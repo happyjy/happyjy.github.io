@@ -46,3 +46,10 @@
 #
 
 ```
+
+# 5 - Post tumbnail images
+
+* image
+  - gatsby-images
+  - GatsbyImageSharpFluid
+
