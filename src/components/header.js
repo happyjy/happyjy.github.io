@@ -38,7 +38,7 @@ const Header = (props) => {
                   <NavLink href="https://github.com/happyjy">GitHub</NavLink>
                 </NavItem>
               </Nav>
-              <NavbarText>Simple Text</NavbarText>
+              {/* <NavbarText>Simple Text</NavbarText> */}
             </Collapse>
             </div>
         </Navbar>
