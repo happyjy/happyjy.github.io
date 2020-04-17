@@ -15,6 +15,9 @@
         a {
           color: $dark-gray;
 
+          &.github:hover {
+            color: #e95950;
+          }
           &.instagram:hover {
             color: #e95950;
           }
