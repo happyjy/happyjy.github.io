@@ -16,10 +16,11 @@ const IndexPage = () => (
           return (
               <div>
                   {data.allMarkdownRemark.edges.map(({ node }) => (
-                      <Post 
+                      <Post
+                        key={node.id}
                         title={node.frontmatter.title}
                         author={node.frontmatter.author}
-                        path={node.frontmatter.path}
+                        slug={node.fields.slug}
                         date={node.frontmatter.date}
                         body={node.excerpt}
                         fluid={node.frontmatter.image.childImageSharp.fluid}
@@ -47,12 +48,10 @@ const indexQeury = graphql`
         edges {
           node {
             id
-            excerpt
             frontmatter {
               author
               date(formatString: "MMM Do YYYY")
               title
-              path
               category
               tags
               image {
@@ -63,6 +62,10 @@ const indexQeury = graphql`
                 }
               }
             }
+            fields{
+              slug
+            }
+            excerpt
           }
         }
       }
