@@ -32,7 +32,10 @@ const IndexPage = () => (
 const indexQeury = graphql`
     query allMarkDownRemark {
       __typename
-      allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+      allMarkdownRemark(
+        sort: {fields: [frontmatter___date], order: DESC}
+        limit: 2
+      ) {
         edges {
           node {
             id
