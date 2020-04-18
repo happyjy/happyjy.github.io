@@ -1,7 +1,7 @@
 ---
 title: "Third Post - CSS & SCSS"
 date: 2020-04-07 22:22
-author: "jyoon"
+author: "miro"
 image: ../../images/sass.png
 category: "react"
 tags: 
