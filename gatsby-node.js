@@ -18,6 +18,8 @@ exports.onCreateNode = ({ node, actions }) => {
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
+
+  //path.resolve에 return 되는 것들은 graphql의 query 들이다.
   const templates = {
     singlePost: path.resolve('src/templates/single-post.js'),
     tagsPage: path.resolve('src/templates/tags-page.js'),
@@ -43,7 +45,7 @@ exports.createPages = ({ actions, graphql }) => {
       }
     }
   `).then(res => {
-    console.log("###############################");
+    console.log("############################### authors, res");
     console.log({authors, res});
     if (res.errors) return Promise.reject(res.errors);
     
@@ -89,7 +91,7 @@ exports.createPages = ({ actions, graphql }) => {
     tags = _.uniq(tags);
     // tags = [...new Set(tags)];
 
-    console.log("#########################")
+    console.log("######################### tags, tagsPostcounts, category")
     console.log({tags, tagPostCounts});
     console.log({category});
 
@@ -132,6 +134,7 @@ exports.createPages = ({ actions, graphql }) => {
           limit: postsPerPage,
           skip: index * postsPerPage,
           currentPage,
+          numberOfPages
         },
       })
     })
