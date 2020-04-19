@@ -6,6 +6,7 @@ image: ../../images/javascript.png
 category: "javascript"
 tags: 
 - scope
+- graphql
 
 ---
 

@@ -24,7 +24,8 @@ exports.createPages = ({ actions, graphql }) => {
     singlePost: path.resolve('src/templates/single-post.js'),
     tagsPage: path.resolve('src/templates/tags-page.js'),
     tagPosts: path.resolve('src/templates/tag-posts.js'),
-    postList: path.resolve('src/templates/post-list.js')
+    postList: path.resolve('src/templates/post-list.js'),
+    authorPosts: path.resolve('src/templates/author-post.js')
   };
 
   return graphql(`
@@ -118,6 +119,8 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     // pagenation
+    // 페이지네이션도 각 페이지에 현재 페이지를 넘겨 버리니 구현하기가 편함
+    // skip: 
     const postsPerPage = 2
     const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
@@ -137,8 +140,19 @@ exports.createPages = ({ actions, graphql }) => {
           numberOfPages
         },
       })
-    })
+    });
 
+    //author page 
+    authors.forEach(author => {
+      createPage({
+        path: `/author/${slugify(author.name)}`,
+        component: templates.authorPosts,
+        context: {
+          authorName: author.name,
+          imageUrl: author.imageUrl,
+        },
+      })
+    })
   });
 }
 

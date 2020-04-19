@@ -16,7 +16,7 @@ import Footer from './Footer'
 import '../styles/index.scss'
 import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
-const Layout = ({ authorImgFluid, children, pageTitle, postAuthor }) => {
+const Layout = ({ authorImageFluid, children, pageTitle, postAuthor }) => {
   console.log({ children, pageTitle })
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -36,7 +36,7 @@ const Layout = ({ authorImgFluid, children, pageTitle, postAuthor }) => {
         <Row>
           <Col md="8">{children}</Col>
           <Col md="4">
-            <Sidebar author={postAuthor} authorFluid={authorImgFluid}/>
+            <Sidebar author={postAuthor} authorFluid={authorImageFluid}/>
           </Col>
         </Row>
       </div>
