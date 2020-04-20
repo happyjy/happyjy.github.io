@@ -1,7 +1,8 @@
 import React from 'react';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 import Post from '../components/Post';
 import PaginationLinks from '../components/PaginationLink';
+import { graphql } from 'gatsby'
 
 const postList = props => {
   //# 해당 컴포넌트에서의 props는 아래 두가지가 있다. 
