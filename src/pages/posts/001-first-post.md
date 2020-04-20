@@ -7,7 +7,6 @@ category: "javascript"
 tags: 
 - scope
 - graphql
-
 ---
 
 

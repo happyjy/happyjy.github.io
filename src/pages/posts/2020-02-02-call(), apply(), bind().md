@@ -1,16 +1,12 @@
 ---
-title: call(), apply(), bind()
-date: 2020-02-02
+title: "call(), apply(), bind()"
+date: 2020-04-07 22:20
+author: "jyoon"
+image: ../../images/javascript.png
 category: "javascript"
 tags:
   - Javascript Core
-keywords:
-  - call
-  - apply
-  - bind
-  - Javascript
 ---
-
 ```
 # 목차
     * call() 정의

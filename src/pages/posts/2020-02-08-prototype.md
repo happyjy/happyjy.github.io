@@ -1,11 +1,11 @@
 ---
-title: prototype
-date: 2020-02-08
+title: "prototype"
+date: 2020-02-05
+author: "jyoon"
+image: ../../images/javascript.png
 category: "javascript"
 tags:
   - Javascript Core
-keywords:
-  - prototype
 ---
 
 javascript언어는 prototype을 기반으로 oop를 구현하고 있다. 

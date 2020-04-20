@@ -1,11 +1,13 @@
 ---
-title: 실행 컨텍스트
-date: 2020-01-24
-category: "javascript"
-tags:
-  - Javascript Core
-keywords:
-  - excute-context
+title: "Excute-context"
+date: 2020-04-07 22:22
+author: "miro"
+image: ../../images/sass.png
+category: "react"
+tags: 
+- redux
+- hook
+- graphql
 ---
 
 개발을 하다보면 this의 범위가 함수, function, bind, call, apply별로 달라지는 걸볼 수 있는데 왜 이런지에 대해서 다뤄보려고 한다.

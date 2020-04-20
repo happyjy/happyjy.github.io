@@ -71,7 +71,7 @@ exports.createPages = ({ actions, graphql }) => {
     let category = [];
     _.each(posts, edge => {
       if (_.get(edge, 'node.frontmatter.tags')) {
-        tags = tags.concat(edge.node.frontmatter.tags)
+        tags = tags.concat(edge.node.frontmatter.tags);
       }
     })
 
@@ -92,7 +92,7 @@ exports.createPages = ({ actions, graphql }) => {
     tags = _.uniq(tags);
     // tags = [...new Set(tags)];
 
-    console.log("######################### tags, tagsPostcounts, category")
+    console.log("######################### tags, tagsPostcounts, category");
     console.log({tags, tagPostCounts});
     console.log({category});
 
@@ -115,14 +115,14 @@ exports.createPages = ({ actions, graphql }) => {
         context: {
           tag,
         },
-      })
-    })
+      });
+    });
 
     // pagenation
     // 페이지네이션도 각 페이지에 현재 페이지를 넘겨 버리니 구현하기가 편함
     // skip: 
-    const postsPerPage = 2
-    const numberOfPages = Math.ceil(posts.length / postsPerPage)
+    const postsPerPage = 3;
+    const numberOfPages = Math.ceil(posts.length / postsPerPage);
 
     Array.from({ length: numberOfPages }).forEach((_, index) => {
       const isFirstPage = index === 0;
@@ -139,7 +139,7 @@ exports.createPages = ({ actions, graphql }) => {
           currentPage,
           numberOfPages
         },
-      })
+      });
     });
 
     //author page 
@@ -151,8 +151,8 @@ exports.createPages = ({ actions, graphql }) => {
           authorName: author.name,
           imageUrl: author.imageUrl,
         },
-      })
-    })
+      });
+    });
   });
 }
 
