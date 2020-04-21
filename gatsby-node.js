@@ -121,7 +121,7 @@ exports.createPages = ({ actions, graphql }) => {
     // pagenation
     // 페이지네이션도 각 페이지에 현재 페이지를 넘겨 버리니 구현하기가 편함
     // skip: 
-    const postsPerPage = 3;
+    const postsPerPage = 5;
     const numberOfPages = Math.ceil(posts.length / postsPerPage);
 
     Array.from({ length: numberOfPages }).forEach((_, index) => {

@@ -73,9 +73,11 @@ const Sidebar = ({ author, authorFluid }) => (
           <div>
             {data.allMarkdownRemark.edges.map(({node}) => (
               <Card key={node.id}>
+              {!node.frontmatter.image ? '' : 
                 <Link to={node.fields.slug}>
                   <Img className="card-image-top" fluid={node.frontmatter.image.childImageSharp.fluid}/>
                 </Link>
+              }
                 <CardBody>
                   <CardTitle>
                     <Link to={node.fields.slug}>

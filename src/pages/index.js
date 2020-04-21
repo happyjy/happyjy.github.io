@@ -7,7 +7,7 @@ import PaginationLinks from '../components/PaginationLink';
 
 
 const IndexPage = () => {
-  const postsPerPage = 2;
+  const postsPerPage = 5;
   let numberOfPages;
   return (
     <Layout pageTitle="developBlog">
@@ -26,7 +26,7 @@ const IndexPage = () => {
                   author={node.frontmatter.author}
                   body={node.excerpt}
                   date={node.frontmatter.date}
-                  fluid={node.frontmatter.image.childImageSharp.fluid}
+                  fluid={node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid}
                   tags={node.frontmatter.tags}
                 />
               ))}
@@ -46,7 +46,7 @@ const indexQuery = graphql`
   query indexQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 2
+      limit: 5
     ) {
       totalCount
       edges {
