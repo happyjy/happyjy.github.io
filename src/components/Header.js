@@ -28,6 +28,9 @@ const Header = (props) => {
                   <NavLink href="/team/">Team</NavLink>
                 </NavItem>
                 <NavItem>
+                  <NavLink href="/category/">category</NavLink>
+                </NavItem>
+                <NavItem>
                   <NavLink href="/tags/">tags</NavLink>
                 </NavItem>
                 <NavItem>

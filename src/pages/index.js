@@ -28,6 +28,7 @@ const IndexPage = () => {
                   date={node.frontmatter.date}
                   fluid={node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid}
                   tags={node.frontmatter.tags}
+                  category={node.frontmatter.category}
                 />
               ))}
               <PaginationLinks 
@@ -57,6 +58,7 @@ const indexQuery = graphql`
             date(formatString: "MMM Do YYYY")
             author
             tags
+            category
             image {
               childImageSharp {
                 fluid(maxWidth: 600) {

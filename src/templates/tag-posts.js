@@ -23,7 +23,7 @@ const tagPosts = ({ data, pageContext }) => {
           date={node.frontmatter.date}
           body={node.excerpt}
           tags={node.frontmatter.tags}
-          fluid={node.frontmatter.image.childImageSharp.fluid}
+          fluid={node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid}
         />
       ))}
     </Layout>

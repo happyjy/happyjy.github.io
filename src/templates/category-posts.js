@@ -1,22 +1,18 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
-import authors from '../util/authors';
-import { graphql } from 'gatsby';
 
-const authorPosts = ({ data, pageContext }) => {
-  console.log("####### author-post.js ");
-  console.log({data, pageContext});
+//data: graphql로 받은 값, pageContext: gatsby-node에서 createPage함수에서 context key값으로 설정한값
+const categoryPosts = ({ data, pageContext }) => {
+  const { category } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
-  const author = authors.find(x => x.name === pageContext.authorName);
-  const pageHeader = `${totalCount} Posts by: ${pageContext.authorName}`;
+  const pageHeader = `${totalCount} post${
+    totalCount === 1 ? '' : 's'
+  } tagged with "${category}"`
 
   return (
-    <Layout
-      pageTitle={pageHeader}
-      postAuthor={author}
-      authorImageFluid={data.file.childImageSharp.fluid}
-    >
+    <Layout pageTitle={pageHeader}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post
           key={node.id}
@@ -26,18 +22,19 @@ const authorPosts = ({ data, pageContext }) => {
           date={node.frontmatter.date}
           body={node.excerpt}
           tags={node.frontmatter.tags}
+          category={node.frontmatter.category}
           fluid={node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid}
         />
       ))}
     </Layout>
-  );
+  )
 }
 
-export const authorQuery = graphql`
-  query($authorName: String!, $imageUrl: String!) {
+export const categoryQuery = graphql`
+  query($category: String!) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { author: { eq: $authorName } } }
+      filter: { frontmatter: { category: { in: [$category] } } }
     ) {
       totalCount
       edges {
@@ -48,9 +45,10 @@ export const authorQuery = graphql`
             date(formatString: "MMMM Do YYYY")
             author
             tags
+            category
             image {
               childImageSharp {
-                fluid(maxWidth: 650) {
+                fluid(maxWidth: 650, maxHeight: 371) {
                   ...GatsbyImageSharpFluid
                 }
               }
@@ -63,14 +61,7 @@ export const authorQuery = graphql`
         }
       }
     }
-    file(relativePath: { eq: $imageUrl }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
   }
 `
 
-export default authorPosts;
+export default categoryPosts;

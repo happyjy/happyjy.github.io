@@ -27,27 +27,40 @@ const SinglePost = ({ data, pageContext }) => {
 
   return (
     <Layout 
-      pageTitle={post.title} l
+      pageTitle={post.title}
       postAuthor={author} 
       authorImageFluid={data.file.childImageSharp.fluid}>
       <SEO title={post.title}/>
       <Card>
-        <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
+        { 
+          !post.image ? '' : 
+          <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
+        }
         <CardBody>
           <CardSubtitle>
+            <h2>{post.title}</h2>
             <span className="text-info">{post.date}</span> by{'  '}
             <span className="text-info">{post.author}</span>
+            <div>
+              <ul className="post-tags">
+                <li>
+                  <Link to={`/category/${post.category}`}>
+                    <Badge color="danger" className="text-uppercase" pill>{post.category}</Badge>
+                  </Link>
+                </li>
+              </ul>
+              <ul className="post-tags">
+                {post.tags.map(tag => (
+                  <li key={tag}>
+                    <Link to={`tag/${slugify(tag)}`}>
+                      <Badge color="primary" className="text-uppercase">{tag}</Badge>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </CardSubtitle>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
-          <ul className="post-tags">
-            {post.tags.map(tag => (
-              <li key={tag}>
-                <Link to={`tag/${slugify(tag)}`}>
-                  <Badge color="primary">{tag}</Badge>
-                </Link>
-              </li>
-            ))}
-          </ul>
         </CardBody>
       </Card>
       {/* <h3 className="text-center">Share this post</h3>
@@ -100,6 +113,7 @@ export const postQuery = graphql`
         author
         date(formatString: "MMM Do YYYY")
         tags
+        category
         image{
           childImageSharp{
             fluid(maxWidth: 700){

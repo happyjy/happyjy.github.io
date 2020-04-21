@@ -24,6 +24,8 @@ exports.createPages = ({ actions, graphql }) => {
     singlePost: path.resolve('src/templates/single-post.js'),
     tagsPage: path.resolve('src/templates/tags-page.js'),
     tagPosts: path.resolve('src/templates/tag-posts.js'),
+    categoriesPage: path.resolve('src/templates/categories-page.js'),
+    categoryPosts: path.resolve('src/templates/category-posts.js'),
     postList: path.resolve('src/templates/post-list.js'),
     authorPosts: path.resolve('src/templates/author-post.js')
   };
@@ -66,9 +68,9 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
 
-    //Get allTags
+    //Get allTags, allCategory
     let tags = [];
-    let category = [];
+    let categories = [];
     _.each(posts, edge => {
       if (_.get(edge, 'node.frontmatter.tags')) {
         tags = tags.concat(edge.node.frontmatter.tags);
@@ -76,10 +78,10 @@ exports.createPages = ({ actions, graphql }) => {
     })
 
     posts.forEach(({ node }) => {
-      console.log("# category ");
+      console.log("# categories ");
       console.log(node);
-      category = category.concat(node.frontmatter.category);
-      return category;
+      categories = categories.concat(node.frontmatter.category);
+      return categories;
     })
 
     //[javascript, react, ...]
@@ -88,13 +90,18 @@ exports.createPages = ({ actions, graphql }) => {
     tags.forEach(tag => {
       tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1;
     });
-
     tags = _.uniq(tags);
     // tags = [...new Set(tags)];
 
+    let categoryPostCounts = {};
+    categories.forEach(category => {
+      categoryPostCounts[category] = (categoryPostCounts[category] || 0) + 1;
+    });
+    categories = _.uniq(categories);
+
     console.log("######################### tags, tagsPostcounts, category");
     console.log({tags, tagPostCounts});
-    console.log({category});
+    console.log({categories});
 
 
     // Create tags page 
@@ -113,11 +120,31 @@ exports.createPages = ({ actions, graphql }) => {
         path: `/tag/${slugify(tag)}`,
         component: templates.tagPosts,
         context: {
-          tag,
+          tag
         },
       });
     });
 
+    // Create categories page 
+    createPage({
+      path: '/category',
+      component: templates.categoriesPage,
+      context: {
+        categories,
+        categoryPostCounts
+      }
+    })
+    // Create category posts pages
+    categories.forEach(category => {
+      createPage({
+        path: `/category/${slugify(category)}`,
+        component: templates.categoryPosts,
+        context: {
+          category
+        },
+      });
+    });
+    
     // pagenation
     // 페이지네이션도 각 페이지에 현재 페이지를 넘겨 버리니 구현하기가 편함
     // skip: 
