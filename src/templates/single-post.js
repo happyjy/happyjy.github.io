@@ -13,9 +13,6 @@ import SEO from '../components/seo';
 const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter; 
   const author = authors.find(x => x.name === post.author);
-  console.log(author);
-  console.log(data.file.childImageSharp.fluid);
-
   const baseUrl = 'https://happyjy.github.io/';
   // const disqusShortname = 'https-gatsbytutorial-co-uk';
   const disqusShortname = 'happyjy';
@@ -29,7 +26,7 @@ const SinglePost = ({ data, pageContext }) => {
     <Layout 
       pageTitle={post.title}
       postAuthor={author} 
-      authorImageFluid={data.file.childImageSharp.fluid}>
+      authorImageFluid={data.file && data.file.childImageSharp.fluid}>
       <SEO title={post.title}/>
       <Card>
         { 
@@ -39,8 +36,8 @@ const SinglePost = ({ data, pageContext }) => {
         <CardBody>
           <CardSubtitle>
             <h2>{post.title}</h2>
-            <span className="text-info">{post.date}</span> by{'  '}
-            <span className="text-info">{post.author}</span>
+            <span className="text-info">{post.date}</span> 
+            {post.author ? `  by`: ''} <span className="text-info">{post.author}</span>
             <div>
               <ul className="post-tags">
                 <li>
