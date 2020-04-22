@@ -21,8 +21,8 @@ const Post = ({ title, author, slug, date, body, fluid, category, tags }) => {
           </Link>
         </CardTitle>
         <CardSubtitle>
-          <span className="text-info">{date}</span> by{' '}
-          <span className="text-info">{author}</span> 
+          <span className="text-info">{date}</span> 
+          {author ? `  by`: ''} <span className="text-info">{author}</span> 
         </CardSubtitle>
         <ul className="post-tags">
           <li>
