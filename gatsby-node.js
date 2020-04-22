@@ -63,7 +63,7 @@ exports.createPages = ({ actions, graphql }) => {
           // Passing slug for template to use to get post
           slug: node.fields.slug,
           // Find author imageUrl from authros and pass it to the single post template
-          imageUrl: authors.find(x => x.name === node.frontmatter.author).imageUrl,
+          imageUrl: authors.find(x => x.name === node.frontmatter.author) && authors.find(x => x.name === node.frontmatter.author).imageUrl || ''
         },
       });
     });
