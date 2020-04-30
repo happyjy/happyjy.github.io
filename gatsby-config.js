@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 module.exports = {
   siteMetadata: {
     title: `jyoon blog version2`,
@@ -9,8 +11,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/_posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/_images`,
       },
     },
     {
@@ -36,7 +45,57 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-catch-links`,
-    `gatsby-transformer-remark`,
+    // `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        tableOfContents: {
+          maxDepth: 4,
+        },
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+              wrapperStyle: fluidResult => `flex:${_.round(fluidResult.aspectRatio, 2)};`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-emojis',
+            options: {
+              active: true,
+              class: 'emoji-icon',
+              size: 64,
+              styles: {
+                display: 'inline',
+                margin: '0',
+                'margin-top': '1px',
+                position: 'relative',
+                top: '5px',
+                width: '25px',
+              },
+            },
+          },
+          `gatsby-remark-autolink-headers`,
+          `gatsby-remark-katex`,
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+            },
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

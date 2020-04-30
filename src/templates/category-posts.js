@@ -1,14 +1,14 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Post from '../components/Post';
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/Layout"
+import Post from "../components/Post"
 
 //data: graphql로 받은 값, pageContext: gatsby-node에서 createPage함수에서 context key값으로 설정한값
 const categoryPosts = ({ data, pageContext }) => {
-  const { category } = pageContext;
-  const { totalCount } = data.allMarkdownRemark;
+  const { category } = pageContext
+  const { totalCount } = data.allMarkdownRemark
   const pageHeader = `${totalCount} post${
-    totalCount === 1 ? '' : 's'
+    totalCount === 1 ? "" : "s"
   } tagged with "${category}"`
 
   return (
@@ -23,7 +23,10 @@ const categoryPosts = ({ data, pageContext }) => {
           body={node.excerpt}
           tags={node.frontmatter.tags}
           category={node.frontmatter.category}
-          fluid={node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid}
+          fluid={
+            node.frontmatter.image &&
+            node.frontmatter.image.childImageSharp.fluid
+          }
         />
       ))}
     </Layout>
@@ -64,4 +67,4 @@ export const categoryQuery = graphql`
   }
 `
 
-export default categoryPosts;
+export default categoryPosts

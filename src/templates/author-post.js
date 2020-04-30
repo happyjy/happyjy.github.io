@@ -1,15 +1,15 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import Post from '../components/Post';
-import authors from '../util/authors';
-import { graphql } from 'gatsby';
+import React from "react"
+import Layout from "../components/Layout"
+import Post from "../components/Post"
+import authors from "../util/authors"
+import { graphql } from "gatsby"
 
 const authorPosts = ({ data, pageContext }) => {
-  console.log("####### author-post.js ");
-  console.log({data, pageContext});
-  const { totalCount } = data.allMarkdownRemark;
-  const author = authors.find(x => x.name === pageContext.authorName);
-  const pageHeader = `${totalCount} Posts by: ${pageContext.authorName}`;
+  console.log("####### author-post.js ")
+  console.log({ data, pageContext })
+  const { totalCount } = data.allMarkdownRemark
+  const author = authors.find(x => x.name === pageContext.authorName)
+  const pageHeader = `${totalCount} Posts by: ${pageContext.authorName}`
 
   return (
     <Layout
@@ -26,11 +26,15 @@ const authorPosts = ({ data, pageContext }) => {
           date={node.frontmatter.date}
           body={node.excerpt}
           tags={node.frontmatter.tags}
-          fluid={node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid}
+          category={node.frontmatter.category}
+          fluid={
+            node.frontmatter.image &&
+            node.frontmatter.image.childImageSharp.fluid
+          }
         />
       ))}
     </Layout>
-  );
+  )
 }
 
 export const authorQuery = graphql`
@@ -42,7 +46,12 @@ export const authorQuery = graphql`
       totalCount
       edges {
         node {
+          excerpt
           id
+          html
+          fields {
+            slug
+          }
           frontmatter {
             title
             date(formatString: "MMMM Do YYYY")
@@ -56,10 +65,6 @@ export const authorQuery = graphql`
               }
             }
           }
-          fields {
-            slug
-          }
-          excerpt
         }
       }
     }
@@ -73,4 +78,4 @@ export const authorQuery = graphql`
   }
 `
 
-export default authorPosts;
+export default authorPosts

@@ -1,3 +1,55 @@
+.blog-post-content {
+  margin-top: 3rem;
+  font-family: 'Noto Serif KR';
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Noto Serif KR';
+  }
+  h1 {
+    margin-top: 4rem;
+  }
+  h2 {
+    margin-top: 3rem;
+  }
+  h3 {
+    margin-top: 2rem;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+
+    ul {
+      margin-top: 0.25rem;
+    }
+  }
+  code {
+    font-family: 'Nanum Gothic Coding';
+  }
+
+  blockquote {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.64);
+    border-left: 4px solid rgba(0, 0, 0, 0.2);
+    margin: 0;
+    margin-bottom: 1rem;
+    padding: 0 1rem 0 1rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .categories > .label > li {
   margin: 0;
   font-size: 14px;
@@ -21,3 +73,4 @@
 .tags > .label > li > a {
   margin-bottom: 10px;
 }
+
