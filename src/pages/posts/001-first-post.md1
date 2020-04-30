@@ -1,12 +1,13 @@
 ---
-title: "First Post - Javascript"
+title: First Post - Javascript
 date: 2020-04-07 22:20
-author: "jyoon"
-image: ../../images/javascript.png
-category: "javascript"
+# author: jyoon
+# image: ../../images/javascript.png
+category: javascript
 tags: 
 - scope
 - graphql
+- 졸려
 ---
 
 
