@@ -1,14 +1,14 @@
-import React from 'react';
-import { Pagination, PaginationItem, PaginationLink } from 'reactstrap'
+import React from "react"
+import { Pagination, PaginationItem, PaginationLink } from "reactstrap"
 
-
-const PaginationLinks = ({currentPage, numberOfPages}) => {
-  console.log("### PaginationLinks");
-  console.log({currentPage, numberOfPages});
-  const isFirst = currentPage === 1;
-  const isLast = currentPage === numberOfPages;
-  const previousPage = currentPage -1 === 1 ? '/' : '/page' + (currentPage -1).toString();
-  const nextPage = '/page/' + (currentPage + 1).toString();
+const PaginationLinks = ({ currentPage, numberOfPages }) => {
+  // console.log("### PaginationLinks");
+  // console.log({currentPage, numberOfPages});
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numberOfPages
+  const previousPage =
+    currentPage - 1 === 1 ? "/" : "/page" + (currentPage - 1).toString()
+  const nextPage = "/page/" + (currentPage + 1).toString()
 
   return (
     <Pagination arial-label="Page navigation example">
@@ -33,19 +33,19 @@ const PaginationLinks = ({currentPage, numberOfPages}) => {
           <PaginationLink previous herf={previousPage}></PaginationLink>
         </PaginationItem>
       )}
-      
+
       {/* 페이지 */}
-      {Array.from({length: numberOfPages}, (_, i) => 
+      {Array.from({ length: numberOfPages }, (_, i) =>
         currentPage === i + 1 ? (
-          <PaginationItem active key={`page-number${i+1}`}>
-            <PaginationLink href={`/${i === 0 ? '' : 'page/' + (i + 1)}`}>
-              {i+1}
+          <PaginationItem active key={`page-number${i + 1}`}>
+            <PaginationLink href={`/${i === 0 ? "" : "page/" + (i + 1)}`}>
+              {i + 1}
             </PaginationLink>
           </PaginationItem>
         ) : (
-          <PaginationItem key={`page-number${i+1}`}>
-            <PaginationLink href={`/${i === 0 ? '' : 'page/' + (i + 1)}`}>
-              {i+1}
+          <PaginationItem key={`page-number${i + 1}`}>
+            <PaginationLink href={`/${i === 0 ? "" : "page/" + (i + 1)}`}>
+              {i + 1}
             </PaginationLink>
           </PaginationItem>
         )
@@ -73,9 +73,7 @@ const PaginationLinks = ({currentPage, numberOfPages}) => {
         </PaginationItem>
       )}
     </Pagination>
-
   )
-
 }
 
-export default PaginationLinks;
+export default PaginationLinks

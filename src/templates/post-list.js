@@ -10,7 +10,7 @@ const postList = props => {
   // 2. graphql의 return value가 props.data로 넘어 온다.
   const posts = props.data.allMarkdownRemark.edges
   const { currentPage, numberOfPages } = props.pageContext
-  console.log("### postList", { posts, pageContext: props.pageContext })
+  // console.log("### postList", { posts, pageContext: props.pageContext })
 
   return (
     <Layout pageTitle={`Page: ${currentPage}`}>

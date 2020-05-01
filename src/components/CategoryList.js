@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { slugify } from "../util/utilityFunctions"
 
 const CategoryList = ({ category, edges }) => {
-  console.log(category, edges)
+  // console.log(category, edges)
   return edges.map(edge => {
     return category === edge.node.frontmatter.category ? (
       <Link to={`/${slugify(edge.node.fields.slug)}`}>
