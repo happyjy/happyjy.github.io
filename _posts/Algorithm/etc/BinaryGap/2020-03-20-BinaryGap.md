@@ -2,6 +2,7 @@
 title: BinaryGap
 date: 2020-03-20
 category: Algorithm
+author: jyoon
 tags:
   - 2진수
 ---

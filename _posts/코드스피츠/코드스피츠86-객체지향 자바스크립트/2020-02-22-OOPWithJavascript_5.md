@@ -2,6 +2,7 @@
 title: 객체지향 자바스크립트 5회차(MVVM pattern 개선3)
 date: 2020-03-22
 category: 코드스피츠
+author: jyoon
 tags:
   - 객제지향 자바스크립트
   - 객체지향

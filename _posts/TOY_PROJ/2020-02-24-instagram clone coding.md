@@ -1,6 +1,7 @@
 ---
 title: INSTAGRAM CLONE CODING
 date: 2020-02-24
+author: jyoon
 category: ToyProj
 tags:
   - Instagram clone coding

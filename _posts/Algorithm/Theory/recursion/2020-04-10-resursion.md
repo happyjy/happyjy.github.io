@@ -2,6 +2,7 @@
 title: Recursion 개념과 기본예제, 응용 배우기
 date: 2020-04-10
 category: Algorithm
+author: jyoon
 tags:
   - recursion
   - 동적프로그래밍
