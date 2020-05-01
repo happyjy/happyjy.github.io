@@ -54,15 +54,17 @@ const SinglePost = ({ data, pageContext }) => {
                 </li>
               </ul>
               <ul className="post-tags">
-                {post.tags.map(tag => (
-                  <li key={tag}>
-                    <Link to={`tag/${slugify(tag)}`}>
-                      <Badge color="primary" className="text-uppercase">
-                        {tag}
-                      </Badge>
-                    </Link>
-                  </li>
-                ))}
+                {post.tags &&
+                  post.tags.length > 0 &&
+                  post.tags.map(tag => (
+                    <li key={tag}>
+                      <Link to={`tag/${slugify(tag)}`}>
+                        <Badge color="primary" className="text-uppercase">
+                          {tag}
+                        </Badge>
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             </div>
           </CardSubtitle>
