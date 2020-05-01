@@ -40,11 +40,27 @@ h1 {
   }
 }
 
+/*
+  Table of contents
+*/
 .toc > ul {
   list-style: none;
   padding: 0px;
 }
 
+.toc ul > li > p {
+  // list-style: none;
+  margin: 0px;
+}
+
+.toc ul > li > ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+/*
+  numbering
+*/
 /**
  * If you already use line highlighting
  */
@@ -83,7 +99,7 @@ h1 {
   .gatsby-highlight 
   .gatsby-highlight 
 
-  # useage
+  # usage
     https://www.gatsbyjs.org/packages/gatsby-remark-prismjs/?=%20highlighting%20to%20code%20blocks#line-highlighting
 
  */
