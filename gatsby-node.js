@@ -8,10 +8,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   if (node.internal.type === "MarkdownRemark") {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
-    console.log("### 1.slug: ", slug)
+    // console.log("### 1.slug: ", slug)
 
     const slugFromTitle = slugify(node.frontmatter.title)
-    console.log("### 2.slugFormTitle: ", slugFromTitle)
+    // console.log("### 2.slugFormTitle: ", slugFromTitle)
     createNodeField({
       node,
       name: "slug",
@@ -87,11 +87,11 @@ exports.createPages = ({ actions, graphql }) => {
       if (_.get(edge, "node.frontmatter.category")) {
         categories = categories.concat(edge.node.frontmatter.category)
       }
-      console.log("### edge: ", edge)
-      console.log("### edge.node.frontmatter: ", edge.node.frontmatter)
+      // console.log("### edge: ", edge)
+      // console.log("### edge.node.frontmatter: ", edge.node.frontmatter)
     })
 
-    console.log("===============================")
+    // console.log("===============================")
 
     // posts.forEach(({ node }) => {
     // 	// console.log("# categories ");
