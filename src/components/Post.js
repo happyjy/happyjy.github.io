@@ -8,19 +8,19 @@ import {
   CardSubtitle,
   CardBody,
 } from "reactstrap"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import { slugify } from "../util/utilityFunctions"
 
 const Post = ({ title, author, slug, date, body, fluid, category, tags }) => {
   return (
     <Card>
-      {!fluid ? (
+      {/* {!fluid ? (
         ""
       ) : (
         <Link to={slug}>
           <Img className="card-image-top cardImg" fluid={fluid} />
         </Link>
-      )}
+      )} */}
       <CardBody>
         <CardTitle>
           <Link to={slug}>
@@ -31,7 +31,7 @@ const Post = ({ title, author, slug, date, body, fluid, category, tags }) => {
           <span className="text-info">{date}</span>
           {author ? `  by` : ""} <span className="text-info">{author}</span>
         </CardSubtitle>
-        <ul className="post-tags">
+        <ul className="post-category">
           <li>
             <Link to={`/category/${category}`}>
               <Badge color="danger" className="text-uppercase" pill>
@@ -51,7 +51,9 @@ const Post = ({ title, author, slug, date, body, fluid, category, tags }) => {
             </li>
           ))}
         </ul>
-        <CardText>{body}</CardText>
+        <CardText>
+          <Link to={slug}>{body}</Link>
+        </CardText>
         <Link to={slug} className="btn btn-outline-primary float-right">
           Read more
         </Link>

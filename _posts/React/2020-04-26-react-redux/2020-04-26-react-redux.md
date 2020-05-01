@@ -1,7 +1,9 @@
 ---
 title: react-redux
 date: 2020-04-26
-category: react
+author: jyoon
+image: ../../images/react.png
+category: React
 tags:
   - react-redux
 ---

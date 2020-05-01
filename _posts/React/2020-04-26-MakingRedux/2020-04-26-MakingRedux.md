@@ -1,7 +1,9 @@
 ---
 title: redux 구현해보기
 date: 2020-04-26
-category: react
+author: jyoon
+image: ../../_images/react.png
+category: React
 tags:
   - redux
 ---
