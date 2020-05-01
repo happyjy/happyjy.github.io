@@ -150,7 +150,7 @@ exports.createPages = ({ actions, graphql }) => {
       },
     })
     // Create category posts pages
-    console.log("### categories: ", categories)
+    // console.log("### categories: ", categories)
     categories.forEach(category => {
       createPage({
         path: `/category/${slugify(category)}`,

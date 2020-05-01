@@ -41,15 +41,17 @@ const Post = ({ title, author, slug, date, body, fluid, category, tags }) => {
           </li>
         </ul>
         <ul className="post-tags">
-          {tags.map(tag => (
-            <li key={tag}>
-              <Link to={`/tag/${slugify(tag)}`}>
-                <Badge color="primary" className="text-uppercase" pill>
-                  {tag}
-                </Badge>
-              </Link>
-            </li>
-          ))}
+          {post.tags &&
+            post.tags.length > 0 &&
+            tags.map(tag => (
+              <li key={tag}>
+                <Link to={`/tag/${slugify(tag)}`}>
+                  <Badge color="primary" className="text-uppercase" pill>
+                    {tag}
+                  </Badge>
+                </Link>
+              </li>
+            ))}
         </ul>
         <CardText>
           <Link to={slug}>{body}</Link>

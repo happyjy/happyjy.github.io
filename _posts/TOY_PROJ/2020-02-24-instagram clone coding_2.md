@@ -2,7 +2,7 @@
 title: INSTAGRAM CLONE CODING_2
 date: 2020-02-24
 category: TOYPROJ
-keywords:
+tags:
   - Instagram clone coding
   - React
   - Hooks
