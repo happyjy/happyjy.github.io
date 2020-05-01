@@ -41,6 +41,29 @@ h1 {
 }
 
 /*
+  sidebar > author
+*/
+.author > ul {
+  padding: 0px;
+}
+
+/*
+  unorderlist
+    : markdown, sidebar > author
+*/
+ul {
+  list-style-type: none;
+}
+
+.blog-post-content > ul {
+  list-style-type: disc;
+}
+
+.blog-post-content ul ul {
+  list-style-type: circle;
+}
+
+/*
   Table of contents
 */
 .toc > ul {
