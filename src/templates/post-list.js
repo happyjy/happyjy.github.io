@@ -1,17 +1,16 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import Post from '../components/Post';
-import PaginationLinks from '../components/PaginationLink';
-import { graphql } from 'gatsby'
+import React from "react"
+import Layout from "../components/Layout"
+import Post from "../components/Post"
+import PaginationLinks from "../components/PaginationLink"
+import { graphql } from "gatsby"
 
 const postList = props => {
-  //# 해당 컴포넌트에서의 props는 아래 두가지가 있다. 
-  // 1."gatsby-node"에서 설정한 createPage의 context 파라미터가 props.pageContext로 
-  // 2. graphql의 return value가 props.data로 넘어 온다. 
-  const posts = props.data.allMarkdownRemark.edges;
-  const { currentPage, numberOfPages } = props.pageContext;
-  console.log("### postList");
-  console.log(props.pageContext);
+  //# 해당 컴포넌트에서의 props는 아래 두가지가 있다.
+  // 1."gatsby-node"에서 설정한 createPage의 context 파라미터가 props.pageContext로
+  // 2. graphql의 return value가 props.data로 넘어 온다.
+  const posts = props.data.allMarkdownRemark.edges
+  const { currentPage, numberOfPages } = props.pageContext
+  console.log("### postList", { posts, pageContext: props.pageContext })
 
   return (
     <Layout pageTitle={`Page: ${currentPage}`}>
@@ -23,8 +22,12 @@ const postList = props => {
           author={node.frontmatter.author}
           date={node.frontmatter.date}
           body={node.excerpt}
+          category={node.frontmatter.category}
           tags={node.frontmatter.tags}
-          fluid={node.frontmatter.image && node.frontmatter.image.childImageSharp.fluid}
+          fluid={
+            node.frontmatter.image &&
+            node.frontmatter.image.childImageSharp.fluid
+          }
         />
       ))}
       <PaginationLinks
@@ -50,6 +53,7 @@ export const postListQuery = graphql`
             date(formatString: "MMMM Do YYYY")
             author
             tags
+            category
             image {
               childImageSharp {
                 fluid(maxWidth: 650, maxHeight: 371) {
@@ -68,4 +72,4 @@ export const postListQuery = graphql`
   }
 `
 
-export default postList;
+export default postList

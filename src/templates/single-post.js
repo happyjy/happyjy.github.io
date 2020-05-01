@@ -44,7 +44,7 @@ const SinglePost = ({ data, pageContext }) => {
             {post.author ? `  by` : ""}{" "}
             <span className="text-info">{post.author}</span>
             <div>
-              <ul className="post-tags">
+              <ul className="post-category">
                 <li>
                   <Link to={`/category/${post.category}`}>
                     <Badge color="danger" className="text-uppercase" pill>

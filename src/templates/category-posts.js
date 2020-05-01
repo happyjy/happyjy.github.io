@@ -21,8 +21,8 @@ const categoryPosts = ({ data, pageContext }) => {
           author={node.frontmatter.author}
           date={node.frontmatter.date}
           body={node.excerpt}
-          tags={node.frontmatter.tags}
           category={node.frontmatter.category}
+          tags={node.frontmatter.tags}
           fluid={
             node.frontmatter.image &&
             node.frontmatter.image.childImageSharp.fluid
