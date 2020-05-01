@@ -21,7 +21,7 @@ const Sidebar = ({ author, authorFluid, tableOfContents }) => (
             {author.name}
           </CardTitle>
           <CardText>{author.bio}</CardText>
-          <div className="author-social-links text-center">
+          <div className="author-social-links text-center author">
             <ul>
               <li>
                 <a
@@ -48,16 +48,17 @@ const Sidebar = ({ author, authorFluid, tableOfContents }) => (
         </CardBody>
       </Card>
     )}
-    <Card>
-      <CardBody>
-        <CardTitle className="text-center text-uppercase mb-3">
-          TABLE OF CONTENTS
-        </CardTitle>
-        <div
-          className="toc"
-          dangerouslySetInnerHTML={{ __html: tableOfContents }}
-        />
-        {/* <Form className="text-center">
+    {tableOfContents && (
+      <Card>
+        <CardBody>
+          <CardTitle className="text-center text-uppercase mb-3">
+            TABLE OF CONTENTS
+          </CardTitle>
+          <div
+            className="toc"
+            dangerouslySetInnerHTML={{ __html: tableOfContents }}
+          />
+          {/* <Form className="text-center">
           <FormGroup>
             <Input 
               type="email" 
@@ -68,20 +69,9 @@ const Sidebar = ({ author, authorFluid, tableOfContents }) => (
             Subscribe
           </button>
         </Form> */}
-      </CardBody>
-    </Card>
-    <Card>
-      <CardBody>
-        <CardTitle className="text-center text-uppercase">
-          Advertisement
-        </CardTitle>
-        <img
-          src="http://via.placeholder.com/320x200"
-          alt="Advert"
-          style={{ width: "100%" }}
-        ></img>
-      </CardBody>
-    </Card>
+        </CardBody>
+      </Card>
+    )}
     <Card>
       <CardBody>
         <CardTitle>Recet Posts</CardTitle>
@@ -113,6 +103,18 @@ const Sidebar = ({ author, authorFluid, tableOfContents }) => (
             </div>
           )}
         />
+      </CardBody>
+    </Card>
+    <Card>
+      <CardBody>
+        <CardTitle className="text-center text-uppercase">
+          Advertisement
+        </CardTitle>
+        <img
+          src="http://via.placeholder.com/320x200"
+          alt="Advert"
+          style={{ width: "100%" }}
+        ></img>
       </CardBody>
     </Card>
   </div>
