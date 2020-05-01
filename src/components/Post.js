@@ -41,8 +41,8 @@ const Post = ({ title, author, slug, date, body, fluid, category, tags }) => {
           </li>
         </ul>
         <ul className="post-tags">
-          {post.tags &&
-            post.tags.length > 0 &&
+          {tags &&
+            tags.length > 0 &&
             tags.map(tag => (
               <li key={tag}>
                 <Link to={`/tag/${slugify(tag)}`}>
