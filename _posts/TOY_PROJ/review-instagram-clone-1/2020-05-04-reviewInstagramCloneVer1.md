@@ -1,5 +1,5 @@
 ---
-title: INSTAGRAM INSTAGRAM CLONE
+title: Review Instagram clone
 date: 2020-05-04
 author: jyoon
 category: ToyProj
@@ -79,7 +79,7 @@ tags:
     connect(mapStateToProps, mapDispatchToProps)(Container);
   ```
   
-* redux 설정
+redux 설정
   1. src/index.js
     - reacct-redux 라이브러리 Provider로 store설정
   2. components/App/index.js

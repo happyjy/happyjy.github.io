@@ -1,5 +1,5 @@
 ---
-title: INSTAGRAM CLONE CODING_2
+title: INSTAGRAM CLONE VER2
 date: 2020-02-24
 author: jyoon
 category: ToyProj
