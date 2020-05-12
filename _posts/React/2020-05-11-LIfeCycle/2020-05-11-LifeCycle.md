@@ -1,6 +1,6 @@
 ---
 title: React Life Cycle
-date: 2020-05-1
+date: 2020-05-12
 author: jyoon
 image: ../../_images/react.png
 category: React
