@@ -6,16 +6,7 @@ image: ../../_images/react.png
 category: React
 tags:
   - ReactLifeCycle
-  - render
-  - constructor
-  - componentDidMount
-  - componentDidUpdate
-  - componentWillUnmount
-  - shouldComponentUpdate
-  - getDerivedStateFromProps
-  - getSnapshotBeforeUpdate
-  - componentDidCatch
-
+  - lifeCycle
 ---
 
 # 실습 gitHub 주소 

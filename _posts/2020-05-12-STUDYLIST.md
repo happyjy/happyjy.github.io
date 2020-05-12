@@ -11,15 +11,17 @@ tags:
 - [x] 2018.07-08 패스트캠퍼스 vuejs
 - [x] 2019.12- 2019.02 이직한 회사 자사 프레임워크 적응
 - [x] 2019.02-08 인스타그램 클론코딩(react, redux, django, postgres)
-  [blog](https://happyjy.netlify.app/category/#ToyProj)
+  - [blog](https://happyjy.netlify.app/category/#ToyProj)
 - [x] 2019.08-09 프로그래머스 알고리즘 문제 풀기
-  [blog](https://happyjy.netlify.app/category/#Algorithm)
+  - [blog](https://happyjy.netlify.app/category/#Algorithm)
 - [x] 2019.10-01 인스타그램 클론코딩(react, hooks, apollo, graphql - express, prisma)
 - [x] 2019.01-02 자바스크립트 코어 스터디/정리
-  [blog](https://happyjy.netlify.app/category/#Javascript%20Core)
+  - [blog](https://happyjy.netlify.app/category/#Javascript%20Core)
 - [x] 2020.02-03 코드스피츠 객체지향자바크립트
+  - [blog](https://5ebaa7a69c2fac0007f629c1--happyjy.netlify.app/category/#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
 - [x] 2020.04: Recursion 스터디 (블로그정리 예정)
 - [x] 2020.04: gatsby로 블로그 생성
+  - [blog](https://5ebaa7a69c2fac0007f629c1--happyjy.netlify.app/category/#React)
 
 ————————————————————————————————————————————————————————————————————————————————————————
 # ...ING LIST
