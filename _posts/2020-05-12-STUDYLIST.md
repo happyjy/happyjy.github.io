@@ -14,7 +14,11 @@ tags:
   - [blog](https://happyjy.netlify.app/category/#ToyProj)
 - [x] 2019.08-09 프로그래머스 알고리즘 문제 풀기
   - [blog](https://happyjy.netlify.app/category/#Algorithm)
-- [x] 2019.10-01 인스타그램 클론코딩(react, hooks, apollo, graphql - express, prisma)
+- [x] 2019.10-01 인스타그램 클론코딩(react, redux, hooks, apollo, graphql - express, prisma)
+  - [blog](https://happyjy.netlify.app/category#ToyProj)
+  - [git - react, redux, scss, django](https://github.com/happyjy/yoonGram)
+  - [git - frontend(react, hooks, graphQl)](https://github.com/happyjy/prismagram-frontend)
+  - [git - backend(express, prisma)](https://github.com/happyjy/prismagram)
 - [x] 2019.01-02 자바스크립트 코어 스터디/정리
   - [blog](https://happyjy.netlify.app/category/#Javascript%20Core)
 - [x] 2020.02-03 코드스피츠 객체지향자바크립트
