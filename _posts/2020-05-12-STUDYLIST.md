@@ -67,6 +67,26 @@ tags:
     - Grid: grid-template-columns, grid-template-rows, column-gap, row-gap, gap, grid-template-areas, grid-column-start, grid-column-end, grid-row-start, grid-row-end, grid-column, grid-row, grid-template, justify-items, align-items, place-items, justify-content, align-content, place-content, justify-self, align-self, place-self, grid-auto-rows, grid-auto-flow, grid-auto-columns
     - Keywords & Functions: repeat, fr, minmax, auto-fit, auto-fill, min-content, max-content
     - SCSS: Variables, Nesting, Mixins, Extend, Responsive Mixins
+
+# algorithm - Recursion
+  - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
+  - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
+  - [ ] 아래 목차는 권오흠 교수님 Recursion 스터디한 내용
+  - [ ] Recursion: Fibonacci number 
+  - [ ] Recursion: Euclid Method(최대공약수)
+  - [ ] Recursion: 문자열 길이 계산
+  - [ ] Recursion: 문자열 프린트 
+  - [ ] Recursion: 문자열 뒤집어 프린트 
+  - [ ] Recursion: 2진수로 변환하여 출력
+  - [ ] Recursion: 배열의 합 구하기 
+  - [ ] Recursion: 매개변수의 명시화: 순차탐색
+  - [ ] Recursion: 매개변수의 명시화: 최대값 찾기 
+  - [ ] Recursion: 매개변수의 명시화: Binary Search
+  - [ ] Recursion: 미로찾기 
+  - [ ] Recursion: class Maze
+  - [ ] Recursion: 움직인경로
+  - [ ] Recursion: Counting Cells in a Blob
+
 ————————————————————————————————————————————————————————————————————————————————————————
 
 # STUDY LIST
@@ -74,7 +94,8 @@ tags:
   - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
   - [git - backEnd](https://github.com/happyjy/prismagram)
   - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16) 
-- [ ] Recursion 스터디한 내용 javascript로 구현 하기
+
+- [ ] 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
   - [제1-1강 Recursion의 개념과 기본 예제들 (1/3)](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)
   - [제1-2강 Recursion의 개념과 기본 예제들 (2/3)](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)
   - [제1-3강 Recursion의 개념과 기본 예제들 (3/3)](https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3)
