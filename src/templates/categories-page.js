@@ -51,7 +51,7 @@ const categoryPage = ({ data, pageContext }) => {
 
 export const categoryPageQuery = graphql`
 	query categoryPageQuery {
-		allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+		allMarkdownRemark(sort: { fields: [frontmatter___title], order: ASC }) {
 			totalCount
 			edges {
 				node {
