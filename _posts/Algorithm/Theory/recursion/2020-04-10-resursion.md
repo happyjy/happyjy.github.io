@@ -1,5 +1,5 @@
 ---
-title: Recursion 개념과 기본예제, 응용 배우기
+title: 재귀_Recursion 개념과 기본예제, 응용 배우기
 date: 2020-04-10
 category: Algorithm
 author: jyoon

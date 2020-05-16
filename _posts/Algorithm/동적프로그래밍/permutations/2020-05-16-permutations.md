@@ -1,5 +1,5 @@
 ---
-title: 모든 문자배열 조합
+title: 재귀_모든 문자배열 조합
 date: 2020-05-16
 category: Algorithm
 author: jyoon

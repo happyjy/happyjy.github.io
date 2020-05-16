@@ -121,3 +121,30 @@ quick_sort
   const sortedArr = quick_Sort(arr);
   console.log("### Sorted array: ", sortedArr);
   ```
+
+
+  # REF/리뷰
+* [첫번째코드](https://www.geeksforgeeks.org/quick-sort/)
+  * 영상 설명 있음 
+    - 두번째 알고리즘 이해는데 한방에 이해 됨
+    - 이해 안되던 부분
+      - ISE(index of smaller element)는 배열의 요소가 pivot 보다 작을때 만 '1증가' 되는 부분이 이해가 안됐었다.
+        - "ISE는 배열을 순회하면서 pivot 보다 큰수에서 멈춰 있는다."
+        - 그러다 pivot 보다 작은 수를 만나면 그 수와 ISE index에 해당하는 배열 요소와 swap
+        - 위 과정을 걸치면 pivot 수 기준으로 작은수는 배열의 왼쪽으로, 큰수는 오른쪽으로 정렬이 된다. 
+        - 즉, partition 함수가 return arr는 high index 기준으로 작은수, 큰수가 정렬이 된다. 
+        - 예시
+        ```
+        아래 숫자 7: pivot
+        partition 전 arr = [1, 8, 3, 9, 4, 5, "7"]
+        partition 제일 마지막 swap 함수 실행 직전 arr = [1, 3, 4, 5, 8, 9, "7"]
+        partition 종료 arr =[1, 3, 4, 5, "7", 8, 9]
+        배열의 요소보다 큰 수는 -> no action
+        배열의 요소보다 작은 수는 -> swap iteration요소와, ISE 요소 
+        ```
+    - https://www.youtube.com/watch?time_continue=47&v=PgBzjlCcFvc&feature=emb_logo
+  * [추가 참고사이트](https://jsperf.com/quicksort)
+    - geeksforgeeks와 같은 내용
+    - w3resource와 코드가 다른점은 swap 하는 로직이 유무가 다르다.
+
+* [두번째코드](https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-1.php#)
