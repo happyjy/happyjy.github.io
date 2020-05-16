@@ -24,20 +24,34 @@ quick_sort
 
 ## 1. partition 함수를 사용해서 해결하는 방법
   - partition 함수
-    - pivot: 함수의 제일 마지막값 
-    - index of smaller element
-      - 배열의 제일 작은 값
+    - pivot: 함수의 제일 마지막 값
+    - index of smaller element: 배열의 제일 작은 값
       - 배열의 요소가 pivot 보다 작을 때 1 증가
     - 배열의 요소가 pivot 보다 작을 때
       - index of smaller element 1 증가
-      - swap index of smaller element, if condition에 해당하는 배열 요소값
+      - swap! index of smaller element/ if condition에 해당하는 배열 요소값
+  - 작은 케이스로 생각해보기 
+    - [4,5,1,2,3] 배열이 있을 때
+    - 첫번째 partition 함수 수행 과정
+      - pivot: 3 / index of smaller element = begin - 1 (=0-1)
+      - for begin(0) to end (4)
+        - 4 < 3 false -> no action
+        - 4 < 5 false -> no action
+        - 1 < 3 true -> index of smaller element 1증가/ swap(4, 1)
+          - [1,5,4,2,3]
+        - 2 < 3 true -> index of smaller element 1증가/ swap(2, 5)
+          - [1,2,4,5,3]
+      - swap(index of smaller elemnt+1, end)
+        - index of smaller elemtn 다음 index에 pivot 값 index 'end'와 바꿔준다.
+        - [1,2,3,5,4] : 첫번째 partitions은 이렇게 끝나며 3을 기준으로 이와 같은 정렬이 이뤄진다.
+      
   - 동작 참고 
     - [geeksforgeeks Youtube](https://www.youtube.com/watch?v=PgBzjlCcFvc&feature=emb_logo)
     - [geeksforgeeks](https://www.geeksforgeeks.org/quick-sort/)
 
 ## 2. 배열을 pivot 값 기준으로 작고, 큰 값을 배열로 만들어 concat 하는 방법
   - 코드보면 1번 보다 이해하기 비교적 쉬움
-  - (참고사이트)][https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-1.php#]
+  - [참고사이트](https://www.w3resource.com/javascript-exercises/searching-and-sorting-algorithm/searching-and-sorting-algorithm-exercise-1.php#)
 
 
 # CODE1 - partition 함수 사용
