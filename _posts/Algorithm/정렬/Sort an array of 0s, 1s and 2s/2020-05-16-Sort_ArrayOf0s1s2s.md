@@ -13,32 +13,20 @@ The task is to write a function that sorts the given array.
 The functions should put all 0s first, then all 1s and all 2s in last.
 
 # 해결 방법
-* 1. index 값 3개 이용 해결( lowestIdx, hightestIdx, i)를 이용해서 해결
-* 2. 0,1,2개수를 세고 차례대로 숫자별 세어진 개수별로 반복하며 새 배열을 만든다. 
 
-# 수행과정
-``` js
-  
-  * 3가지 index
-  l: lowestIdx
-  h: highestIdx
-  i: i 
+## 방법1 
+* index 값 3개 이용 해결( i, lowestIdx, hightestIdx)를 이용해서 해결
+* index별 증가 케이스
+  * i: 0,1일때 증가
+  * lowestIdx: 0일때만 증가
+  * hightestIdx: 2일때만 증가
 
-  * index 이동별 action/array
+## 방법2 
+* 0,1,2개수를 세고 차례대로 숫자별 세어진 개수별로 반복하며 새 배열을 만든다. 
 
-  i,l                       : l-0, h-5, i-0
-  [0, 1, 2, 1, 2, 2]
-     i,l              h     : l-1, h-5, i-1  - index i, h 교환(2, 2) -> 변동없음
-  [0, 1, 2, 1, 2, 2]
-       i,l        h         : l-2, h-4, i-2  - index i, h 교환(2, 2) -> 변동없음
-  [0, 1, 2, 1, 2, 2]
-           i   h            : l-2, h-3, i-2  - index i, h 교환(2, 1) -> [0, 1, 1, 2, 2, 2]
-  [0, 1, 2, 1, 2, 2]
-            i,l             : l-2, h-2, i-2
-  [0, 1, 1, 2, 2, 2]
-```
 
-# CODE1 
+
+# 방법1 - CODE
 ```js
   function solution(arr) {
     let lowestIdx = 0;
@@ -66,11 +54,53 @@ The functions should put all 0s first, then all 1s and all 2s in last.
   }
 
   console.log(solution([0, 1, 2, 1, 2, 2]));
-
-
 ```
 
-# CODE2
+## CODE1 - 수행과정
+``` js
+  * 3가지 index
+  i: i
+  l: lowestIdx
+  h: highestIdx
+
+  * index 이동별 action/array
+    - iteration이 끝난 상태 기준으로 작성
+  1. i=0, h=5
+   i,l                h         : i-0, l-0, h-5 => arr[i]=0 -> index i(0), lowestIdx(0) 교환 -> arr 값 변경 없음
+  [0, 1, 2, 1, 2, 2]
+       i,l            h         : i-1, l-1, h-5
+  [0, 1, 2, 1, 2, 2]
+
+
+  2. i=1, h=5
+       i,l            h         : i-1, l-1, h-5 => arr[i]=1 -> no Action
+  [0, 1, 2, 1, 2, 2]
+        l   i         h         : i-2, l-1, h-5
+  [0, 1, 2, 1, 2, 2]
+
+
+  3. i=2, h=5
+        l  i          h        : i-2, l-1, h-5 => arr[i]=2 -> index i(2), highestIdx(2) 교환
+  [0, 1, 2, 1, 2, 2]
+        l  i      h            : i-2, l-1, h-4 => 교환결과(배열 요소가 같아서 값 자체는 변경 없음)
+  [0, 1, 2, 1, 2, 2]
+
+
+  4. i=2, h=4
+        l   i     h          : i-2, l-1, h-4 => arr[i]=2 -> index i(2), highestIdx(2) 교환
+  [0, 1, 2, 1, 2, 2]
+        l   i  h             : i-2, l-1, h-3 => 교환결과(배열 요소가 같아서 값 자체는 변경 없음)
+  [0, 1, 2, 1, 2, 2]
+
+
+  5. i=2, h=3
+        l   i  h             : i-2, l-1, h-3 => arr[i]=2 -> index i(2), highestIdx(1) 교환
+  [0, 1, 2, 1, 2, 2]
+        l i,h                : i-2, l-1, h-2 => 교환결과(i < h 조건이 안됨으로 while문 종료)
+  [0, 1, 1, 2, 2, 2]
+```
+
+# 방법2 - CODE
 ```js
   function solution(arr) {
 
