@@ -37,7 +37,7 @@ tags:
 
 # 업데이트할 때 호출하는 메서드
 > 아래 순서대로 메서드 수행
-> 업데이트를 발생시키는 요인: pops, state 변경, 부모 컴포넌트 리렌더링
+> 업데이트를 발생시키는 요인: pops, state 변경, 부모 컴포넌트 리렌더링, forceUpdate()
 
 1. getDerivedStateFromProps
   - props변경으로 state값에도 변화를 주고싶을때 사용
@@ -58,44 +58,73 @@ tags:
 1. componentWillUmnount
   - 컴포넌트가 웹 브라우저 상에서 사라지기 전에 호출
 
+# 코드와 함께 설명
+> 유투브강의로 LIFE CYCLE "기본"을 알아보고 
+> 실전 리액트 프로그래밍 책 내용으로 "실전"에서 어떻게 사용되면 좋을지 코드와 함께 정리 했다.  
+* [실습 gitHub 주소](https://github.com/happyjy/learning-reactLifeCycle)
 
+## LIFE CYCLE 기본 
+* [참고 youtube강의](https://youtu.be/7iHepe36m0c)
+  * component > LifecycleForBeginner.js에 내용이 있음 
+  * 다루는 lifecycle list 
+    - constructor 메서드
+    - getDerivedStateFromProps 메서드
+    - render 메서드
+    - componentDidMount 메서드
+    - shouldComponentUpdate 메서드
+    - getSnapshotBeforeUpdate 메서드
+    - componentDidUpdate 메서드
+    - componentWillUnmount 메서드
+    - getDerivedStateFromError, componentDidCatch 메서드
 
-# STUDY1: render
-## def
-## 특징
+## 실전 리액트 프로그래밍 책 내용 
+* lifeCycle별로 실제 프로젝트에서 어제 사용되면 좋은지 노하우가 있다. 
+  * component 폴더 > 코드 숫자 별로 파일이 있음.
+  
+# 3.3.1 constructor 메서드 
+- [x] 코드 3-27 constructor 메서드의 기본구조 
+- [x] 코드 3-28 초기 속성값으로부터 상탯값을 만드는 코드 
+- [x] 코드 3-29 constructor 메서드 없이 속성값을 이용하는 코드 
+- [x] 코드 3-30 속성값에 항상 의존적인 상탯값을 함수로 대처한 코드 
+- [x] 코드 3-31 constructor 메서드에서 setState 메서드를 호출하는 잘못된 예
+- [x] 코드 3-32 constructor 메서드에서 API를 호출하는 잘못된 예
 
-# STUDY2: constructor
-## def
-## 특징
+# 3.3.2 getDerivedStateFromProps 메서드 
+- [x] 코드 3-33 getDerivedStateFromProps 메서드에서 이전 속성값 이용하기
+- [x] 코드 3-35 getDerivedStateFromProps를 이용한 메모이제이션
+- [x] 코드 3-36 로다시 패키지를 이용한 메모이제이션 예 
+- [x] 코드 3-37 속성값 변경시 상탯값을 초기화하는 코드 
+- [x] 코드 3-38 key 속성값을 이용한 코드 
+- [x] 코드 3-39 상탯갑슬 부모 컴포넌트에서 관리하는 코드 
+- [x] 코드 3-40 상탯값이 전후 속성값에 의존적인 경우 사용
 
-# STUDY3: componentDidMount
-## def
-## 특징
+# 3.3.3 render 메서드
+- [x] 코드 3-41 render 메서드가 반환할 수 있는 값
+- [x] 코드 3-42 렌더함수에서 조건부 렌더링을 하는 코드
+- [x] 코드 3-43 리액트 포털을 사용한 코드
 
-# STUDY4: componentDidUpdate
-## def
-## 특징
+# 3.3.4 componentDidMount 메서드
+- [ ] 코드 3-44 componentDidMount 메서드에서 돔 요소에 접근하는 코드
+- [ ] 코드 3-45 constructor 메서드에서 API 요청을 보내는 코드 
 
-# STUDY5: componentWillUnmount
-## def
-## 특징
+# 3.3.5 shouldComponentUpdate 메서드
+- [ ] 코드 3-46 shouldComponentUpdate 메서드의 기본 구조
 
-# STUDY6: shouldComponentUpdate
-## def
-## 특징
+# 3.3.6 getSnapshotBeforeUpdate 메서드
+- [ ] 코드 3-47 돔 요소의 높잇값이 변경됐는지 검사하는 코드
 
-# STUDY7: getDerivedStateFromProps
-## def
-## 특징
+# 3.3.7 componentDidUpdate 메서드
+- [ ] 코드 3-48 스크롤이 가능해지면 알려주는 코드
+- [ ] 코드 3-49 componentDidUpdate 메서드에서 API를 호출하는 코드
+- [ ] 코드 3-50 componentDidMount 메서드에서도 API를 호출하도록 변경하기
 
-# STUDY8: getSnapshotBeforeUpdate
-## def
-## 특징
+# 3.3.8 componentWillUnmount 메서드
+- [ ] 코드 3-51 componentWillUnmount 메서드에서 이벤트 처리 해제하기
 
-# STUDY9: componentDidCatch
-## def
-## 특징
-
+# 3.3.9 getDerivedStateFromError, componentDidCatch 메서드
+- [ ] 코드 3-52 ErrorBoundary 컴포넌트
+- [ ] 코드 3-53 ErrorBoundary 컴포넌트를사용한 코드
+- [ ] 코드 3-54 이벤트 처리 메서드에서 예외가 발생하는 경우
 
 # 참고 
   - [React Component Lifecycle Explained](https://www.youtube.com/watch?v=7iHepe36m0c&feature=youtu.be)
