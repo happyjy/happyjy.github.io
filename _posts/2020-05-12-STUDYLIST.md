@@ -1,6 +1,6 @@
 ---
 title: STUDY LIST
-date: 2020-05-12
+date: 2020-12-31
 author: jyoon
 category: studyList
 tags:
