@@ -10,7 +10,7 @@ tags:
 ---
 
 # 실습 gitHub 주소 
-[실습 gitHub 주소](https://github.com/happyjy/learning-reactLifeCycle)  
+[실습 gitHub 주소](https://github.com/happyjy/learning-react)  
 
 # 컴포넌트 라이프사이클
 * 마운트 : 페이지에 컴포넌트 나타남
@@ -61,11 +61,11 @@ tags:
 # 코드와 함께 설명
 > 유투브강의로 LIFE CYCLE "기본"을 알아보고 
 > 실전 리액트 프로그래밍 책 내용으로 "실전"에서 어떻게 사용되면 좋을지 코드와 함께 정리 했다.  
-* [실습 gitHub 주소](https://github.com/happyjy/learning-reactLifeCycle)
+* [실습 gitHub 주소](https://github.com/happyjy/learning-react)
 
 ## LIFE CYCLE 기본 
 * [참고 youtube강의](https://youtu.be/7iHepe36m0c)
-  * component > LifecycleForBeginner.js에 내용이 있음 
+  * component > lifecycle >  LifecycleForBeginner.js에 내용이 있음 
   * 다루는 lifecycle list 
     - constructor 메서드
     - getDerivedStateFromProps 메서드

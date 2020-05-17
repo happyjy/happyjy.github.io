@@ -33,7 +33,7 @@ tags:
   - [git](https://happyjy.netlify.app/category/#React)
   - [ ] react상태 값과 속성값으로 관리하는 UI 데이터 
   - [...ing] React element, React virtual dom
-  - [...ing] React lifecycle
+  - [2/3] React lifecycle
   - [ ] react component(함수, 공통기능관리, 성능-memoization)
   - [ ] Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, UseLayoutEffect, useDebugValue)
   - [x] Redux
