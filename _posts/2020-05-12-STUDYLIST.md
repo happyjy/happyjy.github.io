@@ -30,10 +30,11 @@ tags:
 ————————————————————————————————————————————————————————————————————————————————————————
 # ...ING LIST
 - [...ing] 2020.05 - 2020.xx React 개념 정리 중 - 주 일회 스터디모임에서 발표 중
-  - [git](https://happyjy.netlify.app/category/#React)
-  - [ ] react상태 값과 속성값으로 관리하는 UI 데이터 
-  - [...ing] React element, React virtual dom
-  - [2/3] React lifecycle
+  - [blog](https://happyjy.netlify.app/category/#React)
+  - [git](https://github.com/happyjy/learning-react)
+  - [x] 202005 react상태 값과 속성값으로 관리하는 UI 데이터 
+  - [x] 202005 React element, React virtual dom
+  - [x] 202005 React lifecycle
   - [ ] react component(함수, 공통기능관리, 성능-memoization)
   - [ ] Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, UseLayoutEffect, useDebugValue)
   - [x] Redux
