@@ -32,18 +32,14 @@ tags:
 - [...ing] 2020.05 - 2020.xx React 개념 정리 중 - 주 일회 스터디모임에서 발표 중
   - [blog](https://happyjy.netlify.app/category/#React)
   - [git](https://github.com/happyjy/learning-react)
-  - [x] 202005 react상태 값과 속성값으로 관리하는 UI 데이터 
-  - [x] 202005 React element, React virtual dom
-  - [x] 202005 React lifecycle
-  - [ ] react component(함수, 공통기능관리, 성능-memoization)
-  - [ ] Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, UseLayoutEffect, useDebugValue)
-  - [x] Redux
-  - [ ] babel
-  - [ ] webpack
-	- [ ] serverside rendering
-  - [ ] Next.js
-  - [ ] TypeScript
-  - [ ] fiber
+  - [x] 202005 3장 리액트 개념 이해하기 (react상태 값과 속성값으로 관리하는 UI 데이터/ React element, React virtual dom/ lifecycle)
+  - [...ing] 4장 리액트 코딩은 결국 컴포넌트 작성이다 (컴포넌트 코드 작성/ 이벤트 처리 함수 작성/ 컴포넌트의 공통 기능 관리/ 렌더링속도 성능최적화)
+  - [ ] 5장 리액트 내장 Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법
+  - [x] 6장 Redux(원칙, 개념, 액션, 미들웨어, 리듀서, 스토어, 리액트 상탯값 리덕스로 관리하기/ )
+  - [ ] 7장 babel/ webpack
+  - [ ] 8장 serverside rendering/ Next.js
+  - [ ] 9장 TypeScript
+  - [ ] 10장 fiber
 
 
 - [...ing] 2020.04 - 2020.xx publishing - flex, grid강의/ website clone
@@ -94,7 +90,15 @@ tags:
   - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
   - [git - backEnd](https://github.com/happyjy/prismagram)
   - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16) 
-
+  
+- [ ] typescript
+  - 학습레퍼런스 
+    - [Typescript로 블록체인 만들기](https://academy.nomadcoders.co/p/build-a-blockchain-with-typescript)
+    - [초보를 위한 React JS](https://academy.nomadcoders.co/p/react-for-beginners)
+       - 리액트에 typescript를 적용하는 강의가 있음
+       - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
+    - [Do it! 타입스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163031482&orderClick=LEa&Kc=)
+    
 - [ ] 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
   - [제1-1강 Recursion의 개념과 기본 예제들 (1/3)](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)
   - [제1-2강 Recursion의 개념과 기본 예제들 (2/3)](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)
@@ -103,20 +107,13 @@ tags:
   - [제2-2강 ecursion의 응용: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
   - [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
 
-- [ ] typescript
-  - 학습레퍼런스 
-    - [Typescript로 블록체인 만들기](https://academy.nomadcoders.co/p/build-a-blockchain-with-typescript)
-    - [초보를 위한 React JS](https://academy.nomadcoders.co/p/react-for-beginners)
-       - 리액트에 typescript를 적용하는 강의가 있음
-       - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
-    - [Do it! 타입스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163031482&orderClick=LEa&Kc=)
 
 * design pattern
-  - 코드스피츠 객체지향에서 배운 design pattern 정리 
-  - 코드스피츠 객체지향에서 배운 solid 정리 
-  - 본내용 정리하기 - [자바스크립트 디자인 패턴](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788960778856&orderClick=LAG&Kc=)
-  - 본내용 정리하기 - [JavaScript Patterns(자바스크립트패턴)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260157&orderClick=LAG&Kc=)
-  - 위 두 책에서 놓친부분 보기 - [자바스크립트 패턴과 테스트 견고한 프로그램을 개발하는 원리](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791160500257&orderClick=LAG&Kc=)
+  - [ ] 스터디한 내용 정리하기 - 코드스피츠 객체지향에서 배운 design pattern 정리 
+  - [ ] 스터디한 내용 정리하기 - 코드스피츠 객체지향에서 배운 solid 정리 
+  - [ ] 스터디한 내용 정리하기 - [자바스크립트 디자인 패턴](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788960778856&orderClick=LAG&Kc=)
+  - [ ] 스터디한 내용 정리하기 - [JavaScript Patterns(자바스크립트패턴)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260157&orderClick=LAG&Kc=)
+  - [ ] 위 두 책에서 놓친부분 보기 - [자바스크립트 패턴과 테스트 견고한 프로그램을 개발하는 원리](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791160500257&orderClick=LAG&Kc=)
 
 * BACKEND
   - [ ] node.js
@@ -136,9 +133,4 @@ tags:
 
 * [ ] 테스트/배포자동화
 * [ ] Css preprocesor(scss)
-
-
-* react 개발방법 패턴 
-  - index, presentation, container
-* node package에서 사용한 lib 에대해서 파악
-* prisma - node.js, postgress - Django
+* [ ] prisma - node.js, postgress - Django
