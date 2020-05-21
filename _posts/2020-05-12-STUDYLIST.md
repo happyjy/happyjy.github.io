@@ -10,11 +10,14 @@ tags:
 # DONE LIST
 - [x] 2018.07-08 패스트캠퍼스 vuejs
 - [x] 2019.12-2019.02 이직한 회사 자사 프레임워크 적응
-- [x] 2019.02-08 인스타그램 클론코딩(react, redux, django, postgres)
+  - vanlliaJs, prototype 기반 객체지향 위젯, view/ viewmodel pattern, observer pattern ...
+- [x] 2019.02-08 인스타그램 클론코딩
+  - react, redux, django, postgres
   - [정리 blog](https://happyjy.netlify.app/category/#ToyProj)
 - [x] 2019.08-09 프로그래머스 알고리즘 문제 풀기
   - [정리 blog](https://happyjy.netlify.app/category/#Algorithm)
-- [x] 2019.10-2020.01 인스타그램 클론코딩(react, redux, hooks, apollo, graphql - express, prisma)
+- [x] 2019.10-2020.01 인스타그램 클론코딩
+  - react, redux, hooks, apollo, graphql - express, prisma
   - [정리 blog](https://happyjy.netlify.app/category#ToyProj)
   - [git - react, redux, scss, django](https://github.com/happyjy/yoonGram)
   - [git - frontend(react, hooks, graphQl)](https://github.com/happyjy/prismagram-frontend)
