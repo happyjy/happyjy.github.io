@@ -52,7 +52,6 @@ tags:
   - [정리 blog](https://happyjy.netlify.app/category/#CloneWebSite)
   - [git repository](https://github.com/happyjy/learning-scss-masterclass)
   - [강의 주소](https://academy.nomadcoders.co/p/cssnext-css-layout-masterclass)
-
   - 클론코딩 진행중
     - [x] https://besthorrorscenes.com/
     - [x] https://paint-box.com/
@@ -71,25 +70,24 @@ tags:
     - Keywords & Functions: repeat, fr, minmax, auto-fit, auto-fill, min-content, max-content
     - SCSS: Variables, Nesting, Mixins, Extend, Responsive Mixins
 
-# algorithm - Recursion
-
-- [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
-- [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
-- [ ] 아래 목차는 권오흠 교수님 Recursion 스터디한 내용
-- [ ] Recursion: Fibonacci number
-- [ ] Recursion: Euclid Method(최대공약수)
-- [ ] Recursion: 문자열 길이 계산
-- [ ] Recursion: 문자열 프린트
-- [ ] Recursion: 문자열 뒤집어 프린트
-- [ ] Recursion: 2진수로 변환하여 출력
-- [ ] Recursion: 배열의 합 구하기
-- [ ] Recursion: 매개변수의 명시화: 순차탐색
-- [ ] Recursion: 매개변수의 명시화: 최대값 찾기
-- [ ] Recursion: 매개변수의 명시화: Binary Search
-- [ ] Recursion: 미로찾기
-- [ ] Recursion: class Maze
-- [ ] Recursion: 움직인경로
-- [ ] Recursion: Counting Cells in a Blob
+* algorithm - Recursion
+  - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
+  - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
+  - [ ] 아래 목차는 권오흠 교수님 Recursion 스터디한 내용
+  - [ ] Recursion: Fibonacci number
+  - [ ] Recursion: Euclid Method(최대공약수)
+  - [ ] Recursion: 문자열 길이 계산
+  - [ ] Recursion: 문자열 프린트
+  - [ ] Recursion: 문자열 뒤집어 프린트
+  - [ ] Recursion: 2진수로 변환하여 출력
+  - [ ] Recursion: 배열의 합 구하기
+  - [ ] Recursion: 매개변수의 명시화: 순차탐색
+  - [ ] Recursion: 매개변수의 명시화: 최대값 찾기
+  - [ ] Recursion: 매개변수의 명시화: Binary Search
+  - [ ] Recursion: 미로찾기
+  - [ ] Recursion: class Maze
+  - [ ] Recursion: 움직인경로
+  - [ ] Recursion: Counting Cells in a Blob
 
 ---
 
