@@ -27,7 +27,7 @@ tags:
 - [x] 2020.04: gatsby로 블로그 생성
   - [정리 blog](https://5ebaa7a69c2fac0007f629c1--happyjy.netlify.app/category/#React)
 
-————————————————————————————————————————————————————————————————————————————————————————
+---
 # ...ING LIST
 - [...ing] 2020.05 - 2020.xx React 개념 정리 중 - 주 일회 스터디모임에서 발표 중
   - [blog](https://happyjy.netlify.app/category/#React)
@@ -88,8 +88,7 @@ tags:
   - [ ] Recursion: 움직인경로
   - [ ] Recursion: Counting Cells in a Blob
 
-————————————————————————————————————————————————————————————————————————————————————————
-
+---
 # STUDY LIST
 - [ ] 인스타그램 클론코딩 코드리뷰 정리(react, graphql, Apollo, express, prisma)
   - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
@@ -130,7 +129,7 @@ tags:
 * 보안
 
 
-———————————————————————————————————————————
+---
 * graphQl
   - rest api vs graphQl
   - apollo
