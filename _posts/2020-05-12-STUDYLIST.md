@@ -8,6 +8,7 @@ tags:
 ---
 
 # DONE LIST
+
 - [x] 2018.07-08 패스트캠퍼스 vuejs
 - [x] 2019.12-2019.02 이직한 회사 자사 프레임워크 적응
   - vanlliaJs, prototype 기반 객체지향 위젯, view/ viewmodel pattern, observer pattern ...
@@ -31,7 +32,9 @@ tags:
   - [정리 blog](https://5ebaa7a69c2fac0007f629c1--happyjy.netlify.app/category/#React)
 
 ---
+
 # ...ING LIST
+
 - [...ing] 2020.05 - 2020.xx React 개념 정리 중 - 주 일회 스터디모임에서 발표 중
   - [blog](https://happyjy.netlify.app/category/#React)
   - [git](https://github.com/happyjy/learning-react)
@@ -44,13 +47,13 @@ tags:
   - [ ] 9장 TypeScript
   - [ ] 10장 fiber
 
+* [...ing] 2020.04 - 2020.xx publishing - flex, grid강의/ website clone
 
-- [...ing] 2020.04 - 2020.xx publishing - flex, grid강의/ website clone
   - [정리 blog](https://happyjy.netlify.app/category/#CloneWebSite)
-  - [git repository](https://github.com/happyjy/learning-scss-masterclass) 
+  - [git repository](https://github.com/happyjy/learning-scss-masterclass)
   - [강의 주소](https://academy.nomadcoders.co/p/cssnext-css-layout-masterclass)
-  
-  - 클론코딩 진행중 
+
+  - 클론코딩 진행중
     - [x] https://besthorrorscenes.com/
     - [x] https://paint-box.com/
     - [ ] http://10x19.co/
@@ -69,39 +72,45 @@ tags:
     - SCSS: Variables, Nesting, Mixins, Extend, Responsive Mixins
 
 # algorithm - Recursion
-  - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
-  - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
-  - [ ] 아래 목차는 권오흠 교수님 Recursion 스터디한 내용
-  - [ ] Recursion: Fibonacci number 
-  - [ ] Recursion: Euclid Method(최대공약수)
-  - [ ] Recursion: 문자열 길이 계산
-  - [ ] Recursion: 문자열 프린트 
-  - [ ] Recursion: 문자열 뒤집어 프린트 
-  - [ ] Recursion: 2진수로 변환하여 출력
-  - [ ] Recursion: 배열의 합 구하기 
-  - [ ] Recursion: 매개변수의 명시화: 순차탐색
-  - [ ] Recursion: 매개변수의 명시화: 최대값 찾기 
-  - [ ] Recursion: 매개변수의 명시화: Binary Search
-  - [ ] Recursion: 미로찾기 
-  - [ ] Recursion: class Maze
-  - [ ] Recursion: 움직인경로
-  - [ ] Recursion: Counting Cells in a Blob
+
+- [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
+- [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
+- [ ] 아래 목차는 권오흠 교수님 Recursion 스터디한 내용
+- [ ] Recursion: Fibonacci number
+- [ ] Recursion: Euclid Method(최대공약수)
+- [ ] Recursion: 문자열 길이 계산
+- [ ] Recursion: 문자열 프린트
+- [ ] Recursion: 문자열 뒤집어 프린트
+- [ ] Recursion: 2진수로 변환하여 출력
+- [ ] Recursion: 배열의 합 구하기
+- [ ] Recursion: 매개변수의 명시화: 순차탐색
+- [ ] Recursion: 매개변수의 명시화: 최대값 찾기
+- [ ] Recursion: 매개변수의 명시화: Binary Search
+- [ ] Recursion: 미로찾기
+- [ ] Recursion: class Maze
+- [ ] Recursion: 움직인경로
+- [ ] Recursion: Counting Cells in a Blob
 
 ---
+
 # STUDY LIST
+
 - [ ] 인스타그램 클론코딩 코드리뷰 정리(react, graphql, Apollo, express, prisma)
+
   - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
   - [git - backEnd](https://github.com/happyjy/prismagram)
-  - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16) 
-  
+  - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
+
 - [ ] typescript
-  - 학습레퍼런스 
+
+  - 학습레퍼런스
+
     - [Typescript로 블록체인 만들기](https://academy.nomadcoders.co/p/build-a-blockchain-with-typescript)
     - [초보를 위한 React JS](https://academy.nomadcoders.co/p/react-for-beginners)
-       - 리액트에 typescript를 적용하는 강의가 있음
-       - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
+      - 리액트에 typescript를 적용하는 강의가 있음
+      - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
     - [Do it! 타입스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163031482&orderClick=LEa&Kc=)
-    
+
 - [ ] 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
   - [제1-1강 Recursion의 개념과 기본 예제들 (1/3)](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)
   - [제1-2강 Recursion의 개념과 기본 예제들 (2/3)](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)
@@ -110,15 +119,16 @@ tags:
   - [제2-2강 ecursion의 응용: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
   - [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
 
-
 * design pattern
-  - [ ] 스터디한 내용 정리하기 - 코드스피츠 객체지향에서 배운 design pattern 정리 
-  - [ ] 스터디한 내용 정리하기 - 코드스피츠 객체지향에서 배운 solid 정리 
+
+  - [ ] 스터디한 내용 정리하기 - 코드스피츠 객체지향에서 배운 design pattern 정리
+  - [ ] 스터디한 내용 정리하기 - 코드스피츠 객체지향에서 배운 solid 정리
   - [ ] 스터디한 내용 정리하기 - [자바스크립트 디자인 패턴](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788960778856&orderClick=LAG&Kc=)
   - [ ] 스터디한 내용 정리하기 - [JavaScript Patterns(자바스크립트패턴)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260157&orderClick=LAG&Kc=)
   - [ ] 위 두 책에서 놓친부분 보기 - [자바스크립트 패턴과 테스트 견고한 프로그램을 개발하는 원리](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791160500257&orderClick=LAG&Kc=)
 
 * BACKEND
+
   - [ ] node.js
   - [ ] python
 
@@ -128,12 +138,13 @@ tags:
 * 성능
 * 보안
 
-
 ---
-* graphQl
+
+- graphQl
+
   - rest api vs graphQl
   - apollo
 
-* [ ] 테스트/배포자동화
-* [ ] Css preprocesor(scss)
-* [ ] prisma - node.js, postgress - Django
+- [ ] 테스트/배포자동화
+- [ ] Css preprocesor(scss)
+- [ ] prisma - node.js, postgress - Django
