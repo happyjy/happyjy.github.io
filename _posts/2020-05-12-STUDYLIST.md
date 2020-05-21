@@ -80,12 +80,12 @@ tags:
   - [ ] Recursion: 문자열 뒤집어 프린트 
   - [ ] Recursion: 2진수로 변환하여 출력
   - [ ] Recursion: 배열의 합 구하기 
-  - [ ] Recursion: 매개변수의 명시화: 순차탐색
-  - [ ] Recursion: 매개변수의 명시화: 최대값 찾기 
-  - [ ] Recursion: 매개변수의 명시화: Binary Search
+  - [ ] Recursion: 매개변수의 명시화: 순차탐색
+  - [ ] Recursion: 매개변수의 명시화: 최대값 찾기 
+  - [ ] Recursion: 매개변수의 명시화: Binary Search
   - [ ] Recursion: 미로찾기 
   - [ ] Recursion: class Maze
-  - [ ] Recursion: 움직인경로
+  - [ ] Recursion: 움직인경로
   - [ ] Recursion: Counting Cells in a Blob
 
 ---
