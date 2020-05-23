@@ -4,7 +4,7 @@ date: 2020-05-04
 author: jyoon
 category: ToyProj
 tags:
-  - review
+  - ToyProjReview
   - Instagram clone coding
   - React
   - redux
