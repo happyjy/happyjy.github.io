@@ -36,12 +36,14 @@ tags:
 # ...ING LIST
 
 - [...ing] 2020.05 - 2020.xx React 개념 정리 중 - 주 일회 스터디모임에서 발표 중
-  - [blog](https://happyjy.netlify.app/category/#React)
-  - [git](https://github.com/happyjy/learning-react)
+  - [정리 blog](https://happyjy.netlify.app/category/#React)
+  - [source code git](https://github.com/happyjy/learning-react)
   - [x] 202005 3장 리액트 개념 이해하기 (react상태 값과 속성값으로 관리하는 UI 데이터/ React element, React virtual dom/ lifecycle)
+    - [3.3 생명주기 메서드 코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/lifeCycle)
   - [...ing] 4장 리액트 코딩은 결국 컴포넌트 작성이다 (컴포넌트 코드 작성/ 이벤트 처리 함수 작성/ 컴포넌트의 공통 기능 관리/ 렌더링속도 성능최적화)
+    - [4.3 컴포넌트의 공통 기능 관리 코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/ManageComponent) 
   - [ ] 5장 리액트 내장 Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법
-  - [x] 6장 Redux(원칙, 개념, 액션, 미들웨어, 리듀서, 스토어, 리액트 상탯값 리덕스로 관리하기/ )
+  - [x] 6장 Redux(원칙, 개념, 액션, 미들웨어, 리듀서, 스토어, 리액트 상탯값 리덕스로 관리하기)
   - [ ] 7장 babel/ webpack
   - [ ] 8장 serverside rendering/ Next.js
   - [ ] 9장 TypeScript
@@ -70,31 +72,14 @@ tags:
     - Keywords & Functions: repeat, fr, minmax, auto-fit, auto-fill, min-content, max-content
     - SCSS: Variables, Nesting, Mixins, Extend, Responsive Mixins
 
-* algorithm - Recursion
-  - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
-  - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
-  - [ ] 아래 목차는 권오흠 교수님 Recursion 스터디한 내용
-  - [ ] Recursion: Fibonacci number
-  - [ ] Recursion: Euclid Method(최대공약수)
-  - [ ] Recursion: 문자열 길이 계산
-  - [ ] Recursion: 문자열 프린트
-  - [ ] Recursion: 문자열 뒤집어 프린트
-  - [ ] Recursion: 2진수로 변환하여 출력
-  - [ ] Recursion: 배열의 합 구하기
-  - [ ] Recursion: 매개변수의 명시화: 순차탐색
-  - [ ] Recursion: 매개변수의 명시화: 최대값 찾기
-  - [ ] Recursion: 매개변수의 명시화: Binary Search
-  - [ ] Recursion: 미로찾기
-  - [ ] Recursion: class Maze
-  - [ ] Recursion: 움직인경로
-  - [ ] Recursion: Counting Cells in a Blob
+* [...ing] 인스타그램 클론코딩 코드리뷰 
+  - [x] django 설명, 가상개발환경
+  - 
 
 ---
 
 # STUDY LIST
-
 - [ ] 인스타그램 클론코딩 코드리뷰 정리(react, graphql, Apollo, express, prisma)
-
   - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
   - [git - backEnd](https://github.com/happyjy/prismagram)
   - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
@@ -109,13 +94,20 @@ tags:
       - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
     - [Do it! 타입스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163031482&orderClick=LEa&Kc=)
 
-- [ ] 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
-  - [제1-1강 Recursion의 개념과 기본 예제들 (1/3)](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)
-  - [제1-2강 Recursion의 개념과 기본 예제들 (2/3)](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)
-  - [제1-3강 Recursion의 개념과 기본 예제들 (3/3)](https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3)
-  - [제2-1강 Recursion의 응용: 미로찾기](https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4)
-  - [제2-2강 ecursion의 응용: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
-  - [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
+- algorithm - Recursion
+  - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
+  - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
+  
+
+  - [ ] 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기 
+    - 다루는 내용
+      - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기, 매개변수의 명시화: 순차탐색, 매개변수의 명시화: 최대값 찾기, 매개변수의 명시화: Binary Search, 미로찾기, class Maze, 움직인경로, Counting Cells in a Blob
+    - [제1-1강 Recursion의 개념과 기본 예제들 (1/3)](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)
+    - [제1-2강 Recursion의 개념과 기본 예제들 (2/3)](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)
+    - [제1-3강 Recursion의 개념과 기본 예제들 (3/3)](https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3)
+    - [제2-1강 Recursion의 응용: 미로찾기](https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4)
+    - [제2-2강 ecursion의 응용: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
+    - [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
 
 * design pattern
 
@@ -126,7 +118,6 @@ tags:
   - [ ] 위 두 책에서 놓친부분 보기 - [자바스크립트 패턴과 테스트 견고한 프로그램을 개발하는 원리](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791160500257&orderClick=LAG&Kc=)
 
 * BACKEND
-
   - [ ] node.js
   - [ ] python
 
