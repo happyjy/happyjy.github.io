@@ -2,7 +2,7 @@
 title: PRACTICAL GIT
 date: 2020-05-20
 author: jyoon
-category: studyList
+category: git
 tags:
   - git
   - practical
