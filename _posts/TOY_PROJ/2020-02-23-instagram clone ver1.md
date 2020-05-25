@@ -21,4 +21,4 @@ Cloning Instagram with Python django + React
 
 # 정리 노트
 
-[notion 주소](https://www.notion.so/happyjy0109/2019-Node-js-Express-ReactJS-Prisma-201910-2019XX-df8d226e12f74f63a4118df9570e75c4)
+[notion 주소](https://www.notion.so/happyjy0109/Django-React-Progres-201903-201907-94e736fe48ff4c669227b77920b626b0)

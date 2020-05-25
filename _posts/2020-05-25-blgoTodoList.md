@@ -1,5 +1,5 @@
 ---
-title: Blog 기능 개선 사항 list
+title: blog 기능 개선 사항 list
 date: 2020-12-30
 author: jyoon
 category: studyList
