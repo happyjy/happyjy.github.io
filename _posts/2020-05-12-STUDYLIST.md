@@ -50,7 +50,6 @@ tags:
   - [ ] 10장 fiber
 
 * [...ing] 2020.04 - 2020.xx publishing - flex, grid강의/ website clone
-
   - [정리 blog](https://happyjy.netlify.app/category/#CloneWebSite)
   - [git repository](https://github.com/happyjy/learning-scss-masterclass)
   - [강의 주소](https://academy.nomadcoders.co/p/cssnext-css-layout-masterclass)
@@ -67,8 +66,8 @@ tags:
     - [ ] https://canalstreet.market/
     - [ ] https://wonhundred.com/
   - 강의에서 다룬 내용
-    - Flexbox: flex-direction, order, justify-content, align-items, align-self, flex-wrap, align-content, flex-grow, flex-shrink, flex-basis
-    - Grid: grid-template-columns, grid-template-rows, column-gap, row-gap, gap, grid-template-areas, grid-column-start, grid-column-end, grid-row-start, grid-row-end, grid-column, grid-row, grid-template, justify-items, align-items, place-items, justify-content, align-content, place-content, justify-self, align-self, place-self, grid-auto-rows, grid-auto-flow, grid-auto-columns
+    - [x][예제 캡쳐 넣기] 정리 Flexbox: flex-direction, order, justify-content, align-items, align-self, flex-wrap, align-content, flex-grow, flex-shrink, flex-basis
+    - [ ] Grid: grid-template-columns, grid-template-rows, column-gap, row-gap, gap, grid-template-areas, grid-column-start, grid-column-end, grid-row-start, grid-row-end, grid-column, grid-row, grid-template, justify-items, align-items, place-items, justify-content, align-content, place-content, justify-self, align-self, place-self, grid-auto-rows, grid-auto-flow, grid-auto-columns
     - Keywords & Functions: repeat, fr, minmax, auto-fit, auto-fill, min-content, max-content
     - SCSS: Variables, Nesting, Mixins, Extend, Responsive Mixins
 
