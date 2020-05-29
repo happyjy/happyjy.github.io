@@ -1,25 +1,30 @@
 .card {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
+}
+
+.post-type-container {
+	display: flex;
 }
 
 ul.post-tags,
 ul.post-category {
-  padding: 0;
-  display: inline-flex;
-  list-style: none;
+	padding: 0;
+	display: inline-flex;
+	flex-wrap: wrap;
+	list-style: none;
 
-  li {
-    margin-right: 10px;
-  }
+	li {
+		margin-right: 10px;
+	}
 }
 
 .cardImg {
-  width: 300px;
-  background-repeat: no-repeat;
-  background-size: auto;
+	width: 300px;
+	background-repeat: no-repeat;
+	background-size: auto;
 }
 
 .card-text a {
-  text-decoration: none;
-  color: #24292e;
+	text-decoration: none;
+	color: #24292e;
 }
