@@ -4,7 +4,8 @@ import { Badge, Card, CardTitle, CardText, CardSubtitle, CardBody } from 'reacts
 // import Img from "gatsby-image"
 import { slugify } from '../util/utilityFunctions';
 
-const Post = ({ title, author, slug, date, body, fluid, category, tags }) => {
+const Post = ({ numberOfPost, title, author, slug, date, body, fluid, category, tags }) => {
+	console.log('numberOfPost: ', numberOfPost);
 	return (
 		<Card>
 			{/* {!fluid ? (

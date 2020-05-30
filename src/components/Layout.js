@@ -22,14 +22,16 @@ const Layout = ({
   pageTitle,
   postAuthor,
   tableOfContents,
+  numberOfPost,
 }) => {
-  // console.log("### Layout: ", {
-  //   authorImageFluid,
-  //   children,
-  //   pageTitle,
-  //   postAuthor,
-  //   tableOfContents,
-  // })
+  console.log("### Layout: ", {
+    authorImageFluid,
+    children,
+    pageTitle,
+    postAuthor,
+    tableOfContents,
+    numberOfPost,
+  })
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

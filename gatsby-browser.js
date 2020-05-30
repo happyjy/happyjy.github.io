@@ -6,5 +6,6 @@
 
 // You can delete this file if you're not using it
 
+// require("prism-themes/themes/prism-ghcolors.css")
 require("prismjs/themes/prism-solarizedlight.css")
-require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+// require('prismjs/plugins/line-numbers/prism-line-numbers.css');
