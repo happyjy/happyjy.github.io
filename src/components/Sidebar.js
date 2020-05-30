@@ -79,25 +79,27 @@ const Sidebar = ({ author, authorFluid, tableOfContents }) => (
           query={sidebarQuery}
           render={data => (
             <div>
-              {data.allMarkdownRemark.edges.map(({ node }) => (
-                <Card key={node.id}>
-                  {!node.frontmatter.image ? (
-                    ""
-                  ) : (
-                    <Link to={node.fields.slug}>
-                      <Img
-                        className="card-image-top"
-                        fluid={node.frontmatter.image.childImageSharp.fluid}
-                      />
-                    </Link>
-                  )}
-                  {/* <CardBody> */}
-                  {/* <CardTitle> */}
-                  <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
-                  {/* </CardTitle> */}
-                  {/* </CardBody> */}
-                </Card>
-              ))}
+              {data.allMarkdownRemark.edges.shift() &&
+                data.allMarkdownRemark.edges.shift() &&
+                data.allMarkdownRemark.edges.map(({ node }) => (
+                  <Card key={node.id}>
+                    {!node.frontmatter.image ? (
+                      ""
+                    ) : (
+                      <Link to={node.fields.slug}>
+                        <Img
+                          className="card-image-top"
+                          fluid={node.frontmatter.image.childImageSharp.fluid}
+                        />
+                      </Link>
+                    )}
+                    {/* <CardBody> */}
+                    {/* <CardTitle> */}
+                    <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                    {/* </CardTitle> */}
+                    {/* </CardBody> */}
+                  </Card>
+                ))}
             </div>
           )}
         />
@@ -122,7 +124,7 @@ const sidebarQuery = graphql`
   query sidebarQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 5
+      limit: 7
     ) {
       edges {
         node {
