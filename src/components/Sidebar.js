@@ -91,13 +91,11 @@ const Sidebar = ({ author, authorFluid, tableOfContents }) => (
                       />
                     </Link>
                   )}
-                  <CardBody>
-                    <CardTitle>
-                      <Link to={node.fields.slug}>
-                        {node.frontmatter.title}
-                      </Link>
-                    </CardTitle>
-                  </CardBody>
+                  {/* <CardBody> */}
+                  {/* <CardTitle> */}
+                  <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                  {/* </CardTitle> */}
+                  {/* </CardBody> */}
                 </Card>
               ))}
             </div>
@@ -124,7 +122,7 @@ const sidebarQuery = graphql`
   query sidebarQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3
+      limit: 5
     ) {
       edges {
         node {
