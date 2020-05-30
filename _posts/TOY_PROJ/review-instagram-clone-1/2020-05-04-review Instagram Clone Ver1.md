@@ -37,16 +37,16 @@ tags:
 ```
 
 2. src/components/App/index.js
-  ```js
-    import { connect } from 'react-redux';
-    import Container from './container';
+```js
+  import { connect } from 'react-redux';
+  import Container from './container';
 
-    const mapStateToProps = (state, ownProps) => {
-      ...
-    }
+  const mapStateToProps = (state, ownProps) => {
+    ...
+  }
 
-    export default connect(mapStateToProps)(Container);
-  ```
+  export default connect(mapStateToProps)(Container);
+```
 
 3. src/components/presentation.js
   ```js
