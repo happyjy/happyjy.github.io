@@ -1,5 +1,5 @@
 ---
-title: [CSS]Flex
+title: Flex
 date: 2020-05-29
 author: jyoon
 category: css
