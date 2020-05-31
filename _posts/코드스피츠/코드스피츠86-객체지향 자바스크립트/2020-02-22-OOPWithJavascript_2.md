@@ -1,7 +1,7 @@
 ---
 title: 객체지향 자바스크립트 2회차(MVVM 구현)
 date: 2020-02-29
-category: 객체지향 자바스크립트
+category: 객체지향자바스크립트
 author: jyoon
 tags:
   - 객제지향 자바스크립트

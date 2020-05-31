@@ -2,7 +2,7 @@
 title: react "container and presentational component patterns"
 date: 2020-05-30
 author: jyoon
-category: ToyProj
+category: React
 tags:
   - container and presentational component patterns
   - React pattern

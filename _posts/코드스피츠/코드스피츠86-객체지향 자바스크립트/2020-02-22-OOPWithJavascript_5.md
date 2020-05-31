@@ -1,7 +1,7 @@
 ---
 title: 객체지향 자바스크립트 5회차(MVVM pattern 개선3)
 date: 2020-03-22
-category: 객체지향 자바스크립트
+category: 객체지향자바스크립트
 author: jyoon
 tags:
   - 객제지향 자바스크립트
@@ -80,7 +80,7 @@ ViewModel을 보니 key값이 하드코딩되어 있어 확장가능하지 않�
     ```
 
     ```js
-        //? 쓰는게 optional이라고 말하고 있음요.
+      //? 쓰는게 optional이라고 말하고 있음.
      this.#processor?.cat === pk...
     ```
 
