@@ -35,14 +35,15 @@ tags:
 
 # ...ING LIST
 
-- [...ing] 2020.05 - 2020.xx React 개념 정리 중 - 주 일회 스터디모임에서 발표 중
+- [...ing] 2020.05 - 2020.xx React 개념 정리 중 - 주 일회 스터디모임에서 "실전리액트프로그래밍"발표 중 & 리액트를다루는기술은 개인적으로 참고
   - [정리 blog](https://happyjy.netlify.app/category/#React)
   - [source code git](https://github.com/happyjy/learning-react)
   - [x] 202005 3장 리액트 개념 이해하기 (react상태 값과 속성값으로 관리하는 UI 데이터/ React element, React virtual dom/ lifecycle)
-    - [3.3 생명주기 메서드 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/lifeCycle)
-  - [...ing] 4장 리액트 코딩은 결국 컴포넌트 작성이다 (컴포넌트 코드 작성/ 이벤트 처리 함수 작성/ 컴포넌트의 공통 기능 관리/ 렌더링속도 성능최적화)
-    - [4.3 컴포넌트의 공통 기능 관리 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/ManageComponent)
-    - [4.4 렌더링 속도를 올리기 위한 성능 최적화방법 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/performance)
+    - [실전리액트프로그래밍 - 3.3 생명주기 메서드 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/lifeCycle)
+  - [x] 202005 4장 리액트 코딩은 결국 컴포넌트 작성이다 (컴포넌트 코드 작성/ 이벤트 처리 함수 작성/ 컴포넌트의 공통 기능 관리/ 렌더링속도 성능최적화)
+    - [실전리액트프로그래밍 - 4.3 컴포넌트의 공통 기능 관리 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/ManageComponent)
+    - [실전리액트프로그래밍 - 4.4 렌더링 속도를 올리기 위한 성능 최적화방법 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/performance)
+    - [리액트를 다루는기술 10장 todoapp만들기, 11장 todoapp 성능개선](https://github.com/happyjy/toyProj-todo-app)
   - [ ] 5장 리액트 내장 Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법
   - [x] 6장 Redux(원칙, 개념, 액션, 미들웨어, 리듀서, 스토어, 리액트 상탯값 리덕스로 관리하기)
   - [ ] 7장 babel/ webpack
