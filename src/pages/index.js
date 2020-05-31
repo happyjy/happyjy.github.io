@@ -6,8 +6,8 @@ import Post from '../components/Post';
 // import PaginationLinks from '../components/PaginationLink';
 
 const IndexPage = () => {
-	const postsPerPage = 5;
-	let numberOfPages;
+	// const postsPerPage = 5;
+	// let numberOfPages;
 	const numberOfPostFunction = function(numberOfPost) {
 		return numberOfPost;
 	};
@@ -18,7 +18,7 @@ const IndexPage = () => {
 			<StaticQuery
 				query={indexQuery}
 				render={(data) => {
-					numberOfPages = Math.ceil(data.allMarkdownRemark.totalCount / postsPerPage);
+					// numberOfPages = Math.ceil(data.allMarkdownRemark.totalCount / postsPerPage);
 
 					console.log('### numberOfPost < index.js ');
 					numberOfPost = numberOfPostFunction(data.allMarkdownRemark.edges.length);
