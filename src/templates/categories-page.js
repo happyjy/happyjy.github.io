@@ -11,17 +11,29 @@ const categoryPage = ({ data, pageContext }) => {
 	const edges = data.allMarkdownRemark.edges;
 	// console.log({data, categories, categoryPostCounts});
 	// console.log({edges});
+	const newCategoryPostCounts = Object.keys(categoryPostCounts).map(function(key) {
+		return [ key, categoryPostCounts[key] ];
+	});
+
+	newCategoryPostCounts.sort(function(first, second) {
+		return second[1] - first[1];
+	});
+
+	const newCategories = newCategoryPostCounts.map((v) => {
+		return v[0];
+	});
+
 	return (
 		<Layout pageTitle='Category'>
 			<SEO title='All category' keywords={[ 'category', 'topics' ]} />
 			<div className='categories'>
 				<ul className='label'>
-					{categories.map((category) => (
+					{newCategoryPostCounts.map((category) => (
 						// style={{ marginBottom: '10px'}}
-						<li key={category}>
+						<li key={category[0]}>
 							{/* <Button color="primary" href={`/category/${slugify(category)}`}> */}
-							<Button color='primary' href={`#${category}`}>
-								{category} <Badge color='light'>{categoryPostCounts[category]}</Badge>
+							<Button color='primary' href={`#${category[0]}`}>
+								{category[0]} <Badge color='light'>{category[1]}</Badge>
 							</Button>
 						</li>
 					))}
@@ -30,7 +42,7 @@ const categoryPage = ({ data, pageContext }) => {
 			<div>
 				<div className='categories'>
 					<ul>
-						{categories.map((category) => (
+						{newCategories.map((category) => (
 							// style={{ marginBottom: '10px'}}
 							<li key={category}>
 								<h2 id={category}>{category}</h2>
