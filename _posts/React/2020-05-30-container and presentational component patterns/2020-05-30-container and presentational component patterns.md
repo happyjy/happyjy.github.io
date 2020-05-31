@@ -1,6 +1,6 @@
 ---
 title: react "container and presentational component patterns"
-date: 2020-05-29
+date: 2020-05-30
 author: jyoon
 category: ToyProj
 tags:
