@@ -1,6 +1,6 @@
 ---
 title: PropTypes에 대해서(vs Typescript)
-date: 2020-0602
+date: 2020-06-02
 author: jyoon
 category: React
 tags:
