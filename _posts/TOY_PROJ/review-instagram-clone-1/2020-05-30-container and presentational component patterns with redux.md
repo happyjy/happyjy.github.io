@@ -29,31 +29,70 @@ tags:
 
 - src/index.js
 
-```js
-import ReactDOM from "react-dom"
-import { Provider } from "react-redux"
-import store, { history } from "redux/configureStore"
-import App from "components/App"
+  ```js
+    import ReactDOM from "react-dom"
+    import { Provider } from "react-redux"
+    import store, { history } from "redux/configureStore"
+    import App from "components/App"
 
-ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById("root")
-)
-```
+    ReactDOM.render(
+      <Provider store={store}>
+        <App />
+      </Provider>,
+      document.getElementById("root")
+    )
+  ```
 
-- App/index.js
-  : react-redux 라이브러리 connect 함수로 redux와 Container를 한다.  
-  : Redux로 props를 넘기고/ Redux로 받은 값을 props로 Container로 보낸다.(mapDispatchToProps, mapStateToProps) - import { connect } from 'react-redux'
-  - import Container from './container';
-  - export defatul connect (mapStateToProps)(Container);
-- App/container.js
-  : 비즈니스모델이 있다/ class component다/ presenter에게 props를 넘겨준다.
-  - import App from ./presenter. - export container props => <App {...props}/>;
-- App/presenter.js
-  : component가 있다/ function component다
-  - import component(Footer, Auth, Navigation, Feed, Explore, Search) from 'component/xxx' - export default App;
+- Feed/index.js
+  - react-redux 라이브러리 connect 함수로 redux와 Container를 바인딩 한다.  
+  - 코드 간략 구조 
+
+  ```js
+  import { connect } from 'react-redux'
+  import Container from './container';
+  const mapStateToProps = (state, ownProps) => { }
+  const mapDispatchToProps = (dispatch, ownProps) = {}
+  export defatul connect(mapStateToProps, mapDispatchToProps)(Container);
+  ```
+
+- Feed/container.js
+  - 비즈니스모델이 있다.
+  - class component
+  - presenter에게 props를 넘겨준다.
+  - 간략 구조 
+  
+  ```js
+    import Feed from './presenter';
+
+    componentDidMount(){
+      const { getFeed } = this.props; //Feed/index.js에서 넘겨 받은 props
+      ...
+      getFeed();
+    }
+
+    render(){
+      return <Feed {...props}/>;
+    }
+    
+    export default container;
+  ```
+
+- Feed/presenter.js
+  - 화면에 보여질 component
+  - function component
+
+  ```js
+    const Feed = (props) => {
+      if (props.loading) {
+        return <LoadingFeed />;
+      } else if (props.feed) {
+        console.log('### Feed > presenter.js > props', props);
+        return <RenderFeed {...props} />;
+      }
+    };
+
+    export default Feed;
+  ```
 
 # 요약
 
