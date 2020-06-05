@@ -18,7 +18,7 @@ tags:
             호이스팅 규칙
             함수 선언문과 함수 표현식
 
-		3-2.. scope, scope chain, outerEnvironmentReference
+		3-2. scope, scope chain, outerEnvironmentReference
             스코프 체인
             전역변수와 지역변수
 	4. this
@@ -51,29 +51,29 @@ tags:
 
   ```txt
     VariableEnvironment : 현재 컨텍스트 내의 식별자들에 대한 정보 + 외부 환경 정보.
-                            : 선언 시점의 LexicalEnvironment의 스냅샷
-                            : 변경 사항은 반영되지 않음
+                        : 선언 시점의 LexicalEnvironment의 스냅샷
+                        : 변경 사항은 반영되지 않음
     LexicalEnvironment  : 처음에는 VariableEnvironment와 같지만 변경사항이 실시간으로 반영
     ThisBinding         : this 식별자가 바라봐야 할 객체
   ```
 
 - 활성화된 실행 컨텍스트의 수집정보
 
-```
-  * inner
-      Variableenvironment : environmentRecord(snapshot)/ outerEnvironmentReferenece(snapshot)
-      LexicalEnvironment  : environmentRecord/ outerenvironmentReferenece
-      ThisBindding
-  * outer
-  * 전역 컨텍스트
-```
+  ```
+    * inner
+        Variableenvironment : environmentRecord(snapshot)/ outerEnvironmentReferenece(snapshot)
+        LexicalEnvironment  : environmentRecord/ outerenvironmentReferenece
+        ThisBindding
+    * outer
+    * 전역 컨텍스트
+  ```
 
 # 2. VariableEnvironment
 
 - LexicalEnvironment와 같지만 최초 실행 시의 스탭 샷을 유지한다는점이 다름
 - 실행 컨텍스트를 생성할 때 VariableEnvironment에 정보를 먼저 담은 다음,  
   이를 그대로 복사해서 Lexical environment를 만들어 LexicalEnvironment를 주로 활용하게 된다.
-- Variableenvironment, LexicalEnvironment의 내부는 **environmentRecord와 outerEnvironmentReference**로 구성
+- VariableEnvironment, LexicalEnvironment의 내부는 **environmentRecord와 outerEnvironmentReference**로 구성
   - 초기화 과정 중에는 사실상 완전히 동일, 이후 코드 진행에 따라 서로 달라짐
   - 자세한 내용은 LexicalEnvironment를 통해 설명
 
@@ -160,21 +160,21 @@ d() // error
 
 - scope chain 예1 코드
 
-```js
-/*01*/ var a = 1
-/*02*/ var outer = function() {
-  /*03*/ var inner = function() {
-    /*04*/ console.log(a)
-    /*05*/ var a = 3
-    /*06*/
-  }
+  ```js
+  /*01*/ var a = 1
+  /*02*/ var outer = function() {
+  /*03*/    var inner = function() {
+  /*04*/        console.log(a)
+  /*05*/        var a = 3
+  /*06*/
+            }
   /*07*/ inner()
   /*08*/ console.log(a)
   /*09*/
-}
-/*10*/ ouer()
-/*11*/ console.log(a)
-```
+         }
+  /*10*/ outer()
+  /*11*/ console.log(a)
+  ```
 
 - scope chaing 예1 코드 도식화
   - 그림을 보면서 라인별로 어떤 동작을 하는지 생각해보자
