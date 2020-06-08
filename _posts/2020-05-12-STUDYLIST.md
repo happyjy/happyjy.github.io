@@ -79,35 +79,15 @@ tags:
     - SCSS: Variables, Nesting, Mixins, Extend, Responsive Mixins
 
 * [...ing] 인스타그램 클론코딩 코드리뷰
+  - [x] redux, class component  
   - [x] django 설명, 가상개발환경
-  -
+  - [ ] hook, function component
+  - [ ] express, apollo, GraphQl, prisma
+    - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
+    - [git - backEnd](https://github.com/happyjy/prismagram)
+    - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
 
----
-
-# STUDY LIST
-
-- [ ] 인스타그램 클론코딩 코드리뷰 정리(react, graphql, Apollo, express, prisma)
-
-  - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
-  - [git - backEnd](https://github.com/happyjy/prismagram)
-  - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
-
-- [ ] typescript
-
-  - 학습레퍼런스
-
-    - [Typescript로 블록체인 만들기](https://academy.nomadcoders.co/p/build-a-blockchain-with-typescript)
-    - [초보를 위한 React JS](https://academy.nomadcoders.co/p/react-for-beginners)
-      - 리액트에 typescript를 적용하는 강의가 있음
-      - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
-    - [Do it! 타입스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163031482&orderClick=LEa&Kc=)
-
-- algorithm - Recursion
-
-  - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
-  - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
-
-* [ ] 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
+* [...ing] 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
   - 다루는 내용
     - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기, 매개변수의 명시화: 순차탐색, 매개변수의 명시화: 최대값 찾기, 매개변수의 명시화: Binary Search, 미로찾기, class Maze, 움직인경로, Counting Cells in a Blob
   - [제1-1강 Recursion의 개념과 기본 예제들 (1/3)](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)
@@ -115,10 +95,24 @@ tags:
   - [제1-3강 Recursion의 개념과 기본 예제들 (3/3)](https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3)
   - [제2-1강 Recursion의 응용: 미로찾기](https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4)
   - [제2-2강 ecursion의 응용: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
-  - [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
+  - [x] 20200609 [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
+---
+
+# STUDY LIST
+- [ ] typescript
+  - 학습레퍼런스
+    - [Typescript로 블록체인 만들기](https://academy.nomadcoders.co/p/build-a-blockchain-with-typescript)
+    - [초보를 위한 React JS](https://academy.nomadcoders.co/p/react-for-beginners)
+      - 리액트에 typescript를 적용하는 강의가 있음
+      - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
+    - [Do it! 타입스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163031482&orderClick=LEa&Kc=)
+
+- algorithm - Recursion
+  - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
+  - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
+
 
 - design pattern
-
   - [ ] 스터디한 내용 정리하기 - 코드스피츠 객체지향에서 배운 design pattern 정리
   - [ ] 스터디한 내용 정리하기 - 코드스피츠 객체지향에서 배운 solid 정리
   - [ ] 스터디한 내용 정리하기 - [자바스크립트 디자인 패턴](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788960778856&orderClick=LAG&Kc=)
