@@ -1,6 +1,6 @@
 ---
-title: 완전탐색_n-Queens
-date: 2020-02-24
+title: 완전탐색_nQueens
+date: 2020-06-09
 category: Algorithm
 author: jyoon
 tags:
