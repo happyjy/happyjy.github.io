@@ -41,10 +41,10 @@ tags:
   - [정리 blog](https://happyjy.netlify.app/category/#React)
   - [source code git](https://github.com/happyjy/learning-react)
   - [x] 202005 3장 리액트 개념 이해하기 (react상태 값과 속성값으로 관리하는 UI 데이터/ React element, React virtual dom/ lifecycle)  
-    : [실전리액트프로그래밍 - 3.3 생명주기 메서드 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/lifeCycle)
+    : [실전리액트프로그래밍 - 3.3 생명주기 메서드 포스팅](https://happyjy.netlify.app/react-life-cycle)
   - [x] 202005 4장 리액트 코딩은 결국 컴포넌트 작성이다 (컴포넌트 코드 작성/ 이벤트 처리 함수 작성/ 컴포넌트의 공통 기능 관리/ 렌더링속도 성능최적화)  
-    : [실전리액트프로그래밍 - 4.3 컴포넌트의 공통 기능 관리 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/ManageComponent)  
-    : [실전리액트프로그래밍 - 4.4 렌더링 속도를 올리기 위한 성능 최적화방법 - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/src/component/performance)  
+    : [실전리액트프로그래밍 - 4.3 컴포넌트의 공통 기능 관리 포스팅](https://happyjy.netlify.app/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B3%B5%ED%86%B5-%EA%B8%B0%EB%8A%A5-%EA%B4%80%EB%A6%AChoc-%EB%A0%8C%EB%8D%94%EC%86%8D%EC%84%B1%EA%B0%92)  
+    : [실전리액트프로그래밍 - 4.4 렌더링 속도를 올리기 위한 성능 포스팅](https://happyjy.netlify.app/%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%86%8D%EB%8F%84%EB%A5%BC-%EC%98%AC%EB%A6%AC%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95)  
     : [리액트를 다루는기술 10장 todoapp만들기 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)  
     : [리액트를 다루는기술 11장 todoapp 성능개선 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)  
   - [ ] 5장 리액트 내장 Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법

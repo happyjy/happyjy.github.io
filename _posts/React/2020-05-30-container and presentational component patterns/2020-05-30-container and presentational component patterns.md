@@ -2,6 +2,7 @@
 title: react "container and presentational component patterns"
 date: 2020-05-30
 author: jyoon
+image: ../../_images/react.png
 category: React
 tags:
   - container and presentational component patterns
