@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="demo"></div>
+  <script>
+    function search(arr, begin, end, target) {
+      if (begin > end) {
+        return false;
+      } else {
+        var middle = Math.floor((begin + end) / 2);
+        if (arr[middle] === target) {
+          return middle;
+        }
+
+        // if (begin > middle - 1) {
+        //   console.log(`search(${arr}, ${begin} > ${middle - 1} , ${target})`)
+        // } else {
+        //   console.log(`search(${arr}, ${begin}, ${middle - 1} , ${target})`)
+        // }
+        var index = search(arr, begin, middle - 1, target);
+
+        if (index != false) {
+          return index;
+        } else {
+          // if (middle + 1 > end) {
+          //   console.log(`search(${arr}, ${middle + 1} > ${end} , ${target})`)
+          // } else {
+          //   console.log(`search(${arr}, ${middle + 1}, ${end} , ${target})`)
+          // }
+          return search(arr, middle + 1, end, target);
+        }
+      }
+    }
+
+    var arr = [1, 2, 3, 4, 5]
+    console.log(search(arr, 0, 4, 5));
+  </script>
+
+</body>
+
+</html>

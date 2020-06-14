@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="demo"></div>
+  <div id="reverseDemo"></div>
+  <script>
+    function printChars(str) {
+      if (str.length === 0) {
+        return;
+      } else {
+        console.log(str.charAt(0));
+        document.getElementById("demo").innerHTML += str.charAt(0);
+        printChars(str.substring(1));
+      }
+    }
+
+    function printReverseChars(str) {
+      if (str.length === 0) {
+        return;
+      } else {
+        printReverseChars(str.substring(1));
+        console.log(str.charAt(0));
+        document.getElementById("reverseDemo").innerHTML += str.charAt(0);
+      }
+    }
+
+    console.log(printChars('wakeup!@#'))
+    console.log(printReverseChars('wakeup!@#'))
+  </script>
+
+</body>
+
+</html>

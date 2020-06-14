@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="demo"></div>
+  <script>
+    function findMax(arr, begin, end) {
+      if (begin === end) {
+        return arr[begin];
+      } else {
+        return Math.max(arr[begin], findMax(arr, begin + 1, end));
+      }
+    }
+    var arr = [1, 2, 3, 4, 5];
+    console.log(findMax(arr, 0, 4))
+  </script>
+
+</body>
+
+</html>

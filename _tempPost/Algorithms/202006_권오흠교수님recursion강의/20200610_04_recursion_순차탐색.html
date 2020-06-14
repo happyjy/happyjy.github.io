@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 순차탐색(주어진 배열 요소가 몇번째 인지 확인하기)
+    // 1. 배열사용
+    // 2. 매개변수의 명시화(recursion)
+
+    var arr = [1, 2, 3, 4, 5];
+    // 1.배열 사용
+    function search(arr, n, target) {
+      for (var i = 0; i < n; i++) {
+        if (arr[i] === target) {
+          return i;
+        }
+      }
+      return false;
+    }
+
+    console.log(search(arr, arr.length, 4));
+
+
+    // 2. 매개변수의 명시화(recursion)
+    function searchRecursion(arr, begin, end, target) {
+      if (begin > end) {
+        return false;
+      } else if (target === arr[begin]) {
+        return begin;
+      } else {
+        return searchRecursion(arr, begin + 1, end, target);
+      }
+    }
+    console.log(searchRecursion(arr, 0, arr.length, 4));
+  </script>
+
+</body>
+
+</html>

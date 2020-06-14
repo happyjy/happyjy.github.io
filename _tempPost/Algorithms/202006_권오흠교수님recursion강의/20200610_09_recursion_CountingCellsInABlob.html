@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="demo"></div>
+  <script>
+
+    const BACKGROUND_COLOR = 0;
+    const IMAGE_COLOR = 1;
+    const ALREADY_COUNTED = '@';
+    const N = 8
+    const grid = [
+      [1, 0, 0, 0, 0, 0, 0, 1],
+      [0, 1, 1, 0, 0, 1, 0, 0],
+      [1, 1, 0, 0, 1, 0, 1, 0],
+      [0, 0, 0, 0, 0, 1, 0, 0],
+      [0, 1, 0, 1, 0, 1, 0, 0],
+      [0, 1, 0, 1, 0, 1, 0, 0],
+      [1, 0, 0, 0, 1, 0, 0, 1],
+      [0, 1, 1, 0, 0, 1, 1, 1]
+    ]
+
+    function countCells(x, y) {
+      if (x < 0 || x >= N || y < 0 || y >= N) {
+        return 0;
+      } else if (grid[x][y] != IMAGE_COLOR) {
+        return 0;
+      } else {
+        grid[x][y] = ALREADY_COUNTED;
+        return 1 + (
+          //북, 북동, 동, 동남, 남, 남서, 서, 북서, 
+          countCells(x, y + 1) +
+          countCells(x + 1, y + 1) +
+          countCells(x + 1, y) +
+          countCells(x + 1, y - 1) +
+          countCells(x, y - 1) +
+          countCells(x - 1, y - 1) +
+          countCells(x - 1, y) +
+          countCells(x - 1, y + 1)
+        )
+      }
+    }
+
+    function printGrid() {
+      grid.forEach(v => {
+        console.log(v.toString());
+        console.log('----------');
+      })
+    }
+
+    console.log(countCells(5, 3));
+    printGrid();
+    let gridBlob = 0;
+    grid.forEach(row => {
+      row.forEach(cell => {
+        if (cell === '@') gridBlob++;
+      })
+    })
+  </script>
+
+</body>
+
+</html>
