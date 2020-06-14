@@ -1,8 +1,8 @@
 ---
 title: Arrow Function
 date: 2020-03-15
-catetory: ES6
 author: jyoon
+category: ES6
 tags:
   - Arrow Function
 ---

@@ -183,7 +183,7 @@ tags:
   - 한개의 category당 한개의 값만 갖기 위해서(제일 마지막에 들어 온것만 덮어 쓴다)
 - 아래 코드 설명
   - 아래 주석 설명1, 설명2 참고
-  - processors의 순환문의 pk: Processor의 catetory(cat)
+  - processors의 순환문의 pk: Processor의 catetgory(cat)
 - [보완]: 아래 설명을 따로 빼서 적어 놓기
 
 ```js
