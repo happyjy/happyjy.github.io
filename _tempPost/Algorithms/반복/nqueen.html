@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <script>
+    // 1row에 1queen을 놓을 수 있다. 
+    let cols = [];  // 말들이 놓여 있는 column/ column[rowIdx] = columnIdx
+    let n;          // 체크판 크기
+    let cnt;
+
+    function queens(level) {
+      // level(=row)단위로 검사 
+      if (!promissing(level)) {
+        return false;
+      } else if (level === n) {
+        // # 종단점
+        cols.shift();
+        console.log(cols.toString());
+        return true;
+      }
+
+      for (let i = 1; i <= n; i++) {  //colum index
+        // cols[] : row index
+        // level(=row)다음 row에 어디에 말을 놓을지 backtracking; 
+        cols[level + 1] = i;
+        if (queens(level + 1)) {
+          break;
+        }
+      }
+
+      return false;
+    }
+
+    function promissing(level) {
+      // queen말들이 row마다 공격 할 수 없는 위치(직선, 대각선으로 공격한다.)에 있는지 확인 
+      // 직선 공격: 1. row별로 1개의 말을 놓는것으로 정함/ 2. 그래서 column 기준으로 공격가능한지 확인
+      for (let i = 1; i < level; i++) {
+        if (cols[i] == cols[level]) {
+          // 같은 column에 있는지 확인
+          return false;
+        } else if (level - i == Math.abs(cols[level] - cols[i])) {
+          // 대각선에 놓였는지 검사
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function solution(level) {
+      let answer = 0;
+      n = level;
+      queens(0);
+    }
+
+    console.log(solution(4));
+  </script>
+</body>
+
+</html>

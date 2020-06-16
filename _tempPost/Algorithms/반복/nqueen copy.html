@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let cols = [];
+    let n;
+
+    function queens(level) {
+      if (!promissing(level)) {
+        return false;
+      } else if (level === n) {
+        cols.shift();
+        console.log(cols.toString());
+        return true;
+      }
+
+      for (let i = 1; i <= n; i++) {
+        cols[level + 1] = i;
+        if (queens(level + 1)) {  // level + i => level + 1
+          break;
+        }
+      }
+
+      return false;
+    }
+
+    function promissing(level) {
+      for (let i = 1; i < level; i++) {
+        if (cols[level] == cols[i]) {
+          return false;
+        } else if (level - i == Math.abs(cols[i] - cols[level])) {
+          /*
+          level이 row3에 있을때 row1, 2에 있는 말들과 겹치는지 확인한다.
+          row1 : i 검사 
+          row2 : i
+          row3 : level
+          row4 : 
+          row5 : 
+          */
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function solution(level) {
+      n = level;
+      queens(0);
+    }
+
+    console.log(solution(4))
+  </script>
+
+</body>
+
+</html>
