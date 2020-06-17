@@ -1,5 +1,5 @@
 ---
-title: Django 프로젝트 가상환경수정, 쿠키커터 재설치, 디비 설정 재설정
+title: RESET Django virtural Environment
 date: 2020-05-23
 author: jyoon
 category: Django
@@ -8,6 +8,9 @@ tags:
   - Instagram clone coding
   - workaround
 ---
+
+Django 가상환경에 문제가 생겨 Django프로젝트 가상환경수정, 쿠키커터 재설치, 디비 설정 재설정을 했습니다. 
+
 # virtual environment에 문제 생김
 
 - 문제

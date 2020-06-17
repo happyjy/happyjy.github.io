@@ -1,5 +1,5 @@
 ---
-title: apollo-GraphQL CRUD
+title: APOLLO GraphQL CRUD in project
 date: 2020-06-15
 author: jyoon
 category: ToyProj

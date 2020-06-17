@@ -1,5 +1,5 @@
 ---
-title: Django에 대해서
+title: Django frameworks
 date: 2020-05-23
 author: jyoon
 category: Django

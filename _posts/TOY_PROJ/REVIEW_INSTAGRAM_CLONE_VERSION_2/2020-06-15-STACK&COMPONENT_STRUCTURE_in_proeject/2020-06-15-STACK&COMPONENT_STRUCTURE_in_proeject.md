@@ -1,5 +1,5 @@
 ---
-title: 인스타그램 클론코딩 2번째 기술스택, 프로젝트 컴포넌트 구조
+title: STACK and COMPONENT STRUCTURE in proeject
 date: 2020-06-15
 author: jyoon
 category: ToyProj
@@ -10,7 +10,7 @@ tags:
 
 
 # 메인 화면 캡쳐 
-![](instagramclonecoding.png)
+![](./img/instagramclonecoding.png)
 
 # 기술스택
 

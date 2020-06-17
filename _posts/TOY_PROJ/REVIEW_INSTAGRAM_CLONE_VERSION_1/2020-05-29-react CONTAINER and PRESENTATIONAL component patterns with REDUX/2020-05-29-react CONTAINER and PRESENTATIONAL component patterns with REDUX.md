@@ -1,5 +1,5 @@
 ---
-title: react "container and presentational component patterns" with "redux"
+title: react CONTAINER and PRESENTATIONAL component patterns with REDUX
 date: 2020-05-29
 author: jyoon
 category: ToyProj
@@ -124,19 +124,19 @@ tags:
 
   - 아래 사진 세개는 Feed/index.js > mapDispatchToProps > dispatch(photoActions.getFeed()); 함수 디버깅 한 내용디ㅏ.
   - 순서는 역순으로 되어 있으며 Call Stack 부분을 확인해보자
-    ![](./dispatch3.png)
+    ![](./img/dispatch3.png)
     - 위 사진 설명
       - action함수: dispatch함수에 넘긴 함수 (Feed/index.js에서는 getFeed() api action 함수)
       - api aciton 함수가 수행될때 받는 파라미터 두개 dispatch, getState는 여기서 부여 되는 것이다.
 
-    ![](./dispatch2.png)
+    ![](./img/dispatch2.png)
 
-    ![](./dispatch1.png)
+    ![](./img/dispatch1.png)
 
 - Feed/index.js "mapStateToProps"는 언제 수행되는거지?
   - **"api actions function"에 fetching response 받은 promise then 부분에서 "dispatch"함수에 의해 호출**
 
-  ![](./mapStateToPropsFunctionStartPoint.png)
+  ![](./img/mapStateToPropsFunctionStartPoint.png)
   
 
 - 정리

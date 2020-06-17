@@ -1,5 +1,5 @@
 ---
-title: INSTAGRAM CLONE VER1
+title: REVIEW INSTAGRAM CLONE VERSION 1
 date: 2020-02-23
 author: jyoon
 category: ToyProj
@@ -11,9 +11,12 @@ tags:
   - Postgres
 ---
 
-# Readme
+# 간략 설명
 
-Cloning Instagram with Python django + React
+* React, django(Python), postgreSQL를 이용하여 인스타그램 로그인, 피드, 댓글, 좋아요 기능 구현
+* react-redux를 사용하여 컴포넌트 상태 관리 
+* container, presentational 구조 적용
+
 
 # github
 
