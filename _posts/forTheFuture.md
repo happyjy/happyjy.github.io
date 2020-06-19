@@ -97,7 +97,7 @@
   - [pub-sub pattern 설명](https://rinae.dev/posts/why-every-beginner-front-end-developer-should-know-publish-subscribe-pattern-kr)
 * [ ] observer pattern, pubsub pattern 차이점
   * [Observer 패턴과 Publisher/Subscriber(Pub-Sub) 패턴의 차이점]([https://jistol.github.io/software%20engineering/2018/04/11/observer-pubsub-pattern/](https://jistol.github.io/software engineering/2018/04/11/observer-pubsub-pattern/))
-  * [초보 프론트엔드 개발자들을 위한 Pub-Sub(Publish-Subscribe) 패턴을 알아보기](https://rinae.dev/posts/why-every-beginner-front-end-developer-should-know-publish-subscribe-pattern-kr)
+  * * [ ] [초보 프론트엔드 개발자들을 위한 Pub-Sub(Publish-Subscribe) 패턴을 알아보기](https://rinae.dev/posts/why-every-beginner-front-end-developer-should-know-publish-subscribe-pattern-kr)
 * [ ] event delegator pattern
 * [ ] mvvm pattern
   
@@ -183,12 +183,14 @@
 * FreeCodeCamp - Style Fancy Buttons: CSS Tutorial (Day 1 of CSS3 in 30 Days)](https://www.youtube.com/watch?v=pmKyG3NBY_k&list=PLWKjhJtqVAbl1AfjiGyYxwpdAPi5v-1OU)
 * [CSS Grid Tutorial | CSS Grid Crash Course](https://www.youtube.com/watch?v=EFafSYg-PkI)
 
-# 본책
+# 본 책
 
 - [x] 자바스크립트 완벽가이드
 - [x] 자바스크립트 패턴
 - [x] 이팩티브 자바스크립트
 - [x] 자바스크립트 코어 
+- [x] 실전 리액트 프로그래밍
+- [x] 리액트를 다루는 기술
 
 # 본 강의
 
@@ -196,8 +198,10 @@
 - [x] 코드스피츠 객체지향 자바스크립트 
 - [x] 노마드코더 인스타그램 클론 코딩 version 1
   * react, redux, django, progresql
-- [x] 노마드코더 인스타그램 클론 코딩 version 1
-  * react, hook, graphQl, apollo, Express, prismagram
+- [x] 노마드코더 인스타그램 클론 코딩 version 2
+  * [x] react, hook, graphQl, apollo, Express, prismagram
+* [x] 노마드코더 redux, react-redux
+* [x] 권오흠 2015년 봄 학기 유투브 강의 recursion 일부
 - [ ] [...ING]노마드코더 FLEX, GRID/ 웹페이지 클론
 
 
@@ -221,9 +225,9 @@
   * [ ] [문성욱](https://munseonguk.github.io/#education)
 
   * TimeLIne
-    * [TimeLine](https://www.w3schools.com/howto/howto_css_timeline.asp)
+    * [W3SHCOOL - TimeLine](https://www.w3schools.com/howto/howto_css_timeline.asp)
 
-# prefer site
+# REFERENCE
 
 - [javascript.info](https://javascript.info/)
 - [publishing guide](https://www.w3schools.com/howto/)
@@ -240,13 +244,39 @@
 
 
 
-## 개발자 인터뷰 
+## 개발자 구직
 
-정원희
+* 정원희 
+  * [NOTION](https://www.notion.so/by-Wonny-d8f197d6f0cb4f24ba3ad3c1cfb732b5)
+
+이현섭-비바퍼블리카
+
+조영륜 - 디자이너
+
+청천향로 - 이동욱
+
+한재엽 - 프론트에드 개발자
+
+유용우 - 야놀자 개발자 
+
+구인본 우아한형제들 개발자
+
+
 
 # TODO 
 
-- [ ] ECOUNT EFE LIB STRUCTURE 설명
+* * [ ] [JAVASCRIPT INFO - Promises, async/await](https://javascript.info/async)
+  * [ ] [JAVASCRIPT INFO - Generators, advanced iteration](https://javascript.info/generators-iterators)
+
+* * [ ] [JAVASCRIPT INFO - DOM tree](https://javascript.info/dom-nodes)
+
+    
+
+* * [ ] 블로그에 TimeLIne 작성하기
+
+* * [ ] [지도 표기하는걸로 확인해보기 - 초보 프론트엔드 개발자들을 위한 Pub-Sub(Publish-Subscribe) 패턴을 알아보기](https://rinae.dev/posts/why-every-beginner-front-end-developer-should-know-publish-subscribe-pattern-kr)
+
+* * [ ] ECOUNT EFE LIB STRUCTURE 설명
 
 ```
 
