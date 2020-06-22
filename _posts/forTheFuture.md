@@ -4,6 +4,43 @@
 
 > 여기서 물러나면 내미래는 독고다이 끝 이라는 마음으로 
 
+
+
+# 개발자 
+
+- 프레임워크만 잘다루는 개발자 되지 않기 
+- 성장은 탄탄한 기본기로부터 나온다 
+- 기본기 !
+  - HTML, CSS 원리와, 최신 스팩(HTML5, CSS, SASS) 관련지식
+  
+  - VanillaJS
+  
+  - ES6+
+  
+  - CS
+  
+  - Algorithms
+    
+    프로그래머스 기준
+    
+    - 높음: 해시, 정렬, 완전탐색, 깊이/너비 우선 탐색(DFS/BFS)
+    - 보통: 스택/큐, 힙,  
+    - 낮음: 탐욕법(Greeedy), 동적계획법(Dynamic Programming), 이분탐색, 그래프
+    
+  - Data Structure
+    
+    - Array, Linked List, Stack, Queue
+    - Binary Tree, Binary Search Tree, Heap, Hashing
+    - Graph, Matrix, Misc, Advanced DataStructure
+    
+  - Network
+  
+  - Design Pattern
+  
+    - [ ] 제로초 사이트 보고 list up 하기
+  
+  - Software architecture
+
 # BRAIN STORMING 
 
 ## 기존산업, 현재산업 비교 
@@ -91,6 +128,67 @@
 
 # ECOUNT EFE LIB STRUCTURE
 
+```
+# page
+	* page 인스턴스로 header, contents, footer에 들어갈 instance를 만드는 시작 단계 인스턴스 
+	* 생성시 page에 생성될 인스턴스들을 캐싱 해놓는다.(event trigger시 여기서 인스턴스 찾는다.) 
+	
+# control
+	* 위젯 rendering시 필요로 하는 공통 property
+ 	* 위젯 기능 함수 
+
+# control을 상속 받는 아이들
+    * control.input/ control.select/ control.label/ contorl.button
+    / control.date ... 
+
+# widget
+	* widget 본인의 control을 갖고 있으면 이 control은 최상위 control을 상속 받아서 구현
+
+
+--------------------------------------------------------
+# control proeprty 구조
+	ㄴ state: 위젯 상태 property
+		ㄴcomponent: 위젯 component가 가질 property(id, name, attr, oppt, service ...)
+         ㄴfunctions: component 가 갖는 기타 기능 설정 property
+			
+# widget property 구조 
+	ㄴ 위젯 기본 property
+		ㄴ__proto__: control.[widget Name]: 위젯에 해당하는 control
+			ㄴ__proto__: control
+				...
+				ㄴ Object prototype
+	
+--------------------------------------------------------
+# Event 설계
+## 개념 설명
+    * Observer pattern 사용으로 document가 ready 될때 mouse, click, key, change, focus, input등등 이벤트를 dom에 한번 등록한다. 
+    * 등록한 이벤트 trigger될때 event의 target dom의data-set정보(target instance, rendering시 등록한 cid, service, funtion etc)을 parsing 한다. 
+    * parsing 데이터 중 target instance control에 parsing한데이터, event data, pipeline design pattern 적용한 store객체를 넘긴다. 
+    * 마지막으로 event가 trigger된 page로 위 paring한 데이터를 보내줘 개별적인 event 처리 가능하다.
+## Observer pattern 장점
+    * event가 일어날 dom, 종류별로 event를 구현해야하지만 Observer pattern은 window, document에 한번 등록한뒤 event가 trigger가 될때 event target에 evnet type별로 구현부가 한 command로 event를 모을 수 있기 때문에 공통 로직을 정리 하기 용이하다. 
+    * 페이지별로 event를 trigger시켜 줌으로 trigger된 dom의 개별적인 event처리가 가능하다.
+  	
+
+--------------------------------------------------------
+ecount.lib.js
+	- even target의 proeprty paring 구현부(finde el, instance ... )
+ecount.global.js
+	- page에서 캐싱한 instance register 구현부
+ecount.event.js
+	- delegator pattern 구현부
+ecount.handler.event.js
+	- observer pattern 구현부, event parse 구현부, 
+ecount.handler.event.navtive.js
+	- event 등록, trigger 구현부
+
+
+```
+
+
+
+
+
 * [ ] ECOUNT EFE LIB STRUCTURE 설계도 같은게 있었는데...
 * [ ] observer pattern
 
@@ -114,7 +212,16 @@
 # Design pattern
 
 * [GFG](https://www.geeksforgeeks.org/software-design-patterns/)
+  
   * 웹, 자바스크립트 전용은 아님
+  
+* * [ ] [제로초 - 디자인패턴](https://www.zerocho.com/category/JavaScript/post/5800b4831dfb250015c38db5)
+
+  * 자바스크립트로 이정도 패턴을 알아둬야 겠다.
+
+  * 전에 봤던 것들인데 나도 정리해두자
+
+    
 
 
 
@@ -158,21 +265,47 @@
 
 
 
+# Javascript fundamental
 
+
+
+- - [ ] [JAVASCRIPT INFO - Promises, async/await](https://javascript.info/async)
+- - [ ] [JAVASCRIPT INFO - Generators, advanced iteration](https://javascript.info/generators-iterators)
+
+- - [ ] [JAVASCRIPT INFO - DOM tree](https://javascript.info/dom-nodes)
+
+    
+
+* * [ ] [prototype - poiemaweb](https://poiemaweb.com/js-prototype)
+* * [ ] [dom - poiemaweb](https://poiemaweb.com/js-dom)
+
+* * [ ] [함수 - poiemaweb](https://poiemaweb.com/js-function)
+
+* * [ ] [동기식처리모델 vs 비동기식처리모델 - poiemaweb](https://poiemaweb.com/js-async)
+
+* * [ ] [데이터타입과 변수 - poiemaweb](https://poiemaweb.com/js-data-type-variable)
+
+    * 호이스팅
+    * 함수 레벨 스코프(Function-level scope)
+    * 블록 레벨 스코프(Block-level scope)
+
+* * [ ] [scope - poiemaweb](https://poiemaweb.com/js-scope) 
+
+    
 
 
 # Javascript Game
 
 * * [ ] [FreeCodeCamp - Learn JavaScript by Building 7 Games - Full Course](https://www.youtube.com/watch?v=lhNdUVh3qCc)
   
-  * 중년 여자분 이신데.. 대단. 만들어 보고 싶다 js로 게임
-  * * [ ] emory Game - Level 1
-  * * [ ] Whack-a-mole - level 1
-  * * [ ] Connect Four - level 1
-  * * [ ] Nokia 3310 Snake - level 2
-  * * [ ] Space Invaders - level 2
-  * * [ ] Frogger - level 2
-  * * [ ] Tetris - level 3
+* * 중년 여자분 이신데.. 대단. 만들어 보고 싶다 js로 게임
+* * [ ] emory Game - Level 1
+* * [ ] Whack-a-mole - level 1
+* * [ ] Connect Four - level 1
+* * [ ] Nokia 3310 Snake - level 2
+* * [ ] Space Invaders - level 2
+* * [ ] Frogger - level 2
+* * [ ] Tetris - level 3
 * [Create a Platformer Game with JavaScript - Full Tutorial](https://www.youtube.com/watch?v=w-OKdSHRlfA)
   
   * First, learn to organize the code using the Model, View, Controller (MVC) strategy and the principles of Object Oriented Programming (OOP). Then, learn how to program movement, draw a tile map, and detect collision. Finally, see how to animate the sprites, load levels, and collect items. 
@@ -242,7 +375,9 @@
   - [강의](https://nomadcoders.co/)
     - [유투브](https://www.youtube.com/channel/UCUpJs89fSBXNolQGOYKn0YQ)
 
-
+* [엔지니어대한민국](https://www.youtube.com/user/damazzang/playlists)
+  * DS, ALGORITHMS 이론 잡기 좋음
+  * big operation, Arrays and STrings, Dynamic Programming, Trees&Grpah, Sorting and Searching, Big O, Stack & Queue, Linked List
 
 ## 개발자 구직
 
@@ -265,12 +400,21 @@
 
 # TODO 
 
-* * [ ] [JAVASCRIPT INFO - Promises, async/await](https://javascript.info/async)
-  * [ ] [JAVASCRIPT INFO - Generators, advanced iteration](https://javascript.info/generators-iterators)
-
-* * [ ] [JAVASCRIPT INFO - DOM tree](https://javascript.info/dom-nodes)
-
-    
+* 프레임워크만 잘다루는 개발자 되지 않기 
+* 성장은 탄탄한 기본기로부터 나온다 
+* 기본기 
+  * VanillaJS
+  * ES6+
+  * CS
+  * Algorithms
+    * [ ] 작성하기
+    * 배열, 탐욕, DSP/
+  * Data Structure
+    * [ ] 작성하기
+    * Queue .... 
+  * Network
+  * Design Pattern
+  * Software architecture
 
 * * [ ] 블로그에 TimeLIne 작성하기
 
