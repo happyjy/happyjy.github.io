@@ -151,7 +151,7 @@
 		ㄴcomponent: 위젯 component가 가질 property(id, name, attr, oppt, service ...)
          ㄴfunctions: component 가 갖는 기타 기능 설정 property
 			
-# widget property 구조 
+# widget instance property 구조 
 	ㄴ 위젯 기본 property
 		ㄴ__proto__: control.[widget Name]: 위젯에 해당하는 control
 			ㄴ__proto__: control
