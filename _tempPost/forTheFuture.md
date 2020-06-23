@@ -12,26 +12,19 @@
 - 성장은 탄탄한 기본기로부터 나온다 
 - 기본기 !
   - HTML, CSS 원리와, 최신 스팩(HTML5, CSS, SASS) 관련지식
-  
   - VanillaJS
-  
   - ES6+
-  
   - CS
-  
   - Algorithms
-    
     프로그래머스 기준
-    
     - 높음: 해시, 정렬, 완전탐색, 깊이/너비 우선 탐색(DFS/BFS)
     - 보통: 스택/큐, 힙,  
     - 낮음: 탐욕법(Greeedy), 동적계획법(Dynamic Programming), 이분탐색, 그래프
-    
   - Data Structure
-    
-    - Array, Linked List, Stack, Queue
-    - Binary Tree, Binary Search Tree, Heap, Hashing
-    - Graph, Matrix, Misc, Advanced DataStructure
+ 
+      
+      
+ 
     
   - Network
   
@@ -226,20 +219,33 @@ ecount.handler.event.navtive.js
 
 
 # DEV OPS
-
 프론트 엔드가 꼭 알아야할 분야가 있다고 생각
-
 * bundling 
-* 
 
-# DS, ALGO
 
+# Data structure
+   - Array, Linked List, Stack, Queue
+    - Binary Tree, Binary Search Tree, Heap, Hashing
+    - Graph, Matrix, Misc, Advanced DataStructure
+    - 자바스크립트로 하는 자료 구조와 알고리즘 [핵심 자료 구조와 알고리즘을 이해하고 구현하기 위한 입문서]
+      - 자바스크립트 문자열 기본 
+      - 정규표현식
+      - 재귀 
+      - 집합
+      - 검색과 정렬(선형, 이진 검색)/ (거품정렬, 선택정렬, 삽입정렬, 빠른정렬, 빠른선택, 병합정렬, 계수정렬, 자바스크립트 내장정렬)
+      - 해시 테이블
+      - 스택과 큐 
+      - 연결 리스트 (단일 연결리스트, 이중 연결 리스트)
+      - 캐싱(LFU, LRU)
+      - 트리(이진트리, 트리순회[preorder, inorder, postorder], 이진 검색 트리, AVL트리)
+      - 힙(이진 힙 배열 인덱스 구조, 최소힙, 힙정렬)
+      - 그래프(DFS, BFS, Undirected Graph, Directed Graph)
+      - 고급문자열 
+      - 동적 프로그래밍
+
+# Algorithms
 > * 50시간만 투자하자 
->
 > * 프로그래머스 기준으로 보통 3단계 테스트(동적프로그래밍 포함)가 코딩인터뷰때 나오는 시험 문제
-
-* 이론
-
   * 안경잡이개발자
     * [네이버 블로그](http://blog.naver.com/PostList.nhn?blogId=ndb796&from=postList&categoryNo=128)
     * [유투브](https://www.youtube.com/watch?v=qQ5iLNjpxSk&list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz)
@@ -254,9 +260,7 @@ ecount.handler.event.navtive.js
       * [GFG ALGO - greedy](https://www.geeksforgeeks.org/greedy-algorithms/)
 
 * 문제 풀이 
-
   * 프로그래머스
-
     * 단계별로 나뉘어져 있으며 보통 3단계 테스트(동적프로그래밍 포함)가 코딩인터뷰때 나오는 시험 문제
     
     
@@ -267,23 +271,15 @@ ecount.handler.event.navtive.js
 
 # Javascript fundamental
 
+- [ ] [JAVASCRIPT INFO - Promises, async/await](https://javascript.info/async)
+- [ ] [JAVASCRIPT INFO - Generators, advanced iteration](https://javascript.info/generators-iterators)
 
-
-- - [ ] [JAVASCRIPT INFO - Promises, async/await](https://javascript.info/async)
-- - [ ] [JAVASCRIPT INFO - Generators, advanced iteration](https://javascript.info/generators-iterators)
-
-- - [ ] [JAVASCRIPT INFO - DOM tree](https://javascript.info/dom-nodes)
-
-    
-
-* * [ ] [prototype - poiemaweb](https://poiemaweb.com/js-prototype)
-* * [ ] [dom - poiemaweb](https://poiemaweb.com/js-dom)
-
-* * [ ] [함수 - poiemaweb](https://poiemaweb.com/js-function)
-
-* * [ ] [동기식처리모델 vs 비동기식처리모델 - poiemaweb](https://poiemaweb.com/js-async)
-
-* * [ ] [데이터타입과 변수 - poiemaweb](https://poiemaweb.com/js-data-type-variable)
+- [ ] [JAVASCRIPT INFO - DOM tree](https://javascript.info/dom-nodes)
+* [ ] [prototype - poiemaweb](https://poiemaweb.com/js-prototype)
+* [ ] [dom - poiemaweb](https://poiemaweb.com/js-dom)
+* [ ] [함수 - poiemaweb](https://poiemaweb.com/js-function)
+* [ ] [동기식처리모델 vs 비동기식처리모델 - poiemaweb](https://poiemaweb.com/js-async)
+* [ ] [데이터타입과 변수 - poiemaweb](https://poiemaweb.com/js-data-type-variable)
 
     * 호이스팅
     * 함수 레벨 스코프(Function-level scope)
