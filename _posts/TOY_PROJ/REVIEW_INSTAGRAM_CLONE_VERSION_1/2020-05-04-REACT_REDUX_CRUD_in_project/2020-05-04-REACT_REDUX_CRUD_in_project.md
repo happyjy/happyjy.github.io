@@ -1,5 +1,5 @@
 ---
-title: REVIEW INSTAGRAM CLONE VERSION 1
+title: REACT REDUX CRUD in project
 date: 2020-05-04
 author: jyoon
 category: ToyProj

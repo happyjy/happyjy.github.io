@@ -1,5 +1,5 @@
 ---
-title: INSTAGRAM CLONE VER2
+title: REVIEW INSTAGRAM CLONE VERSION 2
 date: 2020-02-24
 author: jyoon
 category: ToyProj
