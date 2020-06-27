@@ -1,5 +1,5 @@
 ---
-title: STACK and COMPONENT STRUCTURE in proeject
+title: COMPONENT STRUCTURE in proeject
 date: 2020-06-15
 author: jyoon
 category: ToyProj
