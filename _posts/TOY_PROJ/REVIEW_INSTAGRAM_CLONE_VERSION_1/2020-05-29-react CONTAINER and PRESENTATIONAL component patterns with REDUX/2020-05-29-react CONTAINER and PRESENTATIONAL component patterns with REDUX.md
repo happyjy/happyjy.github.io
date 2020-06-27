@@ -1,5 +1,5 @@
 ---
-title: react CONTAINER and PRESENTATIONAL component patterns with REDUX
+title: React CONTAINER and PRESENTATIONAL component patterns with Redux
 date: 2020-05-29
 author: jyoon
 category: ToyProj
