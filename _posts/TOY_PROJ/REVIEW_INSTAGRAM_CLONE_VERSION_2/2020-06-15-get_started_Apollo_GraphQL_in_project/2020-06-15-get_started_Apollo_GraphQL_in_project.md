@@ -1,5 +1,5 @@
 ---
-title: get started ApolloGraphQL inproject
+title: get started Apollo GraphQL inproject
 date: 2020-06-15
 author: jyoon
 category: ToyProj

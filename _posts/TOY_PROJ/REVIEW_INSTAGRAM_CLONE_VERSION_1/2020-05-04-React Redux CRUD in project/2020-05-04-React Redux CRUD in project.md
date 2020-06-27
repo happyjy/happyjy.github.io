@@ -1,5 +1,5 @@
 ---
-title: react redux CRUD in project
+title: React Redux CRUD in project
 date: 2020-05-04
 author: jyoon
 category: ToyProj

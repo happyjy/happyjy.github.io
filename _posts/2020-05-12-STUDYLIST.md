@@ -110,7 +110,7 @@ tags:
       - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
     - [Do it! 타입스크립트 프로그래밍](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791163031482&orderClick=LEa&Kc=)
 
-- algorithm - Recursion
+- algorithm - recursion
   - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
   - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
 
