@@ -5,10 +5,78 @@ import Layout from "../components/Layout"
 import SEO from "../components/seo"
 
 const About = () => (
-  <Layout pageTitle="About me">
+  <Layout pageTitle="About me" useSidebar={false}>
     <SEO title="About" />
-    <p> 나에 대한 이력서를 써넣고 상기시키며 내가 몇년차 인지 그리고 내가 무슨 일을 해왔는지 돌아보면서 반성하며 다음을준비하는 용도 </p>
-    <p> 사람인 경력 기술서 많이 좋아졌던게 그거 클론해서 마크업 하는것 해보자</p>
+    <div className="timelineBody">
+      <div className="timeline">
+        <div className="container left">
+          <div className="content">
+            <h2>2017</h2>
+            <p>
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+        </div>
+        <div className="container right">
+          <div className="content">
+            <h2>2016</h2>
+            <p>
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+        </div>
+        <div className="container left">
+          <div className="content">
+            <h2>2015</h2>
+            <p>
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+        </div>
+        <div className="container right">
+          <div className="content">
+            <h2>2012</h2>
+            <p>
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+        </div>
+        <div className="container left">
+          <div className="content">
+            <h2>2011</h2>
+            <p>
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+        </div>
+        <div className="container right">
+          <div className="content">
+            <h2>2007</h2>
+            <p>
+              Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
+              admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea
+              quis iuvaret expetendis his, te elit voluptua dignissim per, habeo
+              iusto primis ea eam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </Layout>
 )
 

@@ -23,6 +23,7 @@ const Layout = ({
   postAuthor,
   tableOfContents,
   numberOfPost,
+  useSidebar = true,
 }) => {
   // console.log("### Layout: ", {
   //   authorImageFluid,
@@ -48,14 +49,19 @@ const Layout = ({
       <div className="container" id="content">
         {/* <h1 className="textCenter">{pageTitle}</h1> */}
         <Row>
-          <Col md="8">{children}</Col>
-          <Col md="4">
-            <Sidebar
-              author={postAuthor}
-              authorFluid={authorImageFluid}
-              tableOfContents={tableOfContents}
-            />
-          </Col>
+          {!!useSidebar && (
+            <>
+              <Col md="8">{children}</Col>
+              <Col md="4">
+                <Sidebar
+                  author={postAuthor}
+                  authorFluid={authorImageFluid}
+                  tableOfContents={tableOfContents}
+                />
+              </Col>
+            </>
+          )}
+          {!useSidebar && <Col>{children}</Col>}
         </Row>
       </div>
       <Footer />
