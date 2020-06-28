@@ -5,8 +5,8 @@ import authors from "../util/authors"
 import { graphql } from "gatsby"
 
 const authorPosts = ({ data, pageContext }) => {
-  console.log("####### author-post.js ")
-  console.log({ data, pageContext })
+  // console.log("####### author-post.js ")
+  // console.log({ data, pageContext })
   const { totalCount } = data.allMarkdownRemark
   const author = authors.find(x => x.name === pageContext.authorName)
   const pageHeader = `${totalCount} Posts by: ${pageContext.authorName}`

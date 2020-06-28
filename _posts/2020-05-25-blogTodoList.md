@@ -7,6 +7,7 @@ tags:
   - studyList
 ---
 
+- [ ] markdown #, ##, ### css 색 수정하기 
 - [ ] 포트 바꾸기 
 - [ ] markdown css가 잘 적용안되는 것같음.
 - [ ] about에 이력, 교육이력, toyProject history component 형식으로 보여주기, 클릭시 모달로 자세한 사항 보이게
