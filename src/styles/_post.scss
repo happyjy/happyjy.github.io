@@ -1,6 +1,6 @@
 .blog-post-content {
   margin-top: 3rem;
-  font-family: 'Noto Serif KR';
+  font-family: "Noto Serif KR";
 
   h1,
   h2,
@@ -8,15 +8,20 @@
   h4,
   h5,
   h6 {
-    font-family: 'Noto Serif KR';
+    font-family: "Noto Serif KR";
   }
   h1 {
+    color: #5f00ba;
     margin-top: 4rem;
   }
   h2 {
+    color: #a09be7;
     margin-top: 3rem;
   }
   h3 {
+    color: #fff2f1;
+    // color: #b0ff92;
+    // color: #D6FF79;
     margin-top: 2rem;
   }
 
@@ -28,7 +33,7 @@
     }
   }
   code {
-    font-family: 'Nanum Gothic Coding';
+    font-family: "Nanum Gothic Coding";
   }
 
   blockquote {
@@ -40,15 +45,24 @@
     padding: 0 1rem 0 1rem;
   }
 }
+// # category page
+// .categories {
+//   // margin-top: 20px;
+// }
 
+.categories > ul {
+  padding: 0px;
+  list-style-type: none;
+}
 
-
-
-
-
-
-
-
+.categories > .categoryPost > li {
+  margin-top: 60px;
+  // list-style-type: none;
+}
+.categories > .categoryPost > li > a {
+  margin-left: 30px;
+  display: block;
+}
 
 .categories > .label > li {
   margin: 0;
@@ -73,4 +87,3 @@
 .tags > .label > li > a {
   margin-bottom: 10px;
 }
-

@@ -5,7 +5,7 @@ author: jyoon
 image: ../../_images/javascript.png
 category: Javascript Core
 tags:
-  - Javascript
+  - JavaScript
 ---
 
 javascript Core를 정리하겠다고 마음먹고 제일 먼저 작성한 목록 입니다.

@@ -8,7 +8,7 @@ tags:
   - call
   - apply
   - bind
-  - Javascript
+  - JavaScript
 ---
 
 ```

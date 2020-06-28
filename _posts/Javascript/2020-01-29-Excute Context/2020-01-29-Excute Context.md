@@ -6,6 +6,7 @@ image: ../../_images/javascript.png
 category: Javascript Core
 tags:
   - excute-context
+  - JavaScript
 ---
 
 개발을 하다보면 this의 범위가 함수, function, bind, call, apply별로 달라지는 걸볼 수 있는데 왜 이런지에 대해서 다뤄보려고 한다.
@@ -163,15 +164,15 @@ d() // error
   ```js
   /*01*/ var a = 1
   /*02*/ var outer = function() {
-  /*03*/    var inner = function() {
-  /*04*/        console.log(a)
-  /*05*/        var a = 3
-  /*06*/
-            }
-  /*07*/ inner()
-  /*08*/ console.log(a)
-  /*09*/
-         }
+    /*03*/ var inner = function() {
+      /*04*/ console.log(a)
+      /*05*/ var a = 3
+      /*06*/
+    }
+    /*07*/ inner()
+    /*08*/ console.log(a)
+    /*09*/
+  }
   /*10*/ outer()
   /*11*/ console.log(a)
   ```

@@ -6,6 +6,7 @@ image: ../../_images/javascript.png
 category: Javascript Core
 tags:
   - prototype
+  - JavaScript
 ---
 
 javascript언어는 prototype을 기반으로 oop를 구현하고 있다.

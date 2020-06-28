@@ -100,8 +100,8 @@ exports.createPages = ({ actions, graphql }) => {
     // 	return categories;
     // });
 
-    //[javascript, react, ...]
-    //{javascript: 5, react: 3, ...}
+    //# tags: [javascript, react, ...]
+    //# tagPostsCounts: {javascript: 5, react: 3, ...}
     let tagPostCounts = {}
     tags.forEach(tag => {
       tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1

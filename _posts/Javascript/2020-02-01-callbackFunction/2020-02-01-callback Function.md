@@ -6,7 +6,8 @@ image: ../../_images/javascript.png
 category: Javascript Core
 tags:
   - this
-  - Javascript this
+  - JavaScript this
+  - JavaScript
 ---
 
 업무중에 setTimeout, 특정 반목문, event callback function 등 특정상황에서 콜백함수 내부에 this를 바인딩해서 사용하는 경우가 있었는데 그 경우를 실행 컨텍스트, 제어권에 따라 달라지는 것을 경험해본적이 있어 아래와 같은 내용을 이해하기 용이 했습니다.

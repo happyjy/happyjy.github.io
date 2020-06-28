@@ -7,6 +7,7 @@ category: Javascript Core
 tags:
   - Promise
   - Async/Await
+  - JavaScript
 ---
 
 promise객체에 then을 연속적으로 사용할 수 있는 promise chaining에 대해서 설명하겠습니다.

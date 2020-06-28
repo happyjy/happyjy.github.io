@@ -6,6 +6,7 @@ image: ../../_images/javascript.png
 category: Javascript Core
 tags:
   - Promise chaning
+  - JavaScript
 ---
 
 promise객체에 then을 연속적으로 사용할 수 있는 promise chaining에 대해서 설명하겠습니다.
@@ -93,17 +94,17 @@ promise객체에 then을 연속적으로 사용할 수 있는 promise chaining�
 
 # 예제: loadScript callback function 해결하기
 
-  ```js
-  loadScript("/article/promise-chaining/one.js")
-      .then(script => loadScript("/article/promise-chaining/two.js"))
-      .then(script => loadScript("/article/promise-chaining/three.js"))
-      .then(script => {
-          // 스크립트를 정상적으로 불러왔기 때문에, 스크립트 내의 함수를 호출할 수 있습니다.
-          one();      //...one.js에 있는 function
-          two();      //...two.js에 있는 function
-          three();    //...three.js에 있는 function
-      });
-  ```
+```js
+loadScript("/article/promise-chaining/one.js")
+  .then(script => loadScript("/article/promise-chaining/two.js"))
+  .then(script => loadScript("/article/promise-chaining/three.js"))
+  .then(script => {
+    // 스크립트를 정상적으로 불러왔기 때문에, 스크립트 내의 함수를 호출할 수 있습니다.
+    one() //...one.js에 있는 function
+    two() //...two.js에 있는 function
+    three() //...three.js에 있는 function
+  })
+```
 
 # fetch와 함께 체이닝 함께 응용하기
 

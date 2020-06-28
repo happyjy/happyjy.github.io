@@ -6,6 +6,7 @@ image: ../../_images/javascript.png
 category: Javascript Core
 tags:
   - eventLoop
+  - JavaScript
 ---
 
 setTimeout을 통해서 비동기 처리를 하는데 호출 스택이 어떻게 되는지 궁금하다 이벤트 루프를 알게 됐고
