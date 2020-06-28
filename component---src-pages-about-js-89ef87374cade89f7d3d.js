@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"3XHS":function(e,t,n){"use strict";n.r(t);var a=n("q1tI"),l=n.n(a),r=n("7oih"),u=n("vrFN");t.default=function(){return l.a.createElement(r.a,{pageTitle:"About me"},l.a.createElement(u.a,{title:"About"}),l.a.createElement("p",null," 나에 대한 이력서를 써넣고 상기시키며 내가 몇년차 인지 그리고 내가 무슨 일을 해왔는지 돌아보면서 반성하며 다음을준비하는 용도 "),l.a.createElement("p",null," 사람인 경력 기술서 많이 좋아졌던게 그거 클론해서 마크업 하는것 해보자"))}}}]);
+//# sourceMappingURL=component---src-pages-about-js-89ef87374cade89f7d3d.js.map
