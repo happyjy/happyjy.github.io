@@ -55,12 +55,14 @@ tags:
          : [리액트를 다루는기술 10장 todoapp만들기 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)  
          : [리액트를 다루는기술 11장 todoapp 성능개선 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)
   - [x] 5장 리액트 내장 Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법
-        : [x][실전리액트프로그래밍 - 5장 hook(진화된함수형컴포넌트)](https://github.com/happyjy/learning-react/tree/master/hook)
+        : [실전리액트프로그래밍 - 5장 hook(진화된함수형컴포넌트)](https://github.com/happyjy/learning-react/tree/master/learning-hook)
+        : [hook post 작성](https://happyjy.netlify.app/tag/hook)
   - [x] 6장 Redux(원칙, 개념, 액션, 미들웨어, 리듀서, 스토어, 리액트 상탯값 리덕스로 관리하기)  
-         : [Learning Vanilla Redux & React-Redux - 예제코드 git](https://github.com/happyjy/learning-redux)
-        : [x] hook post 작성
+         : [Learning Vanilla Redux & React-Redux - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/learning-redux)
+        : [redux 포스팅](https://happyjy.netlify.app/tag/redux)
 
 * [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
+  - [recursion 포스팅](https://happyjy.github.io/tag/recursion)
   - 다루는 내용
     - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기,
     - recursion 단 방향: 매개변수의 명시화: 순차탐색, 최대값 찾기, Binary Search,
