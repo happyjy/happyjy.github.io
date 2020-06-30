@@ -60,95 +60,100 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
   - prototype 객체 내부에는 인스턴스가 사용할 메서드를 저장
   - 그러면 인스턴스에서도 숨겨진 프로퍼티인 \_\_proto\_\_를 통해서 이 메서들을 접근할 수 있게 된다.
 
-  ```js
-  var Person = function(name) {
-      this._name = name;
-  }
 
-  Person.prototype.getName = function(){
-      debugger;
-      return this._name;
-  }
+	```js
+		var Person = function(name) {
+		    this._name = name;
+		}
 
-  //---
-  typeof Person                   // function
-  typeof new Person('boa');       // object
-  new Person('boa');              // Person {_name: 'boa'}
-  new Person('boa').__proto__     // {getName: f, constructor: f} -> constructor는 위 Person function 입니다.
-  Person.prototype                // {getName: f, constructor: f} -> constructor는 위 Person function 입니다.
-  //---
+		Person.prototype.getName = function(){
+		    debugger;
+		    return this._name;
+		}
 
-  var boa = new Person('boa');
-  boa.__proto__.getName();    //undefined
-  boa.getName();              //boa
-  /*
-      boa.__proto__에 _name 프로퍼티가 없어 식별자(this._name)를 찾을 수 없다.
-      * boa.__proto__.getName();, boa.getName();
-          - getName이 호출 돼 scope에 있는 this가 서로 다르다. 그래서 결과 값이 다르다.
-          - boa.__proto__ this -> {getName: f, constructor: f}
-          - boa this ->  Person {_name: 'boa'}
+		//예제1_type과 prototype, __proto__ 관계
+		typeof Person // function
+		typeof new Person('boa'); // object
+		new Person('boa'); // Person {_name: 'boa'}
+		Person.prototype === new Person('boa').__proto__ // true
+		// {getName: f, constructor: f} -> constructor는 위 Person function 입니다.
 
-  */
+		// 예제2_인스턴스와 __proto__
+		var boa = new Person('boa');
+		boa.getName(); // boa  
+		boa.__proto__.getName(); // undefined
 
-  Person.prototype === boa.__proto__;
-  /*
-      Constructor function의 prototype으로 생성한 instnace 'boa'의 property '__proto__'객체는 Consytructor function의 객체는 메모리를 공유하고 있다.
+		/*
+			* boa, boa.__proto__ 객체 비교 
+				- boa => Person {_name: "boa"}
+				- boa.__proto__ => {getName: ƒ, constructor: ƒ}
 
-      이런 특징으로
-      instance.__proto__ property를 변경하면 Constructor.prototype도 변경이 된다.
-      즉 instance.__proto__, Constructor.prototype 객체는 메모리를 공유하고 있따.
-  */
+		    * boa.__proto__.getName()
+			- boa.__proto__에 _name 프로퍼티가 없어 식별자(this._name)를 찾을 수 없다.
+			- getName의 실행 컨텍스트는 boa.__proto__(_name은 boa 객체 하위에 있다.)
+			- boa.__proto__ : {getName: ƒ, constructor: ƒ}
+			* boa.getName();
+			- getName이 호출 돼 scope에 있는 this가 서로 다르다. 그래서 결과 값이 다르다.
+			- Person {_name: "boa"}
+		*/
 
-  var boa = new Person('boa');
-  boa.__proto__._name = 'boa.__proto__';
-  boa.__proto__.getName() =               //Boa__proto__
-  /*
-      * boa.__proto__.getName() 에 의해서 호출된 getName의 this는 boa.__proto__
-      *
-  */
+		// 예제3_prototype, __proto__관계
+		Person.prototype === boa.__proto__; // true
+		/*
+		      * boa의 property '__proto__'객체(Constructor function의 prototype으로 생성)는
+			 "Constructor function의 객와 는 메모리를 공유하고 있다.
 
-  //---
+		      * instance.__proto__, Constructor.prototype 객체는 메모리를 공유
+			- instance.__proto__ 변경하면 Constructor.prototype도 변경이 된다.
 
-  var iu = new Person('iu');
-  iu.getName(); // iu
+		*/
 
-  /*
-      iu.__proto__.getName
-      = iu(.__proto__).getName
-      = iu.getName
-  */
-  ```
+		// 예제4_ __proto__에서 getName 호출
+		var boa = new Person('boa');
+		boa.__proto__._name = 'boa.__proto__';
+		boa.__proto__.getName(); //boa__proto__
+		/*
+			* boa.__proto__.getName() 에 의해서 호출된 getName의 this는 boa.__proto__
+			*
+		*/
 
-
-    //---
-
-    var Constructor = function(name) {
-        this.name = name;
-        console.log(this);
-    }
-
-    Constructor.prototype.method = function(){};
-    Constructor.prototype.prototype1 = 'constructor Prototype property';
-
-    var instance = new Constructor('INSTANCE');
-    console.dir(Constructor);
-    console.dir(instance);
-    /*
-        Constructor.prototype === instance.__proto__
-    */
+		// 예제5_ prototype chain 예시
+		var iu = new Person('iu');
+		iu.getName(); // iu
+		iu.__proto__.getName === iu.getName // true
+		/*
+			iu.__proto__.getName
+			= iu(.__proto__).getName
+			= iu.getName
+		*/
 
 
-    //--
-    var arr = [1,2];
-    console.dir(arr);
-    console.dir(Array);     //Array: 내장 생성자 함수
+		var Constructor = function(name) {
+		    this.name = name;
+		    console.log(this);
+		}
 
-    arr.forEach(function(){});  //
-    Array.isArray(arr);         //true
-    arr.isArray()               //TypeError: arr.isArray is not a function
+		Constructor.prototype.method = function(){};
+		Constructor.prototype.prototype1 = 'constructor Prototype property';
+
+		var instance = new Constructor('INSTANCE');
+		console.dir(Constructor);
+		console.dir(instance);
+		/*
+			Constructor.prototype === instance.__proto__
+		*/
 
 
-    ```
+		//--
+		var arr = [1,2];
+		console.dir(arr);
+		console.dir(Array);     //Array: 내장 생성자 함수
+
+		arr.forEach(function(){});  //
+		Array.isArray(arr);         //true
+		arr.isArray()               //TypeError: arr.isArray is not a function
+
+	```
 
 # 1-2 constructor 프로퍼티
 
