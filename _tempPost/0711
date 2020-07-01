@@ -1,0 +1,153 @@
+# 보고 따라하기 & 분석 & 응용
+# BLOG
+	* https://happyjy.github.io/recursion-11nqueens 사진 안나옴
+	* BLOG 기능개선 수정
+	* ASYNC
+	* GENERATOR
+	* NAVER LAYOUT 10
+  
+  
+  # 20200629
+
+
+# "자바스크립트 엔지니어"
+	- 뭐가 되고 싶은지 정해 놓지 않아서 선택하기전에 너무 휘둘렸다. 필요하다 뭐가 되고 싶은지
+	- 마윈이 30대면 내가 잘하는것 정해서 10년 쏟아 부으라고 했다
+	- 저 말에 나는 동의한다 글서 20대때 네트워크, 자바 서버개발자, 했던것중에 제일 잘하고 시간을 많이 투자해서 이걸로 정했다.
+	- 30-40대 실패해도된다고 ? 함 실패하고 망해도 회복할 수 있다.
+	- 40-50대는 내가 가장 잘하는것을 해야한다. 
+	- https://www.youtube.com/watch?v=1nW3We_0tRU
+
+# 자신감을 갖어라 재윤아 
+	- 지금까지 해온것 보면 충분히 잠재력을 갖고 있어
+	- 다른 사람 평가 신경쓰지 말자 내가 가지고 있는 '결과, 잠재력, 태도'를 믿자 
+	- **'결과, 잠재력, 태도'를 잘 보여주도록 노력하자**
+
+
+# 어필!
+	* 일 잘하는 사람이라는 것을 보여줘야한다.
+	* 필살기가 있어야한다. 
+	* 회사에서 원하는것은? 
+		- 제품으로 돈을 벌 수 있는것 
+	 	- 더나은 제품을 만들수 있는 사람인가? (고도화, 유지보수 가능한코드로 생산성 높여 탐구하는 자세가 있다.)
+	
+# 필살기 !
+	* 블로그
+		- 업데이트 하자 		
+	* 인스타그램
+		- 노마드코더
+		- 배포하자 
+		- 업데이트 하자 
+	* 우버(아직 안함, 3주면 끝낼 수 있을 듯)
+	
+	* vanailla js 
+		- [x] 회사 : 프로토타입 기반 객체지향 위젯
+		- [x] 개인 : JavaScript core 스터디 포스팅
+	* react
+		- [x] 개인1: 실전리엑트 프로그래밍 스터디 예제코드 완성
+		- [x] 개인2: 인스타그램 클래스컴포넌트, 함수형 컴포넌트 완성	
+	* layout
+		- [...ing] 개인1: 노마드코더-flex, grid
+	
+	* 회사 
+		- 디자인패턴 
+		- prototype기반 객체지향적으로 컴포넌트가 구성 되어 있음.
+		
+	* node.js 
+		- 인스타그램, 우버 하면서 실력 키우자
+
+# 어떻게 보여 줄수 있을까? 
+	* 포트폴리오 
+		- 어떤것을 구현했고 
+		- 어떻게 구혀냈는지(리뷰 포스팅하기)
+	* 
+	
+# 연습, 반복
+	* 보고 따라하는 것을 내것으로 만들기위해서는 
+		- 고민, 반복 -> 연습하는것밖에 없다. 
+	
+# 기본기 
+	* 실전 축구에서 잘하기위해서 실전감각도 중요하지만 '기본기가 중요하다'
+	* 그래야 새로운 프레임워크가 나와도 기본기로 만들어진 것이기 때문에 빨리 익힐 수 있겠다.
+	
+# 퇴사하지 말고 최대한 버티면서 필살기 준비하자 
+	- 원하지 않는데 다른데가면 거기서 또 적응하느라 준비 못해 
+	
+# 필살기 공부해서 좋은데 가자 
+	- 공부해서 잘안되면? 
+		- 손해는 없지 실력이 생기면 좋은거니까 
+		- 공부한만큼 잘 못받았다고 속상해 하지 말자 수긍하자
+		- 실력 + (회사)경험 쌓이면 결과는 자연스럽게 따라올테니까
+		- "회사"에서는 짜여진것만 하다보니 깊게 공부 못할 수도 있다 .
+		- "개인"프로젝트를 하면 처음부터 빌드하고 고민하고 찾아서 하다 보니 그경험이 갚지다고 생각한다.
+
+# 좋은 직업, 사람은
+	- 내가 선택한것에의해서 결정되닌까 지금 하고 싶은것에 최고로 집중하자
+
+
+# css, layout
+## 네이버 flex 관련 레이어 작업한것
+	: (https://d2.naver.com/helloworld/8540176)
+	* 깃에 올리기 
+	* 포스팅 하기 
+	* codepen 사용하고 있음 참고 하기! 
+		- 김정환님 flex 포스팅에 https://jeonghwan-kim.github.io/dev/2020/03/09/flex.html
+
+
+* The React Handbook
+https://medium.com/free-code-camp/the-react-handbook-b71c27b0a795
+
+* 10 Best Project Tutorials For Self-Taught Developers
+	- publishing에 도움이 많이 되는 강의가 있다.
+	- Learn HTML5 and CSS3 From Scratch (11hr course) By Freecodecamp
+	- One Page Fll Website Project — HTML, CSS Responsive Website 2020
+	- CSS Tutorial — Zero To Hero COMPLETE COURSE (6HR- Course)
+	- Free Course: Beginner Web Design Using HTML5, CSS3, and Javascript ( 4hr Course )
+	- Beginner Vanilla Javascript Project Tutorial
+https://medium.com/swlh/10-best-tutorial-projects-for-self-taught-developers-3e13e7907c9a
+
+
+```
+
+
+
+
+# 수학, 알고리즘을 요구하는 작업
+* 테이블 다난누기 
+	- tr, th merge하는 기능 구현 정보를 받아서 테이블에
+* 계산식 
+	- Math.round, Floor, ceiling에 validation 기능 개선 
+
+
+
+###20200305
+# 성능, 구조, 리팩토링, 코드퀄리티
+* dev.26165_무한로딩	
+	- 간헐적으로 나타나는 무한로딩문제 
+	- 문제
+		: jquery ajax요청을 jquery ajax success안에서 다시 한번 요청해주고 있을때 
+		: ajax요청 전 ProgressBar를 띄우는 setTimeout return value를 전역 객체에 설정할 때 
+			전역객체에 세팅하다보니 두번째 setTimeout return value가 첫번째것을 덮어 써버려
+			response를 받을때 ProgressBar를 제거할때 두번다 덮어씌워진 setTimeout value를 clearTimeout 시켜서 생기는 문제 였습니다. 				
+	- 해결 
+		: setTimeout return value를 clousre 영역을 사용할 수 있도록 변경하는 공통로직 분석/수정했습니다.
+
+* dev.34776_require update
+	- 자체 프레임워크에서 bundling 파일을 life cycle에서 init 이후 render시에만 사용할 수 있는 구조였는데 	
+		init시점에도 bundling 파일을 사용할 수 있는 require로 가능하게 프레임워크 분석/ 구조개선 했습니다.
+	
+* event mouseOver
+	- ecEvent.eventTriggerFromInternalLayerTarget
+	- 문제: observer pattern을 사용함으로 mouseovert시 위젯에서 동작하는 기능을 추가 하던중 같은 위젯이지만 여러 레이어가 있을때 
+	mouseover, mouseout이벤트가 여러번 일어나 문제가 되는 현상이 있었습니다. 	
+	- 원인: mouseOver이벤트는 time to time으로 eventListener가 동작하고 있어서 mouse를 빠르게 이동할 때 mouseover, mouseout이 건너뛰는 컴포넌트 문제가 생겼다. 
+	- 해결: 이벤트 공통 프레임워크에서 위젯 이벤트가 동작할때 사용하는 이벤트 객체를 parsing하는 과정에서 event객체에서 relatedTart, target이 같으면 같은 동작하지 않게 하는 이벤트 구조 개선.
+	
+* safari button에 focus지원 x
+	- 문제: safari button에 focus되지 않아 event객체 relatedTarget객체가 없는 상황
+	- 원인: safari browser에서 button element에 focus지원하지 않음
+	- 해결: 옵저버패턴이 적용되어 있어 이벤트가 일어나면 target의 위젯 인스턴스를 스택구조에 반복문을 돌면서 
+
+* git guide 문서 작성
+	- 형상관리를 ms의 Team Foundation Server에서 GIT으로 변경하면서 GIT사용에 대해서 어려움이 있었습니다. 
+	그당시 visual studio에서 ui 방식으로 처리하던 방식에서 작업에 필요한 명령어들을 취합해서 회사네 전체 공유했습니다.
