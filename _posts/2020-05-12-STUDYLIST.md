@@ -43,7 +43,7 @@ tags:
     - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
 
 * [x] 2020.05 - 2020.06 React 개념 정리 중  
-       주 일회 스터디모임에서 "실전리액트프로그래밍"발표 중(책:리액트를다루는기술, 노마드코더 redux강의 참고)
+       주 일회 스터디모임에서 "실전리액트프로그래밍"발표 중(책:리액트를다루는기술, 노마드코더 redux 강의 참고)
 
   - [정리 blog](https://happyjy.github.io/category/#React)
   - [source code git](https://github.com/happyjy/learning-react)
@@ -54,12 +54,14 @@ tags:
          : [실전리액트프로그래밍 - 4.4 렌더링 속도를 올리기 위한 성능 포스팅](https://happyjy.github.io/%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%86%8D%EB%8F%84%EB%A5%BC-%EC%98%AC%EB%A6%AC%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95)  
          : [리액트를 다루는기술 10장 todoapp만들기 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)  
          : [리액트를 다루는기술 11장 todoapp 성능개선 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)
-  - [x] 5장 리액트 내장 Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법
-        : [실전리액트프로그래밍 - 5장 hook(진화된함수형컴포넌트)](https://github.com/happyjy/learning-react/tree/master/learning-hook)
-        : [hook post 작성](https://happyjy.netlify.app/tag/hook)
+  - [x] 5장 리액트 내장 Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법  
+		 : [hook post 작성](https://happyjy.github.io/tag/hook)
+         : [실전리액트프로그래밍 - 5장 hook(진화된함수형컴포넌트)](https://github.com/happyjy/learning-react/tree/master/learning-hook)
+        
   - [x] 6장 Redux(원칙, 개념, 액션, 미들웨어, 리듀서, 스토어, 리액트 상탯값 리덕스로 관리하기)  
-         : [Learning Vanilla Redux & React-Redux - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/learning-redux)
-        : [redux 포스팅](https://happyjy.netlify.app/tag/redux)
+		 : [redux 포스팅](https://happyjy.github.io/tag/redux)  
+         : [Learning Vanilla Redux & React-Redux - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/learning-redux)  
+        
 
 * [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
   - [recursion 포스팅](https://happyjy.github.io/tag/recursion)
