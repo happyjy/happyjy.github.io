@@ -1,0 +1,35 @@
+# 성능, 구조, 리팩토링, 코드퀄리티
+* dev.26165_무한로딩	
+	- 간헐적으로 나타나는 무한로딩문제 
+	- 문제
+		: jquery ajax요청을 jquery ajax success안에서 다시 한번 요청해주고 있을때 
+		: ajax요청 전 ProgressBar를 띄우는 setTimeout return value를 전역 객체에 설정할 때 
+			전역객체에 세팅하다보니 두번째 setTimeout return value가 첫번째것을 덮어 써버려
+			response를 받을때 ProgressBar를 제거할때 두번다 덮어씌워진 setTimeout value를 clearTimeout 시켜서 생기는 문제 였습니다. 				
+	- 해결 
+		: setTimeout return value를 clousre 영역을 사용할 수 있도록 변경하는 공통로직 분석/수정했습니다.
+
+* dev.34776_require update
+	- 자체 프레임워크에서 bundling 파일을 life cycle에서 init 이후 render시에만 사용할 수 있는 구조였는데 	
+		init시점에도 bundling 파일을 사용할 수 있는 require로 가능하게 프레임워크 분석/ 구조개선 했습니다.
+	
+* event mouseOver
+	- ecEvent.eventTriggerFromInternalLayerTarget
+	- 문제: observer pattern을 사용함으로 mouseovert시 위젯에서 동작하는 기능을 추가 하던중 같은 위젯이지만 여러 레이어가 있을때 
+	mouseover, mouseout이벤트가 여러번 일어나 문제가 되는 현상이 있었습니다. 	
+	- 원인: mouseOver이벤트는 time to time으로 eventListener가 동작하고 있어서 mouse를 빠르게 이동할 때 mouseover, mouseout이 건너뛰는 컴포넌트 문제가 생겼다. 
+	- 해결: 이벤트 공통 프레임워크에서 위젯 이벤트가 동작할때 사용하는 이벤트 객체를 parsing하는 과정에서 event객체에서 relatedTart, target이 같으면 같은 동작하지 않게 하는 이벤트 구조 개선.
+	
+* safari button에 focus지원 x
+	- 문제: safari button에 focus되지 않아 event객체 relatedTarget객체가 없는 상황
+	- 원인: safari browser에서 button element에 focus지원하지 않음
+	- 해결: 옵저버패턴이 적용되어 있어 이벤트가 일어나면 target의 위젯 인스턴스를 스택구조에 반복문을 돌면서 
+
+* 테이블 merge
+	- 요구사항: th에 2번째 merge기능 없었는데 개발 
+	
+	EFE/dev.42330_A17_01547_퇴직금계산컴바인위젯개발
+
+* git guide 문서 작성
+	- 형상관리를 ms의 Team Foundation Server에서 GIT으로 변경하면서 GIT사용에 대해서 어려움이 있었습니다. 
+	그당시 visual studio에서 ui 방식으로 처리하던 방식에서 작업에 필요한 명령어들을 취합해서 회사네 전체 공유했습니다.
