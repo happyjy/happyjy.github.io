@@ -1,6 +1,5 @@
 ---
-title: FLEX
--GRID Clone WebSite
+title: FLEX-GRID Clone WebSite
 date: 2020-05-04
 author: jyoon
 category: CloneWebSite
