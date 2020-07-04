@@ -18,7 +18,7 @@ tags:
 
 # container pattern이란?
 
-- continaer components 인스턴스는 [redux](https://github.com/reduxjs/react-redux) library의 `connect()`와 [Relay](https://relay.dev/) library의 `createContainer`(The production-ready GraphQL client for React.) 같은 higher order components에 의해서 생성된다.
+- continaer components 인스턴스는 [redux](https://github.com/reduxjs/react-redux) library의 `connect()`와 [Relay](https://relay.dev/) library의 `createContainer`(The production-ready GraphQl client for React.) 같은 higher order components에 의해서 생성된다.
 - 이 container pattenr이 적용된 컴포넌트는 다른 어플리케이션에서 재사용 될 수 있다.
 - presentaionnal component가 어떻게 동작하는지 보내줄 데이터를 **fetching** 하고 전달한다. 즉 **data를 관리하는코드가 있다.**
 - **presentational component를 포함한다. 반대로 presentational component은 container를 포함하지 않는다.**

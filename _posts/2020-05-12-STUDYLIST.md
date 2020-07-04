@@ -11,18 +11,18 @@ tags:
 
 - [x] 2018.07-08 패스트캠퍼스 vuejs
 - [x] 2019.12-2019.02 이직한 회사 자사 프레임워크 적응
-  - vanlliaJs, prototype 기반 객체지향 위젯, view/ viewmodel pattern, observer pattern ...
+  - vanlliaJavaScript, prototype 기반 객체지향 위젯, view/ viewmodel pattern, observer pattern ...
 - [x] 2019.02-08 인스타그램 클론코딩
-  - react, redux, django, postgres
+  - React, Redux, Django, Postgres
   - [정리 blog](https://happyjy.github.io/category/#ToyProj)
 - [x] 2019.08-09 프로그래머스 알고리즘 문제 풀기
   - [정리 blog](https://happyjy.github.io/category/#Algorithm)
 - [x] 2019.10-2020.01 인스타그램 클론코딩
-  - react, redux, hooks, apollo, graphql - express, prisma
+  - React, Redux, Hooks, Apollo, Graphql - Express, Prisma
   - [정리 blog](https://happyjy.github.io/category#ToyProj)
-  - [git - react, redux, scss, django](https://github.com/happyjy/yoonGram)
-  - [git - frontend(react, hooks, graphQl)](https://github.com/happyjy/prismagram-frontend)
-  - [git - backend(express, prisma)](https://github.com/happyjy/prismagram)
+  - [git - React, Redux, Scss, Django](https://github.com/happyjy/yoonGram)
+  - [git - frontend(React, Hooks, GraphQl)](https://github.com/happyjy/prismagram-frontend)
+  - [git - backend(Express, Prisma)](https://github.com/happyjy/prismagram)
 - [x] 2020.01-02 자바스크립트 코어 스터디/정리
   - [정리 blog](https://happyjy.github.io/category/#Javascript%20Core)
 - [x] 2020.02-03 코드스피츠 객체지향자바크립트
@@ -40,28 +40,28 @@ tags:
   - [x] React Redux CRUD
     - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
     - [git - backEnd](https://github.com/happyjy/prismagram)
-    - [GraphQL — A beginner’s guide on How To GraphQL](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
+    - [GraphQl — A beginner’s guide on How To GraphQl](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
 
 * [x] 2020.05 - 2020.06 React 개념 정리 중  
        주 일회 스터디모임에서 "실전리액트프로그래밍"발표 중(책:리액트를다루는기술, 노마드코더 redux 강의 참고)
 
   - [정리 blog](https://happyjy.github.io/category/#React)
   - [source code git](https://github.com/happyjy/learning-react)
-  - [x] 202005 3장 리액트 개념 이해하기 (react상태 값과 속성값으로 관리하는 UI 데이터/ React element, React virtual dom/ lifecycle)  
+  - [x] 3장 리액트 개념 이해하기  
+         : (react상태 값과 속성값으로 관리하는 UI 데이터/ React element, React virtual dom/ lifecycle)  
          : [실전리액트프로그래밍 - 3.3 생명주기 메서드 포스팅](https://happyjy.github.io/react-life-cycle)
-  - [x] 202005 4장 리액트 코딩은 결국 컴포넌트 작성이다 (컴포넌트 코드 작성/ 이벤트 처리 함수 작성/ 컴포넌트의 공통 기능 관리/ 렌더링속도 성능최적화)  
+  - [x] 4장 리액트 코딩은 결국 컴포넌트 작성이다 (컴포넌트 코드 작성/ 이벤트 처리 함수 작성/ 컴포넌트의 공통 기능 관리/ 렌더링속도 성능최적화)  
          : [실전리액트프로그래밍 - 4.3 컴포넌트의 공통 기능 관리 포스팅](https://happyjy.github.io/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B3%B5%ED%86%B5-%EA%B8%B0%EB%8A%A5-%EA%B4%80%EB%A6%AChoc-%EB%A0%8C%EB%8D%94%EC%86%8D%EC%84%B1%EA%B0%92)  
          : [실전리액트프로그래밍 - 4.4 렌더링 속도를 올리기 위한 성능 포스팅](https://happyjy.github.io/%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%86%8D%EB%8F%84%EB%A5%BC-%EC%98%AC%EB%A6%AC%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95)  
-         : [리액트를 다루는기술 10장 todoapp만들기 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)  
+         : [리액트를 다루는기술 10장 todoapp 만들기 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)  
          : [리액트를 다루는기술 11장 todoapp 성능개선 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)
-  - [x] 5장 리액트 내장 Hooks(useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법  
-		 : [hook post 작성](https://happyjy.github.io/tag/hook)
-         : [실전리액트프로그래밍 - 5장 hook(진화된함수형컴포넌트)](https://github.com/happyjy/learning-react/tree/master/learning-hook)
-        
+  - [x] 5장 리액트 내장 Hooks  
+         : useState, useEffect, useContext, useRef, useMemo, useCallback, useReducer, useImperativeHandle, useLayoutEffect, useDebugValue)/ 클래스형 컴포넌트와 훅/ 클래스형 컴포넌트를 고려한 커스텀 훅 작성법  
+         : [실전리액트프로그래밍 - 5장 hook(진화된함수형컴포넌트)](https://github.com/happyjy/learning-react/tree/master/learning-hook)  
+         : [hook post 작성](https://happyjy.netlify.app/tag/hook)
   - [x] 6장 Redux(원칙, 개념, 액션, 미들웨어, 리듀서, 스토어, 리액트 상탯값 리덕스로 관리하기)  
-		 : [redux 포스팅](https://happyjy.github.io/tag/redux)  
          : [Learning Vanilla Redux & React-Redux - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/learning-redux)  
-        
+         : [redux 포스팅](https://happyjy.netlify.app/tag/redux)
 
 * [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
   - [recursion 포스팅](https://happyjy.github.io/tag/recursion)
@@ -91,9 +91,9 @@ tags:
 
 - [...ing] 인스타그램 클론코딩 코드리뷰
 
-  - [ ] GraphQL schema post
+  - [ ] GraphQl schema post
 
-- [...ing] 2020.04 - 2020.xx publishing - flex, grid강의/ website clone
+- [...ing] 2020.04 - publishing - flex, grid강의/ website clone
 
   - [정리 blog](https://happyjy.github.io/category/#CloneWebSite)
   - [git repository](https://github.com/happyjy/learning-scss-masterclass)
@@ -143,25 +143,21 @@ tags:
   - [ ] 스터디한 내용 정리하기 - [JavaScript Patterns(자바스크립트패턴)](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966260157&orderClick=LAG&Kc=)
   - [ ] 위 두 책에서 놓친부분 보기 - [자바스크립트 패턴과 테스트 견고한 프로그램을 개발하는 원리](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791160500257&orderClick=LAG&Kc=)
 
-* BACKEND
+- publishing
+
+  - [ ] Css preprocesor(scss)
+  - [ ] find
+
+- BACKEND
 
   - [ ] node.js
-  - [ ] python
 
-* 20200530 DEVOPS
+- DEVOPS
+
   - [ ] TDD
   - [ ] 모듈번들러, 빌드자동화(webpack, grunt, babel, gulp)
-* 20200530 성능
-* 20200530 보안
+
+- 성능
+- 보안
 
 ---
-
-- [ ] 20200530 - seo in gatsby/ server-side render
-- [ ] 20200530 graphQl()
-
-  - rest api vs graphQl
-  - apollo
-
-- [ ] 20200530 테스트/배포자동화
-- [ ] 20200530 Css preprocesor(scss)
-- [ ] 20200530 prisma - node.js, postgress - Django
