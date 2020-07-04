@@ -26,7 +26,7 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
 
 # 1 프로토타입의 개념 이해
 
-# 1-1 Constructor, prototype, instance
+## 1-1 Constructor, prototype, instance
 
 - Constructor
   - A function that initializes an object
@@ -59,10 +59,6 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
   - **이를 참조하는 \_\_proto\_\_도 객체**
   - prototype 객체 내부에는 인스턴스가 사용할 메서드를 저장
   - 그러면 인스턴스에서도 숨겨진 프로퍼티인 \_\_proto\_\_를 통해서 이 메서들을 접근할 수 있게 된다.
-
-
-
-
 
 
 ### 예제1 객체 type과 prototype, __proto__ 관계
@@ -215,17 +211,16 @@ console.dir(instance);
 var arr = [1,2];
 console.dir(arr);  //(2) [1, 2]
 console.dir(Array);  //Array: 내장 생성자 함수
- 
+
 Array.isArray(arr);         //true: isArray는 Array내장 생성자함수의 함수다.
 arr.isArray()               //TypeError: arr.isArray is not a function
 
 Array.prototype === arr.__proto__	//true
-
 ```
 
 
 
-# 1-2 constructor 프로퍼티
+## 1-2 constructor 프로퍼티
 
 ```js
 var arr = [1, 2]
@@ -250,23 +245,43 @@ var p3 = new p1Proto.constructor("인간3") //Person {name:"인간3"} true
 var p4 = new p1.__proto__.constructor("인간4") //Person {name:"인간4"} true
 var p5 = new p1.constructor("인간5") //Person {name:"인간5"} true
 
-;[p1, p2, p3, p4, p5].forEach(function(p) {
+[p1, p2, p3, p4, p5].forEach(function(p) {
   console.log(p, p instanceof Person)
-})[constructor][instance].__proto__.constructor[instance].constructor
-Object.getPrototypeOf([instance]).constructor[Contsructor].prototype
-  .constructor[Constructor][instance].__proto__[instance]
-Object.getPrototypeOf([instance])
+})
 ```
+
+위 예제를 통해서 아래내용이 성립한다.
+
+* 프로토타입 도식
+  ![](프로토타입도식.jpg)
+
+
+* Constructor, instance의 관계
+  ``` txt
+
+  // 아래 각줄은 모두 같은 대상을 가르킨다.
+  [Constructor]
+  [instance].__proto__.constructor
+  [instance].constructor
+  Object.getPrototypeOf([instance]).constructor
+  [Contsructor].prototype.constructor
+
+  // 아래 각줄은 동일한 객체(prototype)에 접근할 수 있습니다.
+  [Constructor].prototype
+  [instance].__proto__
+  [instance]
+  Object.getPrototypeOf([instance])
+  ```
 
 # 2 프로토타입 체인
 
-# 2-1 메서드 오버라이드
+## 2-1 메서드 오버라이드
 
 - 예제
 
   - 아래 메서드 오버라이드 전, 후 캡쳐 참고
 
-    ```js
+  ```js
     var Person = function(name) {
       this.name = name
     }
@@ -291,7 +306,7 @@ Object.getPrototypeOf([instance])
         메서드가 오버라이드된 경우에는 자신으로부터 가장 가까운 메서드에만 접근
         그다음으로 가까운 __proto__의 메서드도 우회적인 방법을 통해서 접근 가능
     */
-    ```
+  ```
 
 - 결과
 
@@ -301,7 +316,7 @@ Object.getPrototypeOf([instance])
   - override 후
     ![](method_override1.png)
 
-# 2-2 프로토타입 체인
+## 2-2 프로토타입 체인
 
 - Object의 내부 구조
 
@@ -311,34 +326,37 @@ Object.getPrototypeOf([instance])
   ![](prototypeOfArray.png)
 
 * Array 내부 도식화
-  ![](Array내부도식화.jpg) - [1,2]는 Array.prototype, Object.prototype내부의 메서드를 자신의 것처럼 실행 할 수 있다. - .\_\_proto\_\_는 생략 가능하다 - 예시
+  ![](Array내부도식화.jpg) 
+  
+  - [1,2]는 Array.prototype, Object.prototype내부의 메서드를 자신의 것처럼 실행 할 수 있다. 
+  - .\_\_proto\_\_는 생략 가능하다 - 예시
 
-          ```js
-          var arr = [1,2];
-          arr(.__proto__).push(3);                            //3
-          arr(.__proto__)(.__proto__).hasOwnProperty(2);      //true
-          ```
+  ```js
+  var arr = [1,2];
+  arr(.__proto__).push(3);                            //3
+  arr(.__proto__)(.__proto__).hasOwnProperty(2);      //true
+  ```
 
 * 메서드 오버라이드와 프로토타입 체이닝
 
 ```js
-var arr = [1, 2, 3]
-Array.prototype.toString.call(arr) //1,2,3
-Object.prototype.toString.call(arr) //[object Array]
-arr.toString() //1,2,3
+  var arr = [1, 2, 3]
+  Array.prototype.toString.call(arr) //1,2,3
+  Object.prototype.toString.call(arr) //[object Array]
+  arr.toString() //1,2,3
 
-arr.toString = function() {
-  //결과 아래 캡쳐 참고
-  return this.join("_")
-}
-arr.toString() //1_2_3
+  arr.toString = function() {
+    //결과 아래 캡쳐 참고
+    return this.join("_")
+  }
+  arr.toString() //1_2_3
 ```
 
 - arr 객체에 toString function 추가시 arr객체 내부
 
   ![](Array객체에toString추가.png)
 
-# 2-3 객체 전용 메서드의 예외사항
+## 2-3 객체 전용 메서드의 예외사항
 
 - Object.prototyp에 추가한 메서드의 접근
 
@@ -378,12 +396,15 @@ arr.toString() //1_2_3
   - Object.prototype.consructor 하위 메서드 & Object.protptype 하위 메서드
     ![](객체전용메서드&스태틱메서드.jpg)
 
-# 2-4 다중 프로토타입 체인
+## 2-4 다중 프로토타입 체인
 
-- 새롭게 만드는 생성자 함수에 \_\_proto\_\_를 연결해서 체인 관계를 만들수 있다.
-- Grade.prototype에 Array instance를 세팅으로 g1(Grade function의 instance)에서 push를 사용할 수 있게 된다.
+아래 예제 주석 부분의 POINT 부분 이해부터 봐보자!   
+Grade.prototype에 Array instance를 세팅으로 g1(Grade function의 instance)에서 push를 사용할 수 있게 된다.  
+이렇게 새롭게 만드는 생성자 함수에 \_\_proto\_\_를 연결해서 체인 관계를 만들수 있다.  
 
-- Grade 생성자 함수와 인스턴스
+
+
+- Grade 생성자 함수와 인스턴스 예제
 
   ```js
   var Grade = function() {
@@ -397,7 +418,8 @@ arr.toString() //1_2_3
   var g = new Grade(100, 80)
   g.push(1) //Uncaugh TypeError: g.push is not function
 
-  Grade.prototype = new Array() //POINT
+  //POINT
+  Grade.prototype = new Array() 
   //Grade.prototype = [];
   //[].__proto__ === new Array().__proto__
   //[] instanceof Array // true
