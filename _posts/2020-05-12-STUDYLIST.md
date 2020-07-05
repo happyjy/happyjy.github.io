@@ -80,20 +80,23 @@ tags:
 
 # ...ING LIST
 
-- [ ] 20205.05 - Async/Await 정리
+- [ready] 20205.05 - Async/Await 정리
+  - [Real World Example-exchange](https://medium.com/free-code-camp/how-to-master-async-await-with-this-real-world-example-19107e7558ad)
+  - [git](https://github.com/adrianhajdin/tutorial_currency_converter)
 
 - [ ] 실전리액트프로그래밍
 
   - [ ] 7장 babel/ webpack
   - [ ] 8장 ssr/ Next.js
-  - [ ] 9장 TypeScript
+  - [ready] 9장 TypeScript
   - [ ] 10장 fiber
 
 - [...ing] 인스타그램 클론코딩 코드리뷰
 
   - [ ] GraphQl schema post
 
-- [...ing] 2020.04 - publishing - flex, grid강의/ website clone
+- [x] 2020.04 - publishing - flex, grid강의/ website clone
+  - [...ing] 배운것 목록 블로그 작성하기 
 
   - [정리 blog](https://happyjy.github.io/category/#CloneWebSite)
   - [git repository](https://github.com/happyjy/learning-scss-masterclass)
@@ -101,18 +104,17 @@ tags:
   - 클론코딩 진행중
     - [x] https://besthorrorscenes.com/
     - [x] https://paint-box.com/
-    - [ ] http://10x19.co/
-    - [ ] http://www.z-o-o.fr/
-    - [ ] https://schwartzmedia.com.au/
-    - [ ] https://tolv.dk/
-    - [ ] https://rodicdavidson.co.uk/
-    - [ ] https://beige.de/
-    - [ ] http://donicaida.com/
-    - [ ] https://canalstreet.market/
-    - [ ] https://wonhundred.com/
+    - [x] http://10x19.co/
+    - [x] http://www.z-o-o.fr/
+    - [x] https://schwartzmedia.com.au/
+    - [x] https://tolv.dk/
+    - [x] https://rodicdavidson.co.uk/
+    - [x] https://beige.de/
+    - [x] http://donicaida.com/
+    - [x] https://canalstreet.market/
   - 강의에서 다룬 내용
     - [x][예제 캡쳐 넣기] 정리 Flexbox: flex-direction, order, justify-content, align-items, align-self, flex-wrap, align-content, flex-grow, flex-shrink, flex-basis
-    - [ ] Grid: grid-template-columns, grid-template-rows, column-gap, row-gap, gap, grid-template-areas, grid-column-start, grid-column-end, grid-row-start, grid-row-end, grid-column, grid-row, grid-template, justify-items, align-items, place-items, justify-content, align-content, place-content, justify-self, align-self, place-self, grid-auto-rows, grid-auto-flow, grid-auto-columns
+    - [x] Grid: grid-template-columns, grid-template-rows, column-gap, row-gap, gap, grid-template-areas, grid-column-start, grid-column-end, grid-row-start, grid-row-end, grid-column, grid-row, grid-template, justify-items, align-items, place-items, justify-content, align-content, place-content, justify-self, align-self, place-self, grid-auto-rows, grid-auto-flow, grid-auto-columns
     - Keywords & Functions: repeat, fr, minmax, auto-fit, auto-fill, min-content, max-content
     - SCSS: Variables, Nesting, Mixins, Extend, Responsive Mixins
 
