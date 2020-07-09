@@ -85,10 +85,9 @@ tags:
   - [git](https://github.com/adrianhajdin/tutorial_currency_converter)
 
 - [ ] 실전리액트프로그래밍
-
   - [ ] 7장 babel/ webpack
   - [ ] 8장 ssr/ Next.js
-  - [ready] 9장 TypeScript
+  - [ ] 9장 TypeScript
   - [ ] 10장 fiber
 
 - [...ing] 인스타그램 클론코딩 코드리뷰
@@ -124,7 +123,6 @@ tags:
 
 - [ ] 인스타그램 클론 두번째 보완하기
 - [ ] 블로그 개선하기
-
 - [ ] Typescript
 
   - [React Typescript Tutorial-Ben Awad](https://www.youtube.com/watch?v=Z5iWr6Srsj8)
