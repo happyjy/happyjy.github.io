@@ -132,8 +132,8 @@ tags:
     - 다음 내용을 다룸: React, React Router, Styled Components, Typescript, Hooks
 
 - algorithm - recursion
-  - [ ] Recursion: all permutations of a given string (GeeksforGeeks)[https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
-  - [ ] Recursion: Length of longest palindromic sub-string (GeeksforGeeks)[https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
+  - [ ] [Recursion: all permutations of a given string (GeeksforGeeks)][https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/]
+  - [ ] [Recursion: Length of longest palindromic sub-string (GeeksforGeeks)][https://www.geeksforgeeks.org/length-of-longest-palindromic-sub-string-recursion/?ref=leftbar-rightbar]
 
 * design pattern
 
