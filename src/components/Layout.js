@@ -16,6 +16,22 @@ import Footer from "./Footer"
 import "../styles/index.scss"
 import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
 
+/**
+ * children: '렌더 속성값'을 이용
+ *  - Layout component에는 children(렌더속성값)사용해 아래 component에서 Wrapper Compnent로 사용해 Layout을 잡고 있다.
+ *
+ *   src/pages/404.js:
+ *   src/pages/about.js:
+ *   src/pages/index.js:
+ *   src/pages/team.js:
+ *   src/templates/author-post.js:
+ *   src/templates/categories-page.js:
+ *   src/templates/category-posts.js:
+ *   src/templates/post-list.js:
+ *   src/templates/single-post.js:
+ *   src/templates/tag-posts.js:
+ *   src/templates/tags-page.js:
+ */
 const Layout = ({
   authorImageFluid,
   children,
