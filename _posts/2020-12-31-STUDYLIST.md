@@ -14,17 +14,17 @@ tags:
   - vanlliaJavaScript, prototype 기반 객체지향 위젯, view/ viewmodel pattern, observer pattern ...
 - [x] 2019.02-08 인스타그램 클론코딩
   - React, Redux, Django, Postgres
-  - [정리 blog](https://happyjy.github.io/category/#ToyProj)
+  - [정리 blog](https://happyjy.netlify.app//category/#ToyProj)
 - [x] 2019.08-09 프로그래머스 알고리즘 문제 풀기
-  - [정리 blog](https://happyjy.github.io/category/#Algorithm)
+  - [정리 blog](https://happyjy.netlify.app//category/#Algorithm)
 - [x] 2019.10-2020.01 인스타그램 클론코딩
   - React, Redux, Hooks, Apollo, Graphql - Express, Prisma
-  - [정리 blog](https://happyjy.github.io/category#ToyProj)
+  - [정리 blog](https://happyjy.netlify.app//category#ToyProj)
   - [git - React, Redux, Scss, Django](https://github.com/happyjy/yoonGram)
   - [git - frontend(React, Hooks, GraphQl)](https://github.com/happyjy/prismagram-frontend)
   - [git - backend(Express, Prisma)](https://github.com/happyjy/prismagram)
 - [x] 2020.01-02 자바스크립트 코어 스터디/정리
-  - [정리 blog](https://happyjy.github.io/category/#Javascript%20Core)
+  - [정리 blog](https://happyjy.netlify.app//category/#Javascript%20Core)
 - [x] 2020.02-03 코드스피츠 객체지향자바크립트
   - [정리 blog](https://5ebaa7a69c2fac0007f629c1--happyjy.github.io/category/#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
 - [x] 2020.04: Recursion 스터디 (블로그정리 예정)
@@ -45,14 +45,14 @@ tags:
 * [x] 2020.05 - 2020.06 React 개념 정리 중  
        주 일회 스터디모임에서 "실전리액트프로그래밍"발표 중(책:리액트를다루는기술, 노마드코더 redux 강의 참고)
 
-  - [정리 blog](https://happyjy.github.io/category/#React)
+  - [정리 blog](https://happyjy.netlify.app//category/#React)
   - [source code git](https://github.com/happyjy/learning-react)
   - [x] 3장 리액트 개념 이해하기  
          : (react상태 값과 속성값으로 관리하는 UI 데이터/ React element, React virtual dom/ lifecycle)  
-         : [실전리액트프로그래밍 - 3.3 생명주기 메서드 포스팅](https://happyjy.github.io/react-life-cycle)
+         : [실전리액트프로그래밍 - 3.3 생명주기 메서드 포스팅](https://happyjy.netlify.app//react-life-cycle)
   - [x] 4장 리액트 코딩은 결국 컴포넌트 작성이다 (컴포넌트 코드 작성/ 이벤트 처리 함수 작성/ 컴포넌트의 공통 기능 관리/ 렌더링속도 성능최적화)  
-         : [실전리액트프로그래밍 - 4.3 컴포넌트의 공통 기능 관리 포스팅](https://happyjy.github.io/%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B3%B5%ED%86%B5-%EA%B8%B0%EB%8A%A5-%EA%B4%80%EB%A6%AChoc-%EB%A0%8C%EB%8D%94%EC%86%8D%EC%84%B1%EA%B0%92)  
-         : [실전리액트프로그래밍 - 4.4 렌더링 속도를 올리기 위한 성능 포스팅](https://happyjy.github.io/%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%86%8D%EB%8F%84%EB%A5%BC-%EC%98%AC%EB%A6%AC%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95)  
+         : [실전리액트프로그래밍 - 4.3 컴포넌트의 공통 기능 관리 포스팅](https://happyjy.netlify.app//%EC%BB%B4%ED%8F%AC%EB%84%8C%ED%8A%B8-%EA%B3%B5%ED%86%B5-%EA%B8%B0%EB%8A%A5-%EA%B4%80%EB%A6%AChoc-%EB%A0%8C%EB%8D%94%EC%86%8D%EC%84%B1%EA%B0%92)  
+         : [실전리액트프로그래밍 - 4.4 렌더링 속도를 올리기 위한 성능 포스팅](https://happyjy.netlify.app//%EB%A0%8C%EB%8D%94%EB%A7%81-%EC%86%8D%EB%8F%84%EB%A5%BC-%EC%98%AC%EB%A6%AC%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94-%EB%B0%A9%EB%B2%95)  
          : [리액트를 다루는기술 10장 todoapp 만들기 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)  
          : [리액트를 다루는기술 11장 todoapp 성능개선 - 예제코드 git](https://github.com/happyjy/toyProj-todo-app)
   - [x] 5장 리액트 내장 Hooks  
@@ -64,7 +64,7 @@ tags:
          : [redux 포스팅](https://happyjy.netlify.app/tag/redux)
 
 * [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
-  - [recursion 포스팅](https://happyjy.github.io/tag/recursion)
+  - [recursion 포스팅](https://happyjy.netlify.app//tag/recursion)
   - 다루는 내용
     - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기,
     - recursion 단 방향: 매개변수의 명시화: 순차탐색, 최대값 찾기, Binary Search,
@@ -81,10 +81,12 @@ tags:
 # ...ING LIST
 
 - [ready] 20205.05 - Async/Await 정리
+
   - [Real World Example-exchange](https://medium.com/free-code-camp/how-to-master-async-await-with-this-real-world-example-19107e7558ad)
   - [git](https://github.com/adrianhajdin/tutorial_currency_converter)
 
 - [ ] 실전리액트프로그래밍
+
   - [ ] 7장 babel/ webpack
   - [ ] 8장 ssr/ Next.js
   - [ ] 9장 TypeScript
@@ -95,9 +97,10 @@ tags:
   - [ ] GraphQl schema post
 
 - [x] 2020.04 - publishing - flex, grid강의/ website clone
-  - [...ing] 배운것 목록 블로그 작성하기 
 
-  - [정리 blog](https://happyjy.github.io/category/#CloneWebSite)
+  - [...ing] 배운것 목록 블로그 작성하기
+
+  - [정리 blog](https://happyjy.netlify.app//category/#CloneWebSite)
   - [git repository](https://github.com/happyjy/learning-scss-masterclass)
   - [강의 주소](https://academy.nomadcoders.co/p/cssnext-css-layout-masterclass)
   - 클론코딩 진행중

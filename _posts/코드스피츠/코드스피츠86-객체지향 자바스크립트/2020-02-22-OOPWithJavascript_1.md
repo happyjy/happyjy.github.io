@@ -121,7 +121,7 @@ worker.print() //hardWorking -> Polymorphism의 내적일관성
 ## Polymorphism of Prototype
 
 - javascript prototype, prototype chain을 통해서 `대체가능성`, `내적일관성`을 구현했다.
-- [프로토타입체인 참고](https://happyjy.github.io/prototype/#2-2-프로토타입-체인)
+- [프로토타입체인 참고](https://happyjy.netlify.app//prototype/#2-2-프로토타입-체인)
 
 ## 대체가능성 설명 도식화
 
@@ -221,7 +221,7 @@ const EssentialObject = class {
 > 수정하는 원인이 하나가 되도록 만드는 것
 
 - 이를 지키지 못했을때 산탄총 수술(shotgun surgery)가 필요하다
-- [SRP(SOLID중 1개: Single Responsibility(단일책임))를 준수하는 객체망이 문제를 해결](https://happyjy.github.io/%EC%BD%94%EB%93%9C%EC%8A%A4%ED%94%BC%EC%B8%A0%2086%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%201%ED%9A%8C%EC%B0%A8/#srpsolid%EC%A4%91-1%EA%B0%9C-single-responsibility%EB%8B%A8%EC%9D%BC%EC%B1%85%EC%9E%84%EB%A5%BC-%EC%A4%80%EC%88%98%ED%95%98%EB%8A%94-%EA%B0%9D%EC%B2%B4%EB%A7%9D%EC%9D%B4-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%ED%95%B4%EA%B2%B0)
+- [SRP(SOLID중 1개: Single Responsibility(단일책임))를 준수하는 객체망이 문제를 해결](https://happyjy.netlify.app//%EC%BD%94%EB%93%9C%EC%8A%A4%ED%94%BC%EC%B8%A0%2086%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%201%ED%9A%8C%EC%B0%A8/#srpsolid%EC%A4%91-1%EA%B0%9C-single-responsibility%EB%8B%A8%EC%9D%BC%EC%B1%85%EC%9E%84%EB%A5%BC-%EC%A4%80%EC%88%98%ED%95%98%EB%8A%94-%EA%B0%9D%EC%B2%B4%EB%A7%9D%EC%9D%B4-%EB%AC%B8%EC%A0%9C%EB%A5%BC-%ED%95%B4%EA%B2%B0)
 
 ### OCP Open Closed(개방폐쇄)
 
@@ -271,8 +271,8 @@ const EssentialObject = class {
   ![](1회/ISP-위임.png) - 위임(소유): 인터페이스로 분리하지 않고 처리하는 첫번째 옵션 - 모듈A, B, C 바라볼 객체를 만들어서 객체별로 A,B,C를 상대하도록 만들어 준다
 
 - 인터페이스로 해결하는 방법  
-  ![](1회/ISP-interface.png)  
-   - 객체를 만들때 처음부터 인터페이스 A, B, C 세개를 가져와서 인터페이스에 맞게 메소드를 오버라이드한다. - 그래서 외부에서 볼때는 객체를 보는게 아니라, 객체가 구현한 인터페이스를 보게 된다.
+  ![](1회/ISP-interface.png)
+  - 객체를 만들때 처음부터 인터페이스 A, B, C 세개를 가져와서 인터페이스에 맞게 메소드를 오버라이드한다. - 그래서 외부에서 볼때는 객체를 보는게 아니라, 객체가 구현한 인터페이스를 보게 된다.
 
 ### DIP Dependency Inversion(다운캐스팅금지)
 
@@ -313,7 +313,7 @@ const EssentialObject = class {
 
 ## SRP(SOLID중 1개: Single Responsibility(단일책임))를 준수하는 객체망이 문제를 해결
 
-[SRP Single Responsibility(단일책임)](https://happyjy.github.io/%EC%BD%94%EB%93%9C%EC%8A%A4%ED%94%BC%EC%B8%A0%2086%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%201%ED%9A%8C%EC%B0%A8/#srp-single-responsibility%EB%8B%A8%EC%9D%BC%EC%B1%85%EC%9E%84)
+[SRP Single Responsibility(단일책임)](https://happyjy.netlify.app//%EC%BD%94%EB%93%9C%EC%8A%A4%ED%94%BC%EC%B8%A0%2086%20%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%201%ED%9A%8C%EC%B0%A8/#srp-single-responsibility%EB%8B%A8%EC%9D%BC%EC%B1%85%EC%9E%84)
 
 - 책임이 상세하게 분리 - 각자의 역할만하고 다른놈에게 넘겨서 문제를 해결  
    : 마치 data structure에 linked-list처럼  
@@ -337,7 +337,7 @@ const EssentialObject = class {
      - 실제로 잘동하지 않는다.
      - 대외적으로 공개된 채널로 내부적으로 매핑(`런타임`구성)에 따라서 하나의 메소드를 실행시칸다.
      - 위 worker.run()을 예를 들어서 생각해보자.
-       - run()이라는 `오퍼레이터`는 Wokrer, HardWorker 둘중 어느것을 수행할지는 worker.run()을 수행할 때 `런타임`이 정해져 어떤 run을 수행할지 정해진다. 이를 `동적바인딩`이라고 한다. 이렇게 javascript는 `prototype`에 의해서 동적 바인딩을 지원한다. - [prototype게시글-2 프로토타입 체인](https://happyjy.github.io/prototype/#2-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%B2%B4%EC%9D%B8)
+       - run()이라는 `오퍼레이터`는 Wokrer, HardWorker 둘중 어느것을 수행할지는 worker.run()을 수행할 때 `런타임`이 정해져 어떤 run을 수행할지 정해진다. 이를 `동적바인딩`이라고 한다. 이렇게 javascript는 `prototype`에 의해서 동적 바인딩을 지원한다. - [prototype게시글-2 프로토타입 체인](https://happyjy.netlify.app//prototype/#2-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85-%EC%B2%B4%EC%9D%B8)
 3. `메소드` - 오퍼레이션이 연결될 실제 처리기
 
 ### 추상클래스, 인터페이스를 상속하게 하는 이유는?
@@ -409,14 +409,15 @@ const EssentialObject = class {
 
 # 객체지향을 배우는 이유
 
-> `격리구간`을 세우고 `의존성`을 관리하기 위해서  
->  - 의존성은 `변화에 대한 격리를 위해서`관리한다
+> `격리구간`을 세우고 `의존성`을 관리하기 위해서
+>
+> - 의존성은 `변화에 대한 격리를 위해서`관리한다
 
 - 위 쳅터 "Message-SRP", "Dependency"에서 설명
 
 # Dependency Inversion
 
-> [DIP Dependency Inversion(다운캐스팅금지)](https://happyjy.github.io/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_1/#dip-dependency-inversion%EB%8B%A4%EC%9A%B4%EC%BA%90%EC%8A%A4%ED%8C%85%EA%B8%88%EC%A7%80)
+> [DIP Dependency Inversion(다운캐스팅금지)](https://happyjy.netlify.app//%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_1/#dip-dependency-inversion%EB%8B%A4%EC%9A%B4%EC%BA%90%EC%8A%A4%ED%8C%85%EA%B8%88%EC%A7%80)
 
 - Polymorphism
   > 어떠한 경우에도 다운캐스팅은 금지  

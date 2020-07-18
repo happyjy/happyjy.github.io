@@ -21,7 +21,7 @@ tags:
 
   - Binder, ViewModel 통신을 이전 강의 까지 call로 해결해쓴는데 이번에 Observation으로 해결을 설명합니다.  
     그래서 결과적으로 모델이 변하면 binder가 자동으로 view를변하게 해준는게 목표이다.  
-     \* [전 강의 observe -> call로 대체](https://happyjy.github.io/객체지향%20자바스크립트_2/#observe---call로-대체)
+     \* [전 강의 observe -> call로 대체](https://happyjy.netlify.app//객체지향%20자바스크립트_2/#observe---call로-대체)
 
 - 배울 keyword
   - Strategy Pattern, Dependency Injection,
@@ -384,7 +384,7 @@ const ViewModel = class extends ViewModelListener {
     - update가 여러번 일어 날 수 있기 때문에
 - 4.중복을 없앴다
   - [보완] 전 강의 Binder Code 수정
-  - 참고: [전 강의 Binder Code](https://happyjy.github.io/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_2/#binder)
+  - 참고: [전 강의 Binder Code](https://happyjy.netlify.app//%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_2/#binder)
   - "".inclues.(k)
     - 문자열의 indexof는 자바스크립트에서 특별하게 빠르다. (object에서 key를 찾는 것보다)
   - defineProperty를 할것이다 왜냐하면 setter를 감시하기 위해서

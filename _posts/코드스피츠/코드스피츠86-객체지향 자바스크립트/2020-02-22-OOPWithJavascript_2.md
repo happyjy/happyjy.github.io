@@ -803,4 +803,4 @@ const Binder = class {
 ## 결론3 - 의존성에 문제가 있다.
 
 - 위 scanner내용에서 SRP내용 참고
-- [scanner](https://happyjy.github.io/%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_2/#scanner)
+- [scanner](https://happyjy.netlify.app//%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_2/#scanner)

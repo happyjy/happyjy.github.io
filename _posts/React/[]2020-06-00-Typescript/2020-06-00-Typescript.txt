@@ -5,6 +5,6 @@ author: jyoon
 category: React
 image: ../../_images/react.png
 tags:
-  - ssr
+  - TypeScript
   
 ---

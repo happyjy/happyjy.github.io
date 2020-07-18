@@ -10,7 +10,7 @@ tags:
 
 # FLEX, GRID 강의 & webSite clone
 
-- [정리 blog](https://happyjy.github.io/category/#CloneWebSite)
+- [정리 blog](https://happyjy.netlify.app//category/#CloneWebSite)
 - [git repository](https://github.com/happyjy/learning-scss-masterclass)
 - [강의 주소](hhttps://nomadcoders.co/css-layout-masterclass)
 
@@ -31,7 +31,7 @@ tags:
 # 강의에서 다룬 내용
 
 - [x] Flexbox  
-       [블로그 정리](https://happyjy.github.io/flex)
+       [블로그 정리](https://happyjy.netlify.app//flex)
 
   - flex-direction
   - order
