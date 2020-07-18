@@ -1,5 +1,5 @@
 ---
-title: clone website 10개 scss file, review
+title: clone website review(flex, grid)
 date: 2020-07-18
 author: jyoon
 category: CloneWebSite
