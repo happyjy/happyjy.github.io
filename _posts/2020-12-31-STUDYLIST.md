@@ -29,9 +29,10 @@ tags:
   - [정리 blog](https://5ebaa7a69c2fac0007f629c1--happyjy.github.io/category/#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
 - [x] 2020.04: Recursion 스터디 (블로그정리 예정)
 - [x] 2020.04: gatsby로 블로그 생성
+
   - [정리 blog](https://5ebaa7a69c2fac0007f629c1--happyjy.github.io/category/#React)
 
-* [x] 인스타그램 클론코딩 코드리뷰
+- [x] 인스타그램 클론코딩 코드리뷰
 
   - [x] Class component, Redux
   - [x] Function component, Hook
@@ -42,7 +43,7 @@ tags:
     - [git - backEnd](https://github.com/happyjy/prismagram)
     - [GraphQl — A beginner’s guide on How To GraphQl](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
 
-* [x] 2020.05 - 2020.06 React 개념 정리 중  
+- [x] 2020.05 - 2020.06 React 개념 정리 중  
        주 일회 스터디모임에서 "실전리액트프로그래밍"발표 중(책:리액트를다루는기술, 노마드코더 redux 강의 참고)
 
   - [정리 blog](https://happyjy.netlify.app//category/#React)
@@ -63,7 +64,8 @@ tags:
          : [Learning Vanilla Redux & React-Redux - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/learning-redux)  
          : [redux 포스팅](https://happyjy.netlify.app/tag/redux)
 
-* [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
+- [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
+
   - [recursion 포스팅](https://happyjy.netlify.app//tag/recursion)
   - 다루는 내용
     - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기,
@@ -75,6 +77,23 @@ tags:
   - [제2-1강 Recursion의 응용: 미로찾기](https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4)
   - [제2-2강 ecursion의 응용: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
   - [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
+
+- [x] 2020.04 - publishing - flex, grid강의/ website clone
+
+  - [정리 blog](https://happyjy.netlify.app//category/#CloneWebSite)
+  - [git repository](https://github.com/happyjy/learning-scss-masterclass)
+  - [강의 주소](https://academy.nomadcoders.co/p/cssnext-css-layout-masterclass)
+  - 클론 코딩 10개 완료
+    - [x] https://besthorrorscenes.com/
+    - [x] https://paint-box.com/
+    - [x] http://10x19.co/
+    - [x] http://www.z-o-o.fr/
+    - [x] https://schwartzmedia.com.au/
+    - [x] https://tolv.dk/
+    - [x] https://rodicdavidson.co.uk/
+    - [x] https://beige.de/
+    - [x] http://donicaida.com/
+    - [x] https://canalstreet.market/
 
 ---
 
@@ -95,30 +114,6 @@ tags:
 - [...ing] 인스타그램 클론코딩 코드리뷰
 
   - [ ] GraphQl schema post
-
-- [x] 2020.04 - publishing - flex, grid강의/ website clone
-
-  - [...ing] 배운것 목록 블로그 작성하기
-
-  - [정리 blog](https://happyjy.netlify.app//category/#CloneWebSite)
-  - [git repository](https://github.com/happyjy/learning-scss-masterclass)
-  - [강의 주소](https://academy.nomadcoders.co/p/cssnext-css-layout-masterclass)
-  - 클론코딩 진행중
-    - [x] https://besthorrorscenes.com/
-    - [x] https://paint-box.com/
-    - [x] http://10x19.co/
-    - [x] http://www.z-o-o.fr/
-    - [x] https://schwartzmedia.com.au/
-    - [x] https://tolv.dk/
-    - [x] https://rodicdavidson.co.uk/
-    - [x] https://beige.de/
-    - [x] http://donicaida.com/
-    - [x] https://canalstreet.market/
-  - 강의에서 다룬 내용
-    - [x][예제 캡쳐 넣기] 정리 Flexbox: flex-direction, order, justify-content, align-items, align-self, flex-wrap, align-content, flex-grow, flex-shrink, flex-basis
-    - [x] Grid: grid-template-columns, grid-template-rows, column-gap, row-gap, gap, grid-template-areas, grid-column-start, grid-column-end, grid-row-start, grid-row-end, grid-column, grid-row, grid-template, justify-items, align-items, place-items, justify-content, align-content, place-content, justify-self, align-self, place-self, grid-auto-rows, grid-auto-flow, grid-auto-columns
-    - Keywords & Functions: repeat, fr, minmax, auto-fit, auto-fill, min-content, max-content
-    - SCSS: Variables, Nesting, Mixins, Extend, Responsive Mixins
 
 ---
 
