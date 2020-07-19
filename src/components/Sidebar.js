@@ -84,7 +84,7 @@ const Sidebar = ({ author, authorFluid, tableOfContents }) => (
                   {!node.frontmatter.image ? (
                     ""
                   ) : (
-                    <Link to={node.fields.slug}>
+                    <Link to={`/${node.fields.slug}`}>
                       <Img
                         className="card-image-top"
                         fluid={node.frontmatter.image.childImageSharp.fluid}
@@ -93,7 +93,9 @@ const Sidebar = ({ author, authorFluid, tableOfContents }) => (
                   )}
                   {/* <CardBody> */}
                   {/* <CardTitle> */}
-                  <Link to={node.fields.slug}>{node.frontmatter.title}</Link>
+                  <Link to={`/${node.fields.slug}`}>
+                    {node.frontmatter.title}
+                  </Link>
                   {/* </CardTitle> */}
                   {/* </CardBody> */}
                 </Card>

@@ -6,6 +6,7 @@ image: ../../images/react.png
 category: React
 tags:
   - react-redux
+  - redux
 ---
 
 이번에는 react-redux 라이브러리를 사용해서 react에서 어떻게 redux로 컴포넌트 관리를 하는지 알아 보겠습니다.
@@ -82,25 +83,27 @@ export default App
 - react-redux 라이브러리 함수 입니다.
   - import { connect } from "react-redux";
 - 사용 모습을 보면 '커링'기법이 사용됨을 알수 있다.
+
   - connect(mapStateToProps, mapDispatchToProps)(Home);
   - 커링 예제
+
   ```js
-    var curryFuncTest = function(func) {
-      return function(a) {
-        return function(b) {
-          // getMaxWith10, getMinWith10 funciton
-          return func(a, b)
-        }
+  var curryFuncTest = function(func) {
+    return function(a) {
+      return function(b) {
+        // getMaxWith10, getMinWith10 funciton
+        return func(a, b)
       }
     }
+  }
 
-    var getMaxWith10 = curryFuncTest(Math.max)(10);
-    console.log(getMaxWith10(8));
-    console.log(getMaxWith10(25));
+  var getMaxWith10 = curryFuncTest(Math.max)(10)
+  console.log(getMaxWith10(8))
+  console.log(getMaxWith10(25))
 
-    var getMinWith10 = curryFuncTest(Math.min)(10);;
-    console.log(getMinWith10(8));
-    console.log(getMinWith10(25));
+  var getMinWith10 = curryFuncTest(Math.min)(10)
+  console.log(getMinWith10(8))
+  console.log(getMinWith10(25))
   ```
 
 ## 3.1 connect fucntion의 첫번째 arguments
