@@ -22,7 +22,7 @@ tags:
 
 useInput.js에서 useState를 사용하고 있는데 어떻게 사용되고 있는지 설명합니다. 
 
-- 예를 들어 Post 컴포넌트에서 좋아요 버튼 상태 관리를 useState로 하고 있는데 어떻게 사용하는지 보겠습ㄴ다.
+- 예를 들어 Post 컴포넌트에서 좋아요 버튼 상태 관리를 useState로 하고 있는데 어떻게 사용하는지 보겠습니다.
 
 ```jsx
 //PostContainer.js 

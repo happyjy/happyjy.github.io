@@ -1,5 +1,5 @@
 ---
-title: get started Apollo GraphQl inproject
+title: get started Apollo GraphQl in project
 date: 2020-06-15
 author: jyoon
 category: ToyProj
@@ -157,5 +157,5 @@ export default () => {
 ```
 
 # REF
-
-[apollographql Get started](<[https://www.apollographql.com/docs/react/get-started/](https://www.apollographql.com/docs/react/get-started/)>)
+[Get started apollographql](https://www.apollographql.com/docs/react/get-started/)
+[A beginner’s guide on How To GraphQl](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)

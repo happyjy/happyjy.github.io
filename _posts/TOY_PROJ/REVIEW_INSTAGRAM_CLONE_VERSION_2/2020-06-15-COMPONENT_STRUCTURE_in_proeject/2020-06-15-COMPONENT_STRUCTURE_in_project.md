@@ -1,5 +1,5 @@
 ---
-title: COMPONENT STRUCTURE in proeject
+title: COMPONENT STRUCTURE in project
 date: 2020-06-15
 author: jyoon
 category: ToyProj

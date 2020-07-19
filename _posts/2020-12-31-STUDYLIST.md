@@ -12,36 +12,54 @@ tags:
 - [x] 2018.07-08 패스트캠퍼스 vuejs
 - [x] 2019.12-2019.02 이직한 회사 자사 프레임워크 적응
   - vanlliaJavaScript, prototype 기반 객체지향 위젯, view/ viewmodel pattern, observer pattern ...
+
 - [x] 2019.02-08 인스타그램 클론코딩
   - React, Redux, Django, Postgres
   - [정리 blog](https://happyjy.netlify.app//category/#ToyProj)
+  - [git - React, Redux, Scss, Django](https://github.com/happyjy/yoonGram)
+
 - [x] 2019.08-09 프로그래머스 알고리즘 문제 풀기
   - [정리 blog](https://happyjy.netlify.app//category/#Algorithm)
+
 - [x] 2019.10-2020.01 인스타그램 클론코딩
   - React, Redux, Hooks, Apollo, Graphql - Express, Prisma
   - [정리 blog](https://happyjy.netlify.app//category#ToyProj)
-  - [git - React, Redux, Scss, Django](https://github.com/happyjy/yoonGram)
   - [git - frontend(React, Hooks, GraphQl)](https://github.com/happyjy/prismagram-frontend)
   - [git - backend(Express, Prisma)](https://github.com/happyjy/prismagram)
+
 - [x] 2020.01-02 자바스크립트 코어 스터디/정리
   - [정리 blog](https://happyjy.netlify.app//category/#Javascript%20Core)
+
 - [x] 2020.02-03 코드스피츠 객체지향자바크립트
-  - [정리 blog](https://5ebaa7a69c2fac0007f629c1--happyjy.github.io/category/#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
-- [x] 2020.04: Recursion 스터디 (블로그정리 예정)
+  - [정리 blog](https://happyjy.netlify.app/category#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
+
+- [x] 2020.04: Recursion 스터디
+    - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기,
+      - [제1-1강 Recursion의 개념과 기본 예제들 (1/3)](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)
+      - [제1-2강 Recursion의 개념과 기본 예제들 (2/3)](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)
+
+    - recursion 단 방향: 매개변수의 명시화: 순차탐색, 최대값 찾기, Binary Search,
+      - [제1-3강 Recursion의 개념과 기본 예제들 (3/3)](https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3)
+
+    - recursion 여러 방향: 미로찾기, class Maze, 움직인경로, Counting Cells in a Blob
+      - [제2-1강 Recursion의 응용: 미로찾기](https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4)
+      - [제2-2강 ecursion의 응용: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
+      - [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
+
 - [x] 2020.04: gatsby로 블로그 생성
+  - [정리 blog](https://happyjy.netlify.app/)
 
-  - [정리 blog](https://5ebaa7a69c2fac0007f629c1--happyjy.github.io/category/#React)
+- [x] 2020.05: 인스타그램 클론코딩 코드리뷰
+  - 인스타그램 클론 version 2
+    - [CRUD Apollo, GraphQl](https://happyjy.netlify.app/apollo-graphql-crud-in-project)
+    - [Apollo GraphQl in project](https://happyjy.netlify.app/get-started-apollo-graphql-in-project)
+    - [프로젝트에서 사용한 Hook review](https://happyjy.netlify.app/hook-in-project)
+    - [functional component 구조](https://happyjy.netlify.app/component-structure-in-proeject)
 
-- [x] 인스타그램 클론코딩 코드리뷰
-
-  - [x] Class component, Redux
-  - [x] Function component, Hook
-  - [x] Django 설명, 가상개발환경
-  - [x] apollo, GraphQl CRUD
-  - [x] React Redux CRUD
-    - [git - frontEnd](https://github.com/happyjy/prismagram-frontend)
-    - [git - backEnd](https://github.com/happyjy/prismagram)
-    - [GraphQl — A beginner’s guide on How To GraphQl](https://medium.com/@hurali/graphql-a-beginners-guide-on-how-to-graphql-6d4dc53a2c16)
+  - 인스타그램 클론 version 1
+    - [CRUD with React, React-Redux](https://happyjy.netlify.app/react-redux-crud-in-project)
+    - [Django 설명](https://happyjy.netlify.app/django-frameworks)
+    - [Django 가상개발환경 문제 해결](https://happyjy.netlify.app/reset-django-virtural-environment)
 
 - [x] 2020.05 - 2020.06 React 개념 정리 중  
        주 일회 스터디모임에서 "실전리액트프로그래밍"발표 중(책:리액트를다루는기술, 노마드코더 redux 강의 참고)
@@ -67,16 +85,7 @@ tags:
 - [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
 
   - [recursion 포스팅](https://happyjy.netlify.app//tag/recursion)
-  - 다루는 내용
-    - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기,
-    - recursion 단 방향: 매개변수의 명시화: 순차탐색, 최대값 찾기, Binary Search,
-    - recursion 여러 방향: 미로찾기, class Maze, 움직인경로, Counting Cells in a Blob
-  - [제1-1강 Recursion의 개념과 기본 예제들 (1/3)](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)
-  - [제1-2강 Recursion의 개념과 기본 예제들 (2/3)](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)
-  - [제1-3강 Recursion의 개념과 기본 예제들 (3/3)](https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3)
-  - [제2-1강 Recursion의 응용: 미로찾기](https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4)
-  - [제2-2강 ecursion의 응용: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
-  - [제2-3강 Recursion의 응용: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
+  
 
 - [x] 2020.04 - publishing - flex, grid강의/ website clone
 
