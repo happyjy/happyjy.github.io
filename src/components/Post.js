@@ -23,6 +23,7 @@ const Post = ({
   tags,
 }) => {
   // console.log('### numberOfPost: ', numberOfPost);
+  console.log("### slug: ", slug)
   return (
     <Card>
       {/* {!fluid ? (
@@ -34,7 +35,7 @@ const Post = ({
       )} */}
       <CardBody>
         <CardTitle>
-          <Link to={slug}>
+          <Link to={`/${slug}`}>
             <h3>{title}</h3>
           </Link>
         </CardTitle>
@@ -67,7 +68,7 @@ const Post = ({
           </ul>
         </div>
         <CardText>
-          <Link to={slug}>{body}</Link>
+          <Link to={`/${slug}`}>{body}</Link>
         </CardText>
         {/* <Link to={slug} className="btn btn-outline-primary float-right">
           Read more
