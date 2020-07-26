@@ -40,3 +40,44 @@ tags:
 - [ ] 20200525 공지글 기능 추가하기
 - [ ] 20200525 최근글 제거
 - [ ] 20200525 About 메뉴에 이력서 정리
+
+
+--- 
+
+
+* markdown에 image import하는 방법
+https://www.gatsbyjs.org/docs/working-with-images-in-markdown/
+
+* page만드는 것 설명
+https://www.gatsbyjs.org/docs/adding-markdown-pages/
+
+* Adding a List of Markdown Blog Posts
+https://www.gatsbyjs.org/docs/adding-a-list-of-markdown-blog-posts/
+
+* pagenation 설명
+* query 설명
+
+*  파일 구조 
+```
+  # 첫화면
+  # index.js
+    ㄴLayout
+      Post
+      PaginationLinks
+
+```
+
+```
+  # Layout.js
+    ㄴHeader
+    ㄴRow
+      ㄴCol - {children}
+      ㄴCol - <Sidebar>
+    ㄴFooter
+
+  # Post.js
+    - only post 
+
+  # PaginationLinks.js
+    - only component
+```
