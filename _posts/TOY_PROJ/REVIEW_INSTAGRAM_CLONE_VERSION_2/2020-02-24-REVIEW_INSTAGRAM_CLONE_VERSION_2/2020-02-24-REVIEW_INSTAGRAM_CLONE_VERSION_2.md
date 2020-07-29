@@ -15,7 +15,7 @@ tags:
 
 # README
 
-Instagram clone with Express(Prisma) + Prisma(apollo) + React(Hooks)
+Instagram clone with React(Hooks) + Prisma(apollo) + Express(Prisma)
 
 # github
 
