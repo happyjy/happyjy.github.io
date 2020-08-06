@@ -80,13 +80,14 @@ function hasScrolled() {
   
   
 //IIFE에서 SCOPE 영역에서 변수는 유지 될것이가? 
-// 유지 된다.
+// ㄴ valueObj는 closure 영역에 유지 된다.
+let layer;
 (function () {
     //closure
     let valueObj = {};
     console.log("In IIFE: ", this);
 
-    this.layer = {
+    layer = {
         setValue: (key, value) => {
             //valueObj: closure
             if (!valueObj[key]) {
