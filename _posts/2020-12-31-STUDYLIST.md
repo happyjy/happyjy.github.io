@@ -98,7 +98,7 @@ tags:
 
   - [recursion 리뷰 포스팅 모음](https://happyjy.netlify.app/tag/recursion)
 
-- [x] 2020.04 - publishing - flex, grid강의/ website 10개 clone
+- [x] 2020.04 - 2020.07 publishing - flex, grid강의/ website 10개 clone
 
   - [clone website 실제 페이지](https://happyjy-learning-scss.netlify.app/)
   - [clone website(Flex, grid) 포스팅](https://happyjy.netlify.app/clone-website-reviewflex-grid)
@@ -120,8 +120,14 @@ tags:
 
 # ...ING LIST
 
-- [ready] 20205.05 - Async/Await 정리
+- [...ing] 2020.08 - Data Structure  
+  - [x] 이론 학습 완료 
+  - [...ing] 코드로 직접 구현해보기 
+  - [ ] 포스팅
+  - 자바스크립트로 하는 자료구조와 알고리즘 - 에이콘
+  - 자바스크립트 자료구조와 알고리즘 - 에이콘 
 
+- [readyToPost] 20205.07 - Async/Await 정리
   - [Real World Example-exchange](https://medium.com/free-code-camp/how-to-master-async-await-with-this-real-world-example-19107e7558ad)
   - [git](https://github.com/adrianhajdin/tutorial_currency_converter)
 
