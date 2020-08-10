@@ -134,19 +134,22 @@ var timer = setInterval(cbFunc, 300)
 
 # 4 콜백 함수 내부의 this에 다른 값 바인딩하기
 
-- 콜백 함수 내부의 this에 따른 값을 바인딩하는 방법 (1/3)
+- 콜백 함수 내부의 this에 따른 값을 바인딩하는 방법 (1/3) 
+  
+  - scope chain으로 closure 영역 변수 접근
+
   ```js
-  var obj1 = {
-    name: "obj1",
-    func: function() {
-      var me = this //POINT
-      return function() {
-        console.log(me.name)
-      }
-    },
-  }
-  var callback = obj1.func()
-  setTimeout(callback, 1000)
+    var obj1 = {
+      name: "obj1",
+      func: function() {
+        var me = this //POINT
+        return function() {
+          console.log(me.name); // obj1
+        }
+      },
+    }
+    var callback = obj1.func();
+    setTimeout(callback, 1000);
   ```
   - var me = this;는 closure scope에 등록
   - setTimeout에 의해서 callback function이 호출 될때 me.name은 excute context에서 me.name 변수를 찾는다.
@@ -154,40 +157,38 @@ var timer = setInterval(cbFunc, 300)
 
 * 콜백 함수 내부의 this에 따른 값을 바인딩하는 방법 (2/3)
 
-  - 예제1에서 만들었던 함수 재활용하는 방법 - cb2 확인해보자
+  - 위예제 obj1.func 함수 재활용
 
   ```js
-  {
-  ,
-  {
-  e
-  {
-  ;
-  ;
-  ;
-  }
-  ;
+    var obj1 = {
+      name: "obj1",
+      func: function() {
+        var me = this //POINT
+        return function() {
+          console.log(me.name); 
+        }
+      }
+    }
+    var callback1 = obj1.func();
+    setTimeout(callback1, 1000);  //obj1
 
-  {
-  ,
-  c
-  ;
+    var obj2 = {
+      name: 'obj2',
+      func: obj1.func
+    };
+    var callback2 = obj2.func();
+    setTimeout(callback2, 1500);  //obj2
 
-  ;
-  ;
-
-  ;
-  ;
-
-  }
-  }
-  ;
+    var obj3 = { name: 'obj3' };
+    //POINT: obj1.func 함수의 call함수 호출로 컨텍스트 변경
+    var callback3 = obj1.func.call(obj3);
+    setTimeout(callback3, 2000);  //obj3
 
       /*
-          # 결과
-              * cb1: obj1 {name: "cb1"}
-              * cb2: obj2 {name: "cb2"}
-              * cb3: obj3 Window {...}
+        # 결과
+          * obj1
+          * obj2
+          * obj3
       */
   ```
 
@@ -199,19 +200,20 @@ var timer = setInterval(cbFunc, 300)
     var obj1 = {
       name: "obj1",
       func: function() {
-        console.log(this.name)
+        console.log(this.name);
       },
     }
+    //POINT: obj1.func 함수의 bind함수 호출로 컨텍스트 변경
+    setTimeout(obj1.func.bind(obj1), 1000);
 
-    setTimeout(obj1.func.bind(obj1), 1000)
-
+    //POINT: obj1.func 함수의 bind함수 호출로 컨텍스트 변경
     var obj2 = { name: "obj2" }
-    setTimeout(obj1.func.bind(obj2), 1500)
+    setTimeout(obj1.func.bind(obj2), 1500);
 
     /*
-        # 결과
-            * obj1
-            * obj2
+      # 결과
+        * obj1
+        * obj2
     */
     ```
 
@@ -232,7 +234,7 @@ var timer = setInterval(cbFunc, 300)
   - 이벤트처리(addEventListener)  
      : 사용자의 직접적인 개입이 있을 때 비로소 어떤 함수를 실행하도록 대기
   - 보류(XMLhttpRequest)  
-     : 웹브라우저 자체가 아닌 별도의 대상에 무어가를 요청하고 그에 대한 응답이 왔을때 비로소 어떤 함수를 실행하도록 대기
+     : 웹브라우저 자체가 아닌 별도의 대상에 무언가를 요청하고 그에 대한 응답이 왔을때 비로소 어떤 함수를 실행하도록 대기
 
 # 참고
 
