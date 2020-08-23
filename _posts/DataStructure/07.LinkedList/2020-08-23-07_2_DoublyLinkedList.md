@@ -1,6 +1,6 @@
 ---
-title: DoublyLinkedList
-date: 2020-01-24
+title: 07_DoublyLinkedList
+date: 2020-08-23
 author: jyoon
 category: DataStructure
 tags:
