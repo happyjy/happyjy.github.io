@@ -1,6 +1,3 @@
-
-# permutation
-
 var result = [];
 function solution(str, pp, strlength) {
 
@@ -21,3 +18,28 @@ function solution(str, pp, strlength) {
 
 var str = "ABC";
 solution(str, 0, str.length);
+console.log(result);
+
+//--
+
+var result2 = [];
+function solution2(str, pp) {
+
+    if (pp == str.length) {
+        console.log({ str, pp })
+        return result2.push(str);
+    } else {
+        for (let i = pp; i < str.length; i++) {
+            //swap pivot, i 
+            var arrStr = [...str];
+            [arrStr[pp], arrStr[i]] = [arrStr[i], arrStr[pp]];
+            //call recursive
+            solution2(arrStr.join(""), pp + 1);
+            [arrStr[i], arrStr[pp]] = [arrStr[pp], arrStr[i]];
+        }
+    }
+}
+
+var str = "ABC";
+solution2(str, 0);
+console.log(result2);
