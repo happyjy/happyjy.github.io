@@ -1,0 +1,22 @@
+
+# permutation
+
+var result = [];
+function solution(str, pp, strlength){
+
+    if (pp === strlength) {
+        console.log({str, pp, strlength})
+        return result.push(str);
+    } else {
+        for (let i = pp; i < str.length; i++) {
+            //swap pivot, i 
+            var arrStr = [...str];
+            [arrStr[pp], arrStr[i]] = [arrStr[i], arrStr[pp]];
+            solution(arrStr.join(""), pp+1, strlength);        
+            [arrStr[i], arrStr[pp]] = [arrStr[pp], arrStr[i]];
+        }
+    }
+}
+
+var str = "ABC";
+solution(str, 0 ,str.length);
