@@ -31,6 +31,31 @@ knapSack(C, weight, value, n)
 
 
 /*
+        maxValue[1][1] = maxValue[0][1];
+        Math.max(value[0] + maxValue[0][0], maxValue[0][2])
+        Math.max(value[0] + maxValue[0][1], maxValue[0][3])
+        Math.max(value[0] + maxValue[0][2], maxValue[0][4])
+        Math.max(value[0] + maxValue[0][3], maxValue[0][5])
+
+        maxValue[2][1] = maxValue[1][1];
+        maxValue[2][2] = maxValue[1][2];
+        Math.max(value[1] + maxValue[1][0], maxValue[1][3])
+        Math.max(value[1] + maxValue[1][1], maxValue[1][4])
+        Math.max(value[1] + maxValue[1][2], maxValue[1][5])
+
+        maxValue[3][1] = maxValue[2][1];
+        maxValue[3][2] = maxValue[2][2];
+        maxValue[3][3] = maxValue[2][3];
+        Math.max(value[2] + maxValue[2][0], maxValue[2][4])
+        Math.max(value[2] + maxValue[2][1], maxValue[2][5])
+
+        maxValue[4][1] = maxValue[3][1];
+        maxValue[4][2] = maxValue[3][2];
+        maxValue[4][3] = maxValue[3][3];
+        maxValue[4][4] = maxValue[3][4];
+        Math.max(value[3] + maxValue[3][0], maxValue[3][5])
+
+
   maxValue[1][1] = maxValue[1 - 1][1];
   Math.max(value[1 - 1] + maxValue[1 - 1][0], maxValue[1 - 1][2])
   Math.max(value[1 - 1] + maxValue[1 - 1][1], maxValue[1 - 1][3])
