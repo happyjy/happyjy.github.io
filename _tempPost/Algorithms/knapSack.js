@@ -31,6 +31,10 @@ knapSack(C, weight, value, n)
 
 
 /*
+        weight[i - 1] <= j
+        const weight = [2, 3, 4, 5]
+        const value = [3, 4, 5, 6]
+
         maxValue[1][1] = maxValue[0][1];
         Math.max(value[0] + maxValue[0][0], maxValue[0][2])
         Math.max(value[0] + maxValue[0][1], maxValue[0][3])
@@ -56,27 +60,30 @@ knapSack(C, weight, value, n)
         Math.max(value[3] + maxValue[3][0], maxValue[3][5])
 
 
-  maxValue[1][1] = maxValue[1 - 1][1];
-  Math.max(value[1 - 1] + maxValue[1 - 1][0], maxValue[1 - 1][2])
-  Math.max(value[1 - 1] + maxValue[1 - 1][1], maxValue[1 - 1][3])
-  Math.max(value[1 - 1] + maxValue[1 - 1][2], maxValue[1 - 1][4])
-  Math.max(value[1 - 1] + maxValue[1 - 1][3], maxValue[1 - 1][5])
 
-  maxValue[2][1] = maxValue[2 - 1][1];
-  maxValue[2][2] = maxValue[2 - 1][2];
-  Math.max(value[2 - 1] + maxValue[2 - 1][0], maxValue[2 - 1][3])
-  Math.max(value[2 - 1] + maxValue[2 - 1][1], maxValue[2 - 1][4])
-  Math.max(value[2 - 1] + maxValue[2 - 1][2], maxValue[2 - 1][5])
+        maxValue[1][1] = maxValue[1 - 1][1];
+        Math.max(value[1 - 1] + maxValue[1 - 1][0], maxValue[1 - 1][2])
+        Math.max(value[1 - 1] + maxValue[1 - 1][1], maxValue[1 - 1][3])
+        Math.max(value[1 - 1] + maxValue[1 - 1][2], maxValue[1 - 1][4])
+        Math.max(value[1 - 1] + maxValue[1 - 1][3], maxValue[1 - 1][5])
 
-  maxValue[3][1] = maxValue[3 - 1][1];
-  maxValue[3][2] = maxValue[3 - 1][2];
-  maxValue[3][3] = maxValue[3 - 1][3];
-  Math.max(value[3 - 1] + maxValue[3 - 1][0], maxValue[3 - 1][4])
-  Math.max(value[3 - 1] + maxValue[3 - 1][1], maxValue[3 - 1][5])
+        # 물건무게 weight[2] = 3;
+        가방용량 1(leftWight = 1 - 3): maxValue[2][1] = maxValue[2 - 1][1];
+        가방용량 2(leftWight = 2 - 3): maxValue[2][2] = maxValue[2 - 1][2];
+        가방용량 3(leftWight = 3 - 3): Math.max(value[2 - 1] + maxValue[2 - 1][0(leftWight)], maxValue[2 - 1][3]) -> Math.max(4 + 0, 3)
+        가방용량 4(leftWight = 4 - 3): Math.max(value[2 - 1] + maxValue[2 - 1][1(leftWight)], maxValue[2 - 1][4]) -> Math.max(4 + 0, 3)
+        가방용량 5(leftWight = 5 - 3): Math.max(value[2 - 1] + maxValue[2 - 1][2(leftWight)], maxValue[2 - 1][5]) -> Math.max(4 + 3, 3)
 
-  maxValue[4][1] = maxValue[4 - 1][1];
-  maxValue[4][2] = maxValue[4 - 1][2];
-  maxValue[4][3] = maxValue[4 - 1][3];
-  maxValue[4][4] = maxValue[4 - 1][4];
-  Math.max(value[4 - 1] + maxValue[4 - 1][0], maxValue[4 - 1][5])
+        maxValue[3][1] = maxValue[3 - 1][1];
+        maxValue[3][2] = maxValue[3 - 1][2];
+        maxValue[3][3] = maxValue[3 - 1][3];
+        Math.max(value[3 - 1] + maxValue[3 - 1][0], maxValue[3 - 1][4]) -> Math.max(5 + 0, 4)
+        Math.max(value[3 - 1] + maxValue[3 - 1][1], maxValue[3 - 1][5]) -> Math.max(5 + 0, 7)
+
+        maxValue[4][1] = maxValue[4 - 1][1];
+        maxValue[4][2] = maxValue[4 - 1][2];
+        maxValue[4][3] = maxValue[4 - 1][3];
+        maxValue[4][4] = maxValue[4 - 1][4];
+        Math.max(value[4 - 1] + maxValue[4 - 1][0], maxValue[4 - 1][5])
+        Math.max(5, 7)
 */
