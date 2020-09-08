@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script version=1>
+        /* 
+            # point1
+                - i, j 시작점을 0으로 하다 보니 
+                maxValues로 0부터 시작된다. 그래서 아무것도 자르고 나서 나머지 철근이 없을때 계산이 없어 저런 식이 나오게 됐다. 
+                그래서 script version=2 를 확인해보자 
+
+         */
+        const value = [1, 5, 8, 9, 10, 17, 17, 20];
+
+        function maxValue(value, N) {
+            let maxValues = Array(value.length).fill(0);
+
+            for (var i = 0; i < N; i++) {
+                console.log(`# 철근길이 ${i} 일때 최대 가격 구하는중 `)
+                for (var j = 0; j <= i; j++) {
+                    // point1
+                    maxValues[i] = Math.max(maxValues[i], value[j] + (i - j == 0 ? 0 : maxValues[i - j - 1]));
+                    console.log(`  ## 철근길이 ${i} 중 ${j} 만큼 길이 구하는 중 -> 가격: ${maxValues[i]}`);
+                }
+                console.log("")
+            }
+
+            // point1
+            return maxValues[N - 1];
+        }
+
+        console.log(maxValue(value, value.length));
+    </script>
+
+    <script version=2>
+        /* 
+            # point1
+                - maxValues로 0부터 시작된다. 그래서 아무것도 자르고 나서 나머지 철근이 없을때 계산이 없어 저런 식이 나오게 됐다. 
+         */
+        const value2 = [1, 5, 8, 9, 10, 17, 17, 20];
+
+        function maxValue2(value2, N) {
+            value2.unshift(0);
+
+            let maxValues2 = Array(value2.length + 1).fill(0);
+
+            for (var i = 1; i <= N; i++) {
+                console.log(`# 철근길이 ${i} 일때 최대 가격 구하는중 `)
+                for (var j = 1; j <= i; j++) {
+                    maxValues2[i] = Math.max(maxValues2[i], value2[j] + maxValues2[i - j]);
+                    console.log(`  ## 철근길이 ${i} 중 ${j} 만큼 길이 구하는 중 -> 가격: ${maxValues2[i]}`);
+                }
+                console.log("")
+            }
+
+            return maxValues2[N];
+        }
+
+        console.log(maxValue2(value2, value2.length));
+    </script>
+</body>
+
+</html>
+
+<script>
+    /*
+         # 순회하면서 recursion 한 log
+
+             N: 1, i: 0, maxValues[0]: 1
+
+             N: 2, i: 0, maxValues[1]: 2
+             N: 2, i: 1, maxValues[1]: 5
+
+             N: 3, i: 0, maxValues[2]: 6
+             N: 3, i: 1, maxValues[2]: 6
+             N: 3, i: 2, maxValues[2]: 8
+
+             N: 4, i: 0, maxValues[3]: 9
+             N: 4, i: 1, maxValues[3]: 10
+             N: 4, i: 2, maxValues[3]: 10
+             N: 4, i: 3, maxValues[3]: 10
+
+             N: 5, i: 0, maxValues[4]: 11
+             N: 5, i: 1, maxValues[4]: 13
+             N: 5, i: 2, maxValues[4]: 13
+             N: 5, i: 3, maxValues[4]: 13
+             N: 5, i: 4, maxValues[4]: 13
+
+             N: 6, i: 0, maxValues[5]: 14
+             N: 6, i: 1, maxValues[5]: 15
+             N: 6, i: 2, maxValues[5]: 16
+             N: 6, i: 3, maxValues[5]: 16
+             N: 6, i: 4, maxValues[5]: 16
+             N: 6, i: 5, maxValues[5]: 17
+
+             N: 7, i: 0, maxValues[6]: 18
+             N: 7, i: 1, maxValues[6]: 18
+             N: 7, i: 2, maxValues[6]: 18
+             N: 7, i: 3, maxValues[6]: 18
+             N: 7, i: 4, maxValues[6]: 18
+             N: 7, i: 5, maxValues[6]: 18
+             N: 7, i: 6, maxValues[6]: 18
+
+             N: 8, i: 0, maxValues[7]: 19
+             N: 8, i: 1, maxValues[7]: 22
+             N: 8, i: 2, maxValues[7]: 22
+             N: 8, i: 3, maxValues[7]: 22
+             N: 8, i: 4, maxValues[7]: 22
+             N: 8, i: 5, maxValues[7]: 22
+             N: 8, i: 6, maxValues[7]: 22
+             N: 8, i: 7, maxValues[7]: 22
+     */
+</script>
