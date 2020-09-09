@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script version=1>
+        //permutation tree 참고 
+        // https://www.google.com/search?q=permutation+tree&rlz=1C1GCEU_koKR826KR826&oq=permutation+tree&aqs=chrome.0.0l8.2107j0j7&sourceid=chrome&ie=UTF-8
+        let arr = [];
+
+        function solution(str, fixPosition, len) {
+            if (fixPosition === len) {
+                console.log({ str, fixPosition });
+                arr.push(str);
+            } else {
+                for (var i = fixPosition; i <= len; i++) {
+                    let temp = [...str];
+                    [temp[i], temp[fixPosition]] = [temp[fixPosition], temp[i]];
+                    str = temp.join("");
+
+                    console.log({ str, i, fixPosition });
+                    // fixPosition을 이동하면 
+                    solution(str, fixPosition + 1, len);
+
+                    // 위 swap 한걸 다시 돌려 이전 글자와 같게 만든다. 
+                    // recursion tree를 보면 이해가 쉬울 것 
+                    temp = [...str];
+                    [temp[fixPosition], temp[i]] = [temp[i], temp[fixPosition]];
+                    str = temp.join("");
+                }
+            }
+        }
+
+        const str = "ABC";
+        console.log(solution(str, 0, str.length - 1));
+    </script>
+</body>
+
+</html>
