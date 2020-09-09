@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script version=1>
+        /*
+
+            코딩 테스트 # 79
+            문제
+            양의 정수 배열과 정수 s가 주어졌을 때, 합이 s가 되는 원소들의 조합이 있는지 찾으시오.
+
+            Input: A = { 7, 3, 2, 5, 8 }, s = 14
+            Output: Yes (7, 2, 5)
+
+            풀이PREMIUM
+            풀이1
+
+
+            이 문제는 0-1 배낭 문제의 특별한 경우로 생각해 볼 수 있습니다.
+            단순하게 원소들의 모든 조합을 고려하는 방법이 있습니다.
+            재귀 호출을 통해 합이 s가 되는 원소들의 조합을 찾습니다.
+            각 원소들에 대해 다음과 같은 조합을 고려합니다.
+
+            1. 원소들의 조합에 현재 원소를 포함하고 남은 원소들에 대해 재귀 호출을 합니다.
+            2. 원소들의 조합에 현재 원소를 제외하고 남은 원소들에 대해 재귀 호출을 합니다.
+            재귀 호출 시 남아 있는 원소들이 없거나 합이 음수가 되면 false를 리턴합니다.
+
+
+            합이 0이 되면 true를 리턴하고, 이 경우 원하는 조합을 찾은 것입니다.
+         */
+        var count = 0;
+        function solution(arr, n, sum, category) {
+            count++;
+            // console.log({ arr, n, sum, category });
+            console.log({ n, sum, category });
+
+            if (sum === 0) {
+                return true;
+            }
+
+            // 남은 원소가 없거나, sum이 음수 -> false
+            if (n < 0 || sum < 0) {
+                return false;
+            }
+
+            const include = solution(arr, n - 1, sum - arr[n], "in");
+
+            const exclude = solution(arr, n - 1, sum, "----- ex");
+
+            return include || exclude;
+
+        }
+
+        const arr = [7, 3, 2, 5, 8];
+        const sum = 14;
+        console.log(solution(arr, arr.length - 1, sum));
+    </script>
+
+</body>
+
+</html>
