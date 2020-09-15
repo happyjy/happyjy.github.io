@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function isSubsetSum(arr, n, X) {
+            // 종료 조건1: X가 0이면 성공 종료 조건
+            if (X == 0) return true;
+
+            // 종료 조건2: X가 0이 아니고 남은 원소가 없다면 실패 종료 조건
+            if (n == 0) return false;
+
+            // X보다 큰 원소는 무시해도 좋습니다.
+            if (arr[0] > X) {
+                return isSubsetSum(arr.slice(1), n - 1, X);
+            }
+
+            // 부분집합에 원소를 포함하지 않는 경우와
+            // 원소를 포함하는 경우 각각에 대해 재귀 호출
+            return isSubsetSum(arr.slice(1), n - 1, X) || isSubsetSum(arr.slice(1), n - 1, X - arr[0]);
+        }
+
+        var arr = [3, 2, 7, 1];
+        console.log(isSubsetSum(arr, arr.length, 6));
+    </script>
+</body>
+
+</html>
