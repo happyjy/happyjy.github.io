@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 최장 공통 부분 수열 
+        // 문자열 내에서 왼쪽에서 오른쪽 방향으로 문자열 내에 들어 잇는 글자의 수열
+        // 반드시 연속적인 글자들로 구성될 필요 x
+        function lcs_length(str1, str2, m, n) {
+            var LCS_table = Array(m + 1).fill(0).map(v => Array(n + 1).fill(0));
+
+            // 배열의 나머지 셀을 채운다.fail
+            for (var i = 1; i <= m; i++) {
+                for (var j = 1; j <= n; j++) {
+                    if (str1[i - 1] === str2[j - 1]) {
+                        LCS_table[i][j] = LCS_table[i - 1][j - 1] + 1;
+                    } else {
+                        LCS_table[i][j] = Math.max(LCS_table[i - 1][j], LCS_table[i][j - 1]);
+                    }
+
+                }
+            }
+
+            return LCS_table[m][n];
+        }
+
+        // var str1 = 'ABCD';
+        // var str2 = 'AEBD';
+        var str1 = 'ACB';
+        var str2 = 'ABC';
+        var m = str1.length;
+        var n = str2.length;
+
+        console.log(lcs_length(str1, str2, m, n));
+    </script>
+</body>
+
+</html>
