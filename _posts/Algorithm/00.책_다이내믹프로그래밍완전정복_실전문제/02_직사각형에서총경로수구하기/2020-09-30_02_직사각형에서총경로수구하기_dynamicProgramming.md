@@ -1,11 +1,11 @@
 ---
-title: 최소교정비용_recursion
+title: 직사각형에서총경로수구하기_dynamicProgramming
 date: 2020-09-30
 category: Algorithm
 author: jyoon
 tags:
-  - recursion
-  - 최소교정비용
+  - 직사각형에서총경로수구하기
+  - dynamicProgramming
 ---
 
 # 문제
