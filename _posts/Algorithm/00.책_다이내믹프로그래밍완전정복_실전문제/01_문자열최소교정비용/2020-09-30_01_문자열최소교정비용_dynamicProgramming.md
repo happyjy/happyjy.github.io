@@ -1,11 +1,11 @@
 ---
-title: 최소교정비용_dynamicProgramming
+title: 문자열최소교정비용_dynamicProgramming
 date: 2020-09-30
 category: Algorithm
 author: jyoon
 tags:
+  - 문자열최소교정비용
   - dynamicProgramming
-  - 최소교정비용
 ---
 
 # 문제
