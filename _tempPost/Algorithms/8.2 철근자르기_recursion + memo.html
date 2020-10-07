@@ -9,7 +9,7 @@
 
 <body>
     <script>
-        const value = [1, 5, 8, 9, 10, 17, 17, 20];
+        const value = [0, 1, 5, 8, 9, 10, 17, 17, 20];
         let maxValues = Array(value.length).fill(0);
 
         function maxValue(value, N) {
@@ -24,9 +24,9 @@
             maxValues[N - 1] = Number.MIN_SAFE_INTEGER;
 
             // 철근을 자르는 모든 경우를 recursion으로 확인한다.
-            for (var i = 0; i < N; i++) {
+            for (var i = 1; i <= N; i++) {
                 //Max
-                maxValues[N - 1] = Math.max(maxValues[N - 1], value[i] + maxValue(value, N - i - 1));
+                maxValues[N - 1] = Math.max(maxValues[N - 1], value[i] + maxValue(value, N - i));
                 const log = { N, i };
                 const number = N - 1 + "";
                 log["maxValues[" + number + "]"] = maxValues[N - 1];
@@ -38,7 +38,7 @@
 
 
 
-        console.log(maxValue(value, value.length));
+        console.log(maxValue(value, value.length - 1));
     </script>
 </body>
 
@@ -47,34 +47,34 @@
 <script>
     /*
          # 순회하면서 recursion 한 log
- 
+
              N: 1, i: 0, maxValues[0]: 1
- 
+
              N: 2, i: 0, maxValues[1]: 2
              N: 2, i: 1, maxValues[1]: 5
- 
+
              N: 3, i: 0, maxValues[2]: 6
              N: 3, i: 1, maxValues[2]: 6
              N: 3, i: 2, maxValues[2]: 8
- 
+
              N: 4, i: 0, maxValues[3]: 9
              N: 4, i: 1, maxValues[3]: 10
              N: 4, i: 2, maxValues[3]: 10
              N: 4, i: 3, maxValues[3]: 10
- 
+
              N: 5, i: 0, maxValues[4]: 11
              N: 5, i: 1, maxValues[4]: 13
              N: 5, i: 2, maxValues[4]: 13
              N: 5, i: 3, maxValues[4]: 13
              N: 5, i: 4, maxValues[4]: 13
- 
+
              N: 6, i: 0, maxValues[5]: 14
              N: 6, i: 1, maxValues[5]: 15
              N: 6, i: 2, maxValues[5]: 16
              N: 6, i: 3, maxValues[5]: 16
              N: 6, i: 4, maxValues[5]: 16
              N: 6, i: 5, maxValues[5]: 17
- 
+
              N: 7, i: 0, maxValues[6]: 18
              N: 7, i: 1, maxValues[6]: 18
              N: 7, i: 2, maxValues[6]: 18
@@ -82,7 +82,7 @@
              N: 7, i: 4, maxValues[6]: 18
              N: 7, i: 5, maxValues[6]: 18
              N: 7, i: 6, maxValues[6]: 18
- 
+
              N: 8, i: 0, maxValues[7]: 19
              N: 8, i: 1, maxValues[7]: 22
              N: 8, i: 2, maxValues[7]: 22
