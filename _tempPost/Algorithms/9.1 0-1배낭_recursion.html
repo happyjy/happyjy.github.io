@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function knapSack(C, weight, value, n) {
+            // 종단점
+            if (C <= 0 || n <= 0) return 0;
+
+            // 물건 무게가 배낭 용량 보다 큰 경우 
+            if (weight[n - 1] > C) {
+                return knapSack(C, weight, value, n - 1);
+            }
+
+            // n번째 물건을 배낭에 넣는 경우
+            const carry = value[n - 1] + knapSack(C - weight[n - 1], weight, value, n - 1);
+
+            // n번째 물건 않넣는 경우 
+            const leave = knapSack(C, weight, value, n - 1);
+
+            return Math.max(carry, leave);
+        }
+
+        const C = 5; // 배낭 용량
+        const weight = [2, 3, 4, 5]; // 물건 무게
+        const value = [3, 4, 5, 6]; // 물건 가격
+        const n = weight.length; // 물건 개수
+
+        console.log(knapSack(C, weight, value, n)); // 7 (무게 2 + 3)
+
+            /*
+            # 물건을 배낭에 넣을 수 있는 모든 경우의 수(전체탐색) 트리 구조
+            o: 배낭에 물건 넣기 
+            x: 배나엥 물건 안 넣기 
+                                                                        o                                                    - 물건 무게 2
+                                                    o                                           x                            - 물건 무게 3
+                                      o                     x                         o                     x                - 물건 무게 4
+                               o           x           o          x            o           x          o           x          - 물건 무게 5
+
+
+
+                                                                        x                                                    - 물건 무게 2
+                                                    o                                           x                            - 물건 무게 3
+                                      o                     x                         o                     x                - 물건 무게 4
+                               o           x           o          x            o           x          o           x          - 물건 무게 5
+                            
+            
+            
+            */
+    </script>
+
+
+
+</body>
+
+</html>
