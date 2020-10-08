@@ -134,23 +134,22 @@ tags:
   - [x] 코드 구현
   - [x] 포스팅
 
-- [ ] 2020.08 - callbackFunction
-
-  - 콜백 지옥과 비동기 제어 6가지 단계 설명 추가하기
-
 - [readyToPost] 20205.07 - Async/Await 정리
 
   - [Real World Example-exchange](https://medium.com/free-code-camp/how-to-master-async-await-with-this-real-world-example-19107e7558ad)
   - [git](https://github.com/adrianhajdin/tutorial_currency_converter)
 
-- [ ] 실전리액트프로그래밍
+- [ ] 2020.08 - callbackFunction
+  - 콜백 지옥과 비동기 제어 6가지 단계 설명 추가하기
+
+* [ ] 실전리액트프로그래밍
 
   - [ ] 7장 babel/ webpack
   - [ ] 8장 ssr/ Next.js
   - [ ] 9장 TypeScript
   - [ ] 10장 fiber
 
-- [...ing] 인스타그램 클론코딩 코드리뷰
+* [...ing] 인스타그램 클론코딩 코드리뷰
 
   - [ ] GraphQl schema post
 

@@ -4,7 +4,7 @@ date: 2020-09-30
 category: Algorithm
 author: jyoon
 tags:
-  - 문자열인터리빙확인문제
+  - Algorithm
   - dynamicProgramming
 ---
 

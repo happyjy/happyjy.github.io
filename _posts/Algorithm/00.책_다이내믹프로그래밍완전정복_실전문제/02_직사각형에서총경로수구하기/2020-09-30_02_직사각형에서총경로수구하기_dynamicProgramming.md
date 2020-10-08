@@ -4,7 +4,7 @@ date: 2020-09-30
 category: Algorithm
 author: jyoon
 tags:
-  - 직사각형에서총경로수구하기
+  - Algorithm
   - dynamicProgramming
 ---
 
