@@ -10,6 +10,7 @@ tags:
 
 # 문제
 
+최장 공통 부분 수열(Longest common subsequce - LCS)
 문자열 내에서 왼쪽에서 오른쪽 방향으로 문자열 내에 들어 잇는 글자의 수열
 반드시 연속적인 글자들로 구성될 필요 x
 
@@ -66,4 +67,4 @@ console.log(lcs_length(str1, str2, m, n))
 
 # call stack tree(하향식 접근방법)
 
-![](./img/08_최장공통부분수열길이구하기_dynamicProgramming.png)
+![](./img/05_최장공통부분수열길이구하기_dynamicProgramming.png)
