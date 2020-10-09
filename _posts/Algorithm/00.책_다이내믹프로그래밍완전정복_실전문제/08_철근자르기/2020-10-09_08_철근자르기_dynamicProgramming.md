@@ -6,6 +6,7 @@ author: jyoon
 tags:
   - Algorithm
   - dynamicProgramming
+  - 다이내믹프로그래밍완전정복실전문제
 ---
 
 # 문제
