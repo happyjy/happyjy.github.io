@@ -2,65 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 
 <body>
-    <script>
-        function knapSack(C, weight, value, n) {
-            //  배낭의 공간이 0일때 도둑은 아무것도 넣을 수 없다. => maxValue[i][0] = 0
-            // 물건이 없을때 도둑은 훔칠게 없다.                  => maxValue[0][j] = 0
-            let maxValue = Array(n + 1).fill(0).map(x => Array(C + 1).fill(0));
+  <script>
+    function knapSack(C, weight, value, n) {
+      //  배낭의 공간이 0일때 도둑은 아무것도 넣을 수 없다. => maxValue[i][0] = 0
+      // 물건이 없을때 도둑은 훔칠게 없다.                  => maxValue[0][j] = 0
+      let maxValue = Array(n + 1).fill(0).map(x => Array(C + 1).fill(0));
 
+      for (let i = 1; i <= n; i++) { // 세로 
+        for (let j = 1; j <= C; j++) {  // 가로 
+          // # i: 물건무게배열(wight) 순회할 변수
+          // # j: 배낭용량
+          // # maxValue[i][j] 의미: "물건무게 배열"(wieight)를 j만큼 담을수 있는 배낭에 넣을 수 있는 "최대 물건 가격"
 
-            for (let i = 1; i <= n; i++) { // 세로 
-                for (let j = 1; j <= C; j++) {  // 가로 
-                    // # i: 물건무게배열(wight) 순회할 변수
-                    // # j: 배낭용량
-                    // # maxValue[i][j] 의미: "물건무게 배열"(wieight)를 j만큼 담을수 있는 배낭에 넣을 수 있는 "최대 물건 가격"
+          // # point 물건이 매낭의 용량보다 크면 따질 필요 없이 위쪽 셀을 복사한다.
+          if (weight[i - 1] <= j) {
+            var leftWight = j - weight[i - 1];  //leftWight 배낭에 넣을수 있는 무게 
+            // console.log(`Math.max(value[${i - 1}] + maxValue[${i - 1}][${leftWight}], maxValue[${i - 1}][${j}])`);
+            maxValue[i][j] = Math.max(value[i - 1] + maxValue[i - 1][leftWight], maxValue[i - 1][j]);
+            // 현재 넣은 물건 가격 + 
+          } else {
+            // console.log(`maxValue[${i}][${j}] = maxValue[${i - 1}][${j}];`);
+            maxValue[i][j] = maxValue[i - 1][j];
+          }
 
-                    // # point 물건이 매낭의 용량보다 크면 따질 필요 없이 위쪽 셀을 복사한다.
-                    if (weight[i - 1] <= j) {
-                        var leftWight = j - weight[i - 1];  //leftWight 배낭에 넣을수 있는 무게 
-                        // console.log(`Math.max(value[${i - 1}] + maxValue[${i - 1}][${leftWight}], maxValue[${i - 1}][${j}])`);
-                        maxValue[i][j] = Math.max(value[i - 1] + maxValue[i - 1][leftWight], maxValue[i - 1][j]);
-                        // 현재 넣은 물건 가격 + 
-                    } else {
-                        // console.log(`maxValue[${i}][${j}] = maxValue[${i - 1}][${j}];`);
-                        maxValue[i][j] = maxValue[i - 1][j];
-                    }
-
-                    maxValue.forEach(v => {
-                        console.log(v.toString());
-                    })
-                    console.log("")
-                    console.log("")
-                    console.log("")
-                }
-            }
-
-            return { result: maxValue[n][C], maxValue };
-        }
-
-        const C = 5;
-        const weight = [2, 3, 4, 5];
-        const value = [3, 4, 5, 6];
-        const n = weight.length;
-
-        const result = knapSack(C, weight, value, n);
-        console.log(result.result);
-
-        result.maxValue.forEach(v => {
+          maxValue.forEach(v => {
             console.log(v.toString());
-        })
+          })
+          console.log("")
+          console.log("")
+          console.log("")
+        }
+      }
+
+      return { result: maxValue[n][C], maxValue };
+    }
+
+    const C = 5;
+    const weight = [2, 3, 4, 5];
+    const value = [3, 4, 5, 6];
+    const n = weight.length;
+
+    const result = knapSack(C, weight, value, n);
+    console.log(result.result);
+
+    result.maxValue.forEach(v => {
+      console.log(v.toString());
+    })
 
 
 
-    </script>
+  </script>
 
-    <script>
+  <script>
 
         // weight[i - 1] <= j
         // const weight = [2, 3, 4, 5]
@@ -117,7 +116,7 @@
         // maxValue[4][4] = maxValue[4 - 1][4];
         // Math.max(value[4 - 1] + maxValue[4 - 1][0], maxValue[4 - 1][5])
         // Math.max(5, 7)
-    </script>
+  </script>
 </body>
 
 </html>

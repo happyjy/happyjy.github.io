@@ -1,5 +1,5 @@
 ---
-title: 부분집합의합구하기
+title: dynamicProgramming_부분집합의합구하기
 date: 2020-09-30
 category: Algorithm
 author: jyoon

@@ -1,5 +1,5 @@
 ---
-title: 문자열최소교정비용_dynamicProgramming
+title: dynamicProgramming_문자열최소교정비용
 date: 2020-09-30
 category: Algorithm
 author: jyoon

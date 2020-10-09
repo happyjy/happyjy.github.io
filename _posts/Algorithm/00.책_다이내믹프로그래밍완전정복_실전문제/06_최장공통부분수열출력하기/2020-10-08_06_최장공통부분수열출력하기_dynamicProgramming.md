@@ -1,5 +1,5 @@
 ---
-title: 최장 공통 부분 수열 문자열 출력하기_dynamicProgramming
+title: dynamicProgramming_최장 공통 부분 수열 문자열 출력하기
 date: 2020-10-08
 category: Algorithm
 author: jyoon
