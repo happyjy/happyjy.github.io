@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            * Sale 생성자 함수에 decorate(), getPrice()를 선언
+                - decorate(): 단지 장식자를 목록에 추가
+                - getPrice(): 호출하면서 이전 반환값을 전달한다.
+        */
+
+        function Sale(price) {
+            this.price = price || 100;
+            this.decorators_list = [];
+        }
+
+        Sale.decorators = {};
+
+        Sale.decorators.fedtax = {
+            getPrice: function (price) {
+                return price + price * 5 / 100;
+            }
+        }
+        Sale.decorators.quebec = {
+            getPrice: function (price) {
+                return price + price * 7.5 / 100;
+            }
+        }
+        Sale.decorators.money = {
+            getPrice: function (price) {
+                return `$${price.toFixed(2)}`
+            }
+        }
+
+        Sale.prototype.decorate = function (decorator) {
+            this.decorators_list.push(decorator);
+        };
+
+        Sale.prototype.getPrice = function () {
+            var price = this.price, i, name, max = this.decorators_list.length;
+
+            for (i = 0; i < max; i++) {
+                name = this.decorators_list[i];
+                price = Sale.decorators[name].getPrice(price);
+            }
+
+            return price;
+        }
+
+        var sale = new Sale(100);
+        sale.decorate('fedtax');
+        sale.decorate('quebec');
+        sale.decorate('money');
+        console.log(sale.getPrice()); //$112.88
+    </script>
+</body>
+
+</html>
