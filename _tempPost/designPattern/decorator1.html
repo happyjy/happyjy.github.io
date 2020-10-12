@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            * fedtax 문자열은 Sale.decorators.fedtax에 구현된 장식자 객체에 대응
+            * 새롭게 꾸며진 newobj객체는 현재 주어져 있는 this 객체를 상속할 것이다.
+                - this 객체: 원본 객체일 수도, 마지막 장식자가 덧붙여진 객체일 수도 있다
+            sale = sale.decorator('fedtax');
+
+        */
+
+        function Sale(price) {
+            this.price = price || 100;
+        }
+
+        Sale.prototype.getPrice = function () {
+            return this.price;
+        }
+
+
+        // static
+        Sale.decorators = {}
+
+        Sale.decorators.fedtax = {
+            type: 'fedtax',
+            getPrice: function () {
+                var price = this.uber.getPrice();
+                price += price * 5 / 100;
+                return price;
+            }
+        };
+        Sale.decorators.quebec = {
+            type: 'quebec',
+            getPrice: function () {
+                var price = this.uber.getPrice();
+                price += price * 7.5 / 100;
+                return price;
+            }
+        };
+        Sale.decorators.money = {
+            type: 'money',
+            getPrice: function () {
+                return `$${this.uber.getPrice().toFixed(2)}`;
+            }
+        };
+        Sale.decorators.cdn = {
+            type: 'cdn',
+            getPrice: function () {
+                return `CDN$${this.uber.getPrice().toFixed(2)}`;
+            }
+        };
+
+
+        // * 상속 부분을 수행하기 위해서 '임시 생성자 패턴을 사용'
+        Sale.prototype.decorate = function (decorator) {
+            // * this.constructor: f Sale(price){ }
+            // * this.constructor.decorator객체에 위 Sale.decorators 객체에 선언한 다음 네가지 객체를 갖고 있다.(fedtax, quebec, money, cdn)
+            var F = function () { },
+                overrides = this.constructor.decorators[decorator],
+                i, newObj;
+
+            // * this: decorate를 호출한 객체( 이 코드에서는 this === sale )
+            // * typeof this // "object"
+            F.prototype = this;
+            newobj = new F();
+            newobj.uber = F.prototype;
+            // * key: overrides 객체의 key
+            for (key in overrides) {
+                if (overrides.hasOwnProperty(key)) {
+                    newobj[key] = overrides[key];
+                }
+            }
+            return newobj;
+        }
+
+        var sale = new Sale(100);
+        sale = sale.decorate('fedtax');
+        sale = sale.decorate('quebec');
+        sale = sale.decorate('money');
+        console.log(sale.getPrice()); //$112.88
+
+        /*
+            # sale.getPrice() 호출 과정
+            Sale.decorators.money.getPrice 함수에서 "this.uber.getPrice()" 호출을 통해서
+            아래 두 getPrice를 연속적으로 호출한다.
+            Sale.decorators.quebec.getPrice, Sale.decorators.fedtax.getPrice
+        */
+
+
+
+
+    </script>
+</body>
+
+</html>
