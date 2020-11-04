@@ -116,42 +116,46 @@ tags:
     : [x] http://donicaida.com/  
     : [x] https://canalstreet.market/
 
----
+- [x] 2020.08 - vanilla js 운동 기록 앱 
+  - vanilla js로 구현해본 운동 기록 앱
 
-# ...ING LIST
-
-- [...ing] 2020.08 - Data Structure
-
+- [x] 2020.08 - Data Structure
   - [x] 이론
   - [x] 코드 구현
   - [...ing] 포스팅
   - 자바스크립트로 하는 자료구조와 알고리즘 - 에이콘
   - 자바스크립트 자료구조와 알고리즘 - 에이콘
 
-- [...ing] 2020.09 - 2020.10: 다이내믹프로그래밍
+- [x] 2020.09 - 2020.10: 다이내믹프로그래밍
 
   - [x] 이론 학습
   - [x] 코드 구현
   - [x] 포스팅
+---
 
-- [readyToPost] 20205.07 - Async/Await 정리
+# ...ING LIST
+  * [x] 2020.10 - 2020.11: design pattern 
+    - [x] 이론 학습
+    - [x] 코드 구현
+    - [x] 포스팅
+  
+  * typeScript
 
-  - [Real World Example-exchange](https://medium.com/free-code-camp/how-to-master-async-await-with-this-real-world-example-19107e7558ad)
-  - [git](https://github.com/adrianhajdin/tutorial_currency_converter)
+  * [readyToPost] 20205.07 - Async/Await 정리
+    - [Real World Example-exchange](https://medium.com/free-code-camp/how-to-master-async-await-with-this-real-world-example-19107e7558ad)
+    - [git](https://github.com/adrianhajdin/tutorial_currency_converter)
 
-- [ ] 2020.08 - callbackFunction
-  - 콜백 지옥과 비동기 제어 6가지 단계 설명 추가하기
+  * [ ] 2020.08 - callbackFunction
+    - 콜백 지옥과 비동기 제어 6가지 단계 설명 추가하기
 
-* [ ] 실전리액트프로그래밍
+  * [ ] 실전리액트프로그래밍
+    - [ ] 7장 babel/ webpack
+    - [ ] 8장 ssr/ Next.js
+    - [ ] 9장 TypeScript
+    - [ ] 10장 fiber
 
-  - [ ] 7장 babel/ webpack
-  - [ ] 8장 ssr/ Next.js
-  - [ ] 9장 TypeScript
-  - [ ] 10장 fiber
-
-* [...ing] 인스타그램 클론코딩 코드리뷰
-
-  - [ ] GraphQl schema post
+  * [...ing] 인스타그램 클론코딩 코드리뷰
+    - [ ] GraphQl schema post
 
 ---
 
