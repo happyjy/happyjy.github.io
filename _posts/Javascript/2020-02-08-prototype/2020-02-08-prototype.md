@@ -30,11 +30,11 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
 
 - Constructor
   - A function that initializes an object
-  - similar to normal javaconstuctor
+  - similar to normal java constuctor
 - prototype
   - Constructor의 property
-  - instance의 property \_\_proto**과 메모리 공유  
-    : constructor.prototype === instance.\_\_proto**
+  - instance의 property \_\_proto\_\_**과 메모리 공유  
+    : constructor.prototype === instance.\_\_proto\_\_**
 - instance
 
   - Constructor를 new키워드로 호출로 생성한 객체
