@@ -1,12 +1,12 @@
 ---
-title: Structural_02.Bridge
+title: StructuralPattern_02.Bridge
 date: 2020-10-11
 author: jyoon
 category: DesignPattern
 tags:
   - Bridge
   - DesignPattern
-  - Structural
+  - StructuralPattern
   - JavaScript
 ---
 

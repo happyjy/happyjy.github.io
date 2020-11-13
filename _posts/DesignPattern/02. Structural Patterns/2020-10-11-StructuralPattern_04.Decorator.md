@@ -1,12 +1,12 @@
 ---
-title: Structural_04.Decorator
+title: StructuralPattern_04.Decorator
 date: 2020-10-11
 author: jyoon
 category: DesignPattern
 tags:
   - Decorator
   - DesignPattern
-  - Structural
+  - StructuralPattern
   - JavaScript
 ---
 

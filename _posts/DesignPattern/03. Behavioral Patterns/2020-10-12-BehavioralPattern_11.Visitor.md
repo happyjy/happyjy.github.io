@@ -1,0 +1,144 @@
+---
+title: BehavioralPattern_11.Visitor
+date: 2020-10-11
+author: jyoon
+category: DesignPattern
+tags:
+  - Visitor
+  - DesignPattern
+  - BehavioralPattern
+  - JavaScript
+---
+
+# def
+방문자 패턴은 객체 자체를 변경하지 않고 객체 컬렉션에 대한 새 작업을 정의한다.  
+새 논리는 방문자라는 별도의 객체에 있다.  
+  
+방문자는 라이브러리 또는 프레임 워크에서 확장성을 구축 할 때 유용하다.  
+프로젝트의 객체가 수신 객체를 변경할 수있는 Visitor 객체를 허용하는 '방문'메소드를 제공하는 경우 클라이언트가 향후 확장을 구현할 수있는 쉬운 방법을 제공하는 것이다.  
+대부분의 프로그래밍 언어에서 방문자 패턴은 원래 개발자가 향후 기능 조정을 예상 할 것을 요구한다.  
+이것은 방문자를 받아들이고 원래 객체 컬렉션에서 작동하도록하는 메서드를 포함하여 수행된다.  
+  
+방문자는 런타임에 메소드를 추가하고 제거하는 기능으로 훨씬 더 많은 유연성을 제공하기 때문에 JavaScript에 중요하지 않다.  
+
+# participants
+  * ObjectStructure 
+    - 반복할 수 있는 요소 collection을 유지한다.
+    - code: employees array
+
+  * Elements 
+    - visitor 객체들을 수락하는 메서드를 정의한다.
+    - accept 함수에서 방문자의 visit 함수는 this를 통해서 호출된다.
+    - code: Employee objects
+    
+  * Visitor 
+    - visit 방법을 구현한다.
+    - 인수는 방문중인 요소이다.
+    - 요소가 변경되는 곳이다.
+    - code: ExtraSalary, ExtraVacation
+
+# Sample Code 설명
+  - Employee 생성자 함수를 사용하여 세 명의 직원이 생된다.
+  - 각각은 10%의 급여 인상과 2일 더 휴가를 받는다.
+
+  - [POINT2] Elements(Employee)
+    - 두 방문자 객체 인 ExtraSalary 및 ExtraVacation은 직원 객체에 필요한 변경을 수행한다.
+  
+  - [POINT3] Visitor(ExtraSalary, ExtraVacation)
+    - 방문자는 visit method에서 공개 interface를 통해 클로저 변수 visitorSalary, visitorVacation객체 visit함수를 호출한다.
+    - 클로저는 외부에서 접근할 수 없기 때문에 유일한 방법이다.
+    - 실제로 클로저 변수 salary, vacation 급여와 휴가는 변수가 아니라 함수 인수이지만 클로저의 일부이기 때문에 작동한다.
+  
+  - [POINT1] clousre -> self 변수
+    - 현재 컨텍스트(클로저 변수로 저장 됨)를 유지하는데 사용되며 visit함수에 사용된다.
+
+```js
+var log = (function () {
+  var log = '';
+
+  return {
+    add: function (msg) { log += msg + '\n' },
+    show: function () { console.log(log); log = ''; }
+  }
+})();
+
+/*
+    # [POINT1]
+      * return에 선언된 변수들은 closure
+*/
+// Elements 역할 
+var Employee = function (name, salary, vacation) {
+  var self = this;
+
+  this.accept = function (visitor) {
+    // [POINT2]
+    //  * this: Employee 객체
+    //  * self대신에 this로 해도 상관없음(self와 마찬가지로 Employee객체 넘김)
+    //    - 실행컨텍스트에서 shapshot capture될때 위 self나, emp객체에 의해서 호출되니 여기서 this나 같다.
+    //    - 즉, self === emp
+    visitor.visit(self);
+  }
+  this.getName = function () {
+    return name;  // name: closure
+  }
+  this.getSalary = function () {
+    return salary;  // salary: closure
+  }
+  this.setSalary = function (sal) {
+    salary = sal; // salary: closure
+  }
+  this.getVacation = function () {
+    return vacation;  // vacation: closure
+  }
+  this.setVacation = function (vac) {
+    vacation = vac; // vacation: closure
+  }
+}
+
+// Visitor 역할
+var ExtraSalary = function () {
+  // [POINT3]
+  this.visit = function (emp) {
+    emp.setSalary(emp.getSalary() * 100);
+  }
+}
+// Visitor 역할
+var ExtraVacation = function () {
+  // [POINT3]
+  this.visit = function (emp) {
+    emp.setVacation(emp.getVacation() + 2);
+  }
+}
+
+function run() {
+  /* 
+      각 Employee에 "ExtraSalary", "ExtraVacation"를 추가해 
+      연봉, 휴가를 늘인다.
+  */
+
+  // ObjectStructure 역할 
+  var employees = [
+    new Employee("John", 50000, 10),
+    new Employee("Yoon", 55000, 21),
+    new Employee("BONO", 250000, 51),
+  ];
+
+  // [POINT2]
+  var visitorSalary = new ExtraSalary();
+  var visitorVacation = new ExtraVacation();
+
+  for (var i = 0, len = employees.length; i < len; i++) {
+    var emp = employees[i];
+
+    // [POINT3]
+    emp.accept(visitorSalary);
+    emp.accept(visitorVacation);
+
+    log.add(`${emp.getName()}: $${emp.getSalary()} and ${emp.getVacation()} vacation days`)
+  }
+
+  log.show();
+}
+
+run()
+```

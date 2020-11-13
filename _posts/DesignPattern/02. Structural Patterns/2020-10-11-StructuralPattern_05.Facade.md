@@ -1,12 +1,12 @@
 ---
-title: Structural_05.Facade
+title: StructuralPattern_05.Facade
 date: 2020-10-11
 author: jyoon
 category: DesignPattern
 tags:
   - Facade
   - DesignPattern
-  - Structural
+  - StructuralPattern
   - JavaScript
 ---
 

@@ -1,12 +1,12 @@
 ---
-title: Structural_01.Adapter
+title: StructuralPattern_01.Adapter
 date: 2020-10-11
 author: jyoon
 category: DesignPattern
 tags:
   - Adapter
   - DesignPattern
-  - Structural
+  - StructuralPattern
   - JavaScript
 ---
 

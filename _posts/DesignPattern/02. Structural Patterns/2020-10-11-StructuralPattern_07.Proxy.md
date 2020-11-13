@@ -1,12 +1,12 @@
 ---
-title: Structural_07.Proxy
+title: StructuralPattern_07.Proxy
 date: 2020-10-11
 author: jyoon
 category: DesignPattern
 tags:
   - Proxy
   - DesignPattern
-  - Structural
+  - StructuralPattern
   - JavaScript
 ---
 

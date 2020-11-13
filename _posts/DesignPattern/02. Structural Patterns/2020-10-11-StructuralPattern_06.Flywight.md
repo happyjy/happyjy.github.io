@@ -1,12 +1,12 @@
 ---
-title: Structural_08.Flywight
+title: StructuralPattern_08.Flywight
 date: 2020-10-11
 author: jyoon
 category: DesignPattern
 tags:
   - Flywight
   - DesignPattern
-  - Structural
+  - StructuralPattern
   - JavaScript
 ---
 

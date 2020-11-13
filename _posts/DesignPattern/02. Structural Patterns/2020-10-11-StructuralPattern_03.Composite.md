@@ -1,12 +1,12 @@
 ---
-title: Structural_03.Composite
+title: StructuralPattern_03.Composite
 date: 2020-10-11
 author: jyoon
 category: DesignPattern
 tags:
   - Composite
   - DesignPattern
-  - Structural
+  - StructuralPattern
   - JavaScript
 ---
 
