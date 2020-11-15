@@ -22,9 +22,8 @@ decorator은 보안 관리이다.
 decorator는 statically한 언어(eg, java)가 runntime에 유연함을 제공한다.  
 (complie time에 상속하는 것에 반대로) 
 그러나 Javascript는 dynamic언어라 runtime시에 객체를 확장 할 수 있다.   
-
 그래서 Javascript는 Decorator pattern과는 덜 관련이 있다.  
-Javascript에서는 "Extend, Mixin patterns"이 포괄하고 있다.  
+Javascript에서는 "Extend, Mixin patterns"개념이 포함하고 있다.
 
 # participants
   * Client
@@ -48,7 +47,7 @@ Javascript에서는 "Extend, Mixin patterns"이 포괄하고 있다.
   
 # 나의 설명
   * Javascript는 runtime에도 객체에 함수를 추가 할 수 있기 때문에 java와같은 statically한 언어에서 유용한 구조 패턴이다.
-  * Decorator 패턴은 기존 객체에 기능(책임)을 추가할 수 있는 패턴으로 기능이 확장이 필요할때 서브 클래싱 대힌에 유연한 대안이 될 수 있다.
+  * Decorator 패턴은 기존 객체에 기능(책임)을 추가할 수 있는 패턴으로 기능이 확장이 필요할때 서브 클래싱 대신에 유연한 대안이 될 수 있다.
 
 # CODE
 ```js
@@ -70,7 +69,7 @@ var User = function (name) {
   };
 }
 
-// Decorator역할
+// Decorator 역할
 var DecoratedUser = function (user, street, city) {
   this.user = user;
   this.name = user.name;  // [POINT] ensures interface stays the same

@@ -17,7 +17,7 @@ tags:
   다 계층 아키텍처를 중심으로 구축 된 시스템에 종종 존재한다.  
 
   * 퍼사드의 목적
-    - 클라이언트가 서브 시스템 또는 툴킷을 쉽게 사용할 수 있도록하는 고급 인터페이스(속성 및 메소드)를 제공하는 것이다.
+    - **클라이언트가 서브 시스템 또는 툴킷을 쉽게 사용할 수 있도록하는 고급 인터페이스(속성 및 메소드)를 제공하는 것이다.**
 
   * 퍼사드가 사용되는 이유1: 
     - 서버에서 다중 계층 웹 애플리케이션에는 프레젠테이션 계층(서비스 계층에 대한 클라이언트)이 자주 있다. 
@@ -34,7 +34,7 @@ tags:
 # participants
   * Facade
     - 하위 시스템은 reqeust에 책임을 다하고 있다는 것을 알고 있다. 
-    - 대표자아다!(client 적절한 하위 시스템 객체에 요청한다.)
+    - 대표자이다!(client 적절한 하위 시스템 객체에 요청한다.)
     - code: Mortage
 
   * Sub Systems
@@ -44,10 +44,8 @@ tags:
 
 # code 설명
   * Mortage 생성자 함수는 Facade 이다. 
-    - Mortage 생성자 함수는 applyFor 함수를 하나 갖은 인터페이스로 대표한다.
-    - applyFor 함수는 속으로 복잡성이 고려된 간단한 API가 위치한다.
+    - Mortage 생성자 함수는 applyFor 함수가 선언되어 있고 이 인터페이스는 복잡성이 고려된 간단한 API가 위치한다.
 
-  * The applicant's name is passed into the Mortgage constructor function. 
   * Mortage 생성자 함수에 name이 설정된다. 
   * 그리고 applyFor 함수가 대출금과 함께 호출된다.
   * 내부적으로 복잡한 기능을하는 3개 하위시스템(Bank, Credit, Background) 처리하는 시간을 갖는다.

@@ -1,5 +1,5 @@
 ---
-title: BehavioralPattern_05.Iterator
+title: BehavioralPattern_04.Iterator
 date: 2020-10-11
 author: jyoon
 category: DesignPattern
@@ -9,7 +9,6 @@ tags:
   - BehavioralPattern
   - JavaScript
 ---
-
 
 # def
 사용자가 효고적으로 반복분(collection 객체) 사용할 수 있도록 돕는다.  

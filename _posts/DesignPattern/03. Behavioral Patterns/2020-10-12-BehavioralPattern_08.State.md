@@ -101,9 +101,6 @@ var TrafficLight = function () {
 // * TrafficLight으로 객체 생성시 prototype chain으로 아래 prototype에 설정된 change, start는 실행 되지 않는다.
 // # count.currentState에 접근 할 수 없다.
 TrafficLight.prototype = {
-  start: function () {
-    currentState.go();
-  },
   // [POINT1]
   change: function (state) {
     // limits numbe of changes
@@ -111,8 +108,8 @@ TrafficLight.prototype = {
     currentState = state;
     currentState.go();
   },
-  test: function () {
-    console.log(" test ")
+  start: function () {
+    currentState.go();
   }
 }
 

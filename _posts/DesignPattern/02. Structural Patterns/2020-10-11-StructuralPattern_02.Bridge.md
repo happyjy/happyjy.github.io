@@ -16,8 +16,8 @@ tags:
     - a client, a service
   * Bridege는 high-level 아키택쳐 패턴이다.
   * [POINT] 주된 목표
-    - 추상적 두개 레벨의 코드를 통해서 더 나은 코드를 만드는 것이다.
-    - loose coupling한 객체를 가능하게 한다.
+    - **추상적 두개 레벨의 코드를 통해서 더 나은 코드를 만드는 것이다.**
+    - **loose coupling**한 객체를 가능하게 한다.
   * 때때로 double Adapter 패턴이라고도 한다.
   * 자주사용되는 예: DB API
       - Bridget pattern은 어플리케이션(client), db driver(service)으로 구성되어 있다.
@@ -36,13 +36,13 @@ tags:
       - code: not used in JavaScript
   * RefinedAbstraction
       - 구현체, Abstraction를 선언된 인터페이스를 확장한 것
-      - code: Gestures, Mouse
+      - code: input device(Gestures, Mouse)
   * Implementor
       - 두번째 레벨 또는 추상 구현체를 선언
       - code: not used in JavaScript
   * ConcreteImplementor
       - 구현해야할 인터페이스를 구현하고, 효과를 선언한다.
-      - code: Screen, Audio
+      - code: output device(Screen, Audio)
       
 
 # 예제 코드 설명 
@@ -64,32 +64,27 @@ tags:
   * Bridge pattern은 어떤 input device와 어떤 output device와 동작 할 수 있도록 도와준다.
 
 # 나의 분석
-  * 구현체와 인터페이스를 분리 시킨다  
+  * Input, Output device에 대한 Bridge pattern의 해석 
+    - input 동작을 하는 디바이스가 직접 output 동작하는 기능을 반복적으로 구현하는것이 아니라 
+    - [POINT1]Output device 인스턴스를 생성해 Input device 인스턴스 생성시 함수 파라미터로 전달해 
+    - [POINT2]Input device에서 이벤트 발생시 발생한 이벤트에 대한 동작을 Output device 인스턴스에서 동작할 수 있게 하는 예제이다.
   * Input device(Gesture, Mouse)/ Output device(Screen, Audio) 인터페이스의 분리  
   
   * 예제 코드 설명 부분의 [POINT]가 중요 !  
-  * 아래와 같이 트랙패드(Gesture)의 기능과 마우스의 기능은 다르지만
-    output device에서 같은 표현을 해줘야 한다.
+  * 아래와 같이 트랙패드(Gesture)의 기능과 마우스의 기능은 다르지만 output device에서 같은 표현을 해줘야 한다.
     ```
-      트랙패드(Gestrue)와 마우스의 기능 비교
+      # input device 트랙패드(Gesture)와 마우스의 기능 비교
       트랙패드(Gesture)의 tap   === 마우스의 click
       트랙패드(Gesture)의 swipe === 마우스의 move
       트랙패드(Gesture)의 pan   === 마우스의 drag
       트랙패드(Gesture)의 pinch === 마우스의 zoom
     ```
-  * [POINT] 즉,  
-    - input 동작을 하는 디바이스가 직접 output 동작하는 기능을 반복적으로 구현하는것이 아니라 
-    - [POINT1]input 동작하는 클래스 RefinedAbstraction(Gestures, Mouse)인스턴스를   
-      output 동작을 가능하게 하는 클래스 ConcreteImplementor(Screen, audio)를 생성할때 생성자 함수로 전달해 
-    - [POINT2]output 인스턴스(ConcreteImplementor 역할)에서 출력할 수 있도록 한다.
-    - 이것이 Bridge 패턴 구조를 만들어 효율적으로 관리하는 패턴으로 해석할 수 있겠다.
-
 #  Gestures, Mouse 함수 설명
   * 역할: RefinedAbstraction
   * parameter
     - output: ConcreateImplementor(Screen, Audio)
   * 설명 
-    - output으로 받은 ConcreateImplementor객체를 수행한다.
+    - output으로 받은 ConcreateImplementor객체(output device)를 수행한다.
     - Bridge 역할을 한다.
 
 # CODE
@@ -113,7 +108,7 @@ var Gestures = function (output) {
   this.pan = function () { this.output.drag(); }
   this.pinch = function () { this.output.zoom(); }
 }
-// RefinedAbstraction 역학
+// RefinedAbstraction 역할
 var Mouse = function (output) {
   this.output = output;
 

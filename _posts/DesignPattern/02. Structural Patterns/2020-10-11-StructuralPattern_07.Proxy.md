@@ -11,7 +11,7 @@ tags:
 ---
 
 # def
-  * 프록시 패턴은 다른 객체에 대해 대신할 객체를 제공하고 다른 객체에 대한 액세스를 가능하게 한다.
+  * **프록시 패턴은 다른 객체에 대해 대신할 객체를 제공하고 다른 객체에 대한 액세스를 가능하게 한다.**
 
   * 객체 지향 프로그래밍에서 객체는 인터페이스 (속성 및 메서드)를 통해 알리는 작업을 수행한다.
     - 이러한 객체의 클라이언트는이 작업이 빠르고 효율적으로 수행되기를 기대한다. 
@@ -37,13 +37,13 @@ tags:
 
 # Sample Code 설명
   * GeoCoder 객체는 Google Maps Geocoding service를 가정한다. 
-  * 코드에서 geocoding은 위치를 제공한다.(latitude/longitude (latlng)을 return 한다.
+  * 코드에서 geocoding은 위치를 제공한다.(latitude/longitude (latlng))을 return 한다.
   * 예시 코드에는 4개 위치만 선언되어 있다. 하지만 수만개의 위치가 있을 수 있다.
 
-  * GeoCoder는 상대적으로 느리기 때문에 Proxy object를 구현한다.
+  * **GeoCoder는 상대적으로 느리기 때문에 Proxy object를 구현한다.**
   * proxy 객체는 GeoProxy를 호출한다.
     - 이것은 알려진대로 같은 요청이 반복된다.
-    - 그래서 자주 반복되는 위치 요청의 속도를 개선하기 위해서는 GeoProxy caches한다.
+    - 그래서 **[POINT]자주 반복되는 위치 요청의 속도를 개선하기 위해서는 GeoProxy caches한다.**
     - 만약 위치가 cache되어 있지 않은 상태라면 실제 GeoCoder 서비스를 호출하고 return을 cache 한다.
 
   * 여러 도시 위치가 조회되고 이들 중 다수는 동일한 도시에 대한 것이다.

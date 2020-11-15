@@ -1,10 +1,10 @@
 ---
-title: CreationalPattern_01.AbsctractFactory
+title: CreationalPattern_01.AbstractFactory
 date: 2020-10-08
 author: jyoon
 category: DesignPattern
 tags:
-  - AbsctractFactory
+  - AbstractFactory
   - DesignPattern
   - CreationalPattern
   - JavaScript
@@ -12,7 +12,7 @@ tags:
 
 # def
   공통된 속성과 관련된 객체를 만드는 패턴이다.    
-  객제지향 프로그래밍에서 팩토리는 다른 객체를 생성하는 객체이다.   
+  **객제지향 프로그래밍에서 팩토리는 다른 객체를 생성하는 객체이다.**   
   Abstract Factory는 새로 생성 된 객체가 공유하는 주제를 추상화했다.  
 
   button, textbox, radio button, listbox 같은 페이지 컨트롤을 만드는 작업을 수행하는 두개의 추상 팩토리가 있다고 가정한다.
@@ -25,13 +25,13 @@ tags:
   팩토리는 단순히 다른 객체를 만드는 객체이다.  
   
   간단하게 바로 new 키워드를 통해서 constructor function을 호출해서 객체를 만들지 않고 객체 생성 책임을 다른 사람에게 맡기는 이유가 궁금해 할 것이다.  
-  이유: constructor function가 전체 생성 프로세스를 제어 하는데 제한이 있고 때로는 더 넓은 정보를 가진 Factory에 제어권을 넘겨야 하기 때문
+  **이유는 constructor function가 전체 생성 프로세스를 제어 하는데 제한이 있고 때로는 더 넓은 정보를 가진 Factory에 제어권을 넘겨야 하기 때문이다**
 
-  여기에는 생성 프로세스에 객체 캐싱, 객체 공유 또는 재사용, 복잡한 논리 또는 객체 및 유형 수를 유지하는 응용 프로그램, 다른 리소스 또는 장치와 상호 작용하는 객체가 포함되는 시나리오가 포함된다. 
+  여기에는 생성 프로세스에 객체 캐싱, 객체 공유 또는 재사용, 복k잡한 논리 또는 객체 및 유형 수를 유지하는 응용 프로그램, 다른 리소스 또는 장치와 상호 작용하는 객체가 포함되는 시나리오가 포함된다. 
   응용 프로그램에서 객체 생성 프로세스를 더 많이 제어해야하는 경우 팩토리 사용을 고려해야 한다.
 
 # Participants
-  * AbsctractFactory
+  * AbstractFactory
     - [POINT]: Prooducts를 만들 interface 생성
     - 생성코드: not used in JS
   * ConcreteFactory
@@ -61,67 +61,67 @@ tags:
 
 # CODE
 ```js
-  var log = (function () {
-    var log = '';
+var log = (function () {
+  var log = '';
 
-    return {
-      add: function (msg) {
-        log += msg + "\n";
-      },
-      show: function () {
-        console.log(log);
-        log = '';
-      }
-    }
-  })();
-
-  function Employee(name) {
-    this.name = name;
-
-    this.say = function () {
-      log.add(`나는 고용인 ${this.name} 이다`);
+  return {
+    add: function (msg) {
+      log += msg + "\n";
+    },
+    show: function () {
+      console.log(log);
+      log = '';
     }
   }
-  // ConcreteFactory 역할
-  function EmployeeFactory() {
-    this.create = function (name) {
-      // [POINT] EmployeeFactory의 공통 된 속성을 추상화한 "Employee"함수로 인스턴스를 생성한다.
-      return new Employee(name);
-    }
+})();
+
+function Employee(name) {
+  this.name = name;
+
+  this.say = function () {
+    log.add(`나는 고용인 ${this.name} 이다`);
   }
-
-  function Vendor(name) {
-    this.name = name;
-
-    this.say = function () {
-      log.add(`나는 판매회사 ${this.name} 이다`);
-    }
+}
+// ConcreteFactory 역할
+function EmployeeFactory() {
+  this.create = function (name) {
+    // [POINT] EmployeeFactory의 공통 된 속성을 추상화한 "Employee"함수로 인스턴스를 생성한다.
+    return new Employee(name);
   }
-  // ConcreteFactory 역할
-  function VendorFactory() {
-    this.create = function (name) {
-      // [POINT] VendorFactory의 공통 된 속성을 추상화한 "Vendor"함수로 인스턴스를 생성한다.
-      return new Vendor(name);
-    }
+}
+
+function Vendor(name) {
+  this.name = name;
+
+  this.say = function () {
+    log.add(`나는 판매회사 ${this.name} 이다`);
   }
-
-  function run() {
-    var persons = [];
-    // Products: employeeFactory 객체, vendorFactory객체
-    var employeeFactory = new EmployeeFactory();
-    var vendorFactory = new VendorFactory();
-
-    persons.push(employeeFactory.create("고용인1"));
-    persons.push(employeeFactory.create("고용인2"));
-    persons.push(vendorFactory.create("판매회사"));
-    persons.push(vendorFactory.create("판매회사"));
-
-    persons.forEach(v => {
-      v.say();
-    })
-
-    log.show();
+}
+// ConcreteFactory 역할
+function VendorFactory() {
+  this.create = function (name) {
+    // [POINT] VendorFactory의 공통 된 속성을 추상화한 "Vendor"함수로 인스턴스를 생성한다.
+    return new Vendor(name);
   }
+}
 
-  run();
+function run() {
+  var persons = [];
+  // Products: employeeFactory 객체, vendorFactory객체
+  var employeeFactory = new EmployeeFactory();
+  var vendorFactory = new VendorFactory();
+
+  persons.push(employeeFactory.create("고용인1"));
+  persons.push(employeeFactory.create("고용인2"));
+  persons.push(vendorFactory.create("판매회사"));
+  persons.push(vendorFactory.create("판매회사"));
+
+  persons.forEach(v => {
+    v.say();
+  })
+
+  log.show();
+}
+
+run();
 ```

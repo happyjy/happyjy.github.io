@@ -42,8 +42,8 @@ Composite 패턴의 모든 노드는 개별 객체와 객체 collection 지원�
 
 
 # 나의 분석
-* POINT1, 2가 중요해 보인다.
-* POINT1: prototype의 활용
+* [POINT1, 2]가 중요해 보인다.
+* [POINT1] prototype의 활용
   - prototype에 함수를 설정후 설정한 함수로 인스턴스를 생성하면
   - 생성된 인스턴스에 prototype에 설정한 함수를 생성하지 않고(복사 하지 않는다)
   - 생성된 인스턴스의 생성자 함수의 prototype을 참조해 메모리를 효율적으로 사용할 수 있다. 
@@ -80,7 +80,6 @@ Node.prototype = {
     this.children.push(child);
   },
 
-
   /*
     child type: Node 객체
   */
@@ -104,7 +103,7 @@ Node.prototype = {
   hasChildren: function () {
     return this.children.length > 0;
   }
-}
+}// end Node.prototype
 
 // recursively traverse a (sub)tree
 function traverse(indent, node) {

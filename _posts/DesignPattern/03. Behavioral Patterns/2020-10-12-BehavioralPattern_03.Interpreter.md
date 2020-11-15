@@ -10,7 +10,6 @@ tags:
   - JavaScript
 ---
 
-
 # def
 [POINT2] 인터프리터 패턴은 최종사용자가 그들의 솔루션을 customize할 수 있는 스크립트 언어를 제공한다.  
 
@@ -58,6 +57,7 @@ tags:
   * [POINT2] 프로그램이 동작할때 로마 숫자를 십진수 숫자로 변환하는 간단한 문법 트리는 만들어진다.
 
 # 나의 해석
+```
   1. run함수 
     1.1 Context객체
       * 역할
@@ -68,6 +68,7 @@ tags:
     1.2 tree 배열 순회 && interpret
       * 역할 
         - 로마숫자를 번역하기 위해서 생성한 규칙 배열 집합 tree의 Expression 객체의 interpret 객체를 Context객체를 인자로 설정한뒤 호출한다.
+        
   2. Expression 
     2.1 Expression 객체 
       * 역할 
@@ -77,12 +78,15 @@ tags:
         - 로마숫자의 상태를 관리하는 context객체를 인자로 받아 
         - 현재 input의 첫 글자를 순차 적으로 확인하며 context의 input, output 프로퍼티들을 update하며 해석해나간다.
 
-* Expression 객체 ?
-  - tree에 push 하는 4개 Expression객체는 로마 숫자를 10진수로 변환하는 규칙 1
-* Expression.interpret? 
-  - Expression객체를 10진수로 변환하는 규칙 2
-* Roman Numberals
-  - https://roman-numerals.info/MCMXXVIII#:~:text=Roman%20Numerals%3A%20MCMXXVIII%20%3D%201928
+  * Expression 객체 ?
+    - tree에 push 하는 4개 Expression객체는 로마 숫자를 10진수로 변환하는 규칙 1
+
+  * Expression.interpret? 
+    - Expression객체를 10진수로 변환하는 규칙 2
+
+  * Roman Numberals
+    - https://roman-numerals.info/MCMXXVIII#:~:text=Roman%20Numerals%3A%20MCMXXVIII%20%3D%201928
+```
 
 # CODE 
 ```js

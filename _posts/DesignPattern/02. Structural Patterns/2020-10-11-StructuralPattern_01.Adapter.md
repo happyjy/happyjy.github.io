@@ -11,9 +11,9 @@ tags:
 ---
 
 # def
-  [POINT]interface(객체의 속성, 함수)를 다른 것으로 사용할수 있게 하는 패턴이다.
+  [POINT]**interface(객체의 속성, 함수)를 다른 것으로 사용할수 있게 하는 패턴이다.**  
   클래스의 인터페이스를 사용자가 기대하는 다른 인터페이스로 변환하는 패턴이다.  
-  호환성이 없는 인터페이스 때문에 함께 동작할 수 없는 클래스들과 함께 작동하도록 한다.  
+  **호환성이 없는 인터페이스 때문에 함께 동작할 수 없는 클래스들과 함께 작동하도록 한다.**  
   Wrapper Pattern 이라고도 한다.  
   
   * 시나리오1
@@ -38,12 +38,15 @@ tags:
 
 # 예제 코드 설명
   * 예제코드는 온라인 쇼핑몰 카트(shipping 객체가 shipping한 가격을 계산)를 보여준다.
-      - old shipping객체는 개선된 Shipping object(AdvancedShipping)
+    - old shipping객체는 개선된 Shipping object(AdvancedShipping)
       (보안, 더 나은 가격제안 기능이 추가된)으로 교체 될 것
-  * 새로운 객체는 AdvancedShipping 이다 
-      - 어려운 interface로 구성되어 있다.(client가 예상 할 수 없다.)
-  * ShippingAdapter
-      - client 프로그램을 어떤 API 변화(old Shipping 인터페이스를 adapting 한)를 제외하고 역할을 할수 있도록 한다.
+  * AdvancedShipping(Adaptee 역할)
+    - Adapter생성자 함수에서 호출이 된다.
+    - 어려운 interface로 구성되어 있다.(client가 예상할 수 없다.)
+  * ShippingAdapter(Adapter 역할)
+    - Adaptee역할 생성자 함수를 호출해 인스턴스로 사용한다.
+    - client가 사용하는 생성자 함수
+    - ShippingAdapter는 이전 Shipping 인터페이스를 새 AdvancedShipping 인터페이스에 매핑하여 어떤 API 변경없이 클라이언트 프로그램이 계속 기능적으로 동작 할 수 있게한다.
 
 # 나의 분석
   * [POINT]클래스의 인터페이스를 사용자가 기대하는 다른 인터페이스로 변환하는 패턴으로 

@@ -33,7 +33,7 @@ tags:
   
 # 나의 추가 분석
   * POINT
-    - this: get을 호출한 req 객체
+    - this: get을 호출한 req 인스턴스
 
 # CODE 
 ```js
@@ -64,10 +64,7 @@ Request.prototype = {
     this.amount -= count * bill;
     log.add(`### Dispense ${count} $${bill} bills`);
 
-    /*  
-      ### POINT
-        this: get을 호출한 req 객체
-    */
+    // [POINT]this: get을 호출한 req 인스턴스
     return this;
   }
 }

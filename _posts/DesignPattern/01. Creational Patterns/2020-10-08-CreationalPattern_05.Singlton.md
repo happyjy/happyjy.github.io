@@ -30,21 +30,21 @@ Factory, Prototype 및 Facade와 같은 몇 가지 다른 패턴은 인스턴스
     - code: Singleton
 
 # 예제 코드 설명
-  * Singleton 객체는 즉각적인 익명 함수로 구현된다.
-  * 함수는 대괄호와 두 개의 추가 대괄호로 묶어 즉시 실행된다.
-  * 이름이 없기 때문에 익명함수라고 한다.
+  Singleton 객체는 즉각적인 익명 함수로 구현된다.  
+  함수는 대괄호와 두 개의 추가 대괄호로 묶어 즉시 실행된다.  
+  이름이 없기 때문에 익명함수라고 한다.  
 
-  * getInstance 메소드는 Singleton의 gatekeeper이다.
-  * 외부 세계에서 액세스 할 수없는 개인 참조를 유지하면서 객체의 유일한 인스턴스를 반환한다.
+  getInstance 메소드는 Singleton의 gatekeeper이다.  
+  외부 세계에서 액세스 할 수없는 개인 참조를 유지하면서 객체의 유일한 인스턴스를 반환한다.  
 
-  * getInstance 메소드는 Lazy Load라는 또 다른 디자인 패턴을 보여준다.
-  * Lazy Load는 인스턴스가 이미 생성되었는지 확인한다.
-  * 그렇지 않은 경우 하나를 만들고 나중에 참조 할 수 있도록 저장한다.
-  * 모든 후속 호출은 저장된 인스턴스를 수신한다.
-  * 지연 로딩은 절대적으로 필요한 경우에만 객체를 생성하는 CPU 및 메모리 절약 기술이다.
+  getInstance 메소드는 Lazy Load라는 또 다른 디자인 패턴을 보여준다.  
+  Lazy Load는 인스턴스가 이미 생성되었는지 확인한다.  
+  그렇지 않은 경우 하나를 만들고 나중에 참조 할 수 있도록 저장한다.  
+  모든 후속 호출은 저장된 인스턴스를 수신한다.  
+  지연 로딩은 절대적으로 필요한 경우에만 객체를 생성하는 CPU 및 메모리 절약 기술이다.  
 
-  * singleton pattern은 일반적인 javascriopt패턴 인 "모듈 패턴"의 표현이다. 
-  * Module은 모든 인기있는 JavaScript 라이브러리 및 프레임 워크 (jQuery, Backbone, Ember 등)의 기반이다. 
+  singleton pattern은 일반적인 javascriopt패턴 인 "모듈 패턴"의 표현이다.   
+  Module은 모든 인기있는 JavaScript 라이브러리 및 프레임 워크 (jQuery, Backbone, Ember 등)의 기반이다.   
 
 # CODE
 

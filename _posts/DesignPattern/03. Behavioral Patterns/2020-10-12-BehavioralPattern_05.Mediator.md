@@ -9,10 +9,8 @@ tags:
   - BehavioralPattern
   - JavaScript
 ---
-
-
 # def
-  * Mediator 패턴은 객체들이 어떻게 상호작용을 하는지 캡슐화 되어 객체의 그룹을 통해서 중앙 권한를 제공한다.
+  * **Mediator 패턴은 객체들이 어떻게 상호작용을 하는지 캡슐화 되어 객체의 그룹을 통해서 중앙 권한를 제공한다.**
   * 이런 모델은 복잡한 상태를 모든 관리하는 시나리오에서 유용하다.
     - 복잡한 상태란?: 그룹내에 모든 객체가 서로 어떤 상태인지 알고 있는 것
   
@@ -28,7 +26,7 @@ tags:
     - 공항의 control tower에서 이륙, 착륙하는 항공기들을 조정하는 것이다.
     
 # participants
-  * Mediator
+  * Mediator      
     * 동료 객체와 통신하기 위한 인터페이스를 정의한다.
     * 동료 객체에 대한 참조를 유지한다.
     * 운영에 대한 중앙제어를 관리한다.
@@ -72,6 +70,7 @@ var log = (function () {
   }
 })();
 
+// Colleagues 역할
 var Participant = function (name) {
   this.name = name;
   this.chatroom = null;
@@ -86,6 +85,8 @@ Participant.prototype = {
   }
 }
 
+
+// Mediator 역할
 var Chatroom = function () {
   // POINT1
   var participants = {};
@@ -109,11 +110,11 @@ var Chatroom = function () {
           if (participants[key] !== from) {
             participants[key].receive(message, from);
           }
-        }
-      }
-    }
-  };
-};
+        } // end for 
+      } // end if
+    } // end send
+  };  // end return 
+};  // end Chatroom
 
 function run() {
   var jyoon = new Participant("JYOON");
