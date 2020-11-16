@@ -22,8 +22,10 @@ tags:
   - 객체 지향을 자바스크립트로 해보자.
   - 디자인 패턴과 함께 알아보자.
   - 오늘 배운 이론 남은 4개 강의에서 활용.
-    - SOLID(SRP, OCP, LSP, ISP, DIP)
-    - Message, 의존성, DI, IOC,
+    ```
+      - SOLID(SRP, OCP, LSP, ISP, DIP)
+      - Message, 의존성, DI, IOC
+    ```
 
 # Value Context, Identifier Context
 
@@ -262,7 +264,7 @@ const EssentialObject = class {
 
 ### ISP Interface Segregation(인터페이스분리)
 
-> 위 원칙 LSP가 성림하지 않았기 때문에 ISP(예제1 -> 예제2)작업이 있었다.
+> 위 원칙 LSP가 성립하지 않았기 때문에 ISP(예제1 -> 예제2)작업이 있었다.
 
 - ISP 필요대상 - 아래 위임, 인터페이스로 해결하는 방법을 소개하겠습니다.
   ![](1회/ISP-필요대상.png)
@@ -341,9 +343,8 @@ const EssentialObject = class {
 3. `메소드` - 오퍼레이션이 연결될 실제 처리기
 
 ### 추상클래스, 인터페이스를 상속하게 하는 이유는?
-
-    - **오퍼레이션, 메소드를 분리해서 런타임에 원하는 애를 바뀌기 위해서**
-    - 결국 **SRP통해서 OCP(SOLID중 1개: Open Closed(개방폐쇄))를 만들어 낸다**
+  - **오퍼레이션, 메소드를 분리해서 런타임에 원하는 애를 바뀌기 위해서**
+  - 결국 **SRP통해서 OCP(SOLID중 1개: Open Closed(개방폐쇄))를 만들어 낸다**
 
 # Dependency
 
@@ -356,7 +357,7 @@ const EssentialObject = class {
   - SRP(위 대chapter Message-srp)설명할때는 책임을 상세하게 나누라고 했는데 여기서는 난눈 개체가 문제가 생기면 격리가 안되서 문제라고 한다.
   - 그래서 이 둘(SRP, Dependency)을 고민해서 설계해야 한다.  
     : 적당하게 의존성을 가지고 있어야한다.
-- 의존성 다소의 차이
+- 의존성 많고 적음의 차이
   - 의존성이 많을때는 객체가 각자의 역할이 정해져있다.
   - 의존성이 적을때는 한개의 객체가 많은 역할을 수행한다.
 
@@ -495,7 +496,7 @@ manager.doWork()
 ## 제어역전의 개념과 필요성
 
     1. Control = flow control(흐름제어)
-    2. 광의에서흐름제어 = 프로그램실행통제
+    2. 강의에서흐름제어 = 프로그램실행통제
     3. 동기흐름제어, 비동기 흐름제어 등
 
 ## 문제점
@@ -521,7 +522,7 @@ manager.doWork()
 # 예제 소스
 
 ```js
-// POINT1
+// [POINT1]
 // Renderer: base element에 view가 주는 element를 집어 넣어서 그림을 그리는 녀석
 const Renderer = class {
   #view = null
@@ -540,13 +541,13 @@ const Renderer = class {
 
     if (!base || !view) throw "no base or no view"
     let target = base.firstElementChild
-    //POINT2
-    //base안 element를 제거한다.
+    // [POINT2]
+    // base안 element를 제거한다.
     do base.removeChild(target)
     while ((target = target.nextElementSibling))
-    //POINT3
-    //view.getElement은 render function에 의해서 받은 data에 합당한 el을 반환
-    //아래 renderer.view에 상속받아 구현함.
+    // [POINT3]
+    // view.getElement은 render function에 의해서 받은 data에 합당한 el을 반환
+    // 아래 renderer.view에 상속받아 구현함.
     base.appendChild(view.getElement(data))
     view.initAni() //애니메이션 초기화
     view.startAni() //애니메이션 시작해
@@ -565,15 +566,15 @@ const View = class {
   }
 }
 
-//특정뷰를 받아서 그리는 역할
+// 특정뷰를 받아서 그리는 역할
 const renderer = new Renderer(document.body)
-//POINT4
-//* new class extends View
-//  :익명클래스처럼 view를 상속받는 class를 하나 만들고 인스턴스를 만드는 코드
+// [POINT4]
+// * new class extends View
+//   :익명클래스처럼 view를 상속받는 class를 하나 만들고 인스턴스를 만드는 코드
 renderer.view = new (class extends View {
   #el
-  //POINT5
-  //data에 의해서 받은 데이터로 dom을 생성해 본인(View를 상속받은 class)필드 '#el'에 집어 넣고 반환
+  // [POINT5]
+  // data에 의해서 받은 데이터로 dom을 생성해 본인(View를 상속받은 class)필드 '#el'에 집어 넣고 반환
   getElement(data) {
     this.#el = document.createElement("div")
     this.#el.innerHTML = `<h2>${data.title}</h2><p>${data.description}</p>`
@@ -586,7 +587,7 @@ renderer.view = new (class extends View {
     style.transition = "all 0.3s" //0.3이후에 오라고 transition 검
   }
   startAni() {
-    //한프레임 건너뛰고 람다에서 style에 margin 0을 넣는건 마진 100%에서 왼쪽으로 쫚들어온다.
+    // 한프레임 건너뛰고 람다에서 style에 margin 0을 넣는건 마진 100%에서 왼쪽으로 쫚들어온다.
     requestAnimationFrame(() => (this.#el.style.marginLeft = 0))
   }
 })()
@@ -658,5 +659,6 @@ renderer.render({
 # 마무리
 
 - 이번에 등장한 모든 디자인패턴들은 모두 `제어역전패턴`과 관련된 패턴이다.
-- 객체지향에서 `제어역전`을 궁극적으로 목표로 삼는 이유는 많은 버그를 제어문이 가지고 있어 제어를 한군데에서 하기 위함이다.
+- **객체지향에서 `제어역전`을 궁극적으로 목표로 삼는 이유**
+  - 많은 버그를 제어문이 가지고 있어 제어를 한군데에서 하기 위함이다.
 - 앞으로 이어지는 4개의 강의는 샘플앱을 만들고 점진적으로 발전시켜가면서 제어역전, SOLID이 지켜지는지 확인하며 refactoring하고 기능을 붙여나갈 예정

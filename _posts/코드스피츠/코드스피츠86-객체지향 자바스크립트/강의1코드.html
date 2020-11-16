@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /*
+    
+      * Renderer
+      * View
+      * 
+    
+    */
+    const Renderer = class {
+      #view = null;
+      #base = null;
+
+      constructor(baseElement) {
+        this.#base = baseElement;
+      }
+      set view(v) {
+        if (v instanceof View) this.#view = v;
+        else throw `invalid view: ${v}`;
+      }
+      render(data) {
+        const base = this.#base;
+        const view = this.#view;
+
+        if (!base || !view) throw "no base or no view";
+        let target = base.firstElementChild;
+
+        // [POINT2]
+        // base안 element를 제거한다.
+        do base.removeChild(target)
+        while ((target = target.nextElementSibling));
+        // [POINT3]
+        // view.getElement은 render function에 의해서 받은 data에 합당한 el을 반환
+        // 아래 renderer.view에 상속받아 구현함.
+        base.appendChild(view.getElement(data));
+        view.initAni(); //애니메이션 초기화
+        view.startAni(); //애니메이션 시작해
+      }
+    }
+
+    // 추상 클래스, 인터페이스처럼 상속 받아서 쓰기 위해서 생성
+    const View = class {
+      getElement(data) {
+        throw `override!`;
+      }
+      initAni() {
+        throw "override!";
+      }
+      startAni() {
+        throw "override!";
+      }
+    }
+
+    // 특정뷰를 받아서 그리는 역할
+    const renderer = new Renderer(document.body);
+    // [POINT4]
+    // * new class extends View
+    //   :익명클래스처럼 view를 상속받는 class를 하나 만들고 인스턴스를 만드는 코드
+    renderer.view = new (class extends View {
+      #el;
+      // [POINT5]
+      // data에 의해서 받은 데이터로 dom을 생성해 본인(View를 상속받은 class)필드 '#el'에 집어 넣고 반환
+      getElement(data) {
+        this.#el = document.createElement("div");
+        this.#el.innerHTML = `<h2>${data.title}</h2><p>${data.description}</p>`;
+        this.#el.style.cssText = `width:100%;background:${data.background}`;
+        return this.#el;
+      }
+      initAni() {
+        const style = this.#el.style;
+        style.marginLeft = "100%"; //화면 밖 오른족으로 쭉 밀어버린다.
+        style.transition = "all 0.5s"; //0.3이후에 오라고 transition 검
+      }
+      startAni() {
+        // 한프레임 건너뛰고 람다에서 style에 margin 0을 넣는건 마진 100%에서 왼쪽으로 쫚들어온다.
+        requestAnimationFrame(() => (this.#el.style.marginLeft = 0));
+      }
+    })()
+
+    renderer.render({
+      title: "title test",
+      description: "contents.......",
+      background: "#ffffaa",
+    });
+
+    debugger;
+  </script>
+</body>
+
+</html>

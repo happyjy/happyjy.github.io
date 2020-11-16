@@ -18,10 +18,10 @@ tags:
 - 전략적 패턴 적용
   - 기존 Binder 클래스가 코드로 확정 되어 있다. 이 부분을 전략적으로 빼내는 방법을 살펴본다.
 - call -> Observation
-
-  - Binder, ViewModel 통신을 이전 강의 까지 call로 해결해쓴는데 이번에 Observation으로 해결을 설명합니다.  
-    그래서 결과적으로 모델이 변하면 binder가 자동으로 view를변하게 해준는게 목표이다.  
-     \* [전 강의 observe -> call로 대체](https://happyjy.netlify.app//객체지향%20자바스크립트_2/#observe---call로-대체)
+  - Binder, ViewModel 통신을 이전 강의 까지 call로 해결했는데 이번에 Observation으로 해결을 설명합니다.  
+  - 그래서 결과적으로 모델이 변하면 binder가 자동으로 view를변하게 해주는게 목표이다.  
+  - 전강의 "observe -> call로 대체" 참고
+  * [전 강의 observe -> call로 대체](https://happyjy.netlify.app//객체지향%20자바스크립트_2/#observe---call로-대체)
 
 - 배울 keyword
   - Strategy Pattern, Dependency Injection,
@@ -44,16 +44,15 @@ tags:
    - 공통된 Strategy: k, v, el, viewmodel
 4. 1,2,3에 도출된 형을 만들고 (Strategy, composite, template method pattern 적용)
 5. 만든 형을 가지고 알고리즘을 만들것 입니다. (알고리즘 일반화)
-
-```
-* Strategy pattern
-    - Composite pattern: Binder class에서 Stratege 부분을 뽑아내는
-    - Composition하는 과정에서 아래 개념
-        * dependency, dependency injection
-        * Template method pattern
-* 알고리즘의 일반화
-    - Strtegy Pattern을 통해서 Binder Class를 수정한다(addProcess method추가, render method수정)
-```
+    ```
+    * Strategy pattern
+        - Composite pattern: Binder class에서 Stratege 부분을 뽑아내는
+        - Composition하는 과정에서 아래 개념
+            * dependency, dependency injection
+            * Template method pattern
+    * 알고리즘의 일반화
+        - Strtegy Pattern을 통해서 Binder Class를 수정한다(addProcess method추가, render method수정)
+    ```
 
 ## Strategy Pattern 정의
 
@@ -77,7 +76,6 @@ tags:
   ![Code->Object](./3회/3.Strategy_CodeToObject.png)
 
 ## Composition에 대해서
-
 > - Binder에서 strategy(algorithm, knowlege, domain) code를 뽑아내 Object로 변경으로 인터페이를 정의해 주입 받는 부분에서 사용할 수 있도록 변경하는 작업
 > - Depency Injection & Composition 관계
 >   - Composition작업으로 Binder class는 dependency가 생기고 외부에서 Strategy부분을 주입 받으면서 Depency Injection이 일어난다.
@@ -91,7 +89,6 @@ tags:
   <u>왜냐하면 type을 정해야지만 code가 어떤식의 객체인지를 알아야 변경했을때 적용할 수 있기 때문이다.</u>
 
 ### Dependency가 생기는 이유
-
 - code를 Object로 변경했기때문
 - code대신에 type을 정의해서 객체를 받아 들이면 기존코드에는 의존이 없었는데 객체를 알아야 Binder를 진행할 수 있다.  
   그래서 code를 외부객체 composition으로 바꿀 것이다. 그러면 외부에서 공급되는 객체를 알아야 Binder가 작동할 수 있다.(그래서 Strategy 부분에 대해서 의존성이 생긴다 )
@@ -99,21 +96,18 @@ tags:
   - 위임했기때문이 아니다! **Strategy를 외부 객체에 의해서 해결하고 싶다. <u>이렇게 하고 싶은 이유는 변화가 있을때 마다 code를 변경해야 하기 때문이다.**</u> 그래서 code를 object로 바꿔주면 바꿔준 object에 대해서 의존성이 생기는 것 입니다. 이렇게 Binder는 Binder strategy와 의존관계가 생성이 됩니다.
 
 ### DI(Dependency Injection)
-
 - 의존성이 생겼을때 내부에서 의존성이 있는 sub Type을 만들어 내는 경우가 있고 공급받는 경우가 있는데 내부에서 만들면 다시 하드코딩을 해야하기 때문에 **외부에서 공급**받는 것을 말한다.(그래야 내부에는 type에 대한 의존만 있고 특정 객체에대한 의존성을 없앨 수 있다.)
 
 ### 정리
-
 > Binder의 Strategy 부분을 Composite pattern으로 변경의 결론
 
 - **Composition(코드를 객체로 빼내는 순간)을 하면 `Dependency`,`Dependency Injection`이 생긴다.**
 - `Dependency`가 생기는 이유는 코드를 객체로 변경했기 때문
   - 객체에 대한 의존성을 내부에서 생성해버리면 dependency만 생긴다. 이러면 다시 코드를 건드려야 해서 외부에서 공급(`Dependency Injection`)받아야지면 객체를 뺀이유가 생긴다.
 
-# Binder 클래스 리팩토링
+# 2. Binder 클래스 리팩토링
 
 ## Binder Class에 Composition 적용 과정
-
 ![Processor Class & Tempalte Method](./3회/4.ProcessorClass_TempalteMethod.png)
 
 1. 연역적 추리(다양한 현상으로 부터 원리가 되는 추상화를 도출)를 통해서 strategy로 부터 공통점을 이끌어낸다.
@@ -122,11 +116,9 @@ tags:
 3. 생선한 Processort Class는 Template Method Pattenr을 가지고 있다.
 
 ### Template method Pattern(Processor Class)
-
 > - 자신이 해야할일을 하고 Hook method에 위임을 통해서 나머지 일을 처리한다.
-> - 외부에서 Processor클래스 \_process를 바로 호출하면 throw걸린다.
-
-    - 그래서 **Proccessor 클래스를 확장(상속)한 클래스에 _process를 재정의(overriding)한 곳에서 처리**하도록 의도해야 한다.
+> - 외부에서 Processor클래스 _process를 바로 호출하면 throw걸린다.
+>   - 그래서 **Proccessor 클래스를 확장(상속)한 클래스에 _process를 재정의(overriding)한 곳에서 처리**하도록 의도해야 한다.
 
 - 부모와 자식사이에 Composition 일어난다.
   - 전략을 위임 했는데 외부에서 주입 받아 위임한것이 아니라 상속 받은 객체에게 위임했다.
@@ -141,7 +133,6 @@ tags:
 - [보완]객체지향 책에서 템플릿 메소드 부분 정리해서 추가하기
 
 ## STEP1 Binder class에서 Processor class 정리
-
 > Binder class에서 strategy pattern, composition pattern을 통해서 Processor class를 생성하고  
 > Processor에 여러 전략을 사용하기 위해서 Template Method pattern을 적용  
 > 아래에서 Template Method pattern을 적용하기 위해서 Processor Class를 상속한것을 설명합니다.
@@ -149,10 +140,9 @@ tags:
 - Binder class의 Strategy부분은 Processor class 인스턴스 위임을 받아서 처리하려고한다.
 - Binder class는 composition적용으로 Processor class를 소유를 통해서(Processor class를 Dependency Injection)을 통해서 해결하려고 있고 이를 처리해주는
 - Processor class에서는 process마다 다양한 처리 방법을 Template Method방법을 통해서 해결  
-  client code에 binder.addProcessor함수로 추가하는 intance(hook method) 참고
+- client code에 binder.addProcessor함수로 추가하는 intance(hook method) 참고
 
 ## Processor Class를 상속 받은 Hook Method
-
 ![Processor Class & Hook Method](./3회/5.Processor_HookMethod.png)
 
 - 전략이 어떤 structure와 관련이 되어 있는지 내용이 부족하다.
@@ -162,18 +152,16 @@ tags:
   - 여기서 k, v는 viewmodel에서 받은 key, value값이다.
 - 예를 들어 첫번째 el.style가 있는 코드는 cat(=category)는 Styles로 정의했다.
 - 익명상속된 클래스의 장점  
-  : 만든 인스턴스를 한번만 만들어 한번만 사용하게해 다시 사용할 수 없게 한다.
+  - 만든 인스턴스를 한번만 만들어 한번만 사용하게해 다시 사용할 수 없게 한다.
 - 우리는 이렇게 el에 style, property, attribute, event를 설정할 수 있는 전략 4개를 만들었다.
   - 4개 전략 이외에 예를들어 lazy loader, scroll injector등의 기능을 넣을 수 있게 됐다.
 - 이렇게 Processor를 상속받아 만은 인스턴스는 각기 다른 객체이지만 하나 의 Processor type으로 인식하게 된다.
 
 ### 객체 망을 구성하는 3요소
-
 - 객체향은 객체망에 의해서 문제를 해결
 - 어떤 객체가 다른 객체를 '필드'수준, '메소드'수준, '자식'수준으로 안다.
 
 ## STEP2 Binder class 변경
-
 > Binder에서 strategy 부분을 공급 받기 위해서 만든 Process class를 생성/ 상속 받은 클래스 인스턴스까지 만들어 봤으니 외부에서 Strategy를 주입 받기에 주입받는 Binder를 수정해보자
 
 ![Processor Class & Hook Method](./3회/6.BinderClass_modification.png)
@@ -185,47 +173,45 @@ tags:
   - 아래 주석 설명1, 설명2 참고
   - processors의 순환문의 pk: Processor의 catetgory(cat)
 - [보완]: 아래 설명을 따로 빼서 적어 놓기
+  ```js
+  //# 설명1: 자바스크립트는 single thread machine이기 때문에 render method가 돌때 갑자기 addProcessor가 동작할 수 없다.
+  const processors = Object.entries(this.#processors);
+  this.#item.forEach(item => {
+      const vm = type(viewmodel[item.viewmodel], ViewModel);
+      const el = item.el;
+      //# 설명2
+      /*
+          # processor value
+          : Binder Class addProcessor에 의해서 생성된 #processors value
+              {
+                  styles: {category: "styles"},
+                  attribute: {category:"attribtues"},
+                  properties: {category:"properties"},
+                  events: {category: "events"}
+              }
 
-```js
-    //# 설명1: 자바스크립트는 single thread machine이기 때문에 render method가 돌때 갑자기 addProcessor가 동작할 수 없다.
-    const processors = Object.entries(this.#processors);
-    this.#item.forEach(item => {
-        const vm = type(viewmodel[item.viewmodel], ViewModel);
-        const el = item.el;
-        //# 설명2
-        /*
-            # processor value
-            : Binder Class addProcessor에 의해서 생성된 #processors value
-                {
-                    styles: {category: "styles"},
-                    attribute: {category:"attribtues"},
-                    properties: {category:"properties"},
-                    events: {category: "events"}
-                }
+          # vm value: ViewModel instance
+          : Binder Class render에 의해서 받은 value
+              : videModel Instacne에 아래 key값이 있다.
+              : 그래서 vm[pk]가 성립 가능
+              instance.styles
+              instance.attribute
+              instance.properties
+              instance.events
 
-            # vm value: ViewModel instance
-            : Binder Class render에 의해서 받은 value
-                : videModel Instacne에 아래 key값이 있다.
-                : 그래서 vm[pk]가 성립 가능
-                instance.styles
-                instance.attribute
-                instance.properties
-                instance.events
+          # processor.process()
+          : processor 인스턴스는 Process class를 상속받아서 생성
 
-            # processor.process()
-            : processor 인스턴스는 Process class를 상속받아서 생성
-
-        */
-        processors.forEach(([pk, processor]) => {
-            Object.entries(vm[pk]).forEach(([k,v])=>{
-                processor.process(vm, el, k, v);    //interface에 교환하는 작업
-            });
-        });
-    });
-```
+      */
+      processors.forEach(([pk, processor]) => {
+          Object.entries(vm[pk]).forEach(([k,v])=>{
+              processor.process(vm, el, k, v);    //interface에 교환하는 작업
+          });
+      });
+  });
+  ```
 
 ### 알고리즘의 일반화
-
 - 구조부분을 남기고 Strategy에 해당하는 code를 object를 type으로 빼냈다.
 - 그리고 빼낸 Object를 DI를 한다.
 - 그리고 받은 Object기준으로 알고리즘을 바꾸는것을 말한다.
@@ -238,19 +224,16 @@ tags:
   - **그분이 processors를 forEach 돌리는 부분이다.**
 
 ## binder에 addProcessort 추가
-
 > Binder class가 전략 패턴으로 바뀜으로 addProcessor를 추가해 전략을 추가하는 로직이 추가 됐다.
 
 ![binderInstane_modification](./3회/7.BinderInstance_modification.png)
-
 - Binder가 Processor를 Dependency한다.
   - Processor가 변경되면 Binder가 변경된다.
   - 의존성은 한방향으로만 되어야한다.
 - Dependency가 생기면 Dependency Injection이 생긴다.
   - code를 Object로 type으로 빼내면 Dependency가 생기고 Dependency Injection이 생긴다.
 
-# 2. Observation Pattern
-
+# 3. Observation Pattern
 ![binderInstane_modification](./3회/8.ObserverPatternInMVVM.png)
 
 - 전 강의에서 binder대신에 call을 사용했다. 이번 시간에는 Observer Pattern을 적용할 것입니다.
@@ -260,139 +243,139 @@ tags:
   - 어떻게 인메모리객체가 변할때 알려줄 수 있을까?  
     자바스크립트에서는 "defineProperty, Proxy"이 두가지를 지원해줍니다.
 - defineProperty & Proxy  
-  우리는 defineProperty의 3번째 인자 descriptor에 setter, getter의 속성을 이용해서 구현합니다. - defineProperty:
-  _ [defineProperty mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
-  _ [defineProperties mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties) - Proxy: ex6 부터 적용, babel로 변환이 안됨
+  우리는 defineProperty의 3번째 인자 descriptor에 setter, getter의 속성을 이용해서 구현합니다. 
+  - defineProperty:
+    _ [defineProperty mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+    _ [defineProperties mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties) 
+  - Proxy: ex6 부터 적용, babel로 변환이 안됨
 
 ## ViewModelListener class
-
 - mouseevent에서 eventListener를 등록할 때 함수로 등록합니다. 하지만 지금은 객체의 특정한 함수를 호출해 observing 시킨다.
 - 아리 클래스는 Binder, ViewModel Class에 상속되어 사용됩니다.(즉 Binder, ViewModel Class에 viewmodelUpdated 함수를 재정의 해서 Observation pattern을 구현합니다.)
-
-```js
-const ViewModelListener = class {
-  viewmodelUpdated(updated) {
-    throw "override"
+  ```js
+  const ViewModelListener = class {
+    viewmodelUpdated(updated) {
+      throw "override"
+    }
   }
-}
-```
+  ```
 
 ## ViewModel Class에 Observer Pattern 적용
-
 아래 POINT1, 2, 3, 4, 4.1, 4.2 주석이 있으며 코드 아래 설명이 있습니다.
+  ```js
+  /*
+      # Class List
+          * ViewModelValue
+          * ViewModelListener
+          * ViewModel
+  */
+  const ViewModelValue = class {
+      category; k; v;
+      constructor(subKey, category, k, v) {
+          this.category = category;
+          this.k = k;
+          this.v = v;
+          Object.freeze(this)
+      }
+  }
 
-```js
-/*
-    # Class List
-        * ViewModelValue
-        * ViewModelListener
-        * ViewModel
-*/
-const ViewModelValue = class {
-    category; k; v;
-    constructor(subKey, category, k, v) {
-        this.category = category;
-        this.k = k;
-        this.v = v;
-        Object.freeze(this)
-    }
-}
+  const ViewModelListener = class {
+      viewmodelUpdated(updated){ throw 'override'; }
+  }
 
-const ViewModelListener = class {
-    viewmodelUpdated(updated){ throw 'override'; }
-}
+  const ViewModel = class extends ViewModelListener {
+      static get = data => new ViewModel(data);
+      static #subjects = new Set;
+      static #inited = false;
+      static notify(vm) {
+          this.#subjects.add(vm);
+          if (this.#inited) return
+          this.#inited = true;
+          const f = () => {
+              this.#subjects.forEach(vm => {
+                  if (vm.#isUpdated.size) {
+                      vm.notify();
+                      vm.#isUpdated.clear();
+                  }
+              })
+              requestAnimationFrame(f);
+          }
+          requestAnimationFrame(f);
+      }
+      static descriptor = (vm, category, k, v) => ({
+          enumerable: true,
+          get: () => v,
+          set(newV) {
+              v = newV;
+              //POINT4.2 defineProperties set정의
+              vm.#isUpdated.add(new ViewModelValue(category, k, v))
+          }
+      })
 
-const ViewModel = class extends ViewModelListener {
-    static get = data => new ViewModel(data);
-    static #subjects = new Set;
-    static #inited = false;
-    static notify(vm) {
-        this.#subjects.add(vm);
-        if (this.#inited) return
-        this.#inited = true;
-        const f = () => {
-            this.#subjects.forEach(vm => {
-                if (vm.#isUpdated.size) {
-                    vm.notify();
-                    vm.#isUpdated.clear();
-                }
-            })
-            requestAnimationFrame(f);
-        }
-        requestAnimationFrame(f);
-    }
-    static descriptor = (vm, category, k, v) => ({
-        enumerable: true,
-        get: () => v,
-        set(newV) {
-            v = newV;
-            //POINT4.2 defineProperties set정의
-            vm.#isUpdated.add(new ViewModelValue(category, k, v))
-        }
-    })
+      static define = (vm, category, obj) => (
+          //POINT4.1 reducing
+          Object.defineProperties(obj,
+              Object.entries(obj).reduce((r, [k, v]) => (r[k] = ViewModel.descriptor(vm, category, k, v), r), {})
+          )
+      )
 
-    static define = (vm, category, obj) => (
-        //POINT4.1 reducing
-        Object.defineProperties(obj,
-            Object.entries(obj).reduce((r, [k, v]) => (r[k] = ViewModel.descriptor(vm, category, k, v), r), {})
-        )
-    )
+      subKey = '', parent = null;
+      styles = {}, attributes = {}, properties = {}, events = {};
+      //POINT1: #isUpdated, #listeners
+      #isUpdated = new Set, #listeners = new Set;
 
-    subKey = '', parent = null;
-    styles = {}, attributes = {}, properties = {}, events = {};
-    //POINT1: #isUpdated, #listeners
-    #isUpdated = new Set, #listeners = new Set;
+      constructor(data, _ = type(data, 'object')) {
+          super();
+          //POTIN4: 중복을 없앴다.
+          Object.entries(data).forEach(([k, v]) => {
+              if ('styles,attributes,properties'.includes(k)) {
+                  if (!v || typeof v != 'object') throw `invalid object k: ${k}, v:${v}`
+                  this[k] = ViewModel.define(this, k, v);
+              } else {
+                  Object.defineProperty(this, k, ViewModel.descriptor(this, '', k, v))
+                  if (v instanceof ViewModel) {
+                      v.parent = this;
+                      v.subKey = k;
+                      v.addListener(this);
+                  }
+              }
+          })
+          //
+          ViewModel.notify(this);
+          Object.seal(this);
+      }
 
-    constructor(data, _ = type(data, 'object')) {
-        super();
-        //POTIN4: 중복을 없앴다.
-        Object.entries(data).forEach(([k, v]) => {
-            if ('styles,attributes,properties'.includes(k)) {
-                if (!v || typeof v != 'object') throw `invalid object k: ${k}, v:${v}`
-                this[k] = ViewModel.define(this, k, v);
-            } else {
-                Object.defineProperty(this, k, ViewModel.descriptor(this, '', k, v))
-                if (v instanceof ViewModel) {
-                    v.parent = this;
-                    v.subKey = k;
-                    v.addListener(this);
-                }
-            }
-        })
-        //
-        ViewModel.notify(this);
-        Object.seal(this);
-    }
-
-    viewmodelUpdated(updated){ updated.forEach(v => this.#isUpdated.add(v));}
-    //POINT2: addListener, removeListener method
-    addListener(v, _ = type(v, ViewModelListener)){ this.#listeners.add(v);}
-    removeListener(v, _ = type(v, ViewModelListener)){ this.#listeners.delete(v);}
-    //POINT3: notify method
-    notify(){ this.#listeners.forEach(v => v.viewmodelUpdated(this.#isUpdated));}
-}
-
-```
+      viewmodelUpdated(updated){ updated.forEach(v => this.#isUpdated.add(v));}
+      //POINT2: addListener, removeListener method
+      addListener(v, _ = type(v, ViewModelListener)){ this.#listeners.add(v);}
+      removeListener(v, _ = type(v, ViewModelListener)){ this.#listeners.delete(v);}
+      //POINT3: notify method
+      notify(){ this.#listeners.forEach(v => v.viewmodelUpdated(this.#isUpdated));}
+  }
+  ```
 
 - [보완] 숫자 앞에 설명 PREFIX 붙이기
-- 1.subject이기때문에 listener를 거느리고 있어야 notification을 할 수 있다.
+
+1.subject이기때문에 listener를 거느리고 있어야 notification을 할 수 있다.
   - 변수 #listener에 listener를 받아서 notification될때 #listener에 nofication을 때려준다!
-- 2.addListener, removeListener method
+
+2.addListener, removeListener method
   - 변수 #listener에 추가, 제거해주는 method
-- 3.notify method
+
+3.notify method
   - true, false가 아니라 Set type을 보내주는 이유
     - update가 여러번 일어 날 수 있기 때문에
-- 4.중복을 없앴다
+
+4.중복을 없앴다
   - [보완] 전 강의 Binder Code 수정
   - 참고: [전 강의 Binder Code](https://happyjy.netlify.app//%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%20%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_2/#binder)
   - "".inclues.(k)
     - 문자열의 indexof는 자바스크립트에서 특별하게 빠르다. (object에서 key를 찾는 것보다)
   - defineProperty를 할것이다 왜냐하면 setter를 감시하기 위해서
-- 4.1.reducing
 
+4.1.reducing
   - [reduce mdn](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
   - reducing 설명
-
     - reduce두번째 인자는 accumulaotr 초기값을 설정
     - reduce함수에는 하나의 인자 callback function이 들어와야 합니다.
     - callback function의 인자 설명
@@ -403,7 +386,6 @@ const ViewModel = class extends ViewModelListener {
     - 배열 두번째 순회 설명
       - 그럼 다음 2번째 배열 인자를 순회 했을때 callback의 첫번째 인자 "accumulator"는 reduce 첫번째 요소를 순회 했을때 accumulator의 return 값 callbcak function 의 첫번째 인자(accumulator)가 된다.
     - 결국 위 코드에서는 r객체가 반환 되겠습니다.
-
       - 반된 값은 아래와 같습니다.
 
       ```js
@@ -428,7 +410,6 @@ const ViewModel = class extends ViewModelListener {
       ["cursor", "pointer"],
     ]
     ```
-
 - POINT4.2 defineProperties set정의
   - vm(ViewModel instance)에 #isUpdated(Set type)에 뭔가를 추가해주고 싶다.
   - 뭔가란?
@@ -440,7 +421,6 @@ const ViewModel = class extends ViewModelListener {
   - 옵저버패턴에서 subject... 지옥이네 🐶빡세네
 
 ## 핵심
-
 - POINT4.2 defineProperties set정의에 아래 코드와 같이 ViewModeValue instance를 넘겨주고 notification되면 set에 담겨있는 것을 호출하는 메커니즘 이해가 중요합니다.
   - 호출은 viewModel에 notify method가있고 이 method는 this.#listeners Set 변수 값으로 담겨 있는 것을 viewmodelUpldated로 보내 호출한다.
   - [보완] 코드를 보고 ViewModel Class에 변수 #listener가 어떤 값이 세팅되는지 확인하자.
@@ -449,7 +429,7 @@ const ViewModel = class extends ViewModelListener {
    new ViewModelValue(vm.subKey, category, k, v))
 ```
 
-# 3. Composite(ViewModel class 수정)
+# 4. Composite(ViewModel class 수정)
 
 > 내가 내 문제를 동일한 문제임에도 불구하고 내가 해결하지 않고 위임을 계속 반복해서 그것들을 취함하는 행동들을 말합니다.
 > 이 부분은 ViewModel class와 관련 있습니다.
@@ -578,7 +558,7 @@ const ViewModel = class extends ViewModelListener {
     - this.#subjects가 어떤 값이 있을지 확인해보자.
   - ViewModel Class Constructor의 ViewModel.notify에서 v에 따라서 VeiwModel의 viewmodelUpdated, binder의 viewModelUpdated가 호출 된다. 어떤 경우인지 확인필요(확인하면서 concept정리)
 
-# 4. Observer(Binder Class 수정)
+# 5. Observer(Binder Class 수정)
 
 - Binder가 실제로 ViewModel을 구독역할(Observer)을한다.
 - Binder Class가 변경된 부분 주석으로 걸어 놓은 POINT1, 2 내용 확인
@@ -634,7 +614,7 @@ const Binder = class extends ViewModelListener {
 - [보완] - 분석
   - viewmodelUpdated method breakpoint걸어 확인해보기
 
-# 5. Client
+# 6. Client
 
 ```js
 const Scanner = class {
@@ -730,7 +710,7 @@ const f = () => {
 requestAnimationFrame(f)
 ```
 
-# 6. 전체코드
+# 7. 전체코드
 
 ```html
 <!DOCTYPE html>

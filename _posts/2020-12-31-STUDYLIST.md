@@ -7,62 +7,39 @@ tags:
   - studyList
 ---
 
-# DONE LIST
+# DONE LIST (DESC)
+* [x] 2020.09 - 2020.10: 다이내믹프로그래밍
+  - [포스팅](https://happyjy.netlify.app/category/#DesignPattern)
 
-- [x] 2018.07-08 패스트캠퍼스 vuejs
-- [x] 2019.12-2019.02 이직한 회사 자사 프레임워크 적응
+*  [x] 2020.08 - Data Structure
+  - [x] 이론
+  - [x] 코드 구현
+  - [...ing] 포스팅
+  - 자바스크립트로 하는 자료구조와 알고리즘 - 에이콘
+  - 자바스크립트 자료구조와 알고리즘 - 에이콘
 
-  - vanlliaJavaScript, prototype 기반 객체지향 위젯, view/ viewmodel pattern, observer pattern, pipeline pattern, template method pattern, facade pattern
+* [x] 2020.08 - vanilla js 운동 기록 앱 
+  - vanilla js로 구현해본 운동 기록 앱
 
-- [x] 2019.02-08 인스타그램 version1 클론코딩
+* [x] 2020.04 - 2020.07 publishing - flex, grid강의/ website 10개 clone
+  - [clone website 실제 페이지](https://happyjy-learning-scss.netlify.app/)
+  - [clone website(Flex, grid) 포스팅](https://happyjy.netlify.app/clone-website-reviewflex-grid)
+  - [git repository](https://github.com/happyjy/learning-scss-masterclass)
+  - [강의 주소](https://academy.nomadcoders.co/p/cssnext-css-layout-masterclass)
+  - 클론 코딩 10개 완료  
+    : [x] https://besthorrorscenes.com/  
+    : [x] https://paint-box.com/  
+    : [x] http://10x19.co/  
+    : [x] http://www.z-o-o.fr/  
+    : [x] https://schwartzmedia.com.au/  
+    : [x] https://tolv.dk/  
+    : [x] https://rodicdavidson.co.uk/  
+    : [x] https://beige.de/  
+    : [x] http://donicaida.com/  
+    : [x] https://canalstreet.market/
 
-  - React, Redux, Django, Postgres
-  - [인스타그램 versiont 1 리뷰 포스팅 모음](https://happyjy.netlify.app/category/#ToyProj)
-  - [git - React, Redux, Scss, Django](https://github.com/happyjy/yoonGram)
-
-- [x] 2019.08-09 프로그래머스 알고리즘 문제 풀기
-
-  - [알고리즘 리뷰 포스팅 모음](https://happyjy.netlify.app/category/#Algorithm)
-
-- [x] 2019.10-2020.01 인스타그램 version2 클론코딩
-
-  - React, Redux, Hooks, Apollo, Graphql - Express, Prisma
-  - [인스타그램 version 2 리뷰 포스팅 모음](https://happyjy.netlify.app/category#ToyProj)
-  - [git - frontend(React, Hooks, GraphQl)](https://github.com/happyjy/prismagram-frontend)
-  - [git - backend(Express, Prisma)](https://github.com/happyjy/prismagram)
-
-- [x] 2020.01-02 자바스크립트 코어 스터디/정리
-
-  - [자바스크립트 코어 스터디 포스팅 모음](https://happyjy.netlify.app/category/#Javascript%20Core)
-
-- [x] 2020.02-03 코드스피츠 객체지향자바크립트
-
-  - [코드스피츠 객체지향자바크립트 포스팅 모음](https://happyjy.netlify.app/category#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
-
-- [x] 2020.04: Recursion 스터디
-
-  - [recursion 포스팅 모음](https://happyjy.netlify.app/tag/recursion) / [강의](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)  
-    : recursion 기초 - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기  
-    : recursion 단 방향 - 매개변수의 명시화: 순차탐색, 최대값 찾기, Binary Search  
-    : recursion 여러 방향 - 미로찾기, class Maze, 움직인경로, Counting Cells in a Blob
-
-* [x] 2020.04: gatsby로 블로그 생성
-
-  - [블로그 주소](https://happyjy.netlify.app/)
-
-* [x] 2020.05: 인스타그램 클론 version 1 리뷰 포스팅
-
-  - [x] [crud apollo, graphql 리뷰 포스팅](https://happyjy.netlify.app/apollo-graphql-crud-in-project)
-  - [x] [apollo graphql in project 리뷰 포스팅](https://happyjy.netlify.app/get-started-apollo-graphql-in-project)
-  - [x] [프로젝트에서 사용한 hook review 리뷰 포스팅](https://happyjy.netlify.app/hook-in-project)
-  - [x] [functional component 구조 리뷰 포스팅](https://happyjy.netlify.app/component-structure-in-project)
-
-* [x] 2020.05: 인스타그램 클론 version 2 리뷰 포스팅
-
-  - [x] [crud with react, react-redux 리뷰 포스팅](https://happyjy.netlify.app/react-redux-crud-in-project)
-  - [x] [react "container and presentational component patterns" 리뷰 포스팅](https://happyjy.netlify.app/react-container-and-presentational-component-patterns)
-  - [x] [django 설명 리뷰 포스팅](https://happyjy.netlify.app/django-frameworks)
-  - [x] [django 가상개발환경 문제 해결 리뷰 포스팅](https://happyjy.netlify.app/reset-django-virtural-environment)
+* [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
+  - [recursion 리뷰 포스팅 모음](https://happyjy.netlify.app/tag/recursion)
 
 * [x] 2020.05 - 2020.06 React 스터디  
        주 일회 스터디모임에서 "실전리액트프로그래밍"발표 중(책:리액트를다루는기술, 노마드코더 redux 강의 참고)  
@@ -94,51 +71,62 @@ tags:
          : [redux 기능 따라 구현해보기 포스팅](https://happyjy.netlify.app/redux-%EA%B5%AC%ED%98%84%ED%95%B4%EB%B3%B4%EA%B8%B0)  
          : [Learning Vanilla Redux & React-Redux - 예제코드 git](https://github.com/happyjy/learning-react/tree/master/learning-redux)
 
-- [x] 2020.04 - 2020.06 권오흠 교수님 Recursion 스터디한 내용 javascript로 구현 하기
+* [x] 2020.05: 인스타그램 클론 version 2 리뷰 포스팅
 
-  - [recursion 리뷰 포스팅 모음](https://happyjy.netlify.app/tag/recursion)
+  - [x] [crud with react, react-redux 리뷰 포스팅](https://happyjy.netlify.app/react-redux-crud-in-project)
+  - [x] [react "container and presentational component patterns" 리뷰 포스팅](https://happyjy.netlify.app/react-container-and-presentational-component-patterns)
+  - [x] [django 설명 리뷰 포스팅](https://happyjy.netlify.app/django-frameworks)
+  - [x] [django 가상개발환경 문제 해결 리뷰 포스팅](https://happyjy.netlify.app/reset-django-virtural-environment)
 
-- [x] 2020.04 - 2020.07 publishing - flex, grid강의/ website 10개 clone
+* [x] 2020.05: 인스타그램 클론 version 1 리뷰 포스팅
 
-  - [clone website 실제 페이지](https://happyjy-learning-scss.netlify.app/)
-  - [clone website(Flex, grid) 포스팅](https://happyjy.netlify.app/clone-website-reviewflex-grid)
-  - [git repository](https://github.com/happyjy/learning-scss-masterclass)
-  - [강의 주소](https://academy.nomadcoders.co/p/cssnext-css-layout-masterclass)
-  - 클론 코딩 10개 완료  
-    : [x] https://besthorrorscenes.com/  
-    : [x] https://paint-box.com/  
-    : [x] http://10x19.co/  
-    : [x] http://www.z-o-o.fr/  
-    : [x] https://schwartzmedia.com.au/  
-    : [x] https://tolv.dk/  
-    : [x] https://rodicdavidson.co.uk/  
-    : [x] https://beige.de/  
-    : [x] http://donicaida.com/  
-    : [x] https://canalstreet.market/
+  - [x] [crud apollo, graphql 리뷰 포스팅](https://happyjy.netlify.app/apollo-graphql-crud-in-project)
+  - [x] [apollo graphql in project 리뷰 포스팅](https://happyjy.netlify.app/get-started-apollo-graphql-in-project)
+  - [x] [프로젝트에서 사용한 hook review 리뷰 포스팅](https://happyjy.netlify.app/hook-in-project)
+  - [x] [functional component 구조 리뷰 포스팅](https://happyjy.netlify.app/component-structure-in-project)
 
-- [x] 2020.08 - vanilla js 운동 기록 앱 
-  - vanilla js로 구현해본 운동 기록 앱
 
-- [x] 2020.08 - Data Structure
-  - [x] 이론
-  - [x] 코드 구현
-  - [...ing] 포스팅
-  - 자바스크립트로 하는 자료구조와 알고리즘 - 에이콘
-  - 자바스크립트 자료구조와 알고리즘 - 에이콘
 
-- [x] 2020.09 - 2020.10: 다이내믹프로그래밍
+* [x] 2020.04: gatsby로 블로그 생성
+  - [블로그 주소](https://happyjy.netlify.app/)
 
-  - [x] 이론 학습
-  - [x] 코드 구현
-  - [x] 포스팅
+* [x] 2020.04: Recursion 스터디
+  - [recursion 포스팅 모음](https://happyjy.netlify.app/tag/recursion) / [강의](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l)  
+    : recursion 기초 - Fibonacci number, Euclid Method(최대공약수), 문자열 길이 계산, 문자열 프린트, 문자열 뒤집어 프린트, 2진수로 변환하여 출력, 배열의 합 구하기  
+    : recursion 단 방향 - 매개변수의 명시화: 순차탐색, 최대값 찾기, Binary Search  
+    : recursion 여러 방향 - 미로찾기, class Maze, 움직인경로, Counting Cells in a Blob  
+
+* [x] 2020.02-03 코드스피츠 객체지향자바크립트
+  - [코드스피츠 객체지향자바크립트 포스팅 모음](https://happyjy.netlify.app/category#%EA%B0%9D%EC%B2%B4%EC%A7%80%ED%96%A5%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8)
+
+* [x] 2020.01-02 자바스크립트 코어 스터디/정리
+  - [자바스크립트 코어 스터디 포스팅 모음](https://happyjy.netlify.app/category/#Javascript%20Core)
+
+
+* [x] 2019.10-2020.01 인스타그램 version2 클론코딩
+  - React, Redux, Hooks, Apollo, Graphql - Express, Prisma
+  - [인스타그램 version 2 리뷰 포스팅 모음](https://happyjy.netlify.app/category#ToyProj)
+  - [git - frontend(React, Hooks, GraphQl)](https://github.com/happyjy/prismagram-frontend)
+  - [git - backend(Express, Prisma)](https://github.com/happyjy/prismagram)
+
+* [x] 2019.08-09 프로그래머스 알고리즘 문제 풀기
+  - [알고리즘 리뷰 포스팅 모음](https://happyjy.netlify.app/category/#Algorithm)  
+
+
+* [x] 2019.02-08 인스타그램 version1 클론코딩
+  - React, Redux, Django, Postgres
+  - [인스타그램 versiont 1 리뷰 포스팅 모음](https://happyjy.netlify.app/category/#ToyProj)
+  - [git - React, Redux, Scss, Django](https://github.com/happyjy/yoonGram)
+
+* [x] 2019.12-2019.02 이직한 회사 자사 프레임워크 적응
+  - vanlliaJavaScript, prototype 기반 객체지향 위젯, view/ viewmodel pattern, observer pattern, pipeline pattern, template method pattern, facade pattern
+
+* [x] 2018.07-08 패스트캠퍼스 vuejs
+
+
 ---
 
 # ...ING LIST
-  * [x] 2020.10 - 2020.11: design pattern 
-    - [x] 이론 학습
-    - [x] 코드 구현
-    - [x] 포스팅
-  
   * typeScript
 
   * [readyToPost] 20205.07 - Async/Await 정리
