@@ -7,6 +7,7 @@ tags:
   - studyList
 ---
 
+- [ ] TOC level 단위 디자인 수정
 - [ ] markdown #, ##, ### css 색 수정하기
 - [ ] 포트 바꾸기
 - [ ] markdown css가 잘 적용안되는 것같음.
