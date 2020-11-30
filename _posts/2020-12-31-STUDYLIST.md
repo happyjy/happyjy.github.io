@@ -8,13 +8,17 @@ tags:
 ---
 
 # DONE LIST (DESC)
+
+* [x] 2020.10 - 2020.11: javascript로 구현해본 Design Pattern 
+  - [포스팅](https://happyjy.netlify.app/category/#DesignPattern)
+
 * [x] 2020.09 - 2020.10: 다이내믹프로그래밍
   - [포스팅](https://happyjy.netlify.app/category/#DesignPattern)
 
 *  [x] 2020.08 - Data Structure
   - [x] 이론
   - [x] 코드 구현
-  - [...ing] 포스팅
+  - [x] 포스팅
   - 자바스크립트로 하는 자료구조와 알고리즘 - 에이콘
   - 자바스크립트 자료구조와 알고리즘 - 에이콘
 
