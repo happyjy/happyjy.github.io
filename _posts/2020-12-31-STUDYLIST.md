@@ -127,7 +127,16 @@ tags:
 ---
 
 # ...ING LIST
-  * typeScript
+  * 리팩토링2판 
+  
+  * TypeScript - doit
+
+  * mvvm review
+    - [ ] 1장
+    - [ ] 2장
+    - [ ] 3장
+    - [ ] 4장
+    - [ ] 5장
 
   * [readyToPost] 20205.07 - Async/Await 정리
     - [Real World Example-exchange](https://medium.com/free-code-camp/how-to-master-async-await-with-this-real-world-example-19107e7558ad)
