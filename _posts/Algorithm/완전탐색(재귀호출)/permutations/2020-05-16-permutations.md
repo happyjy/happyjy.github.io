@@ -5,7 +5,7 @@ category: Algorithm
 author: jyoon
 tags:
   - permutation
-  - dynamic programming
+  - dynamicProgramming
   - recursion
 ---
 
