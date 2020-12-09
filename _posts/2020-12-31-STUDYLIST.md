@@ -129,6 +129,8 @@ tags:
 ---
 
 # ...ING LIST
+  * [...ing]패캠-red(김민태, 김태곤 개발자)강의 수강중
+
   * 리팩토링2판 
   
   * TypeScript - doit
@@ -153,7 +155,7 @@ tags:
     - [ ] 9장 TypeScript
     - [ ] 10장 fiber
 
-  * [...ing] 인스타그램 클론코딩 코드리뷰
+  * [ ] 인스타그램 클론코딩 코드리뷰
     - [ ] GraphQl schema post
 
 ---
