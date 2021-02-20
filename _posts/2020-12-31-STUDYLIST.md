@@ -8,6 +8,10 @@ tags:
 ---
 
 # DONE LIST (DESC)
+* [...ing] 2021.01 - ing : uber clone(back-end)
+* [x] 2020.12: GraphQL로 영화 웹 앱 만들기
+* [x] 2020.12: NestJS로 API 만들기
+* [x] 2012.11: graphql movie API 만들기
 
 * [x] 2020.10 - 2020.11: javascript로 구현해본 Design Pattern 
   - [포스팅](https://happyjy.netlify.app/category/#DesignPattern)
