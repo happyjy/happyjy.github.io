@@ -133,11 +133,17 @@ tags:
 ---
 
 # ...ING LIST
-  * [...ing]패캠-red(김민태, 김태곤 개발자)강의 수강중
+  * [...ing] uber clone 
+  
+  * []패캠-red(김태곤 개발자)강의
+  * []패캠-red(김민태 개발자)강의 
+  * []패캠-red(front ui component)
 
   * 리팩토링2판 
   
-  * TypeScript - doit
+  * TypeScript 
+    - doit
+    - 엘리
 
   * mvvm review
     - [ ] 1장
