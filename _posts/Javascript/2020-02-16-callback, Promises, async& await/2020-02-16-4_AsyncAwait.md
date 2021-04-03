@@ -10,124 +10,174 @@ tags:
   - JavaScript
 ---
 
-promise객체에 then을 연속적으로 사용할 수 있는 promise chaining에 대해서 설명하겠습니다.
+# async 함수 
 
-# promise chaing 방법 두가지
-
-## promise chaining 첫번째 방법(1/2)
-
-- promise객체의 하나에 then을 여러개 연속으로 연결해서 사용하는 방법으로 사슬고리처럼 연결되어 있어 다음 then에 value를 넘겨 줄 수 있습니다.
+* function 앞에 async를 붙이면 해당 함수는 항상 promise 객체를 반환한다. 
   ```js
-  new Promise(function(resolve, reject) {
-    setTimeout(() => resolve(1), 1000) // (*)
-  })
-    .then(function(result) {
-      // (**)
-      alert(result) // 1
-      return result * 2
-    })
-    .then(function(result) {
-      // (***)
-      alert(result) // 2
-      return result * 2
-    })
-    .then(function(result) {
-      alert(result) // 4
-      return result * 2
-    })
+    async function f() {
+      return 1;
+    }
+
+    f() // => Promise 객체 반환 Promise {<fulfilled>: 1}
+    f().then(a => console.log(a))
+    // 콘솔에 1칙히고 then은 Promise 객체 반환(Promise {<fulfilled>: undefined})
+
   ```
 
-## promise chaining 두번째 방법(1/2)
-
-- then을 선언할때마다 promise를 사용해서 선언하게 되면 모든 선언한 then에 pomise의 결과가 전달이 됩니다.
-
+* 명시적으로 Promise 반환 가능, 결과 동일
   ```js
-  var promise = new Promise(function(resolve, reject) {
-    setTimeout(() => resolve(1), 1000)
-  })
+    async function f() {
+      return Promise.resolve(1);
+    }
 
-  promise.then(function(result) {
-    alert(result) // 1
-    return result * 2
-  })
-
-  promise.then(function(result) {
-    alert(result) // 1
-    return result * 2
-  })
-
-  promise.then(function(result) {
-    alert(result) // 1
-    return result * 2
-  })
+    f().then(a => console.log(a)) // 1
   ```
 
-# 프로미스 반환하기
+# await 키워드 
+* await는 async 함수 안에서만 동작
+* 자바스크립트는 await 키워드를 만나면 promise가 처리(settled)될 때까지 기다린다. 결과는 그 이후 반환된다.
+* <u>promise가 처리되길 기다리는 동안에 엔진이 다른일(다른 스크립트 실행, 이벤트처리 등)을 할 수 있기 때문에, CPU 리소스가 낭비 되지 않는다</u>
+* await는 promise.then 보다 좀더 세련되게 promise의 result값을 얻을 수 있도록 해주는 문법이다.
 
-- 아래 예제 설명
-  - 예시에서 첫 번째 .then은 1을 출력하고 new Promise(…)를 반환( 주석1 )합니다.
-  - 1초 후 이 프라미스가 이행되고 그 결과(resolve의 인수인 result \* 2)는 두 번째 .then으로 전달됩니다.
-  - 두 번째 핸들러( 주석2 )는 2를 출력하고 동일한 과정을 반복합니다.
-- **프라미스를 반환하는 것도 비동기 작업 체인을 만들 수 있다.**
-
+* 문법
   ```js
-  new Promise(function(resolve, reject) {
-    setTimeout(() => resolve(1), 1000)
-  })
-    .then(function(result) {
-      alert(result) // 1
-      return new Promise((resolve, reject) => {
-        // 주석1
-        setTimeout(() => resolve(result * 2), 1000)
-      })
-    })
-    .then(function(result) {
-      // 주석2
-      alert(result) // 2
-      return new Promise((resolve, reject) => {
-        setTimeout(() => resolve(result * 2), 1000)
-      })
-    })
-    .then(function(result) {
-      alert(result) // 4
-    })
+  let value = await promise;
   ```
 
-# 예제: loadScript callback function 해결하기
+## 간단예제
+  * 주석 POINT 확인
+  * 말그대로 promise가 처리될 때까지 함수 실행을 기다린다. 
+  * promise가 처리되면 그 결과와 함께 실행이 재개된다. 
+  ```js
+  async function f() {
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve("완료!"), 1000)
+    });
+    let result = await promise; // POINT: 프라미스가 이행될 때까지 기다림
+    console.log(result); // "완료!"
+  } 
+  f();
+  console.log("다른일을 할 수 있습니다.")
+  //# 결과
+  // 다른일을 할 수 있습니다.
+  // 1초뒤 => 완료
+  ```
 
+  * 동기적 코드
+  ```js
+  async function f() {
+    setTimeout(() => console.log("완료!"), 1000)
+  } 
+  f();
+  console.log("기다렸습니다.")
+  // # 결과
+  // 완료!
+  // 1초뒤 => 기다렸습니다.
+  ```
+
+## 실전예제
 ```js
-loadScript("/article/promise-chaining/one.js")
-  .then(script => loadScript("/article/promise-chaining/two.js"))
-  .then(script => loadScript("/article/promise-chaining/three.js"))
-  .then(script => {
-    // 스크립트를 정상적으로 불러왔기 때문에, 스크립트 내의 함수를 호출할 수 있습니다.
-    one() //...one.js에 있는 function
-    two() //...two.js에 있는 function
-    three() //...three.js에 있는 function
-  })
+async function showAvatar() {
+
+  // JSON 읽기
+  let response = await fetch('/article/promise-chaining/user.json');
+  let user = await response.json(); //위 line 코드를 기다렸다 "response"객체 사용
+
+  // github 사용자 정보 읽기
+  let githubResponse = await fetch(`https://api.github.com/users/${user.name}`);//위 line 코드를 기다렸다 "user" 객체사용
+  let githubUser = await githubResponse.json();//위 line 코드를 기다렸다 "githubResponse" 객체사용
+
+  // 아바타 보여주기
+  let img = document.createElement('img');
+  img.src = githubUser.avatar_url;
+  img.className = "promise-avatar-example";
+  document.body.append(img);
+
+  // 3초 대기
+  await new Promise((resolve, reject) => setTimeout(resolve, 3000));
+
+  img.remove();
+
+  return githubUser;
+}
+
+showAvatar();
 ```
 
-# fetch와 함께 체이닝 함께 응용하기
+## 주의사항1: await는 최상위 레벨 코드에서 작동하지 않는다. 
+```js
+// 최상위 레벨 코드에선 문법 에러가 발생함
+let response = await fetch('/article/promise-chaining/user.json');
+let user = await response.json();
+//
+//하지만 익명 async 함수로 코드를 감싸면 최상위 레벨 코드에도 await를 사용할 수 있습니다.
+(async () => {
+  let response = await fetch('/article/promise-chaining/user.json');
+  let user = await response.json();
+  ...
+})();
+```
+# 에러 핸들링
 
-- 프론트 단에선, 네트워크 요청 시 프라미스를 자주 사용합니다.
-- 예시에선 메서드 fetch를 사용해 원격 서버에서 사용자 정보를 가져오겠습니다.
-- fetch는 promise객체를 반환 하기 때문에 fetch로 원하는 정보를 가지고 오고 promise에서 설명한 것 처럼 then을 통해서 후처리를 할 수 있습니다.
+* promise가 정상적으로 이행되면 await promise는 프로미스 객체의 result에 저장된 값을 반환
+* 하지만 프로미스가 거부되면 마치 throw문을 작성한 것처럼 에러가 던져진다.
 
+* 동일한 두 코드
+```js
+// 
+async function f() {
+  await Promise.reject(new Error("에러 발생!"));
+}
+//---
+async function f() {
+  throw new Error("에러 발생!");
+}
+```
+
+## try...catch
+* 실제로는 promise가 거부 되기 전에 await가 에러를 던지기 전에 지연이 발생한다.
+* 그래서 await가 던진 에러는 throw가 던진에러를 잡을 때처럼 try...catch를 사용해 잡을 수 있다.
+* 그리고 async에 에러가 발생하면 제어 흐름이 catch 블록으로 넘어가 여러줄의 코드를 try로 감싸는것도 가능.
   ```js
-  fetch("/article/promise-chaining/user.json")
-    // 원격 서버가 응답하면 .then 아래 코드가 실행됩니다.
-    .then(function(response) {
-      // response.text()는 응답 텍스트 전체가 다운로드되면
-      // 응답 텍스트를 새로운 이행 프라미스를 만들고, 이를 반환합니다.
-      return response.text()
-    })
-    .then(function(text) {
-      // 원격에서 받아온 파일의 내용
-      alert(text) // {"name": "iliakan", isAdmin: true}
-    })
+  async function f() {
+      try {
+        let response = await fetch('http://유효하지-않은-url');
+        let user = await response.json();
+      } catch(err) {
+        // fetch와 response.json에서 발행한 에러 모두를 여기서 잡습니다.
+        alert(err);
+      }
+  }
+
+  f();
   ```
+
+# 요약 
+* function 앞에 async 키워드를 추가하면 두 가지 효과가 있음
+  1. 함수는 언제나 프라미스를 반환
+  2. 함수 안에서 await를 사용할 수 있음
+
+* 프라미스 앞에 await 키워드를 붙이면 자바스크립트는 프라미스가 처리될 때까지 대기한다. 그리고 처리가 완료되면 조건에 따라 아래와 같은 동작이 이어진다.
+  1. 에러 발생 – 예외가 생성됨(에러가 발생한 장소에서 throw error를 호출한 것과 동일함)
+  2. 에러 미발생 – 프라미스 객체의 result 값을 반환
+
+* async/await를 함께 사용하면 읽고, 쓰기 쉬운 비동기 코드를 작성할 수 있음
+  * <u>async/await를 사용하면 promise.then/catch가 거의 필요 없습니다.</u>
+  * <u>하지만 가끔 가장 바깥 스코프에서 비동기 처리가 필요할 때같이 promise.then/catch를 써야만 하는 경우가 생기기 때문에 async/await가 프라미스를 기반으로 한다는 사실을 알고 있어야 한다.</u>
+  * 여러 작업이 있고, 이 작업들이 모두 완료될 때까지 기다리려면 Promise.all을 활용 할 수 있다.
+    ```js
+    // 프라미스 처리 결과가 담긴 배열을 기다린다.
+    let results = await Promise.all([
+      fetch(url1),
+      fetch(url2),
+      ...
+    ]);
+    ```
+
+
+
 
 # 참고
 
 - Javascript.info  
-  https://javascript.info/promise-chaining
+  https://ko.javascript.info/async-await
