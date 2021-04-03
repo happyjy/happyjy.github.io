@@ -66,124 +66,127 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
 * {getName: f, constructor: f} -> constructor는 위 Person function 입니다.
 * new 키워드로 생성한 인스턴스 __proto__는 Person의 prototype에 의해서 생성한 것입니다.
 
-```js
-var Person = function(name) {
-    this._name = name;
-}
-Person.prototype.getName = function(){
-    return this._name;
-}
+  ```js
+  var Person = function(name) {
+      this._name = name;
+  }
+  Person.prototype.getName = function(){
+      return this._name;
+  }
 
-typeof Person // function
-typeof new Person('boa'); // object
+  typeof Person // function
+  typeof new Person('boa'); // object
 
-new Person('boa'); // Person {_name: 'boa'}
+  new Person('boa'); // Person {_name: 'boa'}
 
-Person.prototype === new Person('boa').__proto__ // true
-Person.prototype //{getName: ƒ, constructor: ƒ}
-new Person('boa').__proto__	//{getName: ƒ, constructor: ƒ}
+  Person.prototype === new Person('boa').__proto__ // true
+  Person.prototype //{getName: ƒ, constructor: ƒ}
+  new Person('boa').__proto__	//{getName: ƒ, constructor: ƒ}
 
-```
+  ```
 
 
 
-### 예제2 인스턴스와 인스턴스 __proto__ 의 실행컨텍스트
+### 예제2 인스턴스와 인스턴스 \__proto__ 의 실행컨텍스트
 
-boa.getName === boa.__proto__.getName 은 같지만 getName을 수행할때 "실행컨텍스트"가  다르기 때문에 결과가 다르다
+<u>boa.getName === boa.\__proto__.getName 은 같지만 getName을 수행할때 "실행컨텍스트"가  다르기 때문에 결과가 다르다</u>
 
-* boa, boa.__proto__ 객체 비교 
+* boa, boa.\__proto__ 객체 비교 
   * boa => Person {_name: "boa"}
-  * boa.__proto__ => {getName: ƒ, constructor: ƒ}
+  * boa.\__proto__ => {getName: ƒ, constructor: ƒ}
 
 * boa.getName();
-  - getName이 호출 돼 scope에 있는 this가 서로 다르다. 그래서 결과 값이 다르다.
-  - Person {_name: "boa"}
-* boa.__proto__.getName()
-  * boa.__proto__에 _name 프로퍼티가 없어 식별자(this._name)를 찾을 수 없다.
-  * getName의 실행 컨텍스트는 boa.__proto__(_name은 boa 객체 하위에 있다.)
-  * boa.__proto__ : {getName: ƒ, constructor: ƒ}
+  - return value => "boa"
+  - boa.getName return value => Person {_name: "boa"}
+  
+* boa.\__proto__.getName()
+  - return value => undefined
+  - boa.getName return value => Person {_name: "boa"}
+  - boa.\__proto__ return value => {getName: ƒ, constructor: ƒ}
+  - boa.\__proto__에 _name 프로퍼티가 없어 식별자(this._name)를 찾을 수 없다.
+  - getName의 실행 컨텍스트는 boa.\__proto__(_name은 boa 객체 하위에 있다.)
 
-```js
-var Person = function(name) {
-    this._name = name;
-}
-Person.prototype.getName = function(){
-    return this._name;
-}
+  ```js
+  var Person = function(name) {
+      this._name = name;
+  }
+  Person.prototype.getName = function(){
+      return this._name;
+  }
 
-var boa = new Person('boa');
-boa.getName(); // boa  
-boa.__proto__.getName(); // undefined
-boa.getName === boa.__proto__.getName //true
-```
+  var boa = new Person('boa');
+  boa.getName(); // boa  
+  boa.__proto__.getName(); // undefined
+  boa.getName === boa.__proto__.getName //true
+  ```
 
-### 예제3 prototype, __proto__관계
+### 예제3 prototype, \__proto__관계
 
-* boa의 property '__proto__'객체(Constructor function의 prototype으로 생성)는
-  	 "Constructor function의 객와 는 메모리를 공유하고 있다.
+* boa의 property '\__proto__'객체(Constructor function의 prototype으로 생성)는 "Constructor function의 객와 는 메모리를 공유하고 있다.
 
-* instance.__proto__, Constructor.prototype 객체는 메모리를 공유
-	- instance.__proto__ 변경하면 Constructor.prototype도 변경이 된다.
-Person.prototype === boa.__proto__; // true
+* <u>instance.\__proto__, Constructor.prototype 객체는 메모리를 공유</u>
+	- <u>instance.\__proto__ 변경하면 Constructor.prototype도 변경이 된다.</u>
+  - Person.prototype === boa.\__proto__; // true
 
-```js
-var Person = function(name) {
-    this._name = name;
-}
-Person.prototype.getName = function(){
-    return this._name;
-}
+  ```js
+  var Person = function(name) {
+      this._name = name;
+  }
+  Person.prototype.getName = function(){
+      return this._name;
+  }
 
-var Person = function(name) {
-Person.prototype === boa.__proto__; // true
-```
+  var Person = function(name) {
+  Person.prototype === boa.__proto__; // true
+  ```
 
-### 예제4 __proto__에서 getName 호출
+### 예제4 \__proto__에서 getName 호출
 
-* boa.__proto__.getName() 에 의해서 호출된 getName의 실행컨텍스트(getName에서 this)는 boa.__proto__
+* boa.\__proto\__.getName() 에 의해서 호출된 getName의 실행컨텍스트(getName에서 this) 
+  * => "boa.\__proto__"
 
-```js
-var Person = function(name) {
-    this._name = name;
-}
-Person.prototype.getName = function(){
-    return this._name;
-}
+  ```js
+  var Person = function(name) {
+      this._name = name;
+  }
+  Person.prototype.getName = function(){
+      return this._name;
+  }
 
-var boa = new Person('boa');
-boa.__proto__._name = 'boa.__proto__';
-boa.__proto__.getName(); //boa__proto__
-```
+  var boa = new Person('boa');
+  boa.__proto__._name = 'boa.__proto__';
+  boa.__proto__.getName(); //boa__proto__
+  ```
 
 
 
 ### 예제5 prototype chain 예시
 
-* boa객체 바로 하위에는 getName가 없을때는 __proto__ 객체에 getName 여부 확인을하고 호출한다. 이게 바로 prototype chanin 이다.
-* prototype chanin원리에 따라서 __proto__에 없을경어 __proto__의 __proto__에 접근해서 찾게 된다.
+* boa객체 바로 하위에는 getName가 없을때는 \__proto__ 객체에 getName 여부 확인을하고 호출한다. 이게 바로 prototype chanin 이다.
+* <u>rototype chanin원리에 따라서 \__proto\__에 없을경우 \__proto\__의 \__proto__에 접근해서 찾게 된다.</u>
 
-* boa.__proto__.getName
-  = boa(.__proto__).getName
-  = boa.getName
+* boa.\__proto__.getName
+  * = boa(.\__proto__).getName
+  * = boa.getName
 
-```js
-var Person = function(name) {
-    this._name = name;
-}
-Person.prototype.getName = function(){
-    return this._name;
-}
+  ```js
+  var Person = function(name) {
+      this._name = name;
+  }
+  Person.prototype.getName = function(){
+      return this._name;
+  }
 
-var boa = new Person('boa');
-boa.getName(); // boa
-boa.__proto__.getName === boa.getName // true
-```
+  var boa = new Person('boa');
+  boa.getName(); // boa
+  boa.__proto__.getName === boa.getName // true
+  ```
 
 
 
-### 예제6  function의 prototype과 인스턴스의 __proto__의 관계
+### 예제6  function의 prototype과 인스턴스의 \__proto__의 관계
 
-* Constructor.prototype === instance.__proto__
+* Constructor.prototype === instance.\__proto__
 
 ```js
 var Constructor = function(name) {
@@ -204,7 +207,7 @@ console.dir(instance);
 ### 예제7 Array 내장 생성자 함수로 알아본 prototype
 
 * var arr = [1,2]; 은 내장 생성자 함수 Array로 생성한 인스턴스다. 
-*  내장 생성자 함수 Array를 console.dir(Array) 하면 내부에 프로퍼티 확인 가능하다
+* 내장 생성자 함수 Array를 console.dir(Array) 하면 내부에 프로퍼티 확인 가능하다
 * Array.prototype은 인스턴스로 만든 arr에서 사용할 수 있는 함수들이다.
 
 ```js
@@ -400,9 +403,7 @@ var p5 = new p1.constructor("인간5") //Person {name:"인간5"} true
 
 아래 예제 주석 부분의 POINT 부분 이해부터 봐보자!   
 Grade.prototype에 Array instance를 세팅으로 g1(Grade function의 instance)에서 push를 사용할 수 있게 된다.  
-이렇게 새롭게 만드는 생성자 함수에 \_\_proto\_\_를 연결해서 체인 관계를 만들수 있다.  
-
-
+이렇게 새롭게 만드는 생성자 함수에 \__proto__를 연결해서 체인 관계를 만들수 있다.  
 
 - Grade 생성자 함수와 인스턴스 예제
 
@@ -420,9 +421,10 @@ Grade.prototype에 Array instance를 세팅으로 g1(Grade function의 instance)
 
   //POINT
   Grade.prototype = new Array() 
-  //Grade.prototype = [];
+  // == Grade.prototype = new Array().__proto__
+  // new Array() == [];
   //[].__proto__ === new Array().__proto__
-  //[] instanceof Array // true
+  //[] instanceof Array => true
 
   var g1 = new Grade(10, 20)
   g1.push(1)

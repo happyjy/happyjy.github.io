@@ -16,8 +16,8 @@ tags:
     * call() 정의
     * call()을 생성자 연결에 사용
     * call()을 익명함수와 함께 쓰기
-    * call()호출시 this에 특정 값을 넣어 동작하기
-    * call() 호출시 첫번째 인자값 넣지 않고 동작하기
+    * call()호출시 첫번째 인자값에 특정 값을 넣어 동작하기
+    * call()호출시 첫번째 인자값 넣지 않고 동작하기
     * call, apply함수의 비교(this에 특정 값 넣어 동작)
     * bind()
     * bind()함수 구현 해보기
@@ -86,7 +86,7 @@ var animals = [
 ]
 
 for (var i = 0; i < animals.length; i++) {
-  ;(function(i) {
+  (function(i) {
     this.print = function() {
       console.log("#" + i + " " + this.species + ": " + this.name)
     }
@@ -98,15 +98,11 @@ for (var i = 0; i < animals.length; i++) {
 //#1 Whale: Fail
 ```
 
-# call()호출시 this에 특정 값을 넣어 동작하기
-
->
+# call()호출시 첫번째 인자값에 특정 값을 넣어 동작하기
 
 ```js
 function greet() {
-  var reply = [this.animal, "typically sleep between", this.sleepDuration].join(
-    " "
-  )
+  var reply = [this.animal, "typically sleep between", this.sleepDuration].join("")
   console.log(reply)
 }
 
@@ -118,7 +114,7 @@ var obj = {
 greet.call(obj) // cats typically sleep between 12 and 16 hours
 ```
 
-# call() 호출시 첫번째 인자값 넣지 않고 동작하기
+# call()호출시 첫번째 인자값 넣지 않고 동작하기
 
 > call로 호출될 function 안에 this의 bound는 global object이다  
 > 하지만 use stric을 사용 하용하면 undefined가 나온다.
@@ -166,15 +162,15 @@ console.log(greeting.apply(obj, ["Korea", "Seoul"]))
 # bind()
 
 > 함수와 객체를 서로 묶는 것이다.  
-> bind()함수는 새 함수를 반환한다.(call, apply는 바로 동작`)
+> bind()함수는 새 함수를 반환한다.(call, apply는 바로 동작)
 
 ```js
-function f(y) {
-  return this.x + y
+function f(arg1, arg2) {
+  return (this.x * arg1) + arg2
 } //바인드되어야 하는 함수
 var o = { x: 1 } //바인드될 객체
-var g = f.bind(o) //g(x)를 호출하면 o.f(x)가 호출된다.
-g(2) //=>3
+var g = f.bind(o, 10) //g(x)를 호출하면 o.f(x)가 호출된다.
+g(5) //=>15
 ```
 
 # bind()함수 구현 해보기
@@ -186,14 +182,15 @@ Function.prototype.bind = function(obj){
 
   //bind() 메서드의 반환 값은 함수다.
   return function(){
-  //인자 목록을 작성하는데, 첫 번재 이후의 인자부터
-  //나머지 모든 인자를 이 함수에 전달 한다.
-  var args = [], i;
-  for(i = 1; i < boundArgs.length; i++) args.push(boundArgs[i]);
-  for(i = 0; i < arguments.length; i++) args.push(arguments[i]);
+    //인자 목록을 작성하는데, 첫 번재 이후의 인자부터
+    //나머지 모든 인자를 이 함수에 전달 한다.
+    var args = [], i;
+    for(i = 1; i < boundArgs.length; i++) args.push(boundArgs[i]);
+    for(i = 0; i < arguments.length; i++) args.push(arguments[i]);
 
-  //인자들을 포함하여 obj의 메서드로 me를 호출한다.
-  return me.apply(obj, args);
+    //인자들을 포함하여 obj의 메서드로 me를 호출한다.
+    return me.apply(obj, args);
+  }
 }
 ```
 
@@ -207,8 +204,6 @@ var module = {
     return this.x
   },
 }
-
-module.getX() // 81
 
 var retrieveX = module.getX
 module.getX() // return: 81 - The ufnction gets invoked at the module scope
@@ -226,7 +221,6 @@ boundGetX() // 81
 function list() {
   return Array.prototype.slice.call(arguments)
 }
-
 function addArguments(arg1, arg2) {
   return arg1 + arg2
 }
