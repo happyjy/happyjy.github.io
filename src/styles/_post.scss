@@ -1,3 +1,5 @@
+// markdown class 수정
+
 .blog-post-content {
   margin-top: 3rem;
   font-family: "Noto Serif KR";
@@ -25,11 +27,40 @@
     margin-top: 2rem;
   }
 
+  ol{
+    padding-left: 15px;
+    li{
+      ul{
+        padding-left: 15px;
+        li{
+          list-style-type: disc;
+          ul{
+            li{
+              list-style-type: circle;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ul {  
+    // background-color: #af90a9;
+    margin: 0px;
+    // margin-top: 0.25rem;
+    padding-left: 15px;
+    p {
+      margin: 0px;
+    }
+    
+  }
+
   li {
     margin-bottom: 0.25rem;
-
-    ul {
-      margin-top: 0.25rem;
+    // background-color: #944654;
+    margin: 0px;
+    p {
+      margin: 0px;
     }
   }
   code {
