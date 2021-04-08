@@ -155,7 +155,7 @@ console.log("### getStore: ", store.getState())
 - observer pattern 사용
   - subscribe 설정할때 observer pattern으로 생성한 객체에 subsribe함으로 setter에서 notify할수 있다.
 - setter 사용
-  - setState가 될때 설정한 subscribe가 excute되어야 한다.
+  - setState가 될때 설정한 subscribe가 execute되어야 한다.
   - observer pattern에 설정한것을 notify
 
 4. getState

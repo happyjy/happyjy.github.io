@@ -276,3 +276,7 @@ let bar;
 
 * 블록 레벨 스코프(Block-level scope)
   - 코드 블록 내에서 선언된 변수는 코드 블록 내에서만 유효하며 코드 블록 외부에서는 참조할 수 없다.
+
+
+# 참고 
+  - [poiema](https://poiemaweb.com/es6-block-scope)

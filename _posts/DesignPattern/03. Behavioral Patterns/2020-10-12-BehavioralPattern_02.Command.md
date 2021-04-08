@@ -53,7 +53,7 @@ tags:
   * Calculator 객체에 대해서 
     - POINT1: 계산기 command pattern 에서 현재 값과 연산 기능이 포함된 Command 객체를 stack 자료 형태로 보관
   * Calculator execute에 대해서
-    - POINT1-1: excute하면 수행한 결과값, 수행한 Command 객체를 commands 배열에 stack 자료형태로 보관
+    - POINT1-1: execute하면 수행한 결과값, 수행한 Command 객체를 commands 배열에 stack 자료형태로 보관
   * Calculator undo에 대해서 
     - POINT2: Command 객체 생성시 두번째 param에 undo function을 넣어준다.
     - POINT2-1: undo를 하게 되면 Calculator 객체의 command stack에서 마지막에 연산된 객체를 pop해서 pop한 객체의 undo 수행한다.
@@ -108,7 +108,7 @@ tags:
       }
 
       return {
-        // POINT1-1: excute하면 수행한 결과값, 수행한 Command 객체를 commands 배열에 stack 자료형태로 보관
+        // POINT1-1: execute하면 수행한 결과값, 수행한 Command 객체를 commands 배열에 stack 자료형태로 보관
         execute: function (command) {
           // command.execute = 연산함수(각 연산 Command객체에서 -AddCommand, SubCommand, MulCommand, DivCommand- 수행 할 )
           current = command.execute(current, command.value);

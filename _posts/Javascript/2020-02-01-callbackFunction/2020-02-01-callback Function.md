@@ -152,7 +152,7 @@ var timer = setInterval(cbFunc, 300)
     setTimeout(callback, 1000);
   ```
   - var me = this;는 closure scope에 등록
-  - setTimeout에 의해서 callback function이 호출 될때 me.name은 excute context에서 me.name 변수를 찾는다.
+  - setTimeout에 의해서 callback function이 호출 될때 me.name은 execute context에서 me.name 변수를 찾는다.
     ![callback & scope & clousre](callback&scope&closure.png)
 
 * 콜백 함수 내부의 this에 따른 값을 바인딩하는 방법 (2/3)

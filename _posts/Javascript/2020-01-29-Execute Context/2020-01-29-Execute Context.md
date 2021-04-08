@@ -1,11 +1,11 @@
 ---
-title: Excute Context
+title: execute Context
 date: 2020-01-24
 author: jyoon
 image: ../../_images/javascript.png
 category: Javascript Core
 tags:
-  - excute-context
+  - execute-context
   - JavaScript
 ---
 
@@ -240,7 +240,7 @@ tags:
     ```
 
 
-  * 전역, outer, inner excute context
+  * 전역, outer, inner execute context
     ```js
       "전역 컨텍스트": {
           environmentRecord: 'a, outer function',

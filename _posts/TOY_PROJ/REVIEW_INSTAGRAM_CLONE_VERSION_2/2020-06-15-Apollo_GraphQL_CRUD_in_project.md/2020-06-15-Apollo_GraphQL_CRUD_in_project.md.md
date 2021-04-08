@@ -35,12 +35,12 @@ apollo GraphQl 해당 컴포넌트에 필요한 query가 있어서 해당 컴포
   - useMutation함수로 반환 받은 첫번째 객체 설명
     - 이 객체는 promise 객체라서 await를 사용하게 되면 await 키워드를 사용한 promise객체가 settles and return 할때까지 async를 사용한 function은 기다리게 된다.
     - 이 프로젝트에서는 아래 코드 주석 POINT3에서 addCommentMutation를 통해 server request를 하고 있고 그 아래 "setSelfComments" 이 함수는 response를 받은 후에 실행 될것입니다. 
-      - 이때 기다린다고 해서 cpu의 resource가 낭비되는것이 아니라 javascript engine은 다른 script를 excute를 하거나, 이벤트 처리를 하는 등의 수행을 합니다.
+      - 이때 기다린다고 해서 cpu의 resource가 낭비되는것이 아니라 javascript engine은 다른 script를 execute를 하거나, 이벤트 처리를 하는 등의 수행을 합니다.
     - Aync, Await는 다음을 참고하자
       - [async-await](https://javascript.info/async-await)
 
   - Aync, Await에 대한 간략한 추가 설명
-    - 이때 기다린다고 해서 cpu의 resource가 낭비되는것이 아니라 javascript engine은 다른 script를 excute를 하거나, 이벤트 처리를 하는 등의 수행을 합니다.
+    - 이때 기다린다고 해서 cpu의 resource가 낭비되는것이 아니라 javascript engine은 다른 script를 execute를 하거나, 이벤트 처리를 하는 등의 수행을 합니다.
   
 
 ```jsx

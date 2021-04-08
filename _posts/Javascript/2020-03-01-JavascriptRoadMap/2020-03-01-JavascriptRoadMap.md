@@ -15,7 +15,7 @@ javascript Core를 정리하겠다고 마음먹고 제일 먼저 작성한 목�
 
 # index
 
-[Excute context](https://happyjy.netlify.app/Excute-context/)  
+[execute context](https://happyjy.netlify.app/execute-context/)  
 [Callback function](https://happyjy.netlify.app/callback-function)  
 [this](https://happyjy.netlify.app/this/)  
 [call(), apply(), bind()](https://happyjy.netlify.app/call-apply-bind)  
