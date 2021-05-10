@@ -8,9 +8,10 @@ tags:
 ---
 
 # DONE LIST (DESC)
-* [...ing] 2021.04 - ing: 시크릿코드_UI Component
 * [...ing] 2021.04 - ing: uber 고도화
+* [x] 2021.04 - 202105 : 시크릿코드_UI Component
 * [x] 2021.01 - 2021.04: uber clone
+
 * [x] 2020.12: GraphQL로 영화 웹 앱 만들기
 * [x] 2020.12: NestJS로 API 만들기
 * [x] 2012.11: graphql movie API 만들기
