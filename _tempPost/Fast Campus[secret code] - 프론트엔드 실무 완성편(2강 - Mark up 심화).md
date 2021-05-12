@@ -32,7 +32,7 @@
 [ ] Case21. Flex: 47:18  
 [ ] Case22. Grid: 16:09  
 
-[ ] ## Chapter5. Other Case  
+## Chapter5. Other Case  
 [ ] Case23. Atomic-css: 22:01  
 [ ] Case24. Tailwind-css-footer: 33:35  
 [ ] Case25. Tailwind-css-login: 26:17  
