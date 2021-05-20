@@ -1,6 +1,3 @@
-* TOC
-* section number
-
 # Core React
 
 ## react
