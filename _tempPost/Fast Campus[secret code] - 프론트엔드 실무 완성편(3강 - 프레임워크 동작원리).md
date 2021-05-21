@@ -1,6 +1,9 @@
 # 3강 - 프레임워크 동작원리
 
 ## State & Props
+[ ] Case 1. js_and_react_element: 06:48  
+[ ] Case 2. rendering: 06:12  
+[ ] Case 3.
 [ ] Case 4. State: 26:00  
 [ ] Case 5. Props: 28:50  
 
@@ -16,6 +19,8 @@
 ## 불변성
 [ ] Case 11. Component state update: 20:23  
 
+## 번들러
+[ ] Case 14. webpack
 ## 상태관리
 [ ] Case 15. redux: 6:01  
 [ ] Case 18. redux-middleware: 8:30  
