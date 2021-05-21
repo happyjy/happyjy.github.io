@@ -19,6 +19,7 @@ tags:
 - [ ] 20200529 검색 기능
 - [ ] 20200529 code tag of md 파일에서 띄워쓰기가 제대로 동작하지 않는다.
 - [ ] 20200529 아래 설명 참고 md file에 code block html 구조가 정상적인것과 다름
+
   ```
   1.
     *
@@ -42,23 +43,22 @@ tags:
 - [ ] 20200525 최근글 제거
 - [ ] 20200525 About 메뉴에 이력서 정리
 
+---
 
---- 
+- markdown에 image import하는 방법
+<https://www.gatsbyjs.org/docs/working-with-images-in-markdown/>
 
+- page만드는 것 설명
+<https://www.gatsbyjs.org/docs/adding-markdown-pages/>
 
-* markdown에 image import하는 방법
-https://www.gatsbyjs.org/docs/working-with-images-in-markdown/
+- Adding a List of Markdown Blog Posts
+<https://www.gatsbyjs.org/docs/adding-a-list-of-markdown-blog-posts/>
 
-* page만드는 것 설명
-https://www.gatsbyjs.org/docs/adding-markdown-pages/
+- pagenation 설명
+- query 설명
 
-* Adding a List of Markdown Blog Posts
-https://www.gatsbyjs.org/docs/adding-a-list-of-markdown-blog-posts/
+- 파일 구조
 
-* pagenation 설명
-* query 설명
-
-*  파일 구조 
 ```
   # 첫화면
   # index.js
