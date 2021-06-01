@@ -19,6 +19,10 @@ tags:
 - [ ] 20200529 검색 기능
 - [ ] 20200529 code tag of md 파일에서 띄워쓰기가 제대로 동작하지 않는다.
 - [ ] 20200529 아래 설명 참고 md file에 code block html 구조가 정상적인것과 다름
+- [ ] display 변경 [참고 - tistory](https://salgoomoment.tistory.com/)
+- [ ] 광고
+  - [ ] [ad.daum](https://info.ad.daum.net/optout.do)
+  - [ ] [google ad sense](https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwiph7735ejwAhUGq5YKHe4NDwIYABABGgJ0bA&ohost=www.google.com&cid=CAESQOD2u3rIeQvZLm7UBkvr03pScUpC6bbtZ6QNnNEVC7pp_eEtRISqNM9Xr_ZGOj94OPvT5frE_0SNsuVWmXCfJ10&sig=AOD64_3FlHpZnUxXNj3p1djALg5CmucZ1Q&q&adurl&ved=2ahUKEwjq07T35ejwAhVS-2EKHe-FDF0Q0Qx6BAgGEAE)
 
   ```
   1.
