@@ -9,6 +9,7 @@ tags:
 
 # DONE LIST (DESC)
 
+* [x] 2021.05 - 2021.06: Trello clone(no framework, no Library)
 * [x] 2021.05 - 2021.05: 패스트 캠퍼스 - 시크릿코드_UI MarkUP Advance
 * [x] 2021.04 - 2021.05: 패스트 캠퍼스 - 시크릿코드_UI Component
 * [x] 2021.04 - 2021.04: uber 1차 고도화
