@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Part 1&period; HTML&sol;CSS&sol;JS&#xB85C; &#xB9CC;&#xB4DC;&#xB294; &#xC2A4;&#xD0C0;&#xBC85;&#xC2A4; &#xC6F9;&#xC0AC;&#xC774;&#xD2B8; - 476&#xBD84;</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+                margin: 5px;
+                padding: 5px;
+            }
+            * {
+              font-size: 0.7rem;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -10px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+      <div id="columns_4" style="columns:3">
+
+
+        <ul>
+<li><a href="#part-1-htmlcssjs%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%9B%B9%EC%82%AC%EC%9D%B4%ED%8A%B8---476%EB%B6%84">Part 1. HTML/CSS/JS로 만드는 스타벅스 웹사이트 - 476분</a>
+<ul>
+<li><a href="#ch-1-%EA%B0%9C%EC%9A%94-46%EB%B6%84">Ch 1. 개요: 46분</a></li>
+<li><a href="#ch-2-vs-code-38%EB%B6%84">Ch 2. VS Code: 38분</a></li>
+<li><a href="#ch-3-%EB%AC%B4%EC%9E%91%EC%A0%95-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-87%EB%B6%84">Ch 3. 무작정 시작하기: 87분</a></li>
+<li><a href="#ch-4-%EC%9B%B9%EC%97%90%EC%84%9C-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-17%EB%B6%84">Ch 4. 웹에서 시작하기: 17분</a></li>
+<li><a href="#ch-5-html-%EA%B0%9C%EC%9A%94-31%EB%B6%84">Ch 5. HTML 개요: 31분</a></li>
+<li><a href="#ch-6-html-%ED%95%B5%EC%8B%AC-%EC%A0%95%EB%A6%AC-67%EB%B6%84">Ch 6. HTML 핵심 정리: 67분</a></li>
+<li><a href="#ch-7-css-%EA%B0%9C%EC%9A%94-107%EB%B6%84">Ch 7. CSS 개요: 107분</a></li>
+<li><a href="#ch-8-css-%EC%86%8D%EC%84%B1-331%EB%B6%84">Ch 8. CSS 속성: 331분</a></li>
+<li><a href="#ch-9-js-%EC%84%A0%ED%96%89-112%EB%B6%84">Ch 9. JS 선행: 112분</a></li>
+<li><a href="#ch-10-%EC%8A%A4%ED%83%80%EB%B2%85%EC%8A%A4-%EC%98%88%EC%A0%9C-476%EB%B6%84">Ch 10. 스타벅스 예제: 476분</a></li>
+</ul>
+</li>
+<li><a href="#part-5-typescript-essentials">Part 5. TypeScript Essentials</a>
+<ul>
+<li><a href="#ch-1-typescirpt-43%EB%B6%84">Ch 1. TypeScirpt: 43분</a></li>
+<li><a href="#ch-2-basic-types-83%EB%B6%84">Ch 2. Basic Types: 83분</a></li>
+<li><a href="#ch-3-type-system-41%EB%B6%84">Ch 3. Type System: 41분</a></li>
+<li><a href="#ch-4-typescript-compiler-58%EB%B6%84">Ch 4. TypeScript Compiler: 58분</a></li>
+<li><a href="#ch-5-interfaces-48%EB%B6%84">Ch 5. Interfaces: 48분</a></li>
+<li><a href="#ch-6-classes-86%EB%B6%84">Ch 6. Classes: 86분</a></li>
+<li><a href="#ch-7-generics-49%EB%B6%84">Ch 7. Generics: 49분</a></li>
+</ul>
+</li>
+<li><a href="#part-8-bundler">Part 8. Bundler</a>
+<ul>
+<li><a href="#ch-1-parcel-44%EB%B6%84">Ch 1. Parcel: 44분</a></li>
+<li><a href="#ch-2-webpack-56%EB%B6%84">Ch 2. Webpack: 56분</a></li>
+</ul>
+</li>
+<li><a href="#part10react%EB%A1%9C-%EC%87%BC%ED%95%91%EB%AA%B0-%EB%A7%8C%EB%93%A4%EA%B8%B0react%EA%B8%B0%EB%B3%B8---13%EC%8B%9C%EA%B0%84">Part10.React로 쇼핑몰 만들기(React기본) - 13시간</a>
+<ul>
+<li><a href="#ch-1-react-getting-started-62%EB%B6%84">Ch 1. React Getting Started: 62분</a></li>
+<li><a href="#ch-2-react-component-128%EB%B6%84">Ch 2. React Component: 128분</a></li>
+<li><a href="#ch-3-creating-react-project-66%EB%B6%84">Ch 3. Creating React Project: 66분</a></li>
+<li><a href="#ch-4-react-router-75%EB%B6%84">Ch 4. React Router: 75분</a></li>
+<li><a href="#ch-5-react-component-styling-107%EB%B6%84">Ch 5. React Component Styling: 107분</a></li>
+<li><a href="#ch-6-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%8B%A4%EC%A0%84-%ED%99%9C%EC%9A%A9-39%EB%B6%84">Ch 6. 리액트 실전 활용: 39분</a></li>
+<li><a href="#ch-7-hooks--context-111%EB%B6%84">Ch 7. Hooks &amp; Context: 111분</a></li>
+<li><a href="#ch-8-react-testing-51%EB%B6%84">Ch 8. React Testing: 51분</a></li>
+<li><a href="#ch-9-react-advanced-45%EB%B6%84">Ch 9. React Advanced: 45분</a></li>
+<li><a href="#ch-10-deploy-react-app-37%EB%B6%84">Ch 10. Deploy React App: 37분</a></li>
+<li><a href="#ch-11-react-%EB%A1%9C-%EB%A7%8C%EB%93%9C%EB%8A%94-%EC%87%BC%ED%95%91%EB%AA%B0-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-48%EB%B6%84">Ch 11. React 로 만드는 쇼핑몰 프로젝트: 48분</a></li>
+</ul>
+</li>
+<li><a href="#part-11redux%EB%A1%9C-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0---35%EC%8B%9C%EA%B0%84">Part 11.Redux로 상태관리하기 - 3.5시간</a>
+<ul>
+<li><a href="#ch-1-redux-basic-101%EB%B6%84">Ch 1. Redux Basic: 101분</a></li>
+<li><a href="#ch-2-redux-advanced-1-53%EB%B6%84">Ch 2. Redux Advanced (1): 53분</a></li>
+<li><a href="#ch-3-redux-advanced-2-52%EB%B6%84">Ch 3. Redux Advanced (2): 52분</a></li>
+</ul>
+</li>
+<li><a href="#part-12-react%EB%A1%9C-%EB%82%98%EC%9D%98-%EC%B1%85%EC%9E%A5-%EB%A7%8C%EB%93%A4%EA%B8%B0-typescript---160%EB%B6%84">Part 12. React로 나의 책장 만들기 (TypeScript) - 160분</a></li>
+<li><a href="#part-13-mobx%EB%A1%9C-%EC%83%81%ED%83%9C%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0---95%EB%B6%84">Part 13. mobX로 상태관리하기 - 95분</a></li>
+<li><a href="#part-14-graphql-%EB%A7%9B%EB%B3%B4%EA%B8%B0-server-%EB%A7%8C%EB%93%A4%EA%B8%B0---28%EB%B6%84">Part 14. GraphQL 맛보기 (Server 만들기) - 28분</a></li>
+<li><a href="#part-15-nextjs%EB%A1%9C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0">Part 15. Next.js로 블로그 만들기</a>
+<ul>
+<li><a href="#ch-1-sanity%EB%A1%9C-blog-%EB%AA%A8%EB%8D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-82%EB%B6%84">Ch 1. Sanity로 Blog 모델 만들기: 82분</a></li>
+<li><a href="#ch-2-nextjs%EB%A1%9C-blog-%EB%AA%A8%EB%8D%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-99%EB%B6%84">Ch 2. Next.js로 Blog 모델 만들기: 99분</a></li>
+</ul>
+</li>
+<li><a href="#part-16-svelte">Part 16. Svelte</a>
+<ul>
+<li><a href="#ch-1-svelte-%EC%9E%85%EB%AC%B8-70%EB%B6%84">Ch 1. Svelte 입문: 70분</a></li>
+<li><a href="#ch-2-svelte-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-snowpack-97%EB%B6%84">Ch 2. Svelte 프로젝트 (Snowpack): 97분</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="part-1-htmlcssjs로-만드는-스타벅스-웹사이트---476분">Part 1. HTML/CSS/JS로 만드는 스타벅스 웹사이트 - 476분</h1>
+<h2 id="ch-1-개요-46분">Ch 1. 개요: 46분</h2>
+<ol>
+<li>첫 인사 및 강의 개요 - 4분</li>
+<li>HTML,CSS 그리고 JS - 9분</li>
+<li>웹앱의 동작원리 - 3분</li>
+<li>웹 표준과 브라우저 - 7분</li>
+<li>웹에서 사용하는 이미지 - 12분</li>
+<li>특수 기호 - 7분</li>
+<li>오픈소스 라이선스 - 4분</li>
+</ol>
+<h2 id="ch-2-vs-code-38분">Ch 2. VS Code: 38분</h2>
+<ol>
+<li>설치 및 실행 - 6분</li>
+<li>파일 생성과 삭제 - 5분</li>
+<li>한글화 - 2분</li>
+<li>정리된 코드 만들기(Beautify) - 6분</li>
+<li>태그 이름을 한 번에 변경(Auto Rename Tag) - 3분</li>
+<li>브라우저에 출력(Live Server) - 5분</li>
+<li>단축키 &amp; 공백2로 만들기 - 11분</li>
+</ol>
+<h2 id="ch-3-무작정-시작하기-87분">Ch 3. 무작정 시작하기: 87분</h2>
+<ol>
+<li>Doctype(DTD) - 6분</li>
+<li>HTML, HEAD, BODY - 5분</li>
+<li>CSS,JS 연결하기 - 11분</li>
+<li>정보를 의미하는 태그 살펴보기 - 16분</li>
+<li>화면에 이미지 출력하기 - 10분</li>
+<li>상태 경로와 절대 경로 - 18분</li>
+<li>페이지를 나누고 연결(링크)하기 - 12분</li>
+<li>모든 파일 공백 크기 설정 - 2분</li>
+<li>개발자 도구 사용하기 - 7분</li>
+</ol>
+<h2 id="ch-4-웹에서-시작하기-17분">Ch 4. 웹에서 시작하기: 17분</h2>
+<ol>
+<li><a href="http://Codepen.io">Codepen.io</a> 소개 - 6분</li>
+<li>브라우저 스타일 초기화 - 8분</li>
+<li>Emmet - 3분</li>
+</ol>
+<h2 id="ch-5-html-개요-31분">Ch 5. HTML 개요: 31분</h2>
+<ol>
+<li>기본 문법 - 2분</li>
+<li>부모와 자식 관계의 이해 - 8분</li>
+<li>빈 태그 - 10분</li>
+<li>글자와 상자 - 11분</li>
+</ol>
+<h2 id="ch-6-html-핵심-정리-67분">Ch 6. HTML 핵심 정리: 67분</h2>
+<ol>
+<li>핵심 요소 정리 - 26분</li>
+<li>핵심 요소 출력 연습 - 21분</li>
+<li>주석 - 3분</li>
+<li>전역 속성 - 17분</li>
+</ol>
+<h2 id="ch-7-css-개요-107분">Ch 7. CSS 개요: 107분</h2>
+<ol>
+<li>기본 문법, 주석 - 9분</li>
+<li>선언 방식 - 13분</li>
+<li>선택자_기본 - 5분</li>
+<li>선택자_복합 - 11분</li>
+<li>선택자_가상 클래스 (1) - 12분</li>
+<li>선택자_가상 클래스 (2) - 14분</li>
+<li>선택자_가장 요소 - 10분</li>
+<li>선택자_속성 - 5분</li>
+<li>스타일 상속 - 9분</li>
+<li>선택자 우선순위 - 19분</li>
+</ol>
+<h2 id="ch-8-css-속성-331분">Ch 8. CSS 속성: 331분</h2>
+<ol>
+<li>개요 - 9분</li>
+<li>너비(width, height) - 15분</li>
+<li>CSS 단위 - 11분</li>
+<li>외부 여백(margin) - 10분</li>
+<li>내부 여백(padding) - 6분</li>
+<li>테두리 선(border)과 색상 표현 - 15분</li>
+<li>모서리 둥글게(border-radius) - 3분</li>
+<li>크기 계산(box-sizing) - 8분</li>
+<li>넘침 제어(overflow) - 6분</li>
+<li>출력 특성(display) - 6분</li>
+<li>투명도 - 3분</li>
+<li>글꼴 - 17분</li>
+<li>문자 - 8분</li>
+<li>배경 - 24분</li>
+<li>배치 (1) - 20분</li>
+<li>배치 (2) - 18분</li>
+<li>배치 (3) - 10분</li>
+<li>플렉스(정렬) Container (1) - 15분</li>
+<li>플렉스(정렬) Container (2) - 21분</li>
+<li>플렉스(정렬) Items - 17분</li>
+<li>전환 - 16분</li>
+<li>변환 (1) - 24분</li>
+<li>변환 (2) - 14분</li>
+<li>Overwatch 캐릭터 선택 예제 (1) - 17분</li>
+<li>Overwatch 캐릭터 선택 예제 (2) - 18분</li>
+</ol>
+<h2 id="ch-9-js-선행-112분">Ch 9. JS 선행: 112분</h2>
+<ol>
+<li>개요 - 12분</li>
+<li>데이터 종류 - 23분</li>
+<li>변수, 예약어 - 7분</li>
+<li>함수 - 15분</li>
+<li>조건문 - 4분</li>
+<li>DOM API (1) - 15분</li>
+<li>DOM API (2) - 16분</li>
+<li>메소드 체이닝 - 4분</li>
+<li>질의응답 - 16분</li>
+</ol>
+<h2 id="ch-10-스타벅스-예제-476분">Ch 10. 스타벅스 예제: 476분</h2>
+<ol>
+<li>시작하기 - 프로젝트 시작, 스타일 초기화, 파비콘 - 8분</li>
+<li>시작하기 - 오픈그래프와 트위터 카드 - 8분</li>
+<li>시작하기 - Google Fonts - 7분</li>
+<li>시작하기 - Google Material Icons - 7분</li>
+<li>헤더와 드롭다운 메뉴 - 로고 - 23분</li>
+<li>헤더와 드롭다운 메뉴 - 서브 메뉴 - 24분</li>
+<li>헤더와 드롭다운 메뉴 - 검색 - 21분</li>
+<li>헤더와 드롭다운 메뉴 - 메인 메뉴 (1) - 20분</li>
+<li>헤더와 드롭다운 메뉴 - 메인 메뉴 (2) - 21분</li>
+<li>헤더와 드롭다운 메뉴 - BEM - 7분</li>
+<li>헤더와 드롭다운 메뉴 - 전역 배지(GSAP) (1) - 12분</li>
+<li>헤더와 드롭다운 메뉴 - 전역 배지(GSAP) (2) - 14분</li>
+<li>순차적 애니메이션 - 전역 버튼 스타일 (1) - 13분</li>
+<li>순차적 애니메이션 - 전역 버튼 스타일 (2) - 14분</li>
+<li>순차적 애니메이션 - 순차적으로 요소 보이기 - 9분</li>
+<li>요소 슬라이드 - 공지사항 - 19분</li>
+<li>요소 슬라이드 - 수직 슬라이드(Swiper) - 16분</li>
+<li>요소 슬라이드 - 요소 가운데 배치 - 13분</li>
+<li>요소 슬라이드 - 프로모션 이미지 슬라이드 (1) - 16분</li>
+<li>요소 슬라이드 - 프로모션 이미지 슬라이드 (2) - 16분</li>
+<li>요소 슬라이드 - 슬라이드 영역 토글 - 10분</li>
+<li>유튜브 영상 배경 - 리워즈 - 8분</li>
+<li>유튜브 영상 배경 - Youtube iframe API (1) - 14분</li>
+<li>유튜브 영상 배경 - Youtube iframe API (2) - 13분</li>
+<li>유튜브 영상 배경 - 반복 애니메이션 - 18분</li>
+<li>고정 이미지 배경 - 21분</li>
+<li>3D 애니메이션 - 20분</li>
+<li>스크롤 위치 계산 애니메이션 (1) - 18분</li>
+<li>스크롤 위치 계산 애니메이션 (2) - 19분</li>
+<li>다중 요소 슬라이드 - 12분</li>
+<li>푸터 - 23분</li>
+<li>페이지 상단으로 이동(ScrollTo) - 12분</li>
+</ol>
+<h1 id="part-5-typescript-essentials">Part 5. TypeScript Essentials</h1>
+<h2 id="ch-1-typescirpt-43분">Ch 1. TypeScirpt: 43분</h2>
+<ol>
+<li>TypeScript 란 무엇인가 - 6분</li>
+<li>TypeScript 설치 및 사용 - 25분</li>
+<li>VS Code 설치 및 설정 - 6분</li>
+<li>First Type Annotation - 6분</li>
+</ol>
+<h2 id="ch-2-basic-types-83분">Ch 2. Basic Types: 83분</h2>
+<ol>
+<li>TypeScript Types vs JavaScript Types - 4분</li>
+<li>Primitive Types - 4분</li>
+<li>boolean - 5분</li>
+<li>number - 3분</li>
+<li>string - 5분</li>
+<li>symbol - 6분</li>
+<li>null &amp; undefined - 9분</li>
+<li>object - 5분</li>
+<li>Array - 5분</li>
+<li>Tuple - 5분</li>
+<li>any - 12분</li>
+<li>unknown - 8분</li>
+<li>never - 8분</li>
+<li>void - 4분</li>
+</ol>
+<h2 id="ch-3-type-system-41분">Ch 3. Type System: 41분</h2>
+<ol>
+<li>작성자와 사용자의 관점으로 코드 바라보기 - 17분</li>
+<li>Structural Type System vs Nominal Type System - 5분</li>
+<li>타입 호환성 (Type Compatibility) - 13분</li>
+<li>타입 별칭 (Type Alias) - 6분</li>
+</ol>
+<h2 id="ch-4-typescript-compiler-58분">Ch 4. TypeScript Compiler: 58분</h2>
+<ol>
+<li>Compilation Context - 3분</li>
+<li>tsconfig schema - 3분</li>
+<li>compileOnSave - 2분</li>
+<li>extends - 6분</li>
+<li>files, include, exclude - 6분</li>
+<li>compileOptions - typeRoots, types - 8분</li>
+<li>compileOptions - target 과 lib - 10분</li>
+<li>compileOptions - outDir, outFile, rootDir - 6분</li>
+<li>compileOptions - strict - 14분</li>
+</ol>
+<h2 id="ch-5-interfaces-48분">Ch 5. Interfaces: 48분</h2>
+<ol>
+<li>What are Interfaces - 8분</li>
+<li>optional property (1) - 3분</li>
+<li>optional property (2) - 6분</li>
+<li>function in interface - 7분</li>
+<li>class implements interface - 6분</li>
+<li>interface extends interface - 3분</li>
+<li>function interface - 6분</li>
+<li>Readonly Interface Properties - 3분</li>
+<li>type alias vs interface - 6분</li>
+</ol>
+<h2 id="ch-6-classes-86분">Ch 6. Classes: 86분</h2>
+<ol>
+<li>What are Classes - 2분</li>
+<li>Quick Start - class - 10분</li>
+<li>constructor &amp; initialize - 14분</li>
+<li>접근 제어자 (Access Modifiers) - 4분</li>
+<li>initialization in constructor parameters - 3분</li>
+<li>Getters &amp; Setters - 8분</li>
+<li>readonly properties - 5분</li>
+<li>Index Signatures in class - 8분</li>
+<li>Static Properties &amp; Methods - 6분</li>
+<li>Singletons - 7분</li>
+<li>상속(Inheritance) - 14분</li>
+<li>Abstract Classes - 5분</li>
+</ol>
+<h2 id="ch-7-generics-49분">Ch 7. Generics: 49분</h2>
+<ol>
+<li>Generics, Any 와 다른 점 - 10분</li>
+<li>Generics Basic - 5분</li>
+<li>Generics Array &amp; Tuple - 6분</li>
+<li>Generics Function - 4분</li>
+<li>Generics Class - 4분</li>
+<li>Generics with extends - 4분</li>
+<li>keyof &amp; type lookup system - 16분</li>
+</ol>
+<h1 id="part-8-bundler">Part 8. Bundler</h1>
+<h2 id="ch-1-parcel-44분">Ch 1. Parcel: 44분</h2>
+<ol>
+<li>번들러 개요 - 5분</li>
+<li>프로젝트 생성 - 5분</li>
+<li>정적 파일 연결 - 6분</li>
+<li>autoprefixer - 11분</li>
+<li>babel - 8분</li>
+<li>CLI - 7분</li>
+<li>저장소 업로드 - 2분</li>
+</ol>
+<h2 id="ch-2-webpack-56분">Ch 2. Webpack: 56분</h2>
+<ol>
+<li>프로젝트 생성 - 5분</li>
+<li>entry, output - 11분</li>
+<li>plugins - 5분</li>
+<li>정적 파일 연결 - 5분</li>
+<li>module - 8분</li>
+<li>SCSS - 4분</li>
+<li>Autoprefixer(PostCSS) - 5분</li>
+<li>babel - 3분</li>
+<li>Netlify 배포 - 5분</li>
+<li>NPX, Degit - 5분</li>
+</ol>
+<h1 id="part10react로-쇼핑몰-만들기react기본---13시간">Part10.React로 쇼핑몰 만들기(React기본) - 13시간</h1>
+<h2 id="ch-1-react-getting-started-62분">Ch 1. React Getting Started: 62분</h2>
+<ol>
+<li>React Concept - 21분</li>
+<li>개발 환경 체크 - 5분</li>
+<li>React 라이브러리 (1) - 13분</li>
+<li>React 라이브러리 (2) - 23분</li>
+</ol>
+<h2 id="ch-2-react-component-128분">Ch 2. React Component: 128분</h2>
+<ol>
+<li>React Component 만드는 법 - 11분</li>
+<li>React.createElement 로 컴포넌트 만들기 - 22분</li>
+<li>JSX - 17분</li>
+<li>Props 와 State - 22분</li>
+<li>Event Handling - 11분</li>
+<li>Component Lifecycle (1) - 24분</li>
+<li>Component Lifecycle (2) - 21분</li>
+</ol>
+<h2 id="ch-3-creating-react-project-66분">Ch 3. Creating React Project: 66분</h2>
+<ol>
+<li>Create React App - 22분</li>
+<li>ESLint - 12분</li>
+<li>Prettier - 8분</li>
+<li>husky - 5분</li>
+<li>lint-staged - 8분</li>
+<li>Create React App 시작 코드 이해하기 - 7분</li>
+<li>리액트 컴포넌트 디버깅 - 4분</li>
+</ol>
+<h2 id="ch-4-react-router-75분">Ch 4. React Router: 75분</h2>
+<ol>
+<li>React 의 라우팅 이해하기 - 13분</li>
+<li>Dynamic 라우팅 (1) - 8분</li>
+<li>Dynamic 라우팅 (2) - 11분</li>
+<li>Switch와 NotFound - 7분</li>
+<li>JSX 링크로 라우팅 이동하기 (1) - 8분</li>
+<li>JSX 링크로 라우팅 이동하기 (2) - 12분</li>
+<li>JS 로 라우팅 이동하기 - 13분</li>
+<li>Redirect - 3분</li>
+</ol>
+<h2 id="ch-5-react-component-styling-107분">Ch 5. React Component Styling: 107분</h2>
+<ol>
+<li>Style Loaders - 9분</li>
+<li>CSS, SASS - 11분</li>
+<li>CSS module, SASS module - 30분</li>
+<li>Styled Components (1) - 12분</li>
+<li>Styled Components (2) - 21분</li>
+<li>React Shadow - 8분</li>
+<li>Ant Design - 16분</li>
+</ol>
+<h2 id="ch-6-리액트-실전-활용-39분">Ch 6. 리액트 실전 활용: 39분</h2>
+<ol>
+<li>High Order Component - 16분s</li>
+<li>Controlled Component 와 Uncontrolled Component - 23분</li>
+</ol>
+<h2 id="ch-7-hooks--context-111분">Ch 7. Hooks &amp; Context: 111분</h2>
+<ol>
+<li>Basic Hooks (1) - 18분</li>
+<li>Basic Hooks (2) - 16분</li>
+<li>Custom Hooks - 19분</li>
+<li>Additional Hooks - 25분</li>
+<li>React Router Hooks - 5분</li>
+<li>컴포넌트 간 통신 - 14분</li>
+<li>Context API - 14분</li>
+</ol>
+<h2 id="ch-8-react-testing-51분">Ch 8. React Testing: 51분</h2>
+<ol>
+<li>JavaScript Unit Test &amp; Jest 사용하기 - 18분</li>
+<li>React Component Test - 4분</li>
+<li>testing-libraryreact 활용하기 - 29분</li>
+</ol>
+<h2 id="ch-9-react-advanced-45분">Ch 9. React Advanced: 45분</h2>
+<ol>
+<li>Optimizing Performance - 33분</li>
+<li>createPortal - 7분</li>
+<li>forwardRef - 5분</li>
+</ol>
+<h2 id="ch-10-deploy-react-app-37분">Ch 10. Deploy React App: 37분</h2>
+<ol>
+<li>SPA 프로젝트 배포 이해하기 - 5분</li>
+<li>serve 패키지로 React Wep App 배포하기 - 2분</li>
+<li>AWS S3 에 React Wep App 배포하기 - 6분</li>
+<li>NginX 로 React Wep App 배포하기​ - 8분</li>
+<li>node.js express 로 React Wep App 배포하기 - 4분</li>
+<li>서버사이드 렌더링 이해하기 - 12분</li>
+</ol>
+<h2 id="ch-11-react-로-만드는-쇼핑몰-프로젝트-48분">Ch 11. React 로 만드는 쇼핑몰 프로젝트: 48분</h2>
+<ol>
+<li>프로젝트 개요 - 2분</li>
+<li>기본 디자인 설정하기 - 7분</li>
+<li>상품 리스트 보여주기 - 7분</li>
+<li>상품 선택과 삭제를 주문에서 보여주기 - 32분</li>
+</ol>
+<h1 id="part-11redux로-상태관리하기---35시간">Part 11.Redux로 상태관리하기 - 3.5시간</h1>
+<h2 id="ch-1-redux-basic-101분">Ch 1. Redux Basic: 101분</h2>
+<ol>
+<li>Redux 개요 - 6분</li>
+<li>Action - 액션 - 7분</li>
+<li>Reducers - 리듀서 - 9분</li>
+<li>createStore - 11분</li>
+<li>combineReducers - 27분</li>
+<li>Redux 를 React 에 연결 (1) - 21분</li>
+<li>Redux 를 React 에 연결 (2) - 20분</li>
+</ol>
+<h2 id="ch-2-redux-advanced-1-53분">Ch 2. Redux Advanced (1): 53분</h2>
+<ol>
+<li>Async Action with Redux - 23분</li>
+<li>리덕스 미들웨어 - 9분</li>
+<li>redux-devtools - 3분</li>
+<li>redux-thunk - 8분</li>
+<li>redux-promise-middleware - 10분</li>
+</ol>
+<h2 id="ch-3-redux-advanced-2-52분">Ch 3. Redux Advanced (2): 52분</h2>
+<ol>
+<li>Ducks Pattern - 12분</li>
+<li>react-router-dom 과 redux 함께 쓰기 - 19분</li>
+<li>redux-saga - 13분</li>
+<li>redux-actions - 8분</li>
+</ol>
+<h1 id="part-12-react로-나의-책장-만들기-typescript---160분">Part 12. React로 나의 책장 만들기 (TypeScript) - 160분</h1>
+<ol>
+<li>프로젝트 개요: 2:34</li>
+<li>라우팅 설정하기: 10:09</li>
+<li>로그인, 로그아웃: 1:02:27</li>
+<li>책 목록 보여주기: 46:15</li>
+<li>책 추가하기: 30:35</li>
+<li>책 삭제하기: 10:01</li>
+</ol>
+<h1 id="part-13-mobx로-상태관리하기---95분">Part 13. mobX로 상태관리하기 - 95분</h1>
+<ol>
+<li>What is MobX: 5:42</li>
+<li>프로젝트에 Decorator 설정하기: 11:29</li>
+<li>@observable (by mobx): 9:17</li>
+<li>@observer (by mobx-react): 12:29</li>
+<li>@computed (by mobx): 8:20</li>
+<li>@action (by mobx): 6:28</li>
+<li>@inject 와 Provider: 8:29</li>
+<li>mobx-devtools: 2:20</li>
+<li>stores: 20:54</li>
+<li>Asynchronous actions: 14:15</li>
+</ol>
+<h1 id="part-14-graphql-맛보기-server-만들기---28분">Part 14. GraphQL 맛보기 (Server 만들기) - 28분</h1>
+<ol>
+<li>Rest API 와 GraphQL: 3:50</li>
+<li>Apollo 를 이용해서 Node. js 서버 만들기: 4:05</li>
+<li>typeDef 와 resolver: 3:26</li>
+<li>여러개의 데이터 조회하기: 5:52</li>
+<li>특정 데이터 조회하기: 2:59</li>
+<li>데이터 추가하기: 6:18</li>
+<li>데이터 변경, 삭제하기: 5:55</li>
+</ol>
+<h1 id="part-15-nextjs로-블로그-만들기">Part 15. Next.js로 블로그 만들기</h1>
+<h2 id="ch-1-sanity로-blog-모델-만들기-82분">Ch 1. Sanity로 Blog 모델 만들기: 82분</h2>
+<ol>
+<li>What is Sanity - 3분</li>
+<li>Sanity Project 만들고 Deploy 하기 - 8분</li>
+<li>Schema 만들기 (1) - author - 6분</li>
+<li>Schema 만들기 (2) - post - 14분</li>
+<li>Schema 만들기 (3) - home - 4분</li>
+<li>Schema 만들기 (4) - blockContent - 23분</li>
+<li>Studio 의 input 창 커스터마이징 - 14분</li>
+<li>query 사용하기 - 10분</li>
+</ol>
+<h2 id="ch-2-nextjs로-blog-모델-만들기-99분">Ch 2. Next.js로 Blog 모델 만들기: 99분</h2>
+<ol>
+<li>What is Next.js - 3분</li>
+<li>Next.js 프로젝트 만들기 - 7분</li>
+<li>라우팅 설정하기 - 17분</li>
+<li>Sanity 연결하고 데이터 가져오기 - 22분</li>
+<li>스타일 작업 (1) - Blog Home - 28분</li>
+<li>스타일 작업 (2) - Post - 12분</li>
+<li>next.config.js - 5분</li>
+<li>Next.js 배포 이해하기 - 5분</li>
+</ol>
+<h1 id="part-16-svelte">Part 16. Svelte</h1>
+<h2 id="ch-1-svelte-입문-70분">Ch 1. Svelte 입문: 70분</h2>
+<ol>
+<li>개요 - 6분</li>
+<li>REPL - 5분</li>
+<li>선언적 렌더링 - 14분</li>
+<li>조건문과 반목문 - 14분</li>
+<li>이벤트 핸들링 - 9분</li>
+<li>컴포넌트 - 9분</li>
+<li>스토어 - 13분</li>
+</ol>
+<h2 id="ch-2-svelte-프로젝트-snowpack-97분">Ch 2. Svelte 프로젝트 (Snowpack): 97분</h2>
+<ol>
+<li>Snowpack 개요 - 8분</li>
+<li>Snowpack &amp; Svelte 템플릿 구성 - 15분</li>
+<li>빌드 최적화 및 Babel, SCSS 추가 구성 - 7분</li>
+<li>Svelte for VSCode에서 컴파일 경고 무시 - 2분</li>
+<li>Simple Todo App 개요 및 기본 구성 - 11분</li>
+<li>CreateTodo - 22분</li>
+<li>Todo - 16분</li>
+<li>Storage API - 11분</li>
+<li>사이트 배포 - 5분</li>
+</ol>
+</div>
+    </body>
+
+    </html>
