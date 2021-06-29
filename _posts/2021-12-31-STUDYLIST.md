@@ -9,6 +9,7 @@ tags:
 
 # DONE LIST (DESC)
 
+* [x] 2021.06          : 파이썬 기초, 파이썬으로 배우는 자료구조(배열, 큐, 스택, 리크드리스트, 시간복잡도, 해쉬테이블, 트리, 힙)
 * [x] 2021.05 - 2021.06: Trello clone(no framework, no Library)
 * [x] 2021.05 - 2021.05: 패스트 캠퍼스 - 시크릿코드_UI MarkUP Advance
 * [x] 2021.04 - 2021.05: 패스트 캠퍼스 - 시크릿코드_UI Component
