@@ -12,17 +12,17 @@ tags:
 개발을 하다보면 this의 범위가 함수, function, bind, call, apply별로 달라지는 걸볼 수 있는데 왜 이런지에 대해서 다뤄보려고 한다.
 
 ```js
-	1. 실행 컨텍스트란?
-	2. VariableEnvironment
-	3. LexicalEnvironment
-		3-1 environmentRecord와 hoisting
+ 1. 실행 컨텍스트란?
+ 2. VariableEnvironment
+ 3. LexicalEnvironment
+  3-1 environmentRecord와 hoisting
             호이스팅 규칙
             함수 선언문과 함수 표현식
 
-		3-2. scope, scope chain, outerEnvironmentReference
+  3-2. scope, scope chain, outerEnvironmentReference
             스코프 체인
             전역변수와 지역변수
-	4. this
+ 4. this
 ```
 
 # 1. 실행 컨텍스트란?
@@ -59,6 +59,7 @@ tags:
   ```
 
 - 아래 코드의 활성화된 실행 컨텍스트의 수집정보
+
   ```js
     var a = 1;
     function outer(){
@@ -92,6 +93,12 @@ tags:
 # 3. LexicalEnvironment
 
 - 컨텍스트를 구성하는 환경 정보들을 사전에서 접하는 느낌으로 모아 놓은 것
+- environmentRecord와 outerEnvironmentReference로 구성 되어 있다.
+- environmentRecord
+  - var, function, arguments 등으로 구성
+- outerEnvironmentReference
+  - 외부 실행 컨텍스트 객체를 참조
+  - 이것으로 scope chain이 가능
 
 ## 3-1 environmentRecord와 hoisting
 
@@ -143,7 +150,7 @@ tags:
 
 ## 3-2. scope, scope chain, outerEnvironmentReference
 
-- scope 
+- scope
   - <u>식별자에 대한 유표범위</u>
   - ES5까지의 자바스크립트는 특이하게도 전역 공간을 제외하면 오직 함수에 의해서만 스코프가 생성
 - scope chain
@@ -178,12 +185,12 @@ tags:
   /*01*/ var a = 1;
   /*02*/ var outer = function() {
   /*03*/    var inner = function() {
-  /*04*/       console.log(a);
+  /*04*/       console.log(a);    // 1 출력
   /*05*/       var a = 3;
   /*06*/
                   }
   /*07*/    inner();
-  /*08*/    console.log(a);
+  /*08*/    console.log(a);      // 1 출력
   /*09*/
               }
   /*10*/ outer();
@@ -192,55 +199,63 @@ tags:
 
 - scope chaing 예1 코드 도식화
   - 그림을 보면서 라인별로 어떤 동작을 하는지 생각해보자
-  - LE, e, o 의미 
+  - LE, e, o 의미
+
   ```
     LE: Lexical Envinronment
     e: environmentRecord
     o: outerEnvironmentReference
   ```
+
   ![](context.jpeg)
 
-  * **전역 컨텍스트 활성화**
+  - **전역 컨텍스트 활성화**
+
     ```
       - 0: LexicalEnvironment, VariableEnvironment, thisBinding
     ```
 
-  * 전역 컨텍스트 생성/ outer 함수 호출
+  - 전역 컨텍스트 생성/ outer 함수 호출
+
     ```
       - 1,2: a에 1, outer에 함수 할당
       - 10: outer 함수호출, 전역 컨텍스트 비활성화
       - 2: outer실행 컨텍스트 활성화
     ```
 
-  * outer 컨텍스트 생성/ inner 함수 호출
+  - outer 컨텍스트 생성/ inner 함수 호출
+
     ```
       - 3: inner에 함수 할당
       - 7: inner 함수 호출, outer 실행 컨텍스트 비활성화
       - 3: inner 실행 컨텍스트 활성화
     ```
 
-  * inner 함수 수행
+  - inner 함수 수행
+
     ```
       - 4: inner의 LE에서 a 탐색 -> undefined 출력
       - 5: a에 3할당
     ```
 
-  * inner 컨텍스트 종료
+  - inner 컨텍스트 종료
+
     ```
       - 6: inner 함수 종료, inner 실행 컨텍스트 제거
       - 7: outer 실행 컨텍스트 재활성화
       - 8: outer의 LE에서 a탐색 -> GLOBAL의 LE에서 a 탐색 -> 1출력
     ```
 
-  * outer 컨텍스트 종료
+  - outer 컨텍스트 종료
+
     ```
       - 9: outer함수 종료, outer 실행 컨텍스트 제거
       - 10: 전역 컨텍스트 재활성화
       - 11: GLOBAL의 LE에서 a탐색 -> 1출력
     ```
 
+  - 전역, outer, inner execute context
 
-  * 전역, outer, inner execute context
     ```js
       "전역 컨텍스트": {
           environmentRecord: 'a, outer function',
@@ -265,6 +280,35 @@ tags:
 
 - 전역변수: 전역 공간에서 선언
 - 지역변수: 함수 내부에서 선언
+
+## 3-3. environmentRecord와 closure
+
+- 생성된 함수 객체는 [[Scopes]] 프로퍼티를 가지게 된다.
+- [[Scopes]] 프로퍼티는 함수 객체만이 소유하는 내부 프로퍼티(Internal Property)로서 함수 객체가 실행되는 환경을 가리킨다.
+- 따라서 현재 실행 컨텍스트의 스코프 체인이 참조하고 있는 객체를 값으로 설정한다.
+- 내부 함수의 [[Scopes]] 프로퍼티는 자신의 실행 환경(Lexical Enviroment)과 자신을 포함하는 외부 함수의 실행 환경과 전역 객체를 가리키는데 이때 자신을 포함하는 외부 함수의 실행 컨텍스트가 소멸하여도 [[Scopes]] 프로퍼티가 가리키는 외부 함수의 실행 환경(Activation object)은 소멸하지 않고 참조할 수 있다.
+- 이것이 클로저이다.
+
+- 예
+  - 내부함수 bar()는 외부함수 foo()의 실행컨텍스트, 전역객체를 가르키는데
+  - 이때 외부함수 foo()의 실행컨텍스트가 소명해도
+  - scope 프로퍼티가 외부 함수의 실행환경은 소명하지 않고 찬조할 수 있따.
+
+  ```js
+    var x = 'xxx';
+
+    function foo () {
+      var y = 'yyy';
+
+      function bar () {
+        var z = 'zzz';
+        console.log(x + y + z);
+      }
+      bar();
+    }
+
+    foo();
+  ```
 
 # 4. this
 
