@@ -268,7 +268,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(Home)
 
 - react-redux에서 사용하는 다음 두가지는(mapStateToProps, mapDispatchToProps) vanilla redux에서는 아래와 같은 역할을 합니다.
   - mapStateToProps: store.getState()
-  - mapDispatchToProps: store. dispatch()
+  - mapDispatchToProps: store.dispatch()
 
 # 참고
 
