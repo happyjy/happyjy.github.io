@@ -98,7 +98,7 @@ tags:
   - var, function, arguments 등으로 구성
 - outerEnvironmentReference
   - 외부 실행 컨텍스트 객체를 참조
-  - 이것으로 scope chain이 가능
+  - 이것으로 scope chain, closure 가능
 
 ## 3-1 environmentRecord와 hoisting
 
@@ -292,7 +292,7 @@ tags:
 - 예
   - 내부함수 bar()는 외부함수 foo()의 실행컨텍스트, 전역객체를 가르키는데
   - 이때 외부함수 foo()의 실행컨텍스트가 소명해도
-  - scope 프로퍼티가 외부 함수의 실행환경은 소명하지 않고 찬조할 수 있따.
+  - scope 프로퍼티가 외부 함수의 실행환경은 소멸하지 않고 참조할 수 있다.
 
   ```js
     var x = 'xxx';

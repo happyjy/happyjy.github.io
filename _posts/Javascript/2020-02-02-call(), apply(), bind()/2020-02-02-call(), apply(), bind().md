@@ -185,10 +185,12 @@ Function.prototype.bind = function(obj){
     //인자 목록을 작성하는데, 첫 번재 이후의 인자부터
     //나머지 모든 인자를 이 함수에 전달 한다.
     var args = [], i;
+    // POINT: i가 1부터 시작하는 이유는 bind함수 두번째부터 인자값을 설정 할 수 있기 때문
     for(i = 1; i < boundArgs.length; i++) args.push(boundArgs[i]);
     for(i = 0; i < arguments.length; i++) args.push(arguments[i]);
 
     //인자들을 포함하여 obj의 메서드로 me를 호출한다.
+    // POINT - obj: outer함수의 clousre 영역에 있는 변수
     return me.apply(obj, args);
   }
 }
