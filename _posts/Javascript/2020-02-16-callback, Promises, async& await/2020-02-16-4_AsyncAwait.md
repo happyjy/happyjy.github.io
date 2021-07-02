@@ -196,5 +196,4 @@ async function f() {
 
 # 참고
 
-* Javascript.info  
-  <https://ko.javascript.info/async-await>
+* [Javascript.info](https://ko.javascript.info/async-await)

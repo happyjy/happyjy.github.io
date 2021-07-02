@@ -108,7 +108,7 @@ export default App
 
 ## 3.1 connect fucntion의 첫번째 arguments
 
-- 공식문서: <https://react-redux.js.org/using-react-redux/connect-mapstate>
+- [공식문서](https://react-redux.js.org/using-react-redux/connect-mapstate)
 - component와 store를 연결해주는 react-redux function
 - 아래와 같이 써주게 되면 Home component에 mapStateToProps 함수에서 반환한 객체를 사용 할 수 있다.
   - connect(mapStateToProps)(Home);
@@ -116,7 +116,7 @@ export default App
 
 ## 3.2 connect function의 두번째 arguments
 
-- 공식문서: <https://react-redux.js.org/using-react-redux/connect-mapdispatch>
+- [공식문서](https://react-redux.js.org/using-react-redux/connect-mapdispatch)
 - store.dispatch()를 구현하기 위한 것
 - 아래와 같이 mapDispatchToProps function을 작성해 connect 두번째 파라미터로 넘기면 component에 dispatch를 사용해 store에 있는 action을 사용해서 store state를 변경합니다.
 - mapDispatchToProps에서 반환한 function을 수행하면 dispatch가 수행되어 state가 변경 됩니다.
