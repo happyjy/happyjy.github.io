@@ -2,7 +2,7 @@
 title: react-redux 흐름 설명
 date: 2021-07-02
 author: jyoon
-image: ../../images/react.png
+image: ../../_images/react.png
 category: React
 tags:
   - react-redux
