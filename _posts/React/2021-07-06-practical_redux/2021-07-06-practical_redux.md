@@ -505,7 +505,7 @@ filter.js, todos.js에 각각 선언된 rilger, todos reducer를 합쳐주고 �
 
     export default function TodoForm() {
       const inputRef = useRef();
-     //POINT
+      //POINT
       const dispatch = useReduxDispatch();
 
       const click = () => {
