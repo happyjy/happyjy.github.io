@@ -9,16 +9,20 @@ tags:
   - redux비동기처리
 ---
 
+아래 github에 actions으로만 처리한 비동기처리 코드를 확인/동작을 확인 할 수 있다.
+
+* [github 주소](https://github.com/happyjy/learning-2021-redux/tree/%EB%B9%84%EB%8F%99%EA%B8%B0(Action))
+
 # 비동기 작업을 어디서 하느냐가 젤 중요
 
-- 비동기 작업의 전, 후로 _액션을 분리_
-  - Start
-  - Success
-  - Fail
-  - ... 등등
-- **dispatch 를 할때** 해줍니다.
-  - 당연히 리듀서는 동기적인 것 => Pure
-  - dispatch 도 동기적인 것
+* 비동기 작업의 전, 후로 _액션을 분리_
+  * Start
+  * Success
+  * Fail
+  * ... 등등
+* **dispatch 를 할때** 해줍니다.
+  * 당연히 리듀서는 동기적인 것 => Pure
+  * dispatch 도 동기적인 것
 
 # 도식화
 
@@ -99,7 +103,7 @@ export default function user(state = initialState, action) {
 
 ### Container
 
-- 로직 포함
+* 로직 포함
 
     ```jsx
     // src/containers/UserListContainer.jsx
@@ -133,7 +137,7 @@ export default function user(state = initialState, action) {
 
 ### component
 
-- view 요소
+* view 요소
 
     ```jsx
     // src/component/UserList.jsx
