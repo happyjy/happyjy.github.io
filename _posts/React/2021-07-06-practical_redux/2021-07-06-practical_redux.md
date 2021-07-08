@@ -7,40 +7,40 @@ category: React
 tags:
   - redux
 ---
-- [01. Redux 개요](#01-redux-개요)
-  - [설치](#설치)
-- [02. Action -  액션](#02-action----액션)
-  - [리덕스의 액션이란?](#리덕스의-액션이란)
-  - [리덕스의 액션 생성자란?](#리덕스의-액션-생성자란)
-  - [**리덕스의 액션은 어떤 일을 하나요 ?**](#리덕스의-액션은-어떤-일을-하나요-)
-  - [액션을 준비하기 위해서는 ?](#액션을-준비하기-위해서는-)
-  - [예시 코드](#예시-코드)
-- [03. Reducers - 리듀서](#03-reducers---리듀서)
-  - [Reducer란?](#reducer란)
-  - [리덕스의 리듀서란 ?](#리덕스의-리듀서란-)
-    - [reducer 함수 형태](#reducer-함수-형태)
-  - [예시 코드](#예시-코드-1)
-- [04. createStore](#04-createstore)
-  - [createStore란?](#createstore란)
-  - [설정 방법](#설정-방법)
-  - [store 설명](#store-설명)
-    - [store object의 4개 function](#store-object의-4개-function)
-  - [로직을 추가 하기 3가지](#로직을-추가-하기-3가지)
-    - [action 정의](#action-정의)
-    - [action 생성자 만들기](#action-생성자-만들기)
-    - [reducer 수정](#reducer-수정)
-- [05. combineReducers](#05-combinereducers)
-- [06. Redux 를 React 에 연결 (1) - react-redux 안쓰고 연결하기](#06-redux-를-react-에-연결-1---react-redux-안쓰고-연결하기)
-  - [작업 내용](#작업-내용)
-- [07. Redux 를 React 에 연결 (2) - react-redux 쓰고 연결하기](#07-redux-를-react-에-연결-2---react-redux-쓰고-연결하기)
-  - [설치](#설치-1)
-  - [react-redux 란?](#react-redux-란)
-  - [작업1. provider, connect(hoc) 사용(react-redux pkg)](#작업1-provider-connecthoc-사용react-redux-pkg)
-  - [작업2. 관심사 분리(container, presentational component)](#작업2-관심사-분리container-presentational-component)
-    - [파일구조](#파일구조)
-  - [작업3. connect hoc로 작업한 것을 hook으로 대체(useSelector, useDispatch)](#작업3-connect-hoc로-작업한-것을-hook으로-대체useselector-usedispatch)
-- [[추가정리] 사용한 패키지별 알아야 할 키워드](#추가정리-사용한-패키지별-알아야-할-키워드)
-- [[추가정리] redux의 store객체의 state, dispatch를 사용하기 위한 방법 3가지](#추가정리-redux의-store객체의-state-dispatch를-사용하기-위한-방법-3가지)
+- [1. Redux 개요](#1-redux-개요)
+  - [1.1. 설치](#11-설치)
+- [2. Action -  액션](#2-action----액션)
+  - [2.1. 리덕스의 액션이란?](#21-리덕스의-액션이란)
+  - [2.2. 리덕스의 액션 생성자란?](#22-리덕스의-액션-생성자란)
+  - [2.3. 리덕스의 액션은 어떤 일을 하나요 ?](#23-리덕스의-액션은-어떤-일을-하나요-)
+  - [2.4. 액션을 준비하기 위해서는 ?](#24-액션을-준비하기-위해서는-)
+  - [2.5. 예시 코드](#25-예시-코드)
+- [3. Reducers - 리듀서](#3-reducers---리듀서)
+  - [3.1. Reducer란?](#31-reducer란)
+  - [3.2. 리덕스의 리듀서란 ?](#32-리덕스의-리듀서란-)
+    - [3.2.1. reducer 함수 형태](#321-reducer-함수-형태)
+  - [3.3. 예시 코드](#33-예시-코드)
+- [4. createStore](#4-createstore)
+  - [4.1. createStore란?](#41-createstore란)
+  - [4.2. 설정 방법](#42-설정-방법)
+  - [4.3. store 설명](#43-store-설명)
+    - [4.3.1. store object의 4개 function](#431-store-object의-4개-function)
+  - [4.4. 로직을 추가 하기 3가지](#44-로직을-추가-하기-3가지)
+    - [4.4.1. action 정의](#441-action-정의)
+    - [4.4.2. action 생성자 만들기](#442-action-생성자-만들기)
+    - [4.4.3. reducer 수정](#443-reducer-수정)
+- [5. combineReducers](#5-combinereducers)
+- [6. Redux 를 React 에 연결 (1) - react-redux 안쓰고 연결하기](#6-redux-를-react-에-연결-1---react-redux-안쓰고-연결하기)
+  - [6.1. 작업 내용](#61-작업-내용)
+- [7. Redux 를 React 에 연결 (2) - react-redux 쓰고 연결하기](#7-redux-를-react-에-연결-2---react-redux-쓰고-연결하기)
+  - [7.1. 설치](#71-설치)
+  - [7.2. react-redux 란?](#72-react-redux-란)
+  - [7.3. 작업1. provider, connect(hoc) 사용(react-redux pkg)](#73-작업1-provider-connecthoc-사용react-redux-pkg)
+  - [7.4. 작업2. 관심사 분리(container, presentational component)](#74-작업2-관심사-분리container-presentational-component)
+    - [7.4.1. 파일구조](#741-파일구조)
+  - [7.5. 작업3. connect hoc로 작업한 것을 hook으로 대체(useSelector, useDispatch)](#75-작업3-connect-hoc로-작업한-것을-hook으로-대체useselector-usedispatch)
+- [8. [추가정리] 사용한 패키지별 알아야 할 키워드](#8-추가정리-사용한-패키지별-알아야-할-키워드)
+- [9. [추가정리] redux의 store객체의 state, dispatch를 사용하기 위한 방법 3가지](#9-추가정리-redux의-store객체의-state-dispatch를-사용하기-위한-방법-3가지)
 
 redux를 이해하기 위해서는
 
@@ -97,9 +97,9 @@ redux 개념, redux를 react에서 사용하는 방법을 차례로 익히면 �
     # action, actions creators 선언
     ```
 
-# 01. Redux 개요
+# 1. Redux 개요
 
-## 설치
+## 1.1. 설치
 
 - redux: store를 만들수 있는 lib
 
@@ -109,9 +109,9 @@ redux 개념, redux를 react에서 사용하는 방법을 차례로 익히면 �
     npm i redux
     ```
 
-# 02. Action -  액션
+# 2. Action -  액션
 
-## 리덕스의 액션이란?
+## 2.1. 리덕스의 액션이란?
 
 - 액션은 사실 그냥 **객체 (object)** 입니다.
 - 두 가지 형태의 액션이 있습니다.
@@ -124,7 +124,7 @@ redux 개념, redux를 react에서 사용하는 방법을 차례로 익히면 �
   - action을 만드는 함수를 만들어 사용한다.(actionCreator를 만든다)
     - 실수를 방지하기 위함
 
-## 리덕스의 액션 생성자란?
+## 2.2. 리덕스의 액션 생성자란?
 
 ```jsx
 function 액션생성자(...args) { return 액션; }
@@ -134,7 +134,7 @@ function 액션생성자(...args) { return 액션; }
 - 함수를 통해 액션을 생성해서, 액션 객체를 리턴해줍니다.
 - createTest('hello'); // { type: 'TEST', params: 'h ello' } 리턴
 
-## **리덕스의 액션은 어떤 일을 하나요 ?**
+## 2.3. 리덕스의 액션은 어떤 일을 하나요 ?
 
 - `액션 생성자`를 통해 액션을 만들어 냅니다.
 - 만들어낸 `액션 객체`를 리덕스 스토어에 보냅니다.
@@ -143,14 +143,21 @@ function 액션생성자(...args) { return 액션; }
 - 액션은 스토어에 보내는 일종의 인풋이라 생각할 수 있습니다.
 
 ```jsx
+* dispatch: redux의 store객체의 내장함수
 * action creator 함수: action 객체를 생성하는 함수
 * action 객체: redux store가 action 객체를 받으면 store의 상태 값이 변경
 
-action creator -> action -> "redux store" -> new state -> component
 
+dispatch(action creator) -> reducer 
+  -> "redux store" -> new state 
+  -> component
 ```
 
-## 액션을 준비하기 위해서는 ?
+- store, reducer함수에 대한 설명
+  - redux pkg의 createAction에 reducer함수를 주입하는 것을 생각해보면 reducer와 redux의 store는 밀접한 관련이 있는것으로 보인다
+  그래서 reducer에서 state가 변경되면 store가 감지하고 변경된 state를 사용하고 있는 component가 변경된것을 감지하고 rerendering을 한다.
+
+## 2.4. 액션을 준비하기 위해서는 ?
 
 - 액션의 타입을 정의하여 변수로 빼는 단계
   - 강제는 아닙니다. (그러므로 안해도 됩니다.)
@@ -161,7 +168,7 @@ action creator -> action -> "redux store" -> new state -> component
   - 하나의 액션 객체를 만들기 위해 하나의 함수를 만들어냅니다.
   - 액션의 타입은 미리 정의한 타입 변수로 부터 가져와서 사용합니다.
 
-## 예시 코드
+## 2.5. 예시 코드
 
 ```jsx
 export const ADD_TODO = 'ADD_TODO';
@@ -174,9 +181,9 @@ export function addTodo(todo) {
 }
 ```
 
-# 03. Reducers - 리듀서
+# 3. Reducers - 리듀서
 
-## Reducer란?
+## 3.1. Reducer란?
 
 - 액션을 주면, 그 액션이 적용되어 달라진(안달라질수도...) 결과를 만들어 줌.
 - 그냥 함수이다.
@@ -188,9 +195,9 @@ export function addTodo(todo) {
     - 왜*?*
       - `리듀서`를 통해 `스테이트`가 달라졌음을 `리덕스`가 인지하는 방식
 
-## 리덕스의 리듀서란 ?
+## 3.2. 리덕스의 리듀서란 ?
 
-### reducer 함수 형태
+### 3.2.1. reducer 함수 형태
 
 ```jsx
 function 리듀서(previousState, action) { 
@@ -202,7 +209,7 @@ function 리듀서(previousState, action) {
 - 인자로 들어오는 previousState 와 리턴되는 newState는 다른 **참조를 가지도록 해야합**니다.
   - redux가 상태가 변경됐다는 것을 인지하고 state를 사용하면 component에 변경을 해준다.
 
-## 예시 코드
+## 3.3. 예시 코드
 
 ```jsx
 import { ADD_TODO, COMPLETE_TODO } from './actions';
@@ -245,9 +252,9 @@ export function todoApp(previousState = initialState, action) {
 }
 ```
 
-# 04. createStore
+# 4. createStore
 
-## createStore란?
+## 4.1. createStore란?
 
 - redux lib에서 가져와서 사용하는 것
 - store를 만드는 함수
@@ -263,44 +270,44 @@ export function todoApp(previousState = initialState, action) {
     ): Store<S>;
     ```
 
-## 설정 방법
+## 4.2. 설정 방법
 
 - createStore를 통해서 store객체 return
 
-```jsx
-// store.js
-import { todoApp } from './reducers';
-import { createStore } from 'redux';
+  ```jsx
+  // store.js
+  import { todoApp } from './reducers';
+  import { createStore } from 'redux';
 
-const store = createStore(todoApp);
+  const store = createStore(todoApp);
 
-export default store;
-```
+  export default store;
+  ```
 
 - 위 생성한 store를 사용
   - PIONT: store import
   - POINT1: subscribe
 
-```jsx
-// index.js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+  ```jsx
+  // index.js
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import './index.css';
+  import App from './App';
 
-// POINT: import stroe
-import store from './store';
+  // POINT: import stroe
+  import store from './store';
 
-// POINT1: subscribe
-store.subscribe(() => {
-  const state = store.getState();
-  console.log('store changed', state);
-});
+  // POINT1: subscribe
+  store.subscribe(() => {
+    const state = store.getState();
+    console.log('store changed', state);
+  });
 
-ReactDOM.render(<App />, document.getElementById('root'));
-```
+  ReactDOM.render(<App />, document.getElementById('root'));
+  ```
 
-## store 설명
+## 4.3. store 설명
 
 > redux pkg의 createStore함수에 reducer을 주입한 return value이다.
 
@@ -313,18 +320,18 @@ ReactDOM.render(<App />, document.getElementById('root'));
 - store.replaceReducer(다른리듀서);
   - 실무에서 잘 사용하지 않는다.
 
-### store object의 4개 function
+### 4.3.1. store object의 4개 function
 
 - dispatch: ƒ dispatch(action)
 - getState: ƒ getState()
 - replaceReducer: ƒ replaceReducer(nextReducer)
 - subscribe: ƒ subscribe(listener)
 
-## 로직을 추가 하기 3가지
+## 4.4. 로직을 추가 하기 3가지
 
 - action 정의, action 생성자 만들기, reducer 수정
 
-### action 정의
+### 4.4.1. action 정의
 
 ```jsx
 // actions.js
@@ -338,7 +345,7 @@ export const ADD_TODO = 'ADD_TODO';
 export const COMPLETE_TODO = 'COMPLETE_TODO';
 ```
 
-### action 생성자 만들기
+### 4.4.2. action 생성자 만들기
 
 ```jsx
 // actions.js
@@ -362,7 +369,7 @@ export function completeTodo(index) {
 }
 ```
 
-### reducer 수정
+### 4.4.3. reducer 수정
 
 ```jsx
 import { ADD_TODO, COMPLETE_TODO } from './actions';
@@ -388,21 +395,23 @@ export function todoApp(previousState, action) {
 }
 ```
 
-# 05. combineReducers
+# 5. combineReducers
 
 - store가 복잡해질때 처리하는 방법
 - reducers 폴더에 reducer.js파일에 combineReducers를 활용해
 filter.js, todos.js에 각각 선언된 rilger, todos reducer를 합쳐주고 있다.
 
-# 06. Redux 를 React 에 연결 (1) - react-redux 안쓰고 연결하기
+# 6. Redux 를 React 에 연결 (1) - react-redux 안쓰고 연결하기
 
-- 컴포넌트에서 store 객체만 가지고 있으면 redux의 store를 사용 할 수 있다는 것을 알 수 있습니다.
+- _컴포넌트에서 store 객체만 가지고 있으면 redux의 store를 사용 할 수 있다는 것을 알 수 있습니다._
   - 컴포넌트에서 useEffect에 store객체의 subscribe, unsubscribe 함수 실행
+  - subscribe: dispatch 이후 수행 할 callback function을 등록
+  - unsubscribe: subscribe함수의 return 함수로 수행하면 subscribe으로 등록 했던 것이 제거 되면서 dispatch이후 수행하지 않는다.
 - 전체 하위 컴포넌트에 모두 사용할 수 있도록 `context`를 사용
   - `createContext(react)`, createContext의component.Provider, `useContext`
   - context관련 custom hook 생성
 
-## 작업 내용
+## 6.1. 작업 내용
 
 1. react context 설정
 
@@ -411,7 +420,9 @@ filter.js, todos.js에 각각 선언된 rilger, todos reducer를 합쳐주고 �
     import { createContext } from 'react';
     const ReduxContext = createContext();
     export default ReduxContext;
+    ```
 
+    ```jsx
     // index.js 
     import store from './redux/store';
     import ReduxContext from './contexts/ReduxContext';
@@ -423,6 +434,8 @@ filter.js, todos.js에 각각 선언된 rilger, todos reducer를 합쳐주고 �
     ```
 
 2. redux store객체의 state, dispatch를 사용하기위해 customhook 사용(useReduxState, useReduxDispatch)
+    - useContext(ReduxContext)
+      - useContext hook에 생성했던 react의 createContext객체를 인자값으로 넣으면 createContext함수로 생성한 컴포넌트에 설정한 props를(index.js에서 설정) 반환한다.
     - 아래 두 customhook은 component(TodoForm.js, TodoList.js)에서 사용된다
     - 주석 POINT1 설명: useContext hook에 createContext함수로 생성된 객체 주입
     - 주석 POINT2 설명: 컴포넌트 render완료 된뒤 store 객체의 `subscribe` 객체를 이용해 dispatch 이후 수행할 로직을 추가
@@ -510,15 +523,15 @@ filter.js, todos.js에 각각 선언된 rilger, todos reducer를 합쳐주고 �
     }
     ```
 
-# 07. Redux 를 React 에 연결 (2) - react-redux 쓰고 연결하기
+# 7. Redux 를 React 에 연결 (2) - react-redux 쓰고 연결하기
 
-## 설치
+## 7.1. 설치
 
 ```jsx
 npm i redux-react
 ```
 
-## react-redux 란?
+## 7.2. react-redux 란?
 
 - `Provider 컴포넌트`를 제공해줍니다.
 - `connect 함수`를 통해 `"컨테이너"`를 만들어줍니다.
@@ -528,7 +541,7 @@ npm i redux-react
     - 어떤 dispatch(액션) 을 어떤 props 에 연결할 것인지에 대한 정의(mapDispatchToProps)
     - 그 props 를 보낼 컴포넌트를 정의
 
-## 작업1. provider, connect(hoc) 사용(react-redux pkg)
+## 7.3. 작업1. provider, connect(hoc) 사용(react-redux pkg)
 
 > connect 방식은 state, dispatch를 사용하기 위해서 설정하는 과정이 필요
 
@@ -565,12 +578,12 @@ npm i redux-react
         )(TodoForm);
         ```
 
-## 작업2. 관심사 분리(container, presentational component)
+## 7.4. 작업2. 관심사 분리(container, presentational component)
 
 - container: connect(react-redux 함수)함수에 필요한 요소들(mapStateToProps, mapDispatchToProps)을 컴포넌트 props로 전달해준다.
 - presentational component: props를 받아서 view 요소 역할을 한다.
 
-### 파일구조
+### 7.4.1. 파일구조
 
 - components폴더: view 역할는 요소만 있음
 - containers폴더
@@ -580,31 +593,29 @@ npm i redux-react
 
     ```jsx
     src
-     ┣ components              : 역할분리1
-     ┃ ┣ TodoForm.jsx
-     ┃ ┗ TodoList.jsx
-     ┣ containers              : 역할분리2
-     ┃ ┣ TodoFormContainer.jsx
-     ┃ ┗ TodoListContainer.jsx
-     ┣ contexts
-     ┃ ┗ ReduxContext.js
-     ┣ hooks
-     ┃ ┣ useReduxDispatch.js
-     ┃ ┗ useReduxState.js
-     ┣ redux
-     ┃ ┣ reducers
-     ┃ ┃ ┣ filter.js
-     ┃ ┃ ┣ reducer.js
-     ┃ ┃ ┗ todos.js
-     ┃ ┣ actions.js
-     ┃ ┗ store.js
-     ┣ App.css
-     ┣ App.js
-     ┣ index.css
-     ┣ index.js
+      ┣ components       : 역할분리1 - view 역할 리액트 컴포넌트
+      ┃ ┣ TodoForm.jsx
+      ┃ ┗ TodoList.jsx
+      ┣ containers       : 역할분리2 - store객체를 리액트 컴포넌트 주입
+      ┃ ┣ TodoFormContainer.jsx
+      ┃ ┗ TodoListContainer.jsx
+      ┣ contexts         : redux를 react연결시 사용 [react-redux사용X]
+      ┃ ┗ ReduxContext.js
+      ┣ hooks
+      ┃ ┣ useReduxDispatch.js   : redux를 react연결시 사용 [react-redux사용X] - store객체의 dispatch 함수 가져올때 
+      ┃ ┗ useReduxState.js      : redux를 react연결시 사용 [react-redux사용X] - store객체의 state 값 가져올때 
+      ┣ redux
+      ┃ ┣ reducers
+      ┃ ┃ ┣ filter.js           : reducer
+      ┃ ┃ ┣ reducer.js          : reducer
+      ┃ ┃ ┗ todos.js            : combineReducer로 reducer 관심사 분리
+      ┃ ┣ actions.js            : action creator, actions 
+      ┃ ┗ store.js              : store객체 생성(by redux패키지의 createStore함수에 reducer 주입)
+      ┣ App.js                  
+      ┣ index.js                : redux를 react에 연결하기 위해서 App 컴포넌트를 감싼다.
     ```
 
-## 작업3. connect hoc로 작업한 것을 hook으로 대체(useSelector, useDispatch)
+## 7.5. 작업3. connect hoc로 작업한 것을 hook으로 대체(useSelector, useDispatch)
 
 > redux store객체를 연결 과정없이 state, dispatch를 hook으로 호출해 컴포넌트에 꽂아 주는 방식
 
@@ -655,7 +666,7 @@ npm i redux-react
     }
     ```
 
-# [추가정리] 사용한 패키지별 알아야 할 키워드
+# 8. [추가정리] 사용한 패키지별 알아야 할 키워드
 
 - redux pkg
   - createStore
@@ -665,16 +676,18 @@ npm i redux-react
     - 관심사 별로 reducer function을 나눌 수 있다.
 - react pkg
   - createContext
-    - redux store를 react에 연결하는 컴포넌트
+    - _redux store를 react에 연결하는 컴포넌트_
+  - useContext
+    - _crateContext 컴포넌트에 설정한 값을 사용 가능_
 - react-redux pkg
   - provider component
-    - redux store를 react에 연결하는 컴포넌트
+    - _redux store를 react에 연결하는 컴포넌트_
   - connect hoc
-    - react에서 store의 state, dispatch 사용하기 위한 방법1
+    - _react에서 store의 state, dispatch 사용하기 위한 방법1_
   - useSelector, useDispatch hook
-    - react에서 store의 state, dispatch 사용하기 위한 방법
+    - _react에서 store의 state, dispatch 사용하기 위한 방법2_
 
-# [추가정리] redux의 store객체의 state, dispatch를 사용하기 위한 방법 3가지
+# 9. [추가정리] redux의 store객체의 state, dispatch를 사용하기 위한 방법 3가지
 
 - store객체(=createStore(redux pkg) 함수에 의해서 생성)
 
