@@ -10,10 +10,11 @@ tags:
 # DONE LIST (DESC)
 
 * [x] 2021.07 - 2021.07: [[git repo](https://github.com/happyjy/learning-2021-redux)] - redux기초, react-redux, redux middleware(redux-thunk, redux-promise, redux-saga, redux-actions)
-* [x] 2021.06 - 2021.06: [[git repo](https://github.com/happyjy/learning-python-basic)] - 파이썬 기초, 파이썬으로 배우는 자료구조(배열, 큐, 스택, 리크드리스트, 시간복잡도, 해쉬테이블, 트리, 힙)
-* [x] 2021.05 - 2021.06: [[git repo](https://github.com/happyjy/clone_trello)] - Trello clone(no framework, no Library)
-* [x] 2021.05 - 2021.05: 패스트 캠퍼스 - 시크릿코드_UI MarkUP Advance
-* [x] 2021.04 - 2021.05: 패스트 캠퍼스 - 시크릿코드_UI Component
+* [x] 2021.06 - 2021.06: [[private git repo](https://github.com/happyjy/learning-python-basic)] - 파이썬 기초, 파이썬으로 배우는 자료구조(배열, 큐, 스택, 리크드리스트, 시간복잡도, 해쉬테이블, 트리, 힙)
+* [x] 2021.06 - 2021.06: [[git repo](https://github.com/happyjy/clone_trello)] - Trello clone(no framework, no Library)
+* [x] 2021.05 - 2021.05: 패스트 캠퍼스 - CSS 이론
+* [x] 2021.05 - 2021.05: [[private git repository](https://github.com/happyjy/learning-Markup)] - 패스트 캠퍼스 - 시크릿코드_UI MarkUP Advance
+* [x] 2021.04 - 2021.05: [[private git repository](https://github.com/happyjy/learning-UIComponent)] - 패스트 캠퍼스 - 시크릿코드_UI Component
 * [x] 2021.04 - 2021.04: [[frontend git repo](https://github.com/happyjy/uber-eats-frontend)], [[backend git repo](https://github.com/happyjy/uber-eats-backend)] - uber 1차 고도화
 * [x] 2021.01 - 2021.04: [[frontend git repo](https://github.com/happyjy/uber-eats-frontend)], [[backend git repo](https://github.com/happyjy/uber-eats-backend)] - uber clone
 
