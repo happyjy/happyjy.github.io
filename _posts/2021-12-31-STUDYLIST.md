@@ -9,16 +9,17 @@ tags:
 
 # DONE LIST (DESC)
 
-* [x] 2021.06          : 파이썬 기초, 파이썬으로 배우는 자료구조(배열, 큐, 스택, 리크드리스트, 시간복잡도, 해쉬테이블, 트리, 힙)
-* [x] 2021.05 - 2021.06: Trello clone(no framework, no Library)
+* [x] 2021.07 - 2021.07: [[git repo](https://github.com/happyjy/learning-2021-redux)] - redux기초, react-redux, redux middleware(redux-thunk, redux-promise, redux-saga, redux-actions)
+* [x] 2021.06 - 2021.06: [[git repo](https://github.com/happyjy/learning-python-basic)] - 파이썬 기초, 파이썬으로 배우는 자료구조(배열, 큐, 스택, 리크드리스트, 시간복잡도, 해쉬테이블, 트리, 힙)
+* [x] 2021.05 - 2021.06: [[git repo](https://github.com/happyjy/clone_trello)] - Trello clone(no framework, no Library)
 * [x] 2021.05 - 2021.05: 패스트 캠퍼스 - 시크릿코드_UI MarkUP Advance
 * [x] 2021.04 - 2021.05: 패스트 캠퍼스 - 시크릿코드_UI Component
-* [x] 2021.04 - 2021.04: uber 1차 고도화
-* [x] 2021.01 - 2021.04: uber clone
+* [x] 2021.04 - 2021.04: [[frontend git repo](https://github.com/happyjy/uber-eats-frontend)], [[backend git repo](https://github.com/happyjy/uber-eats-backend)] - uber 1차 고도화
+* [x] 2021.01 - 2021.04: [[frontend git repo](https://github.com/happyjy/uber-eats-frontend)], [[backend git repo](https://github.com/happyjy/uber-eats-backend)] - uber clone
 
-* [x] 2020.12: GraphQL로 영화 웹 앱 만들기
-* [x] 2020.12: NestJS로 API 만들기
-* [x] 2012.11: graphql movie API 만들기
+* [x] 2020.12: [[git repo](https://github.com/happyjy/learning-ReactApolloGraphQL/tree/master)] - GraphQL로 영화 웹 앱 만들기
+* [x] 2020.12: [[git repo](https://github.com/happyjy/learning-GraphQL)] - NestJS로 API 만들기
+* [x] 2012.11: [[git repo](https://github.com/happyjy/learning-NestJS_movieAPI)] - graphql movie API 만들기
 
 * [x] 2020.10 - 2020.11: javascript로 구현해본 Design Pattern
   * [포스팅](https://happyjy.netlify.app/category/#DesignPattern)
