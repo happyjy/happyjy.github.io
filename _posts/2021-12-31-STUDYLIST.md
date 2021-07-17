@@ -9,7 +9,12 @@ tags:
 
 # DONE LIST (DESC)
 
+* [...ing] 2021.07: 토이프로젝트 데이트 계획/기록 웹앱
 * [x] 2021.07 - 2021.07: [[git repo](https://github.com/happyjy/learning-2021-redux)] - redux기초, react-redux, redux middleware(redux-thunk, redux-promise, redux-saga, redux-actions)
+  * [redux비동기처리1(actions으로만처리)](https://happyjy.netlify.app/redux비동기처리1actions으로만처리)
+  * [redux비동기처리2(redux-thunk)](https://happyjy.netlify.app/redux비동기처리2redux-thunk)
+  * [redux비동기처리3(redux-promise)](https://happyjy.netlify.app/redux비동기처리3redux-promise)
+  * [redux비동기처리4(redux-saga)](https://happyjy.netlify.app/redux비동기처리4redux-saga)
 * [x] 2021.06 - 2021.06: [[private git repo](https://github.com/happyjy/learning-python-basic)] - 파이썬 기초, 파이썬으로 배우는 자료구조(배열, 큐, 스택, 리크드리스트, 시간복잡도, 해쉬테이블, 트리, 힙)
 * [x] 2021.06 - 2021.06: [[git repo](https://github.com/happyjy/clone_trello)] - Trello clone(no framework, no Library)
 * [x] 2021.05 - 2021.05: 패스트 캠퍼스 - CSS 이론
