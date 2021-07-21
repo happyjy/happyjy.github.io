@@ -1,46 +1,54 @@
 .card {
-	margin-bottom: 10px;
-	border: 0px;
+  margin-bottom: 10px;
+  border: 0px;
   // .card-body{
   //   background-color: yellowgreen;
   // }
 }
 
 .post-type-container {
-	display: flex;
+  display: flex;
 }
 
 ul.post-category {
-	padding: 0;
-	display: inline-flex;
-	flex-wrap: wrap;
-	list-style: none;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style: none;
 
-	li {
-		margin-right: 10px;
-	}
+  li {
+    margin-right: 10px;
+
+    span {
+      display: inline;
+    }
+  }
 }
 
 ul.post-tags {
-	padding: 0;
-	display: inline-flex;
-	flex-wrap: wrap;
-	list-style: none;
-	min-width: 0;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  list-style: none;
+  min-width: 0;
 
-	li {
-		margin-right: 10px;
-		overflow: hidden;
-	}
+  li {
+    margin-right: 10px;
+    overflow: hidden;
+
+    span {
+      display: inline;
+    }
+  }
 }
 
 .cardImg {
-	width: 300px;
-	background-repeat: no-repeat;
-	background-size: auto;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .card-text a {
-	text-decoration: none;
-	color: #24292e;
+  text-decoration: none;
+  color: #24292e;
 }

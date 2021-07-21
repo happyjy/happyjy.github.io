@@ -67,8 +67,8 @@ const Layout = ({
         <Row>
           {!!useSidebar && (
             <>
-              <Col md="8">{children}</Col>
-              <Col md="4">
+              <Col md="9">{children}</Col>
+              <Col md="3">
                 <Sidebar
                   author={postAuthor}
                   authorFluid={authorImageFluid}
