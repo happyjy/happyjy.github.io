@@ -25,7 +25,7 @@ tags:
 
 * [x] 2020.12: [[git repo](https://github.com/happyjy/learning-ReactApolloGraphQL/tree/master)] - GraphQL로 영화 웹 앱 만들기
 * [x] 2020.12: [[git repo](https://github.com/happyjy/learning-GraphQL)] - NestJS로 API 만들기
-* [x] 2012.11: [[git repo](https://github.com/happyjy/learning-NestJS_movieAPI)] - graphql movie API 만들기
+* [x] 2020.11: [[git repo](https://github.com/happyjy/learning-NestJS_movieAPI)] - graphql movie API 만들기
 
 * [x] 2020.10 - 2020.11: javascript로 구현해본 Design Pattern
   * [포스팅](https://happyjy.netlify.app/category/#DesignPattern)
