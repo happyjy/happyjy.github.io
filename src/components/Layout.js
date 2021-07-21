@@ -64,7 +64,13 @@ const Layout = ({
       <Header siteTitle={data.site.siteMetadata.title} />
       <div className="container" id="content">
         {/* <h1 className="textCenter">{pageTitle}</h1> */}
-        <Row>
+        <Row
+          style={{
+            marginRight: "-85px",
+            marginLeft: "-85px",
+            marginTop: "-40px",
+          }}
+        >
           {!!useSidebar && (
             <>
               <Col md="9">{children}</Col>
