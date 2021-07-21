@@ -62,18 +62,26 @@ const Layout = ({
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="container" id="content">
+      <div
+        className="container"
+        id="content"
+        style={{ paddingLeft: "5px", paddingRight: "5px" }}
+      >
         {/* <h1 className="textCenter">{pageTitle}</h1> */}
         <Row
-          style={{
-            marginRight: "-85px",
-            marginLeft: "-85px",
-            marginTop: "-40px",
-          }}
+          style={
+            {
+              // marginRight: "-85px",
+              // marginLeft: "-85px",
+              // marginTop: "-40px",
+            }
+          }
         >
           {!!useSidebar && (
             <>
-              <Col md="9">{children}</Col>
+              <Col md="9" style={{ paddingRight: "0px", paddingLeft: "0px" }}>
+                {children}
+              </Col>
               <Col md="3">
                 <Sidebar
                   author={postAuthor}

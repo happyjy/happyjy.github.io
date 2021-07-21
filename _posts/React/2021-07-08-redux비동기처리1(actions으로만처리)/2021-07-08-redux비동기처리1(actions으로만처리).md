@@ -99,7 +99,7 @@ export default function user(state = initialState, action) {
 }
 ```
 
-## 비동기 처리가 컨테이너에 있는 경우
+## 3. 비동기 처리를 컨테이너에에서 수행
 
 ### Container
 

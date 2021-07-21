@@ -39,21 +39,21 @@ tags:
 > * _redux-thunk middleware 덕분에 가능_
 
 * thunk 미들웨어사용시
-  * 비동기가 "action creator"함
-  *수에서 처리가 된다.
-  * dispatch부분이 action으로 이동 했기 때문에 관심사가 적절하게 분리됨.
-  * 라이브러리 사용하지 않고 action으로만 처리할때는 component, container에 비동기 로직이 들어있다.
-    * component, container: react component로 관심사로 component는 veiw, container는 logic부분을 담당하고있다.
+  * _비동기가 "action creator"함수에서 처리가 된다._
+  * _dispatch부분이 action으로 이동_ 했기 때문에 관심사가 적절하게 분리됨.
+    * 라이브러리 사용하지 않고 action으로만 처리할때는 component, container에 비동기 로직이 들어있다.
+      * component, container란? react component로 component는 view, container는 logic부분을 담당하고있다.
 * 미들웨어를 사용하지않고 actions으로 비동기를 처리할때
-  * components, container에서 처리를 한다.(redux비동기처리1(actions으로만처리)설명 참고)
-* 흐름을 보면 아래와 같이 비동기 처리 로징이 이동되는것을 확인 할 수 있다.
-  * components → container → actions creator 함수
+  * components, container에서 처리를 한다.
+  * redux비동기처리1(actions으로만처리)게시글 설명 참고
+* 흐름을 보면 아래와 같이 `비동기 처리 로직`이 이동되는것을 확인 할 수 있다.
+  * components → container → _actions creator 함수(by redux-thunk)_
 
 # 도식화
 
 * 노란색 별이 redux비동기처리1(actions으로만처리) 게시글과 다른 부분이다.
 
-  ![도식화](./img/redux에서비동기처리하기(reudx-thunk).png)
+  ![도식화](./img/redux-thunk.png)
 
 # redux-thunk middleware 분석
 
@@ -112,8 +112,9 @@ export default store;
 ## 설정2
 
 * action 함수 추가
-* 비동기 처리 actions creator "getUsersThunk" 함수 return value는 promise 함수
-  * store의 dispatch, getState를 받을 수 있다.(다시 disptach를 하수 있고, state를 활용할 수 있습니다.)
+* _비동기 처리 actions creator "getUsersThunk" 함수 return value는 promise 함수_
+  * store의 dispatch, getState를 받을 수 있다.
+  * 위 의미는 다시 disptach를 할 수 있고, state를 활용할 수 있다.
 
 ```js
 // src/redux/actions.js
@@ -144,7 +145,7 @@ export function getUsersFail(error) {
   };
 }
 
-// 비동기 처리 with thunk
+// #POINT: 비동기 처리 with thunk
 export function getUsersThunk() {
   return async (dispatch, getState) => {
     try {

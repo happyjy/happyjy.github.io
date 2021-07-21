@@ -4,7 +4,7 @@ const authors = [
     imageUrl: "jyoon.png",
     bio: "풀 스택 개발자를 지향하며 정진 하고 있는 5년차 개발자 윤재윤입니다.",
     facebook: "",
-    instagram: "https://www.instagram.com/happyjy_/",
+    instagram: "https://www.instagram.com/happyjy_dev/",
     github: "https://www.github.com/happyjy/",
   },
   {

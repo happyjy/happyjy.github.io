@@ -3,19 +3,23 @@ html {
 }
 
 .container#content {
-  margin-top: 60px;
+  // margin-top: 60px;
 }
+
 body {
   background-color: $light-gray;
   font-family: $site-font;
 }
+
 a {
   color: #0056b3;
+
   &:hover {
     color: #007bff;
     text-decoration: none;
   }
 }
+
 h1 {
   margin-bottom: 20px;
   // text-align: center;
@@ -32,9 +36,11 @@ h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   line-height: 1;
 }
+
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-brand {
   color: #0056b3;
+
   &:hover {
     color: #007bff;
   }
@@ -43,7 +49,7 @@ h1 {
 /*
   sidebar > author
 */
-.author > ul {
+.author>ul {
   padding: 0px;
 }
 
@@ -51,7 +57,7 @@ h1 {
   unorderlist
     : markdown, sidebar > author
 */
-.author-social-links > ul {
+.author-social-links>ul {
   list-style-type: none;
 }
 
@@ -66,17 +72,17 @@ h1 {
 /*
   Table of contents
 */
-.toc > ul {
+.toc>ul {
   list-style: none;
   padding: 0px;
 }
 
-.toc ul > li > p {
+.toc ul>li>p {
   // list-style: none;
   margin: 0px;
 }
 
-.toc ul > li > ul {
+.toc ul>li>ul {
   list-style: none;
   padding-left: 20px;
 }
@@ -112,7 +118,7 @@ h1 {
 }
 
 //markdown에 number option 추가시 number 위치 맞지 않아 조절
-.line-numbers-rows > span {
+.line-numbers-rows>span {
   margin-bottom: 2px;
 }
 
@@ -140,6 +146,7 @@ h1 {
   padding-left: 0.75em;
   border-left: 0.25em solid #f99;
 }
+
 /**
  * Add back the container background-color, border-radius, padding, margin
  * and overflow that we removed from <pre>.
@@ -164,6 +171,8 @@ h1 {
   margin: 0;
   padding: 0;
   overflow: initial;
-  float: left; /* 1 */
-  min-width: 100%; /* 2 */
+  float: left;
+  /* 1 */
+  min-width: 100%;
+  /* 2 */
 }
