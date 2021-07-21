@@ -11,7 +11,7 @@ tags:
 
 아래 github에 actions으로만 처리한 비동기처리 코드를 확인/동작을 확인 할 수 있다.
 
-* [github 주소](https://github.com/happyjy/learning-2021-redux/tree/%EB%B9%84%EB%8F%99%EA%B8%B0(Action))
+* [github 주소](https://github.com/happyjy/learning-2021-redux/tree/6.%EB%B9%84%EB%8F%99%EA%B8%B0(Action))
 
 # 비동기 작업을 어디서 하느냐가 젤 중요
 

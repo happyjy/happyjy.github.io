@@ -12,7 +12,7 @@ tags:
 
 아래 github에 redux-saga로 비동기 처리한 코드를 확인/동작을 확인 할 수 있다.
 
-* [github 주소](https://github.com/happyjy/learning-2021-redux/tree/%EB%B9%84%EB%8F%99%EA%B8%B0(redux-saga))
+* [github 주소](https://github.com/happyjy/learning-2021-redux/tree/6.4%EB%B9%84%EB%8F%99%EA%B8%B0(redux-saga))
 
 # redux-saga란?
 

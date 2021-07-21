@@ -12,7 +12,7 @@ tags:
 
 아래 github에 redux-thunk로 비동기 처리한 코드를 확인/동작을 확인 할 수 있다.
 
-* [github 주소](https://github.com/happyjy/learning-2021-redux/tree/%EB%B9%84%EB%8F%99%EA%B8%B0(redux-thunk))
+* [github 주소](https://github.com/happyjy/learning-2021-redux/tree/6.2%EB%B9%84%EB%8F%99%EA%B8%B0(redux-thunk))
 
 # redux-thunk 란?
 
@@ -39,7 +39,8 @@ tags:
 > * _redux-thunk middleware 덕분에 가능_
 
 * thunk 미들웨어사용시
-  * 비동기가 "action creator"함수에서 처리가 된다.
+  * 비동기가 "action creator"함
+  *수에서 처리가 된다.
   * dispatch부분이 action으로 이동 했기 때문에 관심사가 적절하게 분리됨.
   * 라이브러리 사용하지 않고 action으로만 처리할때는 component, container에 비동기 로직이 들어있다.
     * component, container: react component로 관심사로 component는 veiw, container는 logic부분을 담당하고있다.
@@ -56,7 +57,7 @@ tags:
 
 # redux-thunk middleware 분석
 
-[reduxjs/redux-thunk](https://github.com/reduxjs/redux-thunk/blob/master/src/index.js)
+[reduxjs/redux-thunk 코드](https://github.com/reduxjs/redux-thunk/blob/master/src/index.js)
 
 ```jsx
 function createThunkMiddleware(extraArgument) {
@@ -108,7 +109,7 @@ const store = createStore(
 export default store;
 ```
 
-## 설정1
+## 설정2
 
 * action 함수 추가
 * 비동기 처리 actions creator "getUsersThunk" 함수 return value는 promise 함수
@@ -207,4 +208,6 @@ export default function UserList({ users, getUsers }) {
 }
 ```
 
-마지막으로 redux 공식문서에서 [writing-logic-thunks](https://redux.js.org/usage/writing-logic-thunks)라는 게시글이 있는데 사용하는 이유가 비동리 로직이 UI(react component) useEffect안에 많이 포함되어 있으면 UI layer와 관심사가 다른 역할을 한다. 그래서 이것을 action creator로 옮기면서 테스트, component 재사용성을 높인다는 이유로 사용한다고 하면서 자세한 사용방법이 있어 참고하면 좋을 것같다.
+# 마지막으로
+
+redux 공식문서에서 [writing-logic-thunks](https://redux.js.org/usage/writing-logic-thunks)라는 게시글이 있는데 사용하는 이유가 비동리 로직이 UI(react component) useEffect안에 많이 포함되어 있으면 UI layer와 관심사가 다른 역할을 한다. 그래서 이것을 action creator로 옮기면서 테스트, component 재사용성을 높인다는 이유로 사용한다고 하면서 자세한 사용방법이 있어 참고하면 좋을 것같다.
