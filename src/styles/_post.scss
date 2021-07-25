@@ -4,6 +4,15 @@
   margin-top: 3rem;
   font-family: 'Poppins';
 
+  // 210725 undering 설정
+  // markdown 설정시 언더라인 하나가(_글자_) 밑줄인데 블로그에서는 이탤릭체로 보임
+  // em이 이탤릭체 설정인데 임시로 em을 underline으로 설정
+  // [todo] 개츠비 markdown 변경시 설정을 찾아서 변경하기 
+  em {
+    text-decoration: underline;
+    font-style: unset;
+  }
+
   h1,
   h2,
   h3,
