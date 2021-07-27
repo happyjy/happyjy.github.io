@@ -128,14 +128,21 @@
   margin-bottom: 10px;
 }
 
-.tags>.label>li {
-  margin: 0;
-  font-size: 14px;
-  font-weight: 300;
-  display: inline;
-  margin-right: 10px;
+.tags>.label {
+  padding-left: 0px;
+
+  li {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+    display: inline;
+    margin-right: 10px;
+
+    a {
+      margin-bottom: 10px;
+    }
+  }
 }
 
-.tags>.label>li>a {
-  margin-bottom: 10px;
-}
+// .tags>.label>li>a {//   margin-bottom: 10px;
+// }
