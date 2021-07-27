@@ -1,4 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "pasteImage.path": "${currentFileDir}/imgs"
+  "pasteImage.path": "${currentFileDir}/imgs",
+  "prettier.cssEnable": ["css", "less", "scss", "postcss"],
+  "prettier.tabWidth": 2
 }

@@ -36,7 +36,7 @@ const Post = ({
       <CardBody>
         <CardTitle>
           <Link to={`/${slug}`}>
-            <h3>{title}</h3>
+            <h5>{title}</h5>
           </Link>
         </CardTitle>
         <CardSubtitle>
@@ -67,9 +67,9 @@ const Post = ({
               ))}
           </ul>
         </div>
-        <CardText>
+        {/* <CardText>
           <Link to={`/${slug}`}>{body}</Link>
-        </CardText>
+        </CardText> */}
         {/* <Link to={slug} className="btn btn-outline-primary float-right">
           Read more
         </Link> */}

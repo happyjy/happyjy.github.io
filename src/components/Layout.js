@@ -79,9 +79,8 @@ const Layout = ({
         >
           {!!useSidebar && (
             <>
-              <Col md="9" style={{ paddingRight: "0px", paddingLeft: "0px" }}>
-                {children}
-              </Col>
+              {/* <Col md="9" style={{ paddingRight: "0px", paddingLeft: "0px" }}> */}
+              <Col md="9">{children}</Col>
               <Col md="3">
                 <Sidebar
                   author={postAuthor}

@@ -1,20 +1,36 @@
 .card {
   margin-bottom: 10px;
   border: 0px;
-  // .card-body{
-  //   background-color: yellowgreen;
-  // }
+
+  .card-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .card-body {
+    //   background-color: yellowgreen;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    min-height: 1px;
+    padding: 0.5rem 0.5rem;
+
+    .card-subtitle {
+      font-size: 0.8rem;
+    }
+
+    .post-type-container {
+      display: flex;
+      font-size: 0.5rem;
+    }
+  }
 }
 
-.post-type-container {
-  display: flex;
-}
+
 
 ul.post-category {
   padding: 0;
   display: inline-flex;
   flex-wrap: wrap;
   list-style: none;
+  margin-bottom: 0;
 
   li {
     margin-right: 10px;
@@ -31,6 +47,8 @@ ul.post-tags {
   flex-wrap: wrap;
   list-style: none;
   min-width: 0;
+  padding: 0;
+  margin-bottom: 0;
 
   li {
     margin-right: 10px;
