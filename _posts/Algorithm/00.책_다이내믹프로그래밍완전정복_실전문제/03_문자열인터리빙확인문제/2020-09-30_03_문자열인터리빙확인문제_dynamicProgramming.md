@@ -1,5 +1,5 @@
 ---
-title: dynamicProgramming_문자열인터리빙확인문제
+title: 다이나믹프로그래밍완전정복실전문제분석_dynamicProgramming_문자열인터리빙확인문제
 date: 2020-09-30
 category: Algorithm
 author: jyoon
@@ -12,6 +12,15 @@ tags:
 # 문제
 
 주어진 두 문자(str1, str2)가 순서를 유지하고 섞었을때 str3이 되는가?
+
+```
+str1 = "bcc"
+str2 = "bbca"
+str3 = "bbcbcac"
+
+* _ _ 의미: str3 문자
+str3 = " _bbc_ bc _a_ c"
+```
 
 # 해결 방법
 
@@ -113,8 +122,8 @@ str2 = "bbca"
 str3 = "bbcbcac"
 
 ```
-    |           b     b      c      a
-  ----------------------------------------
+    |           b      b      c      a
+  ---------------------------------------
     | [true , true , true , true , false]
   b | [true , true , false, true , false]
   c | [false, true , true , true , true ]
@@ -125,8 +134,14 @@ str3 = "bbcbcac"
 
 - ilMatrix[0][3] 의미
 
-  - str2의 bbc까지 문자열로 str3문자열을 만들 수 있어 true
+    - str2의 bbc까지 문자열로
+    - str3문자열의 세번째 문자열까지(bbc)까지 만들 수 있어 true 이다.
 
 - ilMatrix[2][3] 의미
 
-  - str1의 bc, str2의 bbc까지 문자열로 str3문자열의 5번째 문자열까지(bbcbc)를 만들 수 있어 true
+    - str1의 bc, str2의 bbc까지 문자열을 통해서
+    - str3문자열의 5번째 문자열까지(bbcbc)를 만들 수 있어 true 이다.
+
+- ilMatrix[3][4] 의미
+    - str1의 bbc, str2의 bbca의 문자열을 통해서
+    - str3의 문자열 7번째 문자열까지(bbcbcac)를 만들 수 있어 true이다.

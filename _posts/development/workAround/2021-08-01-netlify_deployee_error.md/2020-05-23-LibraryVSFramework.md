@@ -1,6 +1,6 @@
 ---
 title: netlify 배포시 node version 문제
-date: 2021-05-23
+date: 2021-08-01
 author: jyoon
 category: development
 tags:
@@ -27,14 +27,14 @@ error extract-files@11.0.0: The engine "node" is incompatible with this module. 
 * [netlify docs의 Magane build dependencies](https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-and-javascript)에서 node version을 관리하는 방법이 있다.
 
 * 실제 변경하는 방법은 [Build environment variables 문서에 있다.](https://docs.netlify.com/configure-builds/environment-variables/)
-    * 개인 프로젝트면 아래 부분을 참고 하면 된다.
+    * 개인 프로젝트면 아래 문구가 있는 곳을 참고 하면 된다.
 
-  ```
-  In Site settings > Build & deploy > Environment > Environment variables. Variable values set under site settings will override the team-level settings.
-  ```
+    ```
+    In Site settings > Build & deploy > Environment > Environment variables. Variable values set under site settings will override the team-level settings.
+    ```
 
     * 참고 캡쳐
-        * Deploy setting > Environment
-  ![](imgs/2021-08-01-13-11-37.png)
+        * Netlify > Site > setting > Build & deploy > Environment
+          ![](imgs/2021-08-01-13-11-37.png)
             * node version 확인
-  ![](imgs/2021-08-01-13-12-28.png)
+              ![](imgs/2021-08-01-13-12-28.png)

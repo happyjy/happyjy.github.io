@@ -1,5 +1,5 @@
 ---
-title: 재귀_모든 문자배열 조합(permutation)
+title: recursion_12.모든 문자배열 조합(permutation)
 date: 2020-05-16
 category: Algorithm
 author: jyoon
@@ -15,23 +15,28 @@ tags:
 
 # 해결 방법
 
-* 문자열의 기준을 정하고 "swap, 재귀호출"을 통해서 문자열 자리수를 정하면서 문자열 순열을 구한다.
+- 문자열의 기준을 정하고 "swap, 재귀호출"을 통해서 문자열 자리수를 정하면서 문자열 순열을 구한다.
 
-- POINT1: l, r 의미
-    - l
-    : 문자열 고정 기준점(l번째 이전 문자열은 고정)
-    : l번째 문자 이후 문자는 swap 이후 재귀호출한다. 재귀호출 시에 l+1 해준다.
-    - r
-    : 문자열 길이
+- POINT1: 변수 point, length, cursor 의미
+    - point
+        - 문자열 고정 기준점(point번째 이전 문자열은 고정)
+        - point번째 문자 이후 문자는 swap 이후 재귀호출한다. 재귀호출 시에 point+1 해준다.
+    - length
+        - 문자열 길이
+    - cursor
+        - 문자열에서 기준점(point)과 swap할 index
+        - 기준점(point)부터 시작해서 문자열 길이만큼 순회하면서 swap하고 재귀호출한다.
+        - _이 과정에서 문자열이 만들 수 있는 문자열을 모두 만든다._
 - POINT2: 재귀함수가 끝나면 문자를 원래대로 돌려놓는다.
 - POINT3: 종단점
-    - l == r
+    - point == length
     - 이 때 각자리에 문자열이 정해진 상태이므로 PRINT 한다.
 
 # solution 함수 설명
 
-* 1st parameter
+- 1st parameter
     - 문자열
+
 - 2nd parameter
     - 이 파라미터 숫자 포함 이후 숫자를 swap 이후 재귀호출한다.
     - **재귀호출 호출할때 두번째 파라미터를 + 1한다.**
@@ -42,37 +47,41 @@ tags:
 # CODE
 
 ```js
-  function solution(str, l, r) {
+  var arr = [];
+
+  // highlight-line // POINT1
+  function solution(str, point, length) {
     str = str.toString();
 
-    if (l == r) {    // highlight-line // POINT3  
+    if (point == length) {
+      // highlight-line // POINT3
       arr.push(str);
     } else {
-      for (var i = l; i <= r; i++) {
-        str = swap(str, l, i);    // highlight-line //POINT2
-        solution(str, l + 1, r);  // highlight-line //POINT2
-        str = swap(str, l, i);    // highlight-line //POINT3
+      // highlight-line // POINT1
+      for (var cursor = point; cursor <= length; cursor++) {
+        str = swap(str, point, cursor); // highlight-line //POINT2
+        solution(str, point + 1, length); 
+        str = swap(str, point, cursor); // highlight-line //POINT2
       }
     }
   }
 
-  function swap(str, i, j) {
-    let temp = '';
+  function swap(str, point, cursor) {
     let arr = [...str];
-
-    temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-    return arr.join('');
+    [arr[point], arr[cursor]] = [arr[cursor], arr[point]];
+    return arr.join("");
   }
 
   var str = "ABC";
   solution(str, 0, str.length - 1);
+
+  console.log(arr);
+  // (6) ["ABC", "ACB", "BAC", "BCA", "CBA", "CAB"]
 ```
 
 # 설명
 
-* recursion tree와 tree레벨 기준으로 수행되는 코드 두가지를 보면서 이해해 보자
+- recursion tree와 tree레벨 기준으로 수행되는 코드 두가지를 보면서 이해해 보자
 
 ## recursion tree
 
@@ -80,8 +89,9 @@ tags:
 
 ## tree레벨 기준으로 수행되는 코드
 
-* 'ABC'의 Tree의 level 기준 코드
+- 'ABC'의 Tree의 level 기준 코드
     - Level-1, Level-2 단계가 있음
+
 - permute 함수 설명
     - 1st parameter
         - 문자열

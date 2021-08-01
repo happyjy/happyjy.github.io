@@ -1,5 +1,5 @@
 ---
-title: dynamicProgramming_철근자르기
+title: 다이나믹프로그래밍완전정복실전문제분석_dynamicProgramming_철근자르기
 date: 2020-10-08
 category: Algorithm
 author: jyoon

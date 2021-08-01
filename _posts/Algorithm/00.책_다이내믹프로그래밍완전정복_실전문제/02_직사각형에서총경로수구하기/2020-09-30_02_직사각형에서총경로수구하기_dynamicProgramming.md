@@ -1,5 +1,5 @@
 ---
-title: dynamicProgramming_직사각형에서총경로수구하기
+title: 다이나믹프로그래밍완전정복실전문제분석_dynamicProgramming_직사각형에서총경로수구하기
 date: 2020-09-30
 category: Algorithm
 author: jyoon

@@ -1,5 +1,5 @@
 ---
-title: 재귀_Recursion 개념과 기본예제, 응용 배우기
+title: recursion_00.Recursion 개념과 기본예제, 응용 배우기
 date: 2020-04-10
 category: Algorithm
 author: jyoon
@@ -10,7 +10,7 @@ tags:
 
 # 1. 순환이란? (what is Recursion?)
 
-https://www.youtube.com/watch?v=YZcO_jRhvxs
+[유투브 영상](https://www.youtube.com/watch?v=YZcO_jRhvxs)
 
 ## 수학적 문제를 recursion으로 풀어보기
 
@@ -21,9 +21,8 @@ https://www.youtube.com/watch?v=YZcO_jRhvxs
 
 # 2. Recursive Thinking
 
-## 수학 함수 뿐 아니라 다른 많은 문제들을 recursion으로 해결할 수 있다.
-
-https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2
+[Recursive Thinking 영상](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)  
+수학 함수 뿐 아니라 다른 많은 문제들을 recursion으로 해결할 수 있다
 
 1. 문자열 길이 계산
 2. 문자열 프린트
@@ -34,65 +33,46 @@ https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n
 ## Recursion VS Iteration
 
 - 모든 순환함수는 반복문(iteration)으로 변경가능
-- 그 역도 성립! 즉 모든 반복문은 recursion으로 표현 가능
+    - 그 역도 성립! 즉 모든 반복문은 recursion으로 표현 가능
 - 순환함수는 복잡한 알고리즘을 단순, 알기 쉽게 표현하는 것을 가능하게 함
-- 하지만 함수 호출에 따른 오버헤드가 있음( 매개변수 전달, 액티베이션 프레임 생성 등 )
-  - 순환에 비해 속도가 손해를 볼 수 있다.
+    - 하지만 함수 호출에 따른 오버헤드가 있음( 매개변수 전달, 액티베이션 프레임 생성 등 )
+    - 순환에 비해 속도가 손해를 볼 수 있다.
 
 # 3. Designing Recursion(순환적 알고리즘 설계)
-- **recursion 설계하는 방법을 연습합니다.**
 
-https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3
+**[recursion 설계하는 방법을 연습 영상](https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3)**
 
 - 적어도 하나의 base case, 즉 순환되지 않고 종료되는 case가 있어야 함
-- 모든 case는 결국 *base case로 수렴해야함*
+    - 모든 case는 결국 *base case로 수렴해야함*
 - 암시적(implicit) **매개변수를 명시적(explicit) 매개변수로** 바꿔야 함
 
 ## Recursion 기본예제
 
 - 순차탐색 - Iteration
-  * recursion 함수 매개변수 선언할때 처음 호출하는 상황말고 자기 자신을 호출하는 상황에서의 매개변수를 생각해야 한다 .
-  * 그래서 예제에 begin, end가 추가가 된것이다. 
+    - recursion 함수 매개변수 선언할때 처음 호출하는 상황말고 자기 자신을 호출하는 상황에서의 매개변수를 생각해야 한다 .
+    - 그래서 예제에 begin, end가 추가가 된것이다.
 - 매개변수의 명시화: 순차탐색 - recursion
 - 순차탐색: 다른 버전 - recursion
 - 매개변수의 명시화: 최대값 찾기 - recursion
 - 최대값 찾기: 다른 버전 - recursion
 - Binary Search
-  - https://www.geeksforgeeks.org/binary-search-in-javascript/
+    - <https://www.geeksforgeeks.org/binary-search-in-javascript/>
+    - Recursive Approach, Iterative Approach 두가지 방법이 설명되어 있다.
 
 # 4. Recursion 응용
 
-```
- nqueens(arguemtns){
-  if non-promising
-  else if success
-  else
-    visit children recursively
- }
-```
-
-- recursion 응용1: findMaze
-  https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4
-- recursion 응용2: Counting Cells in a Blob
-  https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5
-- recursion 응용3: n queens problem
-  https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6
+- [recursion 응용1: findMaze](https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4)
+- [recursion 응용2: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
+- [recursion 응용3: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)
 
 # 참고
 
-- What Is Recursion - recursion Explained In 3 Minutes
-  https://www.youtube.com/watch?v=YZcO_jRhvxs
+- [What Is Recursion - recursion Explained In 3 Minutes](https://www.youtube.com/watch?v=YZcO_jRhvxs)
 
 - 권오흠 교수님 강의
-  - what is Recursion
-    https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=1
-  - Recursive Thinking
-    https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2
-  - Designing Recursion(순환적 알고리즘 설계)
-    https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3
-  - recursion 응용1: findMaze
-    https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4
-  - recursion 응용2: Counting Cells in a Blob
-    https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5
-  - recursion 응용3: n queens problem
-    https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6
+    - [what is Recursion](https://www.youtube.com/watch?v=ln7AfppN7mY&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=1)
+    - [Recursive Thinking](https://www.youtube.com/watch?v=tuzf1yLPgRI&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=2)
+    - [Designing Recursion(순환적 알고리즘 설계)](https://www.youtube.com/watch?v=Vwfo_hrxuzg&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=3)
+    - [recursion 응용1: findMaze](https://www.youtube.com/watch?v=m6lXDsx7oCk&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=4)
+    - [recursion 응용2: Counting Cells in a Blob](https://www.youtube.com/watch?v=HHJFlVT1tBw&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=5)
+    - [recursion 응용3: n queens problem](https://www.youtube.com/watch?v=xKGbWC-DPT4&list=PL52K_8WQO5oUuH06MLOrah4h05TZ4n38l&index=6)

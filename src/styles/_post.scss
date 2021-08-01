@@ -2,7 +2,7 @@
 
 .blog-post-content {
   margin-top: 3rem;
-  font-family: 'Poppins';
+  // font-family: 'Poppins';
 
   // 210725 undering 설정
   // markdown 설정시 언더라인 하나가(_글자_) 밑줄인데 블로그에서는 이탤릭체로 보임
@@ -82,8 +82,9 @@
   }
 
   code {
+    font-size: 0.9rem;
     // font-family: "Nanum Gothic Coding";
-    font-family: 'Poppins';
+    // font-family: 'Poppins';
   }
 
   blockquote {

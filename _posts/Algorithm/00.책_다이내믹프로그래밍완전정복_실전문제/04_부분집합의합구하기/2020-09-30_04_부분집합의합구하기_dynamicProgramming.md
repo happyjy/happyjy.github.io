@@ -1,5 +1,5 @@
 ---
-title: dynamicProgramming_부분집합의합구하기
+title: 다이나믹프로그래밍완전정복실전문제분석_dynamicProgramming_부분집합의합구하기
 date: 2020-09-30
 category: Algorithm
 author: jyoon
