@@ -1,11 +1,9 @@
 <html>
+  <head> </head>
 
-<head>
-</head>
-
-<body>
-  <script>
-    /*
+  <body>
+    <script>
+      /*
       dfs: depth first search
     
       ### 문제 설명
@@ -35,30 +33,29 @@
       문제에 나온 예와 같습니다.
     */
 
-    function solution(numbers, target) {
-      var answer = 0;
+      function solution(numbers, target) {
+        var answer = 0
 
-      function dfs(numbers, index) {
+        function dfs(numbers, index) {
           if (index === numbers.length) {
-              var sum = numbers.reduce(function (acc, curr) {
-                  return acc + curr;
-              });
-              if (sum === target) {
-                  answer++;
-              }
-              return;
+            var sum = numbers.reduce(function(acc, curr) {
+              return acc + curr
+            })
+            if (sum === target) {
+              answer++
+            }
+            return
           } else {
-              dfs(numbers, index + 1);
-              numbers[index] *= -1;
-              dfs(numbers, index + 1);
-              return;
+            dfs(numbers, index + 1)
+            numbers[index] *= -1
+            dfs(numbers, index + 1)
+            return
           }
+        }
+
+        dfs(numbers, 0)
+        return answer
       }
-
-      dfs(numbers, 0);
-      return answer;
-    }
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
