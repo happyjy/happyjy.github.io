@@ -37,43 +37,43 @@ str3 = " _bbc_ bc _a_ c"
 
 4. str1 == str3 && str2 == str3 => 왼쪽 또는 위쪽 셀값 중 하나라도 true 이면 true이다.
 
-# CODE
+# CODE + 해석
 
 ```js
 function isInterleaving(str1, str2, str3) {
   // str1, str2, str3의 문자열 길이를 구한다.
 
-  var str1Len = str1.length
-  var str2Len = str2.length
-  var str3Len = str3.length
+  var str1Len = str1.length;
+  var str2Len = str2.length;
+  var str3Len = str3.length;
 
   // A와 B 문자열의 길이의 합이 C 문자열의 길이와 다를때
   if (str3Len != str1Len + str2Len) {
-    return false
+    return false;
   }
 
   // 인터리빙 여부를 저장하는 2차원 배열
   var ilMatrix = Array(str1Len + 1)
     .fill(true)
-    .map(v => Array(str2Len + 1).fill(true))
+    .map((v) => Array(str2Len + 1).fill(true));
 
-  ilMatrix[0][0] = true // (0,0)은 true
+  ilMatrix[0][0] = true; // (0,0)은 true
 
   // 첫번째 열을 채운다.
   for (let i = 1; i <= str1Len; i++) {
     if (str1[i - 1] != str3[i - 1]) {
-      ilMatrix[i][0] = false
+      ilMatrix[i][0] = false;
     } else {
-      ilMatrix[i][0] = ilMatrix[i - 1][0]
+      ilMatrix[i][0] = ilMatrix[i - 1][0];
     }
   }
 
   // 첫번째 행을 채운다.
   for (let j = 1; j <= str2Len; j++) {
     if (str2[j - 1] != str3[j - 1]) {
-      ilMatrix[0][j] = false
+      ilMatrix[0][j] = false;
     } else {
-      ilMatrix[0][j] = ilMatrix[0][j - 1]
+      ilMatrix[0][j] = ilMatrix[0][j - 1];
     }
   }
 
@@ -83,36 +83,103 @@ function isInterleaving(str1, str2, str3) {
   for (var i = 1; i <= str1Len; i++) {
     for (var j = 1; j <= str2Len; j++) {
       //현재의 셀 str1, str2, str3의 글자
-      var currentStr1 = str1[i - 1] // i번째 글자
-      var currentStr2 = str2[j - 1] // j번째 글자
-      var currentStr3 = str3[i + j - 1] //i+j번째 글자
+      var curStr1 = str1[i - 1]; // i번째 글자
+      var curStr2 = str2[j - 1]; // j번째 글자
+      var curStr3 = str3[i + j - 1]; //i+j번째 글자
 
-      if (currentStr1 == currentStr3 && currentStr2 != currentStr3) {
+      if (curStr1 == curStr3 && curStr2 != curStr3) {
         // str3의 글자가 str1의 글자와 같고 str2의 글자와 다를 때
         // str1과 str3가 같으니 이전 i(행-세로)을 i에 대입
-        ilMatrix[i][j] = ilMatrix[i - 1][j]
-      } else if (currentStr1 != currentStr3 && currentStr2 == currentStr3) {
+        ilMatrix[i][j] = ilMatrix[i - 1][j];
+      } else if (curStr1 != curStr3 && curStr2 == curStr3) {
         // str3의 글자가 str2의 글자와 같고 str1의 글자와 다를 때
         // str2과 str3가 같으니 이전 j(열-가로)을 j에 대입
-        ilMatrix[i][j] = ilMatrix[i][j - 1]
-      } else if (currentStr1 == currentStr3 && currentStr2 == currentStr3) {
+        ilMatrix[i][j] = ilMatrix[i][j - 1];
+      } else if (curStr1 == curStr3 && curStr2 == curStr3) {
         // str1, str2, str3 글자 모두 가 같을 때
         // 둘중 하나라도 true이면 true
-        ilMatrix[i][j] = ilMatrix[i - 1][j] || ilMatrix[i][j - 1]
+        ilMatrix[i][j] = ilMatrix[i - 1][j] || ilMatrix[i][j - 1];
       } else {
-        // C의 글자가 A, B 두 글자 어느쪽과도 다를 때
-        ilMatrix[i][j] = false
+        // str3의 글자가 str1, str2 두 글자 어느쪽과도 다를 때
+        ilMatrix[i][j] = false;
       }
     }
   }
-  return ilMatrix[str1Len][str2Len]
+  return ilMatrix[str1Len][str2Len];
 }
 
-var str1 = "bcc"
-var str2 = "bbca"
-var str3 = "bbcbcac"
+var str1 = "bcc";
+var str2 = "bbca";
+var str3 = "bbcbcac";
 
-console.log(isInterleaving(str1, str2, str3))
+console.log(isInterleaving(str1, str2, str3));
+```
+
+# code only
+
+```js
+function isInterleaving(str1, str2, str3) {
+  var str1Len = str1.length;
+  var str2Len = str2.length;
+  var str3Len = str3.length;
+
+  if (str3Len != str1Len + str2Len) {
+    return false;
+  }
+
+  var ilMatrix = Array(str1Len + 1)
+    .fill(true)
+    .map((v) => Array(str2Len + 1).fill(true));
+
+  ilMatrix[0][0] = true;
+
+  // str1, 첫번째 행
+  for (let i = 1; i <= str1Len; i++) {
+    if (str1[i - 1] != str3[i - 1]) {
+      ilMatrix[i][0] = false;
+    } else {
+      ilMatrix[i][0] = ilMatrix[i - 1][0];
+    }
+  }
+
+  // str2, 첫번째 열
+  for (let j = 1; j <= str2Len; j++) {
+    if (str2[j - 1] != str3[j - 1]) {
+      ilMatrix[0][j] = false;
+    } else {
+      ilMatrix[0][j] = ilMatrix[0][j - 1];
+    }
+  }
+
+  // str1,str2/ 첫번째 행,열 제외한 모든 셀
+  for (let i = 1; i < str1Len; i++) {
+    for (let j = 1; j < str1Len; j++) {
+      //str1, str2, str3의 첫번째 글자
+      var curStr1 = str1[i - 1];
+      var curStr2 = str2[j - 1];
+      var curStr3 = str3[i + j - 1];
+
+      if (curStr1 == curStr3 && curStr2 != curStr3) {
+        // str3의 글자가 str1의 글자와 같고 str2의 글자와 다를 때
+        ilMatrix[i][j] = ilMatrix[i - 1][j];
+      } else if (curStr1 != curStr3 && curStr2 == curStr3) {
+        // str3의 글자가 str2의 글자와 같고 str1의 글자와 다를 때
+        ilMatrix[i][j] = ilMatrix[i][j - 1];
+      } else if (curStr1 == curStr3 && curStr2 == curStr3) {
+        // str1, str2, str3 글자 모두 가 같을 때
+        ilMatrix[i][j] = ilMatrix[i - 1][j] || ilMatrix[i][j - 1];
+      } else {
+        // str3의 글자가 str1, str2 두 글자 어느쪽과도 다를 때
+        ilMatrix[i][j] = false;
+      }
+    }
+  }
+}
+var str1 = "bcc";
+var str2 = "bbca";
+var str3 = "bbcbcac";
+
+console.log(isInterleaving(str1, str2, str3));
 ```
 
 # 2중 반복문 이후 최종 ilMatrix 배열(상향식 접근방법)
