@@ -12,14 +12,14 @@ tags:
 # 문제
 
 최장 공통 부분 수열(Longest common subsequce - LCS)
-문자열 내에서 왼쪽에서 오른쪽 방향으로 문자열 내에 들어 잇는 글자의 수열
+문자열 내에서 왼쪽에서 오른쪽 방향으로 문자열 내에 들어 있는 글자의 수열
 반드시 연속적인 글자들로 구성될 필요 x
 
 - 예
 
 ```
   문자열 X가 ABCDE라면
-  AB, ACD, BDE 등은 문자역 X의 부분 집합
+  AB, ACD, BDE 등은 문자열 X의 부분 집합
 ```
 
 # 해결 방법
@@ -43,10 +43,10 @@ function lcs_length(str1, str2, m, n) {
   for (var i = 1; i <= m; i++) {
     for (var j = 1; j <= n; j++) {
       // 추가된 글자가 같은 글자면 LCS에 이 글자를 추가 할 수 있다.
-      if (str1[i - 1] === str2[j - 1]) {
-        lcs_table[i][j] = lcs_table[i - 1][j - 1] + 1
+      if (str1[i - 1] === str2[j - 1]) {  //highlight-line
+        lcs_table[i][j] = lcs_table[i - 1][j - 1] + 1 //highlight-line
       } else {
-        lcs_table[i][j] = Math.max(lcs_table[i - 1][j], lcs_table[i][j - 1])
+        lcs_table[i][j] = Math.max(lcs_table[i - 1][j], lcs_table[i][j - 1]) //highlight-line
       }
     }
   }
@@ -59,7 +59,7 @@ var str2 = "AEBD"
 var m = str1.length
 var n = str2.length
 
-console.log(lcs_length(str1, str2, m, n))
+console.log(lcs_length(str1, str2, m, n)) // 3
 ```
 
 # 시간복잡도
