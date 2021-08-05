@@ -24,8 +24,8 @@ n개의 물건이 있으며, 각 물건에는 무게, 가격(weight, value)이 �
 
 - 문제에 배낭용량, 물건의 두개의 변수가 있다.
 
-    - 행(가로, i): 물건 무게
-    - 열(세로, j): 배낭 용량
+    - 행(세로, i): 물건 무게
+    - 열(가로, j): 배낭 용량
 
 - 행렬의 셀(i, j)의 값의 의미
 
@@ -55,16 +55,16 @@ n개의 물건이 있으며, 각 물건에는 무게, 가격(weight, value)이 �
       value[i-1] + maxValue[ j - weight[i-1] ]
     ```
 
-# CODE
+# CODE + 설명
 
 ```js
 /*
-      가방수하량: C
+  가방수하량: C
 
-      물건무게: weight
-      물건가격: value
-      상점에 있는 물건 개수: n
-    */
+  물건무게: weight
+  물건가격: value
+  상점에 있는 물건 개수: n
+*/
 function knapSack(C, weight, value, n) {
   var maxVal = Array(n + 1)
     .fill(0)
@@ -85,20 +85,22 @@ function knapSack(C, weight, value, n) {
   //          i: 행 = 상하 이동 index
   //          j: 열 = 좌우 이동 index
   for (var i = 1; i <= n; i++) {
-    // i: i번째 물건 -> (weight[i] i번째 물건 무게)
+    // i: i번째 물건
+    // weight[i]: i번째 물건 무게
+    // value[i]: i번째 물건 가격 
     for (var j = 1; j <= C; j++) {
       // j: 배낭 용량
       if (weight[i - 1] <= j) {
-        var x = j - weight[i - 1] //[point2] 배낭용량(i번째 물건 담고 남은) = 배낭용량 - 물건 무게
+        var x = j - weight[i - 1] //highlight-line //[point2] 배낭용량(i번째 물건 담고 남은) = 배낭용량 - 물건 무게
         maxVal[i][j] = Math.max(
           value[i - 1] + maxVal[i - 1][x],
           maxVal[i - 1][j]
         )
         // [point3]
         // Math.max(
-        //          i-1번째 물건 가격 + i-1번째까지 물건을 x용량 배낭에 집어 넣을때의 최대 가격,
-        //          i-1번째까지 물건을 j용량 배낭에 넣을때 최대가격
-        //          )
+        //   [i-1번째 물건 가격] + i-1번째까지 물건을 x용량 배낭에 집어 넣을때의 최대 가격,
+        //   i-1번째까지 물건을 j용량 배낭에 넣을때 최대가격
+        // )
 
         //[point4] 다음 배열 value, maxVal에서 i-1의 의미 (value[i-1], maxVal[i-1][x])
         //    배열 value의 i-1 의미: 순환 index i가 1부터 시작이라 i-1
@@ -120,6 +122,40 @@ const C = 5
 const weight = [2, 3, 4, 5]
 const value = [3, 4, 5, 6]
 console.log(knapSack(C, weight, value, weight.length))
+```
+
+# CODE ONLY
+
+```js
+function knapSack(C, weight, value, n = weight.lenth) {
+  var maxVal = Array(n + 1)
+    .fill(0)
+    .map(() => Array(C + 1).fill(0));
+
+  for (var i = 0; i <= n; i++) {
+    maxVal[i][0] = 0;
+  }
+
+  for (var j = 0; j <= C; j++) {
+    maxVal[0][j] = 0;
+  }
+
+  for (var i = 1; i <= n; i++) {
+    for (var j = 1; j <= C; j++) {
+      if (weight[i] < j) {
+        maxVal[i][j] = Math.max(  //highlight-line
+          value[i - 1] + maxVal[i - 1][j - weight[i]],  //highlight-line
+          maxVal[i - 1][j]  //highlight-line
+        );
+      }
+    }
+  }
+}
+
+const C = 5;
+const weight = [2, 3, 4, 5];
+const value = [3, 4, 5, 6];
+console.log(knapSack(C, weight, value, weight.length));
 ```
 
 # call stack tree(상향식 접근방법)

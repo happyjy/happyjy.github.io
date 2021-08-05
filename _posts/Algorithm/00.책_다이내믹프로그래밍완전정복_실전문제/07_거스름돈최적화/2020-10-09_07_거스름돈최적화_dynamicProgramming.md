@@ -49,7 +49,7 @@ function minCoins(coin, N, C) {
         // resultArr[i - coin[j]]: 거슬러야할 거스름돈에서 가지고 있는 코인을 빼고난뒤 "코인갯수"
         var temp = resultArr[i - coin[j]];
 
-        // # POINT3 - 거슬러야할 "거스름돈"을 동전으로줄때 최소 동전을 구하기 위한 로직
+        //highlight-line // # POINT3 - 거슬러야할 "거스름돈"을 동전으로줄때 최소 동전을 구하기 위한 로직
         // # POINT4 - coin 배열이 내림차 순이어야지 가능한 알고리즘
         if (temp != maxNum && temp + 1 < resultArr[i]) {
           resultArr[i] = temp + 1;
@@ -80,10 +80,10 @@ function minCoins(coin, N = coin.length, C) {
   for (var i = 0; i <= C; i++) {
     for (var j = 0; j < N; j++) {
       if (coin[j] <= i) {
-        var temp = resultArr[i - coin[j]];
+        var temp = resultArr[i - coin[j]];  //highlight-line
 
-        if (temp < resultArr[i]) {
-          resultArr[i] = temp + 1;
+        if (temp < resultArr[i]) {  //highlight-line
+          resultArr[i] = temp + 1;  //highlight-line
         }
       }
     }
