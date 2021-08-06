@@ -11,26 +11,28 @@ tags:
 
 # 문제
 
-최장 공통 부분 수열(Longest common subsequce - LCS)
-문자열 내에서 왼쪽에서 오른쪽 방향으로 문자열 내에 들어 있는 글자의 수열
-반드시 연속적인 글자들로 구성될 필요 x
+* 최장 공통 부분 수열(Longest common subsequce - LCS)
+* 문자열 내에서 왼쪽에서 오른쪽 방향으로 문자열 내에 들어 있는 글자의 수열
+* 반드시 연속적인 글자들로 구성될 필요 x
 
-- 예
-
-```
-  문자열 X가 ABCDE라면
-  AB, ACD, BDE 등은 문자열 X의 부분 집합
-```
+* 예
+    * 문자열 ABCD, AEBD면 두 문자열의 LCS는 ABD임으로 3을 반환한다.
 
 # 해결 방법
 
-- 2차원 행렬을 가정하고 문자열 하나는 행에, 문자열 하나는 열에 배치한다.
-- 주어진 문자 두개의 마지막 글자를 비교하면서 행렬을 채워나간다.
-- 아래 코드에서 point1, point2 부분을 확인하자.
+* 2차원 행렬을 가정하고 문자열 하나는 행에, 문자열 하나는 열에 배치한다.
+* 주어진 문자 두개의 마지막 글자를 비교하면서 행렬을 채워나간다.
+* 아래 코드에서 point1, point2 부분을 확인하자.
 
 # CODE
 
 ```js
+var str1 = "ABCD"
+var str2 = "AEBD"
+var m = str1.length
+var n = str2.length
+console.log(lcs_length(str1, str2, m, n)) // 3
+
 function lcs_length(str1, str2, m, n) {
   // # point1
   // lcs_table 첫번째 열, 첫번째 행을 0으로 채우는것 행략 위 코드에서 모든 요소에 0으로 초기화함.
@@ -51,15 +53,8 @@ function lcs_length(str1, str2, m, n) {
     }
   }
 
-  return lcs_table[m][n]
+  return lcs_table[m][n];
 }
-
-var str1 = "ABCD"
-var str2 = "AEBD"
-var m = str1.length
-var n = str2.length
-
-console.log(lcs_length(str1, str2, m, n)) // 3
 ```
 
 # 시간복잡도
