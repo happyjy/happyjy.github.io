@@ -95,6 +95,29 @@ maxValue[4] = Math.max(maxValue[4], value[4]+maxValue[4-3]);
 maxValue[4] = Math.max(maxValue[4], value[5]+maxValue[4-4]);
 ```
 
+# CODE ONLY
+
+```js
+function MaxValue(barArr, N) {
+  // "철근 길이 단위 최대 이익" 보관 배열
+  let maxValues = new Array(N).fill(0);
+  for (let i = 1; i <= N; i++) {
+    // i: bar 길이
+    for (let j = 1; j <= i; j++) {
+      // j: 철근 자른 길이(i(bar 길이) 범위 내)
+      // maxValues: bar길이(i)별 최대 이익
+      maxValues[i] = Math.max(maxValues[i], barArr[j] + maxValues[i - j]);
+    }
+  }
+
+  return maxValues;
+  return maxValues[N];
+}
+var barArr = [0, 1, 5, 8, 9, 10, 17, 17, 20];
+console.log(MaxValue(barArr, barArr.length));
+
+```
+
 # call stack tree(상향식 접근방법)
 
-![](./img/08_철근자르기_dynamicProgramming.png)
+![](./img/08_철근자르기_recursion1.png)

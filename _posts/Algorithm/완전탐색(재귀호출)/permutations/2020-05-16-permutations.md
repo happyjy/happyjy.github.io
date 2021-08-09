@@ -27,7 +27,9 @@ tags:
         - 문자열에서 기준점(point)과 swap할 index
         - 기준점(point)부터 시작해서 문자열 길이만큼 순회하면서 swap하고 재귀호출한다.
         - _이 과정에서 문자열이 만들 수 있는 문자열을 모두 만든다._
-- POINT2: 재귀함수가 끝나면 문자를 원래대로 돌려놓는다.
+- POINT2: swap한 str 다시 원상복구
+    - 재귀함수가 끝나면 문자를 원래대로 돌려놓는다.
+    - for문 안에서는 str이 공유 됨으로 swap한것을 다시 swap해준뒤 cursor를 증가해야한다.
 - POINT3: 종단점
     - point == length
     - 이 때 각자리에 문자열이 정해진 상태이므로 PRINT 한다.
@@ -54,14 +56,14 @@ tags:
     str = str.toString();
 
     if (point == length) {
-      // highlight-line // POINT3
+      // highlight-line // POINT3: 종단점.
       arr.push(str);
     } else {
       // highlight-line // POINT1
       for (var cursor = point; cursor <= length; cursor++) {
         str = swap(str, point, cursor); // highlight-line //POINT2
         solution(str, point + 1, length); 
-        str = swap(str, point, cursor); // highlight-line //POINT2
+        str = swap(str, point, cursor); // highlight-line //POINT2  : for문 안에서는 str이 공유 됨으로 swap한것을 다시 swap해준뒤 cursor를 증가해야한다.
       }
     }
   }

@@ -59,12 +59,23 @@ function isInterleaving(str1, str2, str3) {
 
   ilMatrix[0][0] = true; // (0,0)은 true
 
-  // 첫번째 열을 채운다.
+  // 첫번째 열을 채운다. ㅇㅇ
   for (let i = 1; i <= str1Len; i++) {
     if (str1[i - 1] != str3[i - 1]) {
       ilMatrix[i][0] = false;
     } else {
-      ilMatrix[i][0] = ilMatrix[i - 1][0];
+      /* 
+        # 이전 행의 값과 같게 한다.
+
+        # 이전 행의 값과 같게 하는건 왜일까?
+          * 예를 들어 var str1 = "bcc", str3 = "bbcbcac"; 일때
+          * i=1일때는 str1[1], str3[1]의 값은 각각 c, b이라 값이 다르다. 
+          * i=2일때는 str1[2], str3[2]의 값은 각각 c, c이라 값이 같다. 
+            * 그래서 true를 해버리면안된다. 
+          * i=1일때 까지 값이 false 이기 때문에 이후 idx i를 순회 할때 이후에 모든 값은 false이어야 한다.
+          * 아래 첫번째 행을 채울때도 마찬가지이다.
+       */
+      ilMatrix[i][0] = ilMatrix[i - 1][0];  //highlight-line
     }
   }
 
@@ -73,7 +84,7 @@ function isInterleaving(str1, str2, str3) {
     if (str2[j - 1] != str3[j - 1]) {
       ilMatrix[0][j] = false;
     } else {
-      ilMatrix[0][j] = ilMatrix[0][j - 1];
+      ilMatrix[0][j] = ilMatrix[0][j - 1];  //highlight-line
     }
   }
 
@@ -87,19 +98,19 @@ function isInterleaving(str1, str2, str3) {
       var curStr2 = str2[j - 1]; // j번째 글자
       var curStr3 = str3[i + j - 1]; //i+j번째 글자
 
-      if (curStr1 == curStr3 && curStr2 != curStr3) {
+      if (curStr1 == curStr3 && curStr2 != curStr3) { //highlight-line
         // str3의 글자가 str1의 글자와 같고 str2의 글자와 다를 때
         // str1과 str3가 같으니 이전 i(행-세로)을 i에 대입
         ilMatrix[i][j] = ilMatrix[i - 1][j];
-      } else if (curStr1 != curStr3 && curStr2 == curStr3) {
+      } else if (curStr1 != curStr3 && curStr2 == curStr3) {  //highlight-line
         // str3의 글자가 str2의 글자와 같고 str1의 글자와 다를 때
         // str2과 str3가 같으니 이전 j(열-가로)을 j에 대입
         ilMatrix[i][j] = ilMatrix[i][j - 1];
-      } else if (curStr1 == curStr3 && curStr2 == curStr3) {
+      } else if (curStr1 == curStr3 && curStr2 == curStr3) {  //highlight-line
         // str1, str2, str3 글자 모두 가 같을 때
         // 둘중 하나라도 true이면 true
         ilMatrix[i][j] = ilMatrix[i - 1][j] || ilMatrix[i][j - 1];
-      } else {
+      } else {  //highlight-line
         // str3의 글자가 str1, str2 두 글자 어느쪽과도 다를 때
         ilMatrix[i][j] = false;
       }

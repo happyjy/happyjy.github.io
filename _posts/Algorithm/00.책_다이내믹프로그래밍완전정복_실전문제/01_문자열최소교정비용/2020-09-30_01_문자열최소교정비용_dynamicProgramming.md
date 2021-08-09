@@ -26,18 +26,19 @@ tags:
   } ESLE {
     EditD[i][j] = 1 + MININUM (
                         EditD[i-1][ j ],  // #POINT:2.1- 위쪽 셀
-                        EditD[i-1][j-1],  // #POINT:2.2- 왼쪽, 위(대각선)셀
-                        EditD[ i ][j-1]   // #POINT:2.3- 왼쪽 셀
+                        EditD[ i ][j-1]   // #POINT:2.2- 왼쪽 셀
+                        EditD[i-1][j-1],  // #POINT:2.3- 왼쪽, 위(대각선)셀
                       )
   }
   
   # 'SUND', 'SATUR'의 예를 들어보자
     ## 2.1 str1에 삭제 연산을 수행 
       * 'SUN', 'SATUR'의 최소 교정 비용과 같은 값이 된다.
-    ## 2.2 양쪽 단어에 치환연산을 수행 
-      * 'SUN', 'SATU'의 최소 교정 비용과 같은 값이 된다.
-    ## 2.3 str에 삽입 연산을 수행 
+    ## 2.2 str2에 삽입 연산을 수행 
       * 'SUNDR', 'SATUR'이 되어 'SUND', 'SATU'의 최소교정비용과같은 값이된다.
+      * 그래서 "j-1"을 해서 "EditD[i][j-1]"과 같은 의미를 같는다.
+    ## 2.3 양쪽 단어에 치환연산을 수행 
+      * 'SUN', 'SATU'의 최소 교정 비용과 같은 값이 된다.
 
   ```
 
@@ -68,9 +69,9 @@ function editDistance(str1, str2, m = str1.length, n = str2.length) {
       } else {
         EditD[i][j] =
           Math.min(
-            EditD[i][j - 1], // 왼쪽 셀
-            EditD[i - 1][j], // 위 셀
-            EditD[i - 1][j - 1] // 왼쪽,위셀(대각선)
+            EditD[i - 1][j], // 위 셀: str1에 삭제 연산을 수행 
+            EditD[i][j - 1], // 왼쪽 셀: str2에 삽입 연산을 수행 
+            EditD[i - 1][j - 1] // 왼쪽,위셀(대각선): 양쪽 단어에 치환연산을 수행 
           ) + 1;
       }
     }
