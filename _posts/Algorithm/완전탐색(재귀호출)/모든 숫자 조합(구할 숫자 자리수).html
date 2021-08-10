@@ -1,9 +1,7 @@
 <html>
-  <head>
-  </head>
+  <head> </head>
   <body>
     <script>
-
       /*
         # 재귀 호출에 대한 이해 필요
 
@@ -20,40 +18,38 @@
           그래야 재귀함수 안의 함수가 끝났을때 이어서 다른 재귀함수를 제대로된 문자열로 콜 할수 있습니다.
       */
       function makeAllAssemble(str, m, n) {
-        let result = [];
+        let result = []
         if (m === n) {
           //모든 문자열 조합 재귀호출 확인용 log
           // console.log({m, n})
-          console.log("### l === n", str);
-          result = [str];
+          console.log("### l === n", str)
+          result = [str]
         } else {
           for (var i = m; i <= n; i++) {
-            //모든 문자열 조합 재귀호출 확인용 log 
+            //모든 문자열 조합 재귀호출 확인용 log
             // console.log({m, n, i})
-            str = swap(str, m, i); 
-            result = [...result, ...makeAllAssemble(str, m+1, n)];
-            str = swap(str, m, i);
+            str = swap(str, m, i)
+            result = [...result, ...makeAllAssemble(str, m + 1, n)]
+            str = swap(str, m, i)
             // console.log("------------");
           }
         }
 
-        return result;
+        return result
       }
 
-      function swap(str, i, j){
-        var temp = str[i];
-        str[i] = str[j];
-        str[j] = temp;
+      function swap(str, i, j) {
+        var temp = str[i]
+        str[i] = str[j]
+        str[j] = temp
 
-        return str;
+        return str
       }
 
-      var numbersArr = "123".toString().split('');
-      makeAllAssemble(numbersArr, 0, numbersArr.length-1);
-     
+      var numbersArr = "123".toString().split("")
+      makeAllAssemble(numbersArr, 0, numbersArr.length - 1)
     </script>
 
-    <div>
-    </div>
+    <div></div>
   </body>
 </html>
