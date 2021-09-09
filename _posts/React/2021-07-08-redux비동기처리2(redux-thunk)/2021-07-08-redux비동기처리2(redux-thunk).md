@@ -25,12 +25,12 @@ tags:
 * 리덕스를 만든 사람이 만들었음. (Dan)
 * 리덕스에서 비동기 처리를 위한 라이브러리
 * 액션 생성자를 활용하여 비동기 처리
-  * _액션 생성자가 액션을 리턴하지 않고, 함수를 리턴함._
-  * _해당 함수가 비동기처리를 한다._
+    * _액션 생성자가 액션을 리턴하지 않고, 함수를 리턴함._
+    * _해당 함수가 비동기처리를 한다._
 * 이를 가능하게 하는 것은 뭘까?
-  * store에 _redux-thunk 미들웨어를 설정_ 하면
-  * _dispatch할때 함수를 인자로 사용하면_ (action dictionary 객체가 아닌)
-  * reducer전에 redux-thunk 미들웨어에서 dispatch로 전달한 함수에있는 비동기 처리를 가능하게 한다.
+    * store에 _redux-thunk 미들웨어를 설정_ 하면
+    * _dispatch할때 함수를 인자로 사용하면_ (action dictionary 객체가 아닌)
+    * reducer전에 redux-thunk 미들웨어에서 dispatch로 전달한 함수에있는 비동기 처리를 가능하게 한다.
 
 # 비동기가 처리되는 위치
 
@@ -39,15 +39,15 @@ tags:
 > * _redux-thunk middleware 덕분에 가능_
 
 * thunk 미들웨어사용시
-  * _비동기가 "action creator"함수에서 처리가 된다._
-  * _dispatch부분이 action으로 이동_ 했기 때문에 관심사가 적절하게 분리됨.
-    * 라이브러리 사용하지 않고 action으로만 처리할때는 component, container에 비동기 로직이 들어있다.
-      * component, container란? react component로 component는 view, container는 logic부분을 담당하고있다.
+    * _비동기가 "action creator"함수에서 처리가 된다._
+    * _dispatch부분이 action으로 이동_ 했기 때문에 관심사가 적절하게 분리됨.
+        * 라이브러리 사용하지 않고 action으로만 처리할때는 component, container에 비동기 로직이 들어있다.
+            * component, container란? react component로 component는 view, container는 logic부분을 담당하고있다.
 * 미들웨어를 사용하지않고 actions으로 비동기를 처리할때
-  * components, container에서 처리를 한다.
-  * redux비동기처리1(actions으로만처리)게시글 설명 참고
+    * components, container에서 처리를 한다.
+    * redux비동기처리1(actions으로만처리)게시글 설명 참고
 * 흐름을 보면 아래와 같이 `비동기 처리 로직`이 이동되는것을 확인 할 수 있다.
-  * components → container → _actions creator 함수(by redux-thunk)_
+    * components → container → _actions creator 함수(by redux-thunk)_
 
 # 도식화
 
@@ -61,16 +61,16 @@ tags:
 
 ```jsx
 function createThunkMiddleware(extraArgument) {
-// POINT1: 
-//   * middleware의 첫번째 인자는 store객체이다. 
+// POINT1:
+//   * middleware의 첫번째 인자는 store객체이다.
 //   * store객체에서 dispatch, getState를 가지고온다.
   return ({ dispatch, getState }) => (next) => (action) => {
 // POINT2:
 //   * action 인자를 가진 function이 dispatch가 됐을때 처리되는 부분
 
-// POINT3: 
-//   * action type이 function 이면 
-//   * action에 dispatch, getState를 넘겨 
+// POINT3:
+//   * action type이 function 이면
+//   * action에 dispatch, getState를 넘겨
     if (typeof action === 'function') {
       return action(dispatch, getState, extraArgument);
     }
@@ -113,8 +113,8 @@ export default store;
 
 * action 함수 추가
 * _비동기 처리 actions creator "getUsersThunk" 함수 return value는 promise 함수_
-  * store의 dispatch, getState를 받을 수 있다.
-  * 위 의미는 다시 disptach를 할 수 있고, state를 활용할 수 있다.
+    * store의 dispatch, getState를 받을 수 있다.
+    * 위 의미는 다시 disptach를 할 수 있고, state를 활용할 수 있다.
 
 ```js
 // src/redux/actions.js
@@ -211,4 +211,4 @@ export default function UserList({ users, getUsers }) {
 
 # 마지막으로
 
-redux 공식문서에서 [writing-logic-thunks](https://redux.js.org/usage/writing-logic-thunks)라는 게시글이 있는데 사용하는 이유가 비동리 로직이 UI(react component) useEffect안에 많이 포함되어 있으면 UI layer와 관심사가 다른 역할을 한다. 그래서 이것을 action creator로 옮기면서 테스트, component 재사용성을 높인다는 이유로 사용한다고 하면서 자세한 사용방법이 있어 참고하면 좋을 것같다.
+redux 공식문서에서 [writing-logic-thunks](https://redux.js.org/usage/writing-logic-thunks)라는 게시글에 _"thunk"를 사용하는 이유가_ **비동기 로직이 UI(react component) useEffect안에 많이 포함되어 있으면 UI layer와 관심사가 다른 역할을 한다.**고 나와 있다. 그래서 비동기 로직을 action creator로 옮기면서 생기는 장점은 테스트의 용이점과 component 재사용성을 높인다는 이유로 사용한다고 하면서 자세한 사용방법이 있어 참고하면 좋을 것같다.
