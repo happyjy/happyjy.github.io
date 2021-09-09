@@ -14,14 +14,14 @@ javascript언어는 prototype을 기반으로 oop를 구현하고 있다.
 prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보도록 하자.
 
 ```js
-	1 프로토타입의 개념 이해
-		1-1 constructor, prototype, instance
-		1-2 constructor 프로퍼티
-	2 프로토타입 체인
-		2-1 메서드 오버라이드
-		2-2 프로토타입 체인
-		2-3 객체 전용 메서드의 예외사항
-		2-4 다중 프로토타입 체인
+ 1 프로토타입의 개념 이해
+  1-1 constructor, prototype, instance
+  1-2 constructor 프로퍼티
+ 2 프로토타입 체인
+  2-1 메서드 오버라이드
+  2-2 프로토타입 체인
+  2-3 객체 전용 메서드의 예외사항
+  2-4 다중 프로토타입 체인
 ```
 
 # 1 프로토타입의 개념 이해
@@ -29,42 +29,41 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
 ## 1-1 Constructor, prototype, instance
 
 - Constructor
-  - A function that initializes an object
-  - similar to normal java constuctor
+    - A function that initializes an object
+    - similar to normal java constuctor
 - prototype
-  - Constructor의 property
-  - instance의 property \_\_proto\_\_**과 메모리 공유  
+    - Constructor의 property
+    - instance의 property \_\_proto\_\_**과 메모리 공유  
     : constructor.prototype === instance.\_\_proto\_\_**
 - instance
 
-  - Constructor를 new키워드로 호출로 생성한 객체
+    - Constructor를 new키워드로 호출로 생성한 객체
 
 - prototype 도식
   ![](프로토타입도식.jpg)
 
-  - 왼쪽 꼭짓점: Constructor(생성자 함수)
-  - 오른쪽 꼭짓점: Constructor.prorotype 프로퍼티
-  - new를 통해 instance 생성
-  - instance.\_\_proto\_\_
+    - 왼쪽 꼭짓점: Constructor(생성자 함수)
+    - 오른쪽 꼭짓점: Constructor.prorotype 프로퍼티
+    - new를 통해 instance 생성
+    - instance.\_\_proto\_\_
 
 - 어떤 생성자 함수(Constructor)를 new 연산자와 함께 호출하면
 
-  - Constructor에서 정의된 내용을 바탕으로 새로운 인스턴스(instance)가 생성됩니다.
-  - 이때 instance에는 \_\_proto\_\_라는 프포퍼티가 자동으로 부여
-  - 이 프로퍼티는 Constructor의 prototype이라는 프로퍼티를 참조
+    - Constructor에서 정의된 내용을 바탕으로 새로운 인스턴스(instance)가 생성됩니다.
+    - 이때 instance에는 \_\_proto\_\_라는 프로퍼티가 자동으로 부여
+    - 이 프로퍼티는 Constructor의 prototype이라는 프로퍼티를 참조
 
 - prototype 개념의 핵심: prototype 프로퍼티, \_\_proto\_\_라는 프로퍼티
 
-  - **prototype은 객체**
-  - **이를 참조하는 \_\_proto\_\_도 객체**
-  - prototype 객체 내부에는 인스턴스가 사용할 메서드를 저장
-  - 그러면 인스턴스에서도 숨겨진 프로퍼티인 \_\_proto\_\_를 통해서 이 메서들을 접근할 수 있게 된다.
-
+    - **prototype은 객체**
+    - **이를 참조하는 \_\_proto\_\_도 객체**
+    - prototype 객체 내부에는 인스턴스가 사용할 메서드를 저장
+    - 그러면 인스턴스에서도 숨겨진 프로퍼티인 \_\_proto\_\_를 통해서 이 메서들을 접근할 수 있게 된다.
 
 ### 예제1 객체 type과 prototype, __proto__ 관계
 
-* {getName: f, constructor: f} -> constructor는 위 Person function 입니다.
-* new 키워드로 생성한 인스턴스 __proto__는 Person의 prototype에 의해서 생성한 것입니다.
+- {getName: f, constructor: f} -> constructor는 위 Person function 입니다.
+- new 키워드로 생성한 인스턴스 __proto__는 Person의 prototype에 의해서 생성한 것입니다.
 
   ```js
   var Person = function(name) {
@@ -81,30 +80,28 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
 
   Person.prototype === new Person('boa').__proto__ // true
   Person.prototype //{getName: ƒ, constructor: ƒ}
-  new Person('boa').__proto__	//{getName: ƒ, constructor: ƒ}
+  new Person('boa').__proto__ //{getName: ƒ, constructor: ƒ}
 
   ```
-
-
 
 ### 예제2 인스턴스와 인스턴스 \__proto__ 의 실행컨텍스트
 
 <u>boa.getName === boa.\__proto__.getName 은 같지만 getName을 수행할때 "실행컨텍스트"가  다르기 때문에 결과가 다르다</u>
 
-* boa, boa.\__proto__ 객체 비교 
-  * boa => Person {_name: "boa"}
-  * boa.\__proto__ => {getName: ƒ, constructor: ƒ}
+- boa, boa.\__proto__ 객체 비교
+    - boa => Person {_name: "boa"}
+    - boa.\__proto__ => {getName: ƒ, constructor: ƒ}
 
-* boa.getName();
-  - return value => "boa"
-  - boa.getName return value => Person {_name: "boa"}
+- boa.getName();
+    - return value => "boa"
+    - boa.getName return value => Person {_name: "boa"}
   
-* boa.\__proto__.getName()
-  - return value => undefined
-  - boa.getName return value => Person {_name: "boa"}
-  - boa.\__proto__ return value => {getName: ƒ, constructor: ƒ}
-  - boa.\__proto__에 _name 프로퍼티가 없어 식별자(this._name)를 찾을 수 없다.
-  - getName의 실행 컨텍스트는 boa.\__proto__(_name은 boa 객체 하위에 있다.)
+- boa.\__proto__.getName()
+    - return value => undefined
+    - boa.getName return value => Person {_name: "boa"}
+    - boa.\__proto__ return value => {getName: ƒ, constructor: ƒ}
+    - boa.\__proto__에 _name 프로퍼티가 없어 식별자(this._name)를 찾을 수 없다.
+    - getName의 실행 컨텍스트는 boa.\__proto__(_name은 boa 객체 하위에 있다.)
 
   ```js
   var Person = function(name) {
@@ -122,11 +119,11 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
 
 ### 예제3 prototype, \__proto__관계
 
-* boa의 property '\__proto__'객체(Constructor function의 prototype으로 생성)는 "Constructor function의 객와 는 메모리를 공유하고 있다.
+- boa의 property '\__proto__'객체(Constructor function의 prototype으로 생성)는 "Constructor function의 객와 는 메모리를 공유하고 있다.
 
-* <u>instance.\__proto__, Constructor.prototype 객체는 메모리를 공유</u>
-	- <u>instance.\__proto__ 변경하면 Constructor.prototype도 변경이 된다.</u>
-  - Person.prototype === boa.\__proto__; // true
+- <u>instance.\__proto__, Constructor.prototype 객체는 메모리를 공유</u>
+    - <u>instance.\__proto__ 변경하면 Constructor.prototype도 변경이 된다.</u>
+    - Person.prototype === boa.\__proto__; // true
 
   ```js
   var Person = function(name) {
@@ -142,8 +139,8 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
 
 ### 예제4 \__proto__에서 getName 호출
 
-* boa.\__proto\__.getName() 에 의해서 호출된 getName의 실행컨텍스트(getName에서 this) 
-  * => "boa.\__proto__"
+- boa.\__proto\__.getName() 에 의해서 호출된 getName의 실행컨텍스트(getName에서 this)
+    - => "boa.\__proto__"
 
   ```js
   var Person = function(name) {
@@ -158,16 +155,14 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
   boa.__proto__.getName(); //boa__proto__
   ```
 
-
-
 ### 예제5 prototype chain 예시
 
-* boa객체 바로 하위에는 getName가 없을때는 \__proto__ 객체에 getName 여부 확인을하고 호출한다. 이게 바로 prototype chanin 이다.
-* <u>rototype chanin원리에 따라서 \__proto\__에 없을경우 \__proto\__의 \__proto__에 접근해서 찾게 된다.</u>
+- boa객체 바로 하위에는 getName가 없을때는 \__proto__ 객체에 getName 여부 확인을하고 호출한다. 이게 바로 prototype chanin 이다.
+- <u>prototype chanin원리에 따라서 \__proto\__에 없을경우 \__proto\__의 \__proto__에 접근해서 찾게 된다.</u>
 
-* boa.\__proto__.getName
-  * = boa(.\__proto__).getName
-  * = boa.getName
+- boa.\__proto__.getName
+    - = boa(.\__proto__).getName
+    - = boa.getName
 
   ```js
   var Person = function(name) {
@@ -182,11 +177,9 @@ prototype 기반의 언어가 어떻게 oop를 구현 하고 있는지 알아보
   boa.__proto__.getName === boa.getName // true
   ```
 
-
-
 ### 예제6  function의 prototype과 인스턴스의 \__proto__의 관계
 
-* Constructor.prototype === instance.\__proto__
+- Constructor.prototype === instance.\__proto__
 
 ```js
 var Constructor = function(name) {
@@ -202,13 +195,11 @@ console.dir(Constructor);
 console.dir(instance);
 ```
 
-
-
 ### 예제7 Array 내장 생성자 함수로 알아본 prototype
 
-* var arr = [1,2]; 은 내장 생성자 함수 Array로 생성한 인스턴스다. 
-* 내장 생성자 함수 Array를 console.dir(Array) 하면 내부에 프로퍼티 확인 가능하다
-* Array.prototype은 인스턴스로 만든 arr에서 사용할 수 있는 함수들이다.
+- var arr = [1,2]; 은 내장 생성자 함수 Array로 생성한 인스턴스다.
+- 내장 생성자 함수 Array를 console.dir(Array) 하면 내부에 프로퍼티 확인 가능하다
+- Array.prototype은 인스턴스로 만든 arr에서 사용할 수 있는 함수들이다.
 
 ```js
 var arr = [1,2];
@@ -218,10 +209,8 @@ console.dir(Array);  //Array: 내장 생성자 함수
 Array.isArray(arr);         //true: isArray는 Array내장 생성자함수의 함수다.
 arr.isArray()               //TypeError: arr.isArray is not a function
 
-Array.prototype === arr.__proto__	//true
+Array.prototype === arr.__proto__ //true
 ```
-
-
 
 ## 1-2 constructor 프로퍼티
 
@@ -255,11 +244,11 @@ var p5 = new p1.constructor("인간5") //Person {name:"인간5"} true
 
 위 예제를 통해서 아래내용이 성립한다.
 
-* 프로토타입 도식
+- 프로토타입 도식
   ![](프로토타입도식.jpg)
 
+- Constructor, instance의 관계
 
-* Constructor, instance의 관계
   ``` txt
 
   // 아래 각줄은 모두 같은 대상을 가르킨다.
@@ -282,7 +271,7 @@ var p5 = new p1.constructor("인간5") //Person {name:"인간5"} true
 
 - 예제
 
-  - 아래 메서드 오버라이드 전, 후 캡쳐 참고
+    - 아래 메서드 오버라이드 전, 후 캡쳐 참고
 
   ```js
     var Person = function(name) {
@@ -313,10 +302,10 @@ var p5 = new p1.constructor("인간5") //Person {name:"인간5"} true
 
 - 결과
 
-  - override 하기 전
+    - override 하기 전
     ![](method_override.png)
 
-  - override 후
+    - override 후
     ![](method_override1.png)
 
 ## 2-2 프로토타입 체인
@@ -328,11 +317,11 @@ var p5 = new p1.constructor("인간5") //Person {name:"인간5"} true
 - Array의 내부 구조
   ![](prototypeOfArray.png)
 
-* Array 내부 도식화
-  ![](Array내부도식화.jpg) 
+- Array 내부 도식화
+  ![](Array내부도식화.jpg)
   
-  - [1,2]는 Array.prototype, Object.prototype내부의 메서드를 자신의 것처럼 실행 할 수 있다. 
-  - .\_\_proto\_\_는 생략 가능하다 - 예시
+    - [1,2]는 Array.prototype, Object.prototype내부의 메서드를 자신의 것처럼 실행 할 수 있다.
+    - .\_\_proto\_\_는 생략 가능하다 - 예시
 
   ```js
   var arr = [1,2];
@@ -340,7 +329,7 @@ var p5 = new p1.constructor("인간5") //Person {name:"인간5"} true
   arr(.__proto__)(.__proto__).hasOwnProperty(2);      //true
   ```
 
-* 메서드 오버라이드와 프로토타입 체이닝
+- 메서드 오버라이드와 프로토타입 체이닝
 
 ```js
   var arr = [1, 2, 3]
@@ -388,20 +377,20 @@ var p5 = new p1.constructor("인간5") //Person {name:"인간5"} true
   })
   ```
 
-  - 어떤 데이터 타입이건 거의 무조건 프로토타입 체이닝을 통해 getEntries 메서드에 접근
+    - 어떤 데이터 타입이건 거의 무조건 프로토타입 체이닝을 통해 getEntries 메서드에 접근
 
-* 스태틱 메서드(객체한정메서드)
-  - 객체만을 대상으로 동작하는 객체 전용메서드들은 부득이 Object.prototype이 아닌 Object에 스태틱 메서드(static method)로 부여할 수 밖에 없다.
-  - 생성자 함수인 Object, 인스턴스 객체 리터럴 사이에는 this를 통한 연결이 불가능
-  - 전용 메서드 처럼 '메서드명 앞의 대상이 곧 this'가 되는 방식대신  
+- 스태틱 메서드(객체한정메서드)
+    - 객체만을 대상으로 동작하는 객체 전용메서드들은 부득이 Object.prototype이 아닌 Object에 스태틱 메서드(static method)로 부여할 수 밖에 없다.
+    - 생성자 함수인 Object, 인스턴스 객체 리터럴 사이에는 this를 통한 연결이 불가능
+    - 전용 메서드 처럼 '메서드명 앞의 대상이 곧 this'가 되는 방식대신  
     this의 사용을 포기하고 대상 **인스턴스를 인자로 직접 주입해야 하는 방식**으로 구현  
     : 예시 Object.freeze({prop: 42})
-  - Object.prototype.consructor 하위 메서드 & Object.protptype 하위 메서드
+    - Object.prototype.consructor 하위 메서드 & Object.protptype 하위 메서드
     ![](객체전용메서드&스태틱메서드.jpg)
 
 ## 2-4 다중 프로토타입 체인
 
-아래 예제 주석 부분의 POINT 부분 이해부터 봐보자!   
+아래 예제 주석 부분의 POINT 부분 이해부터 봐보자!
 Grade.prototype에 Array instance를 세팅으로 g1(Grade function의 instance)에서 push를 사용할 수 있게 된다.  
 이렇게 새롭게 만드는 생성자 함수에 \__proto__를 연결해서 체인 관계를 만들수 있다.  
 
@@ -433,7 +422,7 @@ Grade.prototype에 Array instance를 세팅으로 g1(Grade function의 instance)
   console.log(g1) //Grade(3) [20, 1]
   ```
 
-  - 도식화
+    - 도식화
     ![](Grade생성자함수에배열proto.jpg)
 
 # 참고
