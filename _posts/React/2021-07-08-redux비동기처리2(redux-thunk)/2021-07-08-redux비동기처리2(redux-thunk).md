@@ -17,9 +17,7 @@ tags:
 # redux-thunk 란?
 
 > 함수를 dispatch할 수 있게 해주는 미들웨어
->
-> * 위 함수에서 비동기 처리
-> * diapatch 할때 action creator를 통해서 action dictionary 객체를 전달했었다.
+> thunk 미들웨어를 사용하지 않으면 dispatch는 action 타입 객체({type, state})를 받아 reducer로 넘긴다.
 
 * 리덕스 미들웨어
 * 리덕스를 만든 사람이 만들었음. (Dan)
@@ -34,13 +32,13 @@ tags:
 
 # 비동기가 처리되는 위치
 
-> "action creator"
+> "action creator" 에서 생성한다.
 >
-> * _redux-thunk middleware 덕분에 가능_
+> * _redux-thunk middleware 의해서 가능_
 
 * thunk 미들웨어사용시
     * _비동기가 "action creator"함수에서 처리가 된다._
-    * _dispatch부분이 action으로 이동_ 했기 때문에 관심사가 적절하게 분리됨.
+    * _dispatch부분이 action으로 이동 했기 때문에 관심사가 적절하게 분리됨._
         * 라이브러리 사용하지 않고 action으로만 처리할때는 component, container에 비동기 로직이 들어있다.
             * component, container란? react component로 component는 view, container는 logic부분을 담당하고있다.
 * 미들웨어를 사용하지않고 actions으로 비동기를 처리할때
@@ -109,7 +107,7 @@ const store = createStore(
 export default store;
 ```
 
-## 설정2
+## 설정2 - 비동기 처리 위치
 
 * action 함수 추가
 * _비동기 처리 actions creator "getUsersThunk" 함수 return value는 promise 함수_
@@ -149,11 +147,11 @@ export function getUsersFail(error) {
 export function getUsersThunk() {
   return async (dispatch, getState) => {
     try {
-      dispatch(getUsersStart());
+      dispatch(getUsersStart()); //highlight-line
       const res = await axios.get('https://api.github.com/users');
-      dispatch(getUsersSuccess(res.data));
+      dispatch(getUsersSuccess(res.data)); //highlight-line
     } catch (e) {
-      dispatch(getUsersFail());
+      dispatch(getUsersFail()); //highlight-line
     }
   };
 }
@@ -177,7 +175,8 @@ export default function UserListContainer() {
   const users = useSelector((state) => state.users.data);
   const dispatch = useDispatch();
   const getUsers = useCallback(() => {
-    dispatch(getUsersThunk());
+    // #POINT: 비동기 처리 thunk dispatch로 호출
+    dispatch(getUsersThunk());  //highlight-line // thunk 호출
   }, [dispatch]);
 
   return <UserList users={users} getUsers={getUsers} />;

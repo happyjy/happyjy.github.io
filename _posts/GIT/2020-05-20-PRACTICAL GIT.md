@@ -8,6 +8,32 @@ tags:
   - practical
 ---
 
+# change remote branch name
+
+1. Switch to the local branch you want to rename
+
+    ```
+        git checkout <old_name>
+    ```
+
+2. Rename the local branch
+
+    ```
+        git branch -m <new_name>
+    ```
+
+3. Push the <new_name> local branch and reset the upstream branch
+
+    ```
+        git push origin -u <new_name>
+    ```
+
+4. Delete the <old_name> remote branch
+
+    ```
+        git push origin --delete <old_name>
+    ```
+
 # fetch
 
 | 동작                 | 명령어               |
@@ -38,7 +64,7 @@ tags:
 
 - 현재 local branch에 있는 경우 master branch를 checkout한 이후에 생긴 remote branch(master branch) commit들이 생기고 그 다음 내가 commit 한 것들이 붙는다.
 
-  - 아래 도표 참고
+    - 아래 도표 참고
 
   ```
         A---B---C [local branch]
@@ -46,8 +72,8 @@ tags:
   D---E---F---G [master branch]
   ```
 
-  - 로컬 브랜치는 E commit 단계에서 생성, B, C Commit / master 브랜치에 F, G commit 생성
-  - 이 단계에서 "git branch [master branch]" || "git branch [master branch][local branch]" 를 하면 아래와 같이 로컬 브렌치는 변경된다.
+    - 로컬 브랜치는 E commit 단계에서 생성, B, C Commit / master 브랜치에 F, G commit 생성
+    - 이 단계에서 "git branch [master branch]" || "git branch [master branch][local branch]" 를 하면 아래와 같이 로컬 브렌치는 변경된다.
 
   ```
                 A'--B'--C' [local branch]
@@ -67,7 +93,7 @@ tags:
 | commit 취소 | git reset --soft [commit 위치] |
 
 - commit 위치
-  - head^은 현재 commit 하나를 의미
+    - head^은 현재 commit 하나를 의미
     즉 git reset --soft head^^은 현재 commit 기준 두개 commit 취소
 
 # push

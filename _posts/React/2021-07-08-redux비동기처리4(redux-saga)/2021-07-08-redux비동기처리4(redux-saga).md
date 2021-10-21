@@ -17,19 +17,19 @@ tags:
 # redux-saga란?
 
 * _액션을 모니터링_ → _특정 액션이 발생하면 이에 따라 특정 작업을 하는 방식으로_ 사용
-  * 여기서 특정 작업이란,
-    * _특정 자바스크립트를 실행_
-    * _다른 액션을 디스패치_
-    * _현재 상태를 불러오는 것_
+    * 여기서 특정 작업이란,
+        * _특정 자바스크립트를 실행_
+        * _다른 액션을 디스패치_
+        * _현재 상태를 불러오는 것_
 * 미들웨어 입니다.
 * 제너레이터 객체를 만들어 내는 _제네레이터 생성 함수를 이용합니다._
 * 리덕스 사가 미들웨어를 설정하고,
-  * 내가 만든 사가 함수를 등록한 후
-  * 사가 미들웨어를 실행합니다.
-  * 그리고 등록된 사가 함수를 실행할 액션을 디스패치하면 됩니다.
+    * 내가 만든 사가 함수를 등록한 후
+    * 사가 미들웨어를 실행합니다.
+    * 그리고 등록된 사가 함수를 실행할 액션을 디스패치하면 됩니다.
 * redux-saga는 다양한 상황에 쓸 수 있는 만큼 제공되는 기능도 많고 사용방법도 진입장벽이 꽤나 큽니다.
-  * 자바스크립트 초심자라면 생소할만한 Generator 문법을 사용
-  * 이 문법을 이해하지 못하면 redux-saga를 배우는 것이 매우 어렵다
+    * 자바스크립트 초심자라면 생소할만한 Generator 문법을 사용
+    * 이 문법을 이해하지 못하면 redux-saga를 배우는 것이 매우 어렵다
 
 # redux-saga는 redux-thunk로 못하는 다양한 작업들을 처리하는 예시 5가지
 
@@ -58,7 +58,7 @@ tags:
         thunk.withExtraArgument({ history }),
         promise,
         routerMiddleware(history),
-        sagaMiddleware,
+        sagaMiddleware, //highlight-line
       ),
     ),
   );
@@ -72,12 +72,12 @@ tags:
 
   const GET_USERS_SAGA_START = 'GET_USERS_SAGA_START';
 
-  export function getUsersSagaStart() {
+  export function getUsersSagaStart() { //highlight-line
     return {
       type: GET_USERS_SAGA_START,
     };
   }
-  function* getUsersSaga(action) {
+  function* getUsersSaga(action) { //highlight-line
     try {
       /* # put (redux-saga effect - dispatch)
       *  * store에 dispatch 하도록 스케쥴링한다.
@@ -87,13 +87,14 @@ tags:
       // sleep 2초
       yield delay(2000);
       // 비동기로 동작
-      /* # call (redux-saga effect - 비동기 동작)
-      * 비동기 동작
-      * doc: https://redux-saga.js.org/docs/api/#callfn-args
-      * call의 첫번째 변수가 promise를 반환하는 객체인경우 설명
-      * redux-saga는 generator가 Promise객체가 settled상태까지 대기하고
-      * 이후 pormise resolved에 따라서(resolved, rejected) generator는 다시 재개 된다.
-      * 원문 : If fn is a normal function and returns a Promise, the middleware will suspend the Generator until the Promise is settled. After the promise is resolved the Generator is resumed with the resolved value, or if the Promise is rejected an error is thrown inside the Generator.
+      /*
+       *    # call (redux-saga effect - 비동기 동작)
+       *     * 비동기 동작
+       *     * doc: https://redux-saga.js.org/docs/api/#callfn-args
+       *     * call의 첫번째 변수가 promise를 반환하는 객체인경우 설명
+       *     * redux-saga는 generator가 Promise객체가 settled 상태까지 대기하고
+       *     * 이후 pormise resolved에 따라서(resolved, rejected) generator는 다시 재개 된다.
+       *     * 원문 : If fn is a normal function and returns a Promise, the middleware will suspend the Generator until the Promise is settled. After the promise is resolved the Generator is resumed with the resolved value, or if the Promise is rejected an error is thrown inside the Generator.
       */
       const res = yield call(axios.get, 'https://api.github.com/users');
       yield put(getUsersSuccess(res.data));
@@ -111,7 +112,7 @@ tags:
   import { call, delay, put, takeEvery } from 'redux-saga/effects';
 
   export function* usersSaga() {
-    yield takeEvery(GET_USERS_SAGA_START, getUsersSaga);
+    yield takeEvery(GET_USERS_SAGA_START, getUsersSaga);  //highlight-line
   }
   ```
 
@@ -122,8 +123,8 @@ tags:
   import { all } from 'redux-saga/effects';
   import { usersSaga } from './users';
 
-  export default function* rootSaga() {
-    yield all([usersSaga()]);
+  export default function* rootSaga() { //highlight-line
+    yield all([usersSaga()]); //highlight-line
   }
   ```
 
@@ -134,7 +135,7 @@ tags:
   import createSagaMiddleware from '@redux-saga/core';
   import rootSaga from './modules/rootSaga';
   const sagaMiddleware = createSagaMiddleware();
-  sagaMiddleware.run(rootSaga);
+  sagaMiddleware.run(rootSaga); //highlight-line
   ```
 
 6. component에서 dispatch(UserListContainer.jsx)
@@ -152,7 +153,7 @@ tags:
     const dispatch = useDispatch();
 
     const getUsers = useCallback(() => {
-      dispatch(getUsersSagaStart()); // redux-saga 방법
+      dispatch(getUsersSagaStart()); //highlight-line // redux-saga 방법
     }, [dispatch]);
 
     return <UserList users={users} getUsers={getUsers} />;

@@ -13,16 +13,23 @@ tags:
 
 * [github 주소](https://github.com/happyjy/learning-2021-redux/tree/6.%EB%B9%84%EB%8F%99%EA%B8%B0(Action))
 
-# 비동기 작업을 어디서 하느냐가 젤 중요
+# 비동기 처리 위치
 
+* _actions만으로 처리할때는 "비동기 처리를 컨테이너에에서 수행"한다._
+    * 컨테이너는 react의 view layer 영역이다.
+    * 즉, view layer 영역에 api 호출 로직이 들어가 있어 관심사 분리가 제대로 되어있지 않다.
+    * 비동기처리 2,3,4는 view layer 영역이 아닌 다른곳에서 한다. 블로그를 확인해보자.
+        * [비동기처리2-redux-thunk](https://happyjy.netlify.app/redux%EB%B9%84%EB%8F%99%EA%B8%B0%EC%B2%98%EB%A6%AC2redux-thunk)
+        * [비동기처리3-promise](https://happyjy.netlify.app/redux%EB%B9%84%EB%8F%99%EA%B8%B0%EC%B2%98%EB%A6%AC3redux-promise)
+        * [비동기처리4-redux-saga](https://happyjy.netlify.app/redux%EB%B9%84%EB%8F%99%EA%B8%B0%EC%B2%98%EB%A6%AC4redux-saga)
 * 비동기 작업의 전, 후로 _액션을 분리_
-  * Start
-  * Success
-  * Fail
-  * ... 등등
+    * Start
+    * Success
+    * Fail
+    * ... 등등
 * **dispatch 를 할때** 해줍니다.
-  * 당연히 리듀서는 동기적인 것 => Pure
-  * dispatch 도 동기적인 것
+    * 당연히 리듀서는 동기적인 것 => Pure
+    * dispatch 도 동기적인 것
 
 # 도식화
 
@@ -119,15 +126,16 @@ export default function user(state = initialState, action) {
 
       // # useCallback 사용이유?
       //  * 반복적으로 만들어져 UserList에 props로 전달함으로 리소스 낭비
-     // # POINT
       const getUsers = useCallback(async () => {
         try {
-          dispatch(getUsersStart());
+          // # POINT
+          dispatch(getUsersStart()); // highlight-line
           const res = await axios.get('https://api.github.com/users');
-          console.log(res);
-          dispatch(getUsersSuccess(res.data));
+          // # POINT
+          dispatch(getUsersSuccess(res.data)); // highlight-line
         } catch (e) {
-          dispatch(getUsersFail());
+          // # POINT
+          dispatch(getUsersFail()); // highlight-line
         }
       }, [dispatch]);
 
