@@ -1,0 +1,181 @@
+{
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "git.autofetch": true,
+  // "gitlens.historyExplorer.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.detectIndentation": false,
+  "git.enableSmartCommit": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "python.jediEnabled": false,
+  "[bat]": {},
+  "editor.minimap.showSlider": "always",
+  "workbench.colorCustomizations": {
+    // "scrollbarSlider.activeBackground": "#62fa1b",
+    // "scrollbarSlider.hoverBackground": "#fa2a1b",
+    // "scrollbarSlider.background": "#c97554",
+    "minimapSlider.background": "#69b3eb60",
+    "minimapSlider.hoverBackground": "#69b3ebb1",
+    "minimapSlider.activeBackground": "#a99fd350",
+    "minimap.background": "#00002233",
+
+    "terminal.background": "#090300",
+    "terminal.foreground": "#A5A2A2",
+    "terminalCursor.background": "#A5A2A2",
+    "terminalCursor.foreground": "#A5A2A2",
+    "terminal.ansiBlack": "#090300",
+    "terminal.ansiBlue": "#01A0E4",
+    "terminal.ansiBrightBlack": "#5C5855",
+    "terminal.ansiBrightBlue": "#01A0E4",
+    "terminal.ansiBrightCyan": "#B5E4F4",
+    "terminal.ansiBrightGreen": "#01A252",
+    "terminal.ansiBrightMagenta": "#A16A94",
+    "terminal.ansiBrightRed": "#DB2D20",
+    "terminal.ansiBrightWhite": "#F7F7F7",
+    "terminal.ansiBrightYellow": "#FDED02",
+    "terminal.ansiCyan": "#B5E4F4",
+    "terminal.ansiGreen": "#01A252",
+    "terminal.ansiMagenta": "#A16A94",
+    "terminal.ansiRed": "#DB2D20",
+    "terminal.ansiWhite": "#A5A2A2",
+    "terminal.ansiYellow": "#FDED02",
+    "[Material Theme High Contrast]": {
+      "activityBarBadge.background": "#FF4081",
+      "activityBar.activeBorder": "#FF4081",
+      "list.activeSelectionForeground": "#FF4081",
+      "list.inactiveSelectionForeground": "#FF4081",
+      "list.highlightForeground": "#FF4081",
+      "scrollbarSlider.activeBackground": "#FF408150",
+      "editorSuggestWidget.highlightForeground": "#FF4081",
+      "textLink.foreground": "#FF4081",
+      "progressBar.background": "#FF4081",
+      "pickerGroup.foreground": "#FF4081",
+      "tab.activeBorder": "#FF4081",
+      "notificationLink.foreground": "#FF4081",
+      "editorWidget.resizeBorder": "#FF4081",
+      "editorWidget.border": "#FF4081",
+      "settings.modifiedItemIndicator": "#FF4081",
+      "settings.headerForeground": "#FF4081",
+      "panelTitle.activeBorder": "#FF4081",
+      "breadcrumb.activeSelectionForeground": "#FF4081",
+      "menu.selectionForeground": "#FF4081",
+      "menubar.selectionForeground": "#FF4081",
+      "editor.findMatchBorder": "#FF4081",
+      "selection.background": "#FF408140",
+      "statusBarItem.remoteBackground": "#FF4081"
+    }
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.editor.labelFormat": "short",
+  "breadcrumbs.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.fontFamily": "D2Coding",
+  // "terminal.integrated.fontFamily": "'Meslo LG M for Powerline'",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "editor.wordWrap": "on",
+  "editor.tabSize": 2,
+  "gitlens.views.search.files.layout": "list",
+  "files.associations": {},
+  "terminal.integrated.shell.linux": "/bin/zsh",
+  "prettier.jsxSingleQuote": true,
+  "beautify.ignore": "**/*.js",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "javascript.format.enable": false,
+  "materialTheme.accent": "Pink",
+  "material-icon-theme.folders.theme": "specific",
+  "material-icon-theme.folders.color": "#90a4ae",
+  "material-icon-theme.activeIconPack": "nest",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "python.languageServer": "Microsoft",
+  // "editor.codeActionsOnSave": null,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": true,
+    "source.fixAll.eslint": true
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.validate": ["javascript", "typescript"],
+  "markdownlint.config": {
+    "MD025": true,
+    "MD007": { "indent": 4 }
+  },
+
+  "liveSassCompile.settins.autoprefix": ["> 1%", "ie.10", "last 1 chrome version", "last 1 firefox version", "last 7 safari version"],
+  "liveSassCompile.settings.generateMap": false,
+  "[scss]": {
+    "editor.defaultFormatter": "michelemelluso.code-beautifier"
+  },
+  // "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.CustomBrowser": "chrome",
+  "terminal.integrated.tabs.enabled": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "files.trimTrailingWhitespace": true,
+  "gitlens.views.repositories.files.layout": "list",
+  "editor.bracketPairColorization.enabled": true,
+  // "files.trimTrailingWhitespace": false
+  /* ****************************************** */
+  /* ********* liveSassCompile 정의 ************ */
+  /* ****************************************** */
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.includeItems": ["css/scss/test.scss"],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": null
+      // "format": "compressed",
+      // "extensionName": ".min.css",
+      // "savePath": "~/../css/"
+    }
+  ],
+  // "pasteImage.path": "${currentFileDir}/img"
+  /* *********************************** */
+  /* ********* prettier 정의 ************ */
+  /* *********************************** */
+  "prettier.printWidth": 140,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.useTabs": false,
+  "tabWidth": 2,
+  "prettier.trailingComma": "all",
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.fontSize": 13,
+  "workbench.editor.untitled.hint": "hidden",
+  "liveServer.settings.donotShowInfoMsg": true
+}
